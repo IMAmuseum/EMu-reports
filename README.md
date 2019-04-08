@@ -1,4 +1,4 @@
-# EMu-reports
+# EMu Reports
 Custom reports created for the Indianapolis Museum of Art at Newfields collection management system, EMu. These reports were designed to meet specific one-time or ongoing needs of Newfields' Registration and Curatorial staff.
 
 Reports maintained in this repository are all XSLT report formats, created to output HTML as either page views within the EMu modules or as stand-alone reports to be printed as PDFs. Reports are separated into two directories base on their intention:
