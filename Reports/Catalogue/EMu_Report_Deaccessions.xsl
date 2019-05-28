@@ -155,7 +155,7 @@ p
             </xsl:if>
         </xsl:for-each>
         <xsl:for-each select="table[@name='ecatalogue']/tuple[starts-with(atom[@name='TitAccessionNo'], 'C') or starts-with(atom[@name='TitAccessionNo'], 'LH') or starts-with(atom[@name='TitAccessionNo'], 'MH') or starts-with(atom[@name='TitAccessionNo'], 'N') or starts-with(atom[@name='TitAccessionNo'], 'S') or starts-with(atom[@name='TitAccessionNo'], 'TR') or starts-with(atom[@name='TitAccessionNo'], 'U') or starts-with(atom[@name='TitAccessionNo'], 'WH')]">
-            <xsl:sort select="atom[@name='TitAccessionNo']"/>>
+            <xsl:sort select="atom[@name='TitAccessionNo']"/>
             <xsl:call-template name="record" />
             <xsl:if test="position() != last()">
                 <p />
@@ -191,11 +191,11 @@ p
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomvalue" style="font-weight: bold">
+                                    <td class="atomvalue">
                                     <xsl:choose>
                                         <xsl:when test="table[@name='Creator']">
                                         <xsl:for-each select="table[@name='Creator']/tuple">
-                                            <xsl:if test="atom[@name='CreRole'] != ''"><xsl:value-of select="atom[@name='CreRole']"/><xsl:text>: </xsl:text></xsl:if>
+                                            <xsl:choose><xsl:when test="atom[@name='CreRole'] != ''"><b style="font-style: normal"><xsl:value-of select="atom[@name='CreRole']"/><xsl:text>:  </xsl:text></b></xsl:when><xsl:otherwise><b style="font-style: normal"><xsl:text>Creator:  </xsl:text></b></xsl:otherwise></xsl:choose>
                                         <xsl:choose>
                                             <xsl:when test="atom[@name='BioNationality'] != '' and atom[@name='BioBirthDate'] != ''">
                                                 <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioNationality']"/><xsl:text>, </xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:when><xsl:otherwise ><xsl:value-of select="atom[@name='NamOrganisation']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioNationality']"/><xsl:text>, </xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:otherwise>
@@ -215,6 +215,11 @@ p
                                                 <br/>
                                             </xsl:if>
                                         </xsl:for-each>
+                                        </xsl:when>
+                                        <xsl:when test="table[@name='CreCreationCultureOrPeople_tab']">
+                                            <xsl:for-each select="table[@name='CreCreationCultureOrPeople_tab']/tuple">
+                                                <b style="font-style: normal">Culture or People: </b><xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/><xsl:if test="position() != last()"><br/></xsl:if>
+                                            </xsl:for-each>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <xsl:value-of select="table[@name='CreCountry_tab']/tuple[1]/atom[@name='CreCountry']"/>

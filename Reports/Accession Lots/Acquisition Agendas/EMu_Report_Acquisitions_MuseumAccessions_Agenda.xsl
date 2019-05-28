@@ -114,6 +114,7 @@ td.atomvalue
     padding-left: 0.5em;
     padding-right: 0.5em;
     border: 0px;
+	white-space: pre-wrap;
 }
 td.bottomvalue
 {
@@ -480,7 +481,14 @@ p
                                 <xsl:when test="atom[@name='ValReasonForValuation'] != '' and atom[@name='ValValuationAmount'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
-                                            <b><xsl:value-of select="atom[@name='ValReasonForValuation']"/></b><xsl:text>: $</xsl:text><xsl:value-of select="atom[@name='ValValuationAmount']"/>
+                                            <b><xsl:value-of select="atom[@name='ValReasonForValuation']"/>:</b><xsl:text> $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/>
+                                        </td>
+                                    </tr>
+                                </xsl:when>
+                                <xsl:when test="atom[@name='ValReasonForValuation'] = '' and atom[@name='ValValuationAmount'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Valuation:</b><xsl:text> $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/>
                                         </td>
                                     </tr>
                                 </xsl:when>
@@ -492,6 +500,13 @@ p
                                     </tr>
                                 </xsl:otherwise>
                                 </xsl:choose>
+                                <xsl:if test="atom[@name='ValValuationNotes'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Valuation Notes: </b><xsl:value-of select="atom[@name='ValValuationNotes']" />
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                                 <xsl:if test="atom[@name='SumCreditLine'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">

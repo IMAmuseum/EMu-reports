@@ -121,6 +121,7 @@ td.atomvalue
     padding-left: 0.5em;
     padding-right: 0.5em;
     border: 0px;
+	white-space: pre-wrap;
 }
 td.bottomvalue
 {

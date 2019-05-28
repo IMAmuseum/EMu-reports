@@ -131,6 +131,14 @@ td.atomvalue
     padding-left: 0.5em;
     padding-right: 0.5em;
     border: 0px;
+	white-space: pre-wrap;
+}
+td.atomvalue1
+{
+    font-size: small;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border: 0px;
 }
 td.bottomvalue
 {
@@ -628,55 +636,55 @@ p
     -->
                         <td style="vertical-align: top;">
                             <table style="width:250px;" border="2" class="box" id="datatable">
-                                <tr class="atomvalue">
-                                    <td class="atomvalue" style="font-weight: bold; text-decoration: underline;">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1" style="font-weight: bold; text-decoration: underline;">
                                         Acquisition Paperwork Status:
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         Signed TR Received: <xsl:if test="ancestor::tuple/atom[@name='AcqTrReceived'] = 'Yes'"><b>Yes</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqTrReceived'] = 'No'"><b>No</b></xsl:if>
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         Acquisition Proposal Form Received: <xsl:if test="ancestor::tuple/atom[@name='AcqAcquisitionProposalForm'] = 'Yes'"><b>Yes</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqAcquisitionProposalForm'] = 'No'"><b>No</b></xsl:if>
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         Conservation Report Received: <xsl:if test="ancestor::tuple/atom[@name='AcqConservationReportCompleted'] = 'Yes'"><b>Yes</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqConservationReportCompleted'] = 'No'"><b>No</b></xsl:if>
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         Deed of Gift Received: <xsl:if test="ancestor::tuple/atom[@name='AcqDeedOfGift'] = 'Yes'"><b>Yes</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqDeedOfGift'] = 'No'"><b>No</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqDeedOfGift'] = 'Not Applicable'"><b>N/A</b></xsl:if>
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         Bill of Sale Received: <xsl:if test="ancestor::tuple/atom[@name='AcqBillOfSale'] = 'Yes'"><b>Yes</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqBillOfSale'] = 'No'"><b>No</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqBillOfSale'] = 'Not Applicable'"><b>N/A</b></xsl:if>
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         Invoice Received: <xsl:if test="ancestor::tuple/atom[@name='AcqInvoice'] = 'Yes'"><b>Yes</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqInvoice'] = 'No'"><b>No</b></xsl:if><xsl:if test="ancestor::tuple/atom[@name='AcqInvoice'] = 'Not Applicable'"><b>N/A</b></xsl:if>
                                     </td>
                                 </tr>
                             </table>
                             <table style="width:250px;" border="2" class="box" id="datatable">
-                                <tr class="atomvalue">
-                                    <td class="atomvalue" style="font-weight: bold; text-decoration: underline;">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1" style="font-weight: bold; text-decoration: underline;">
                                         Art Loss Registry Search:
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         ALR Search Sumbitted? <xsl:choose><xsl:when test="atom[@name='AlrDescription_tab'] = 'Search Submitted'"><b>Yes</b></xsl:when><xsl:otherwise><b>No</b></xsl:otherwise></xsl:choose>
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
+                                <tr class="atomvalue1">
+                                    <td class="atomvalue1">
                                         ALR Search Clear? <xsl:choose><xsl:when test="contains(atom[@name='AlrStatus_tab'], 'Complete')"><b>Yes</b></xsl:when><xsl:otherwise><b>No</b></xsl:otherwise></xsl:choose>
                                     </td>
                                 </tr>
@@ -848,7 +856,14 @@ p
                                 <xsl:when test="atom[@name='ValReasonForValuation'] != '' and atom[@name='ValValuationAmount'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
-                                            <b><xsl:value-of select="atom[@name='ValReasonForValuation']"/></b><xsl:text>: $</xsl:text><xsl:value-of select="atom[@name='ValValuationAmount']"/>
+                                            <b><xsl:value-of select="atom[@name='ValReasonForValuation']"/></b><xsl:text>: $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/>
+                                        </td>
+                                    </tr>
+                                </xsl:when>
+                                <xsl:when test="atom[@name='ValReasonForValuation'] = '' and atom[@name='ValValuationAmount'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Valuation:</b><xsl:text> $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/>
                                         </td>
                                     </tr>
                                 </xsl:when>
@@ -860,6 +875,13 @@ p
                                     </tr>
                                 </xsl:otherwise>
                                 </xsl:choose>
+                                <xsl:if test="atom[@name='ValValuationNotes'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Valuation Notes: </b><xsl:value-of select="atom[@name='ValValuationNotes']" />
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                                 <xsl:if test="atom[@name='SumCreditLine'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
