@@ -395,7 +395,7 @@ pre
                                 </tr>
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
-                                        <xsl:text>Insured Value: </xsl:text><xsl:value-of select="atom[@name='ValValuationAmount']" />
+                                        <xsl:text>Insured Value: </xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')" />
                                     </td>
                                 </tr>
                             </table>

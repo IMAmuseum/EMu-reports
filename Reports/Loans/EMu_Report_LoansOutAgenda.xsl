@@ -516,7 +516,7 @@ textarea.meeting
                                     <xsl:when test="atom[@name='ValReasonForValuation'] != '' and atom[@name='ValValuationAmount'] != ''">
                                         <tr class="atomvalue">
                                             <td class="atomvalue">
-                                                <b><xsl:value-of select="atom[@name='ValReasonForValuation']"/></b><xsl:text>: $</xsl:text><xsl:value-of select="atom[@name='ValValuationAmount']"/>
+                                                <b><xsl:value-of select="atom[@name='ValReasonForValuation']"/></b><xsl:text>: $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/>
                                             </td>
                                         </tr>
                                     </xsl:when>

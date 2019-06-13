@@ -397,14 +397,14 @@ p
                                     <xsl:when test="atom[@name='ValReasonForValuation'] != '' and atom[@name='ValValuationAmount'] != '' and atom[@name='ValValuationNotes'] != ''">
                                         <tr class="atomvalue">
                                             <td class="atomvalue">
-                                                <xsl:value-of select="atom[@name='ValReasonForValuation']"/><xsl:text>: $</xsl:text><xsl:value-of select="atom[@name='ValValuationAmount']"/><xsl:text> - Notes: </xsl:text><xsl:value-of select="atom[@name='ValValuationNotes']"/>
+                                                <xsl:value-of select="atom[@name='ValReasonForValuation']"/><xsl:text>: $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/><xsl:text> - Notes: </xsl:text><xsl:value-of select="atom[@name='ValValuationNotes']"/>
                                             </td>
                                         </tr>
                                     </xsl:when>
                                     <xsl:when test="atom[@name='ValReasonForValuation'] != '' and atom[@name='ValValuationAmount'] != '' and atom[@name='ValValuationNotes'] = ''">
                                         <tr class="atomvalue">
                                             <td class="atomvalue">
-                                                <xsl:value-of select="atom[@name='ValReasonForValuation']"/><xsl:text>: $</xsl:text><xsl:value-of select="atom[@name='ValValuationAmount']"/>
+                                                <xsl:value-of select="atom[@name='ValReasonForValuation']"/><xsl:text>: $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/>
                                             </td>
                                         </tr>
                                     </xsl:when>

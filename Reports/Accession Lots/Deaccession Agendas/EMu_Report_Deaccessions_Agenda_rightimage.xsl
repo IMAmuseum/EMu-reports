@@ -323,7 +323,7 @@ p
                                 <xsl:when test="atom[@name='ValReasonForValuation'] != '' and atom[@name='ValValuationAmount'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
-                                            <xsl:value-of select="atom[@name='ValReasonForValuation']"/><xsl:text>: $</xsl:text><xsl:value-of select="atom[@name='ValValuationAmount']"/><xsl:if test="contains(atom[@name='ValValuationNotes'], 'for set')"><xsl:text> - Notes: </xsl:text><xsl:value-of select="atom[@name='ValValuationNotes']"/></xsl:if>
+                                            <xsl:value-of select="atom[@name='ValReasonForValuation']"/><xsl:text>: $</xsl:text><xsl:value-of select="format-number(atom[@name='ValValuationAmount'], '###,###,###,###,###.00')"/><xsl:if test="contains(atom[@name='ValValuationNotes'], 'for set')"><xsl:text> - Notes: </xsl:text><xsl:value-of select="atom[@name='ValValuationNotes']"/></xsl:if>
                                         </td>
                                     </tr>
                                 </xsl:when>
