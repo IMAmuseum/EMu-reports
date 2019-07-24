@@ -91,6 +91,11 @@ table.picture
 {
     width: 100%;
 }
+table.header
+{
+    border-bottom: 1px solid #D3D3D3;
+    width: 100%;
+}
 table.icon
 {
     margin-left:auto; 
@@ -154,29 +159,29 @@ p
             <img style="margin: 5px" height="75px" src="https://discovernewfields.org/application/files/2515/3608/3665/logo-ima-large.png"/>
             <br/>
             <p>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.1-European')">Deaccessions: European Painting and Sculpture 1800-1945</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.2-American')">Deaccessions: American Painting and Sculpture 1800-1945</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '902.1-European')">Deaccessions: European Painting and Sculpture Before 1800</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '903.1-Decorative')">Deaccessions: Decorative Arts</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '903.2-Design')">Deaccessions: Design Arts</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '904.1-Prints')">Deaccessions: Prints, Drawings, and Photographs</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '904.2-Classical')">Deaccessions: Classical Art</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '905.1-Asian')">Deaccessions: Asian Art (Chinese and Other Asian)</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '905.2-Asian')">Deaccessions: Asian Art (Japanese and Korean)</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906.1-African')">Deaccessions: African Art</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906.2-Native')">Deaccessions: Native American and Pre-Columbian</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906-Africa')">Deaccessions: Africa, the South Pacific, and the Americas</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '907-Contemporary')">Deaccessions: Contemporary Art</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '908-Textile')">Deaccessions: Textile and Fashion Arts</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '913-Conservation')">Deaccessions: Conservation</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.1-Registration')">Deaccessions: Registration (Unknown Objects)</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.2-Registration')">Deaccessions: Registration (Cancelled Objects)</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.4-Registration')">Deaccessions: Registration (Returned Loans)</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916-Registration')">Deaccessions: Registration</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '918-Education')">Deaccessions: Education</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '979-Westerley')">Deaccessions: Westerley Estate</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '981-Lilly')">Deaccessions: Lilly House</xsl:if>
-                <xsl:if test="starts-with(table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '982-Miller')">Deaccessions: Miller House</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.1-European')">Deaccessions: European Painting and Sculpture 1800-1945</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.2-American')">Deaccessions: American Painting and Sculpture 1800-1945</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '902.1-European')">Deaccessions: European Painting and Sculpture Before 1800</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '903.1-Decorative')">Deaccessions: Decorative Arts</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '903.2-Design')">Deaccessions: Design Arts</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '904.1-Prints')">Deaccessions: Prints, Drawings, and Photographs</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '904.2-Classical')">Deaccessions: Classical Art</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '905.1-Asian')">Deaccessions: Asian Art (Chinese and Other Asian)</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '905.2-Asian')">Deaccessions: Asian Art (Japanese and Korean)</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906.1-African')">Deaccessions: African Art</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906.2-Native')">Deaccessions: Native American and Pre-Columbian</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906-Africa')">Deaccessions: Africa, the South Pacific, and the Americas</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '907-Contemporary')">Deaccessions: Contemporary Art</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '908-Textile')">Deaccessions: Textile and Fashion Arts</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '913-Conservation')">Deaccessions: Conservation</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.1-Registration')">Deaccessions: Registration (Unknown Objects)</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.2-Registration')">Deaccessions: Registration (Cancelled Objects)</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.4-Registration')">Deaccessions: Registration (Returned Loans)</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916-Registration')">Deaccessions: Registration</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '918-Education')">Deaccessions: Education</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '979-Westerley')">Deaccessions: Westerley Estate</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '981-Lilly')">Deaccessions: Lilly House</xsl:if>
+                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '982-Miller')">Deaccessions: Miller House</xsl:if>
             </p>
                 <textarea class="meeting" rows="1" cols="50">Enter meeting name.</textarea>
             <br/>
@@ -256,10 +261,55 @@ p
     <!--
         Image Table
     -->
-                <table class="picture">
+                <table class="header">
                         <tr class="atomvalue">
                             <td class="atomvalue">
-                                <b>Board of Trustees Meeting, <xsl:value-of select="ancestor::atom[@name='AcqMeetingDate']"/></b>
+                                Board of Trustees Meeting - <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                </xsl:if> - Deaccessions for <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.1-European')">Deaccessions: European Painting and Sculpture 1800-1945</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.2-American')">Deaccessions: American Painting and Sculpture 1800-1945</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '902.1-European')">Deaccessions: European Painting and Sculpture Before 1800</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '903.1-Decorative')">Deaccessions: Decorative Arts</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '903.2-Design')">Deaccessions: Design Arts</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '904.1-Prints')">Deaccessions: Prints, Drawings, and Photographs</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '904.2-Classical')">Deaccessions: Classical Art</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '905.1-Asian')">Deaccessions: Asian Art (Chinese and Other Asian)</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '905.2-Asian')">Deaccessions: Asian Art (Japanese and Korean)</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906.1-African')">Deaccessions: African Art</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906.2-Native')">Deaccessions: Native American and Pre-Columbian</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '906-Africa')">Deaccessions: Africa, the South Pacific, and the Americas</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '907-Contemporary')">Deaccessions: Contemporary Art</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '908-Textile')">Deaccessions: Textile and Fashion Arts</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '913-Conservation')">Deaccessions: Conservation</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.1-Registration')">Deaccessions: Registration (Unknown Objects)</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.2-Registration')">Deaccessions: Registration (Cancelled Objects)</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916.4-Registration')">Deaccessions: Registration (Returned Loans)</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '916-Registration')">Deaccessions: Registration</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '918-Education')">Deaccessions: Education</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '979-Westerley')">Deaccessions: Westerley Estate</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '981-Lilly')">Deaccessions: Lilly House</xsl:if>
+                                <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '982-Miller')">Deaccessions: Miller House</xsl:if>
                             </td>
                         </tr>
                 </table>
