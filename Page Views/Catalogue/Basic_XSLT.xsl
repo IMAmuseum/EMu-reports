@@ -340,6 +340,14 @@ function loaded()
                                         <xsl:value-of select="atom[@name='irn']"/>
                                     </td>
                                 </tr>
+                                <tr class="atomvalue">
+                                    <td class="atomprompt">
+                                        Publish Online?
+                                    </td>
+                                    <td class="atomvalue">
+                                        <xsl:value-of select="atom[@name='AdmPublishWebNoPassword']"/>
+                                    </td>
+                                </tr>
                             </table>
                         </td>
                     </tr>

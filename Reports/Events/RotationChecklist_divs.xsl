@@ -257,7 +257,7 @@ pre
                     <xsl:value-of select="substring-after(atom[@name='ConConditionDetails'], 'Condition Details: ')"/></pre>
                 </div>
                     </xsl:when>
-                    <xsl:otherwise><div>Structured condition details not available.<xsl:if test="atom[@name='ConConditionDetails'] != ''"><br/><br/><b>Condition Details entered as:</b><br/><pre><xsl:value-of select="atom[@name='ConConditionDetails']"/></pre></xsl:if></div></xsl:otherwise>
+                    <xsl:otherwise><div><span style="color: red;">Structured condition details not available.</span><xsl:if test="atom[@name='ConConditionDetails'] != ''"><br/><br/><b>Condition Details entered as:</b><br/><pre><xsl:value-of select="atom[@name='ConConditionDetails']"/></pre></xsl:if></div></xsl:otherwise>
                 </xsl:choose>
             </div>
         </div>
