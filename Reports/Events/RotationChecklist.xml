@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE table
+[
+  <!ELEMENT table	(tuple)*>
+  <!ATTLIST table
+            name	CDATA #REQUIRED
+  >
+  <!ELEMENT tuple	(table|tuple|atom)*>
+  <!ATTLIST tuple
+            name	CDATA #IMPLIED
+  >
+  <!ELEMENT atom	(#PCDATA)*>
+  <!ATTLIST atom
+            name	CDATA #REQUIRED
+            type	CDATA "text"
+            size	CDATA "short"
+  >
+]
+>
+<?schema
+  table           eevents
+    text short      EveEventNumber
+    text long       EveEventTitle
+    text short      EveExhibitionStatus
+    text long       EveEventDescription
+    table           Objects
+      integer         irn
+      text short      TitAccessionNo
+      text long       TitMainTitle
+      text short      CreDateCreated
+      text short      CreDateDesigned
+      text short      CreCreationPeriod
+      text long       CreCreationDynasty
+      text long       CreCreationNotes
+      text long       PhyMediumAndSupport
+      text long       PhyConvertedDims
+      text short      StaStocktakeStatus
+      table           Creator1
+        text short      CreRole
+        text short      NamFirst
+        text short      NamMiddle
+        text short      NamLast
+        text long       NamFullName
+        text short      UlaName
+        text long       NamOrganisation
+        text short      ColCollaborationName
+      end
+      table           Creator2
+        text long       CreCreatorAttribution
+        text long       CreCreationCultureOrPeople
+        text long       CreCreationNationality2
+      end
+      float           ConDispMaxLight
+      text long       ConDispGenLight
+      integer         IllExposurePeriod
+      text short      IllExposurePeriodType
+      text long       ConDispOtherInstructions
+      text long       ConHandlingInstructions
+      tuple           ConCheckedByRef
+        text long       NamFullName
+      end
+      date            ConDateChecked
+      text long       ConConditionStatus
+      text long       ConConditionDetails
+      table           MulMultiMediaRef_tab
+        text short      Multimedia
+      end
+      tuple           LocCurrentLocationRef
+        text short      SummaryData
+        text short      LocLocationCode
+      end
+      text long       ObjAttachedObjectsNotes
+    end
+  end
+?>
+<!-- Data -->
+<table name="eevents">
+  <!-- Row 1 -->
+  <tuple>
+    <atom name="EveEventNumber">ROT2019.53</atom>
+    <atom name="EveEventTitle">Laura Wheeler Waring LI - K205</atom>
+    <atom name="EveExhibitionStatus">Approved</atom>
+    <atom name="EveEventDescription">Install Waring [TR12270] in spot where Sloan used to be. 
+With only one object on the checklist, no EMu group was created.</atom>
+    <table name="Objects">
+      <tuple>
+        <atom name="irn">94301</atom>
+        <atom name="TitAccessionNo">TR12270</atom>
+        <atom name="TitMainTitle">untitled</atom>
+        <atom name="CreDateCreated"></atom>
+        <atom name="CreDateDesigned"></atom>
+        <atom name="CreCreationPeriod"></atom>
+        <atom name="CreCreationDynasty"></atom>
+        <atom name="CreCreationNotes"></atom>
+        <atom name="PhyMediumAndSupport">oil on canvas</atom>
+        <atom name="PhyConvertedDims">33 x 28-1/2 in. (framed)</atom>
+        <atom name="StaStocktakeStatus"></atom>
+        <table name="Creator1">
+          <tuple>
+            <atom name="CreRole">Artist</atom>
+            <atom name="NamFirst">Laura</atom>
+            <atom name="NamMiddle">Wheeler</atom>
+            <atom name="NamLast">Waring</atom>
+            <atom name="NamFullName">Laura W. Waring</atom>
+            <atom name="UlaName">Waring, Laura Wheeler</atom>
+            <atom name="NamOrganisation"></atom>
+            <atom name="ColCollaborationName"></atom>
+          </tuple>
+        </table>
+        <atom name="ConDispMaxLight">194</atom>
+        <atom name="ConDispGenLight">161 lux (15 footcandles) preferred.</atom>
+        <atom name="IllExposurePeriod">5</atom>
+        <atom name="IllExposurePeriodType">Years</atom>
+        <atom name="ConDispOtherInstructions">4/10/2019, IMA Conservator David Miller:  Preferred - Hang using the mirror hangers already attached to the frame and secure to the wall with the security plate.  Do not remove the lender's hanging wire. If this is not feasible, we can remove the hanging wire and hardware, retain it for replacement/return to the lender, and substitute new mirror hangers in the existing holes.</atom>
+        <atom name="ConHandlingInstructions"></atom>
+        <tuple name="ConCheckedByRef">
+          <atom name="NamFullName">David Miller</atom>
+        </tuple>
+        <atom name="ConDateChecked">2019-04-10</atom>
+        <atom name="ConConditionStatus">Inspected By</atom>
+        <atom name="ConConditionDetails">Treatment Needed: Yes
+Treatment to be Done: Tape removal, dusting, attachment of a security plate.  Compensastion for damage/loss of metal leaf at top of trame to be determined.
+Timeframe: 8 hours
+Condition Details: 4/10/2019; David Miller, Conservator: As stated below, plus staining in the linen frame liner at the lower right corner and fraying of the linen at the miter join, lower left corner.  The "butcher's paper" (?) taped to the frame to protect the surface of the painting during transit was trimmed off  by this conservator to prevent further damage to the frame, leaving only two sections of 1 7/8 x 3/4" adhesive tape still partially attached to the top surface of the frame.  Movement of the paper during transit caused the tape to completely or partially lift off the metal leaf finish where it was attached, revealing the underlying red surface. Treatment will attempt to remove the tape without causing additional damage.Compensation for missing/damaged finish is possible but yet to be determined - requires approval of the lender. 
+Note: the verso has kraft paper taped to the frame as a dust cover; there does not appear to be a backing board in place below it.  Although general email approval has been received, a formal condition report and treatment proposal will be supplied to the owner for written permission to proceed with tape removal and perhaps compensation for loss of frame finish (TBD).  Permission to attach a security plate is also needed.  Until this is received, treatment cannot proceed.
+Treatment required: tape removal, dusting, attachment of a security plate.  Compensastion for damage/loss of metal leaf at top of trame to be determined.  8 hours.
+3/20/2019, IMA Flo Caddell: Overall: canvas appears to be in good condition.  Some overall cracking due to thin layers of paint. There are stretcher marks on all 4 sides of the canvas.  The proper lower left corner appears to have been cleaned or is unfinished.  Small white spot on proper right, middle background area, perhaps lifting paint or white accretion?  Overall minor accretions and some dirt.  No signature visible.  Frame: Minor losses and abrasions overall as well as tape on metal leaf on the top of the frame.  The tape most likely cannot be removed without damaging the metal leaf.  (David Miller and Laura Mosteller have seen this.)</atom>
+        <table name="MulMultiMediaRef_tab">
+          <tuple>
+            <atom name="Multimedia">C:\Users\snorling\AppData\Local\KESoftware\Cache\94\210\REG_Waring, Laura Wheeler_TR12270_Rabb, madeline Murphy_thumbnail image_2018-12-18.PNG</atom>
+          </tuple>
+        </table>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="SummaryData">[S83.rack] IMA - Art Vault - S83 - rack</atom>
+          <atom name="LocLocationCode">S83.rack</atom>
+        </tuple>
+        <atom name="ObjAttachedObjectsNotes">install</atom>
+      </tuple>
+    </table>
+  </tuple>
+</table>

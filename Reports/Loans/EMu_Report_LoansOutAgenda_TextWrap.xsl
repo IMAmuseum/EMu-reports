@@ -116,6 +116,7 @@ td.atomvalue
     padding-left: 0.5em;
     padding-right: 0.5em;
     border: 0px;
+	white-space: pre-wrap;
 }
 td.bottomvalue
 {
@@ -165,7 +166,7 @@ textarea.meeting
      -->
     <xsl:template name="body">
         <center>
-            <img style="margin: 2px" height="125px" src="https://discovernewfields.org/application/files/2315/3911/5304/NewfieldsLogo_leWitt.jpg"/>
+            <img style="margin-top: 5px; margin-bottom: 10px;" height="75px" src="https://discovernewfields.org/application/files/2515/3608/3665/logo-ima-large.png"/>
             <br/>
         </center>
         <xsl:for-each select="/table[@name='eloans']/tuple">
@@ -229,119 +230,197 @@ textarea.meeting
                             <xsl:if test="atom[@name='AddPostCountry'] != ''"><xsl:text> </xsl:text><xsl:value-of select="atom[@name='AddPostCountry']"/></xsl:if>
                             <br/>
                             <xsl:choose>
-                                <xsl:when test="string-length(atom[@name='InfVenueStartDate']) = 4 and string-length(atom[@name='InfVenueEndDate']) = 4">
-                                    <xsl:value-of select="atom[@name='InfVenueStartDate']"/><xsl:text> to </xsl:text><xsl:value-of select="atom[@name='InfVenueEndDate']"/>
-                                </xsl:when>
-                                <xsl:when test="string-length(atom[@name='InfVenueStartDate']) = 4 and not(atom[@name='InfVenueEndDate'])">
-                                    <xsl:value-of select="atom[@name='InfVenueStartDate']"/><xsl:text> to TBD</xsl:text>
-                                </xsl:when>
-                                <xsl:when test="not(atom[@name='InfVenueStartDate']) and string-length(atom[@name='InfVenueEndDate']) = 4">
-                                    <xsl:text>TBD to </xsl:text><xsl:value-of select="atom[@name='InfVenueEndDate']"/>
-                                </xsl:when>
                                 <xsl:when test="atom[@name='InfVenueStartDate'] != '' and atom[@name='InfVenueEndDate'] != ''">
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:choose><xsl:when test="string-length(atom[@name='InfVenueStartDate']) = 4"><xsl:value-of select="atom[@name='InfVenueStartDate']"/></xsl:when><xsl:when test="string-length(atom[@name='InfVenueStartDate']) = 8">                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    </xsl:if></xsl:when><xsl:otherwise><xsl:if test="contains(atom[@name='InfVenueStartDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:text> to </xsl:text>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
-                                    </xsl:if>
-                                </xsl:when>
-                                <xsl:when test="atom[@name='InfVenueStartDate'] != '' and atom[@name='InfVenueEndDate'] = ''">
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:text> to TBD</xsl:text>
-                                </xsl:when>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if></xsl:otherwise></xsl:choose> to <xsl:choose><xsl:when test="string-length(atom[@name='InfVenueEndDate']) = 4"><xsl:value-of select="atom[@name='InfVenueEndDate']"/></xsl:when><xsl:when test="string-length(atom[@name='InfVenueEndDate']) = 8"><xsl:if test="contains(atom[@name='InfVenueEndDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if></xsl:when><xsl:otherwise><xsl:if test="contains(atom[@name='InfVenueEndDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if>
+                                                <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                                </xsl:if></xsl:otherwise></xsl:choose></xsl:when>
                                 <xsl:when test="atom[@name='InfVenueStartDate'] != '' and not(atom[@name='InfVenueEndDate'])">
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                    <xsl:choose><xsl:when test="string-length(atom[@name='InfVenueStart']) = 4"><xsl:value-of select="atom[@name='InfVenueStartDate']"/></xsl:when><xsl:when test="string-length(atom[@name='InfVenueStartDate']) = 8">                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if></xsl:when><xsl:otherwise><xsl:if test="contains(atom[@name='InfVenueStartDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                        </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
+                                            </xsl:if></xsl:otherwise></xsl:choose> to TBD
+                                </xsl:when>
+                                <xsl:when test="not(atom[@name='InfVenueStartDate']) and atom[@name='InfVenueEndDate'] != ''">
+                                    TBD to <xsl:choose><xsl:when test="string-length(atom[@name='InfVenueEndDate']) = 4"><xsl:value-of select="atom[@name='InfVenueEndDate']"/></xsl:when><xsl:when test="string-length(atom[@name='InfVenueEndDate']) = 8"><xsl:if test="contains(atom[@name='InfVenueEndDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
                                     </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:if test="contains(atom[@name='InfVenueStartDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueStartDate'],1,4)"/>
-                                    </xsl:if>
-                                    <xsl:text> to TBD</xsl:text>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                        <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if></xsl:when><xsl:otherwise><xsl:if test="contains(atom[@name='InfVenueEndDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                        </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if>
+                                            <xsl:if test="contains(atom[@name='InfVenueEndDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(atom[@name='InfVenueEndDate'],1,4)"/>
+                                            </xsl:if></xsl:otherwise></xsl:choose>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     Loan Dates To Be Determined
@@ -429,7 +508,7 @@ textarea.meeting
                                                             <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:otherwise></xsl:choose>
                                                         </xsl:when>
                                                         <xsl:otherwise>
-                                                            <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:otherwise></xsl:choose>
+                                                            <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:otherwise></xsl:choose>
                                                         </xsl:otherwise>
                                                     </xsl:choose>
                                                     <xsl:if test="position() != last()">
@@ -467,6 +546,13 @@ textarea.meeting
                                         </td>
                                     </tr>
                                 </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                                 <xsl:if test="atom[@name='PhyMediumAndSupport'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
@@ -474,31 +560,20 @@ textarea.meeting
                                         </td>
                                     </tr>
                                 </xsl:if>
-                                <xsl:choose>
-                                    <xsl:when test="atom[@name='PhyConvertedDims'] != ''">
-                                        <tr class="atomvalue">
-                                            <td class="atomvalue">
-                                                <b>Dimensions: </b><xsl:value-of select="atom[@name='PhyConvertedDims']"/>
-                                            </td>
-                                        </tr>
-                                        <xsl:if test="atom[@name='PhyDimensionNotes_tab'] != ''">
-                                            <tr class="atomvalue">
-                                                <td class="atomvalue">
-                                                    <xsl:value-of select="atom[@name='PhyDimensionNotes_tab']"/>
-                                                </td>
-                                            </tr>
-                                        </xsl:if>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:if test="atom[@name='PhyDimensionNotes_tab'] != ''">
-                                            <tr class="atomvalue">
-                                                <td class="atomvalue">
-                                                    <b>Dimensions: </b><xsl:value-of select="atom[@name='PhyDimensionNotes_tab']"/>
-                                                </td>
-                                            </tr>
-                                        </xsl:if>
-                                    </xsl:otherwise>
-                                </xsl:choose>
+                                <xsl:if test="atom[@name='PhyConvertedDims'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Dimensions: </b><xsl:value-of select="atom[@name='PhyConvertedDims']"/>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="contains(table[@name='Dimensions']/tuple/atom[@name='PhyDimensionNotes'], 'Metric')">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Metric Dimensions: </b><xsl:for-each select="table[@name='Dimensions']/tuple[starts-with(atom[@name='PhyDimensionNotes'], 'Metric')]"><xsl:value-of select="translate(atom[@name='PhyDimensionNotes'], 'Metric: ', '')"/><xsl:if test="atom[@name='PhyType'] != ''"><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='PhyType']"/><xsl:text>)</xsl:text></xsl:if><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                                 <xsl:if test="atom[@name='SumCreditLine'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">

@@ -356,7 +356,7 @@ pre
                                 <tr class="atomvalue">
                                     <td class="atomvalue" style="font-weight: bold">
                                         <xsl:for-each select="table[@name='Creator']/tuple">
-                                            <xsl:if test="atom[@name='CreRole'] != ''"><xsl:value-of select="atom[@name='CreRole']"/>: </xsl:if><xsl:if test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:if><xsl:if test="atom[@name='NamFullName'] = ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:if>
+                                            <xsl:if test="atom[@name='CreRole'] != ''"><xsl:value-of select="atom[@name='CreRole']"/>: </xsl:if><xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:otherwise></xsl:choose>
                                             <xsl:if test="position() != last()">
                                                 <br/>
                                             </xsl:if>
@@ -368,11 +368,20 @@ pre
                                         <xsl:value-of select="atom[@name='TitMainTitle']" />
                                     </td>
                                 </tr>
-                                <tr class="atomvalue">
-                                    <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='CreDateCreated']" />
-                                    </td>
-                                </tr>
+                                <xsl:if test="atom[@name='CreDateCreated'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <xsl:value-of select="atom[@name='CreDateCreated']"/>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <xsl:value-of select="atom[@name='PhyMediumAndSupport']" />

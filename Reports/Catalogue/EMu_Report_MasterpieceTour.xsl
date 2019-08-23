@@ -208,7 +208,7 @@ pre
                     </xsl:if></xsl:when><xsl:otherwise><span style="color: red;">DATE VALUED MISSING</span></xsl:otherwise></xsl:choose>
             </div>
             <div class="header2">Provenance</div>
-            <div><pre><xsl:value-of select="atom[@name='CreProvenance']"/></pre></div>
+            <div><pre><xsl:value-of select="translate(translate(atom[@name='CreProvenance'], '', '&quot;'), '', '&quot;')"/></pre></div>
         </div>
     </xsl:template>
 </xsl:stylesheet>

@@ -328,7 +328,7 @@ p
                                                             <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:otherwise></xsl:choose>
                                                         </xsl:when>
                                                         <xsl:otherwise>
-                                                            <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:otherwise></xsl:choose>
+                                                            <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:otherwise></xsl:choose>
                                                         </xsl:otherwise>
                                                     </xsl:choose>
                                             <xsl:if test="position() != last()">
@@ -355,6 +355,13 @@ p
                                         <xsl:value-of select="atom[@name='CreDateCreated']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
                                 </xsl:if>
                                 <xsl:if test="atom[@name='PhyMediumAndSupport'] != ''">
                                 <tr class="atomvalue">

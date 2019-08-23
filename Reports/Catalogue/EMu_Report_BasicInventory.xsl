@@ -149,7 +149,7 @@ p
      -->
     <xsl:template name="body">
         <center>
-            <img style="margin: 2px" height="125px" src="https://discovernewfields.org/application/files/2315/3911/5304/NewfieldsLogo_leWitt.jpg"/>
+            <img style="margin-top: 5px; margin-bottom: 10px;" height="75px" src="https://discovernewfields.org/application/files/2515/3608/3665/logo-ima-large.png"/>
             <br/>
         </center>
         <xsl:for-each select="table[@name='ecatalogue']/tuple">
@@ -201,7 +201,7 @@ p
                                                 <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:otherwise></xsl:choose>
                                             </xsl:when>
                                             <xsl:otherwise>
-                                                <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:otherwise></xsl:choose>
+                                                <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:otherwise></xsl:choose>
                                             </xsl:otherwise>
                                         </xsl:choose>
                                             <xsl:if test="position() != last()">
@@ -231,6 +231,13 @@ p
                                         <b>Date: </b><xsl:value-of select="atom[@name='CreDateCreated']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
                                 </xsl:if>
                                 <xsl:if test="table[@name='Creation']">
                                     <tr class="atomvalue">

@@ -264,30 +264,30 @@ p
                 <table class="header">
                         <tr class="atomvalue">
                             <td class="atomvalue">
-                                Board of Trustees Meeting - <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                Board of Trustees Meeting - <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
                                 </xsl:if>
-                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
-                                </xsl:if> - Deaccessions for <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.1-European')">Deaccessions: European Painting and Sculpture 1800-1945</xsl:if>
+                                <xsl:if test="contains(ancestor::tuple/atom[@name='AcqDateAuthorised'], '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqDateAuthorised'],1,4)"/>
+                                </xsl:if> - <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.1-European')">Deaccessions: European Painting and Sculpture 1800-1945</xsl:if>
                                 <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '901.2-American')">Deaccessions: American Painting and Sculpture 1800-1945</xsl:if>
                                 <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '902.1-European')">Deaccessions: European Painting and Sculpture Before 1800</xsl:if>
                                 <xsl:if test="starts-with(ancestor::table[@name='eaccessionlots']/tuple[1]/atom[@name='LotDepartment'], '903.1-Decorative')">Deaccessions: Decorative Arts</xsl:if>
@@ -378,7 +378,7 @@ p
                                                             <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:otherwise></xsl:choose>
                                                         </xsl:when>
                                                         <xsl:otherwise>
-                                                            <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:otherwise></xsl:choose>
+                                                            <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:otherwise></xsl:choose>
                                                         </xsl:otherwise>
                                                     </xsl:choose>
                                             <xsl:if test="position() != last()">
@@ -405,6 +405,13 @@ p
                                         <xsl:value-of select="atom[@name='CreDateCreated']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
                                 </xsl:if>
                                 <xsl:if test="atom[@name='PhyMediumAndSupport'] != ''">
                                 <tr class="atomvalue">

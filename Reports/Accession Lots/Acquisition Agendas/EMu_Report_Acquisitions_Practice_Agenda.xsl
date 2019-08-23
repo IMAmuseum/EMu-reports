@@ -81,7 +81,7 @@ textarea.date
     text-align: center;
     font-size: 14px;
     margin-top: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     border: none;
     resize: none;
 }
@@ -166,42 +166,10 @@ p
      -->
     <xsl:template name="body">
         <center>
-            <img style="margin: 2px" height="125px" src="https://discovernewfields.org/application/files/2315/3911/5304/NewfieldsLogo_leWitt.jpg"/>
+            <img style="margin-top: 5px; margin-bottom: 10px;" height="75px" src="https://discovernewfields.org/application/files/2515/3608/3665/logo-ima-large.png"/>
             <br/>
         </center>
         <!--Original Sort Order
-        <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple[contains(atom[@name='TitAccessionNo'], 'TR')]">
-            <xsl:sort select="atom[@name='TitAccessionNo']"/>
-            <xsl:choose>
-                <xsl:when test="position() = 1">
-                    <xsl:call-template name="record-1"/>
-                    <p />
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:call-template name="record-2" />
-                    <xsl:if test="position() != last()">
-                        <p />
-                    </xsl:if>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:for-each>
-        <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple[not(contains(atom[@name='TitAccessionNo'], 'TR'))]">
-            <xsl:sort select="substring-before(atom[@name='TitAccessionNo'], '.')" data-type="number" />
-            <xsl:sort select="translate(substring-after(atom[@name='TitAccessionNo'], '.'), '-ABCDEFGHIJKLMNOPQRSTUVWXYZ', '')" data-type="number" />
-            <xsl:choose>
-                <xsl:when test="position() = 1">
-                    <xsl:call-template name="record-1"/>
-                    <p />
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:call-template name="record-2" />
-                    <xsl:if test="position() != last()">
-                        <p />
-                    </xsl:if>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:for-each>
-        -->
         <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple[not(starts-with(atom[@name='TitAccessionNo'], 'C')) and not(starts-with(atom[@name='TitAccessionNo'], 'LH')) and not(starts-with(atom[@name='TitAccessionNo'], 'MH')) and not(starts-with(atom[@name='TitAccessionNo'], 'N')) and not(starts-with(atom[@name='TitAccessionNo'], 'S')) and not(starts-with(atom[@name='TitAccessionNo'], 'TR')) and not(starts-with(atom[@name='TitAccessionNo'], 'U')) and not(starts-with(atom[@name='TitAccessionNo'], 'WH'))]">
             <xsl:sort select="substring-before(atom[@name='TitAccessionNo'], '.')" data-type="number"/>
             <xsl:sort select="translate(substring-after(atom[@name='TitAccessionNo'], '.'), '-ABCDEFGHIJKLMNOPQRSTUVWXYZ', '')" data-type="number" />
@@ -338,6 +306,24 @@ p
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
+        -->
+        <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple">
+            <xsl:choose>
+                <xsl:when test="position() = 1">
+                    <xsl:call-template name="record-1"/>
+                    <p />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:call-template name="record-2" />
+                    <xsl:if test="position() != last()">
+                        <p />
+                    </xsl:if>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:if test="position() != last()">
+                <p />
+            </xsl:if>
+        </xsl:for-each>
     </xsl:template>
     <!--
             Record 1 template
@@ -368,10 +354,10 @@ p
         <tr class="meeting">
             <td class="meeting">
                 <center>
-                <xsl:text>Collections Committee Practice Meeting</xsl:text>
-                <br/>
-                <textarea class="date" rows="1" cols="50">Enter meeting date.</textarea>
-                <br/>
+                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Collections Committee Practice Meeting</span>
+                    <br/>
+                    <textarea class="date" rows="1" cols="50">Enter meeting date.</textarea>
+                    <br/>
                 </center>
             </td>
         </tr>
@@ -501,7 +487,7 @@ p
         <tr class="meeting">
             <td class="meeting">
                 <center>
-                    <xsl:text>Collections Committee Practice Meeting</xsl:text>
+                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Art Committee Practice Meeting</span>
                     <br/>
                 </center>
             </td>
@@ -680,7 +666,7 @@ p
                                 </tr>
                                 <tr class="atomvalue1">
                                     <td class="atomvalue1">
-                                        ALR Search Sumbitted? <xsl:choose><xsl:when test="atom[@name='AlrDescription_tab'] = 'Search Submitted'"><b>Yes</b></xsl:when><xsl:otherwise><b>No</b></xsl:otherwise></xsl:choose>
+                                        ALR Search Sumbitted? <xsl:choose><xsl:when test="contains(atom[@name='AlrDescription_tab'], 'Search Submitted')"><b>Yes</b></xsl:when><xsl:otherwise><b>No</b></xsl:otherwise></xsl:choose>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue1">
@@ -761,7 +747,7 @@ p
                                                     <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='BioBirthDate']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='BioDeathDate']"/><xsl:text>)</xsl:text></xsl:otherwise></xsl:choose>
                                                 </xsl:when>
                                                 <xsl:otherwise>
-                                                    <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:otherwise></xsl:choose>
+                                                    <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:otherwise></xsl:choose>
                                                 </xsl:otherwise>
                                             </xsl:choose>
                                             <xsl:if test="position() != last()">
@@ -798,6 +784,13 @@ p
                                         <b>Date: </b><xsl:value-of select="atom[@name='CreDateCreated']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
                                 </xsl:if>
                                 <xsl:if test="atom[@name='PhyMediumAndSupport'] != ''">
                                 <tr class="atomvalue">
