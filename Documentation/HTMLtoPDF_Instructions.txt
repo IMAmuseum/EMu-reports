@@ -1,0 +1,31 @@
+# Instructions for Converting HTML Reports to PDF with wkhtmltopdf Tool
+
+wkhtmltopdf: https://wkhtmltopdf.org
+download: https://wkhtmltopdf.org/downloads.html
+
+
+## Set-up Instructions:
+
+1. Request IT or Digital Collections Manager to install wkhtmltopdf and "set up to be run on the command line"
+
+2. Once installed, confirm that it can be run from the command line by opening cmd.exe, typing "wkhtmltopdf", and hit Enter. If the application is installed and set up correctly, you will see a long return of wkhtmltopdf instructions. If it is not set up correctly, you will get an error that 'wkhtmltopdf' is not recognized as an internal command. Contact IT or Digital Collections Manager to troubleshoot.
+
+3. Set up a folder somewhere on your computer (e.g., your Desktop or in your H Drive) that will hold the input HTML and output PDF files.
+
+
+## Generating PDF from HTML Reports:
+
+1. Run the XSLT report as you normally would in EMu. When complete, the report should automatically open in your computer's preferred browser.
+
+2. When the report opens in browser, right-click anywhere on the report and select "Save As". Save as "Webpage, Complete" (.html) - this should be the default - in the folder that you set up for holding input and output files. Save the file with a name that you will remember for the next step. The saved HTML file will appear, along with an accompanying file folder. Do not delete the file folder.
+
+3. If the HTML report you ran contains editable fields (i.e., "Enter meeting name." or "Enter meeting date." options), right-click on the HTML file in the folder where it is stored and select "Edit with Notepad++". In Notepad++, replace the holder text with the desired text (i.e., "Collections Committee Meeting" and "August 9, 2019"). Save and Close the file.
+
+4. While viewing the folder contents, type "cmd" into the navigation bar of the file viewer window and hit Enter.
+
+5. In the command line window, confirm that the active file path is the folder that contains the HTML input file. If it is, type in the following command and hit enter (Note: INPUT_FILENAME.html should be the name of the source HTML file, and OUTPUT_FILENAME.pdf should be the desired PDF name):
+
+	wkhtmltopdf --footer-center [page] "INPUT_FILENAME.html" "OUTPUT_FILENAME.pdf"
+
+6. The transformation from HTML to PDF will run in the command line window, and may take 30 minutes or more, if the report is particularly long. Short reports could take less than a minute. Once the transformation is complete, the output PDF will be accessible in your HTML to PDF folder.
+
