@@ -224,18 +224,39 @@ p
         Object Table
     -->
                             <table border="0" class="data" id="datatable">
+                                <xsl:if test="atom[@name='TitAccessionNo'] != ''">
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <b>Object ID: </b><xsl:value-of select="atom[@name='TitAccessionNo']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='TitAccessionNo'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">OBJECT ID MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='TitPreviousAccessionNo'] != ''">
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <b>Previous ID: </b><xsl:value-of select="atom[@name='TitPreviousAccessionNo']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='TitPreviousAccessionNo'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">PREVIOUS ID MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
+                                        <xsl:if test="not(table[@name='Culture']) and not(table[@name='Creator'])">
+                                            <span style="color: red;">CREATOR MISSING</span>
+                                        </xsl:if>
                                         <xsl:if test="table[@name='Culture']">
                                             <xsl:for-each select="table[@name='Culture']/tuple">
                                                 <xsl:choose>
@@ -284,41 +305,104 @@ p
                                     </xsl:choose>
                                     </td>
                                 </tr>
+                                <xsl:if test="atom[@name='TitMainTitle'] != ''">
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <b>Title: </b><xsl:value-of select="atom[@name='TitMainTitle']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='TitMainTitle'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">TITLE MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] != ''">
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <b>Date: </b><xsl:value-of select="atom[@name='CreDateCreated']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='PhyMediumAndSupport'] != ''">
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <b>Medium: </b><xsl:value-of select="atom[@name='PhyMediumAndSupport']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='PhyMediumAndSupport'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b><span style="color: red;">MEDIUM AND SUPPORT MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='PhyConvertedDims'] != ''">
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <b>Dimensions: </b><xsl:value-of select="atom[@name='PhyConvertedDims']"/>
                                     </td>
                                 </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='PhyConvertedDims'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue" style="color: red;">
+                                            <xsl:text>CONVERTED DIMENSIONS MISSING</xsl:text>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='SumCreditLine'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
                                             <b>Credit Line: </b><xsl:value-of select="atom[@name='SumCreditLine']" />
                                         </td>
                                     </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='SumCreditLine'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue" style="color: red;">
+                                            <xsl:text>CREDIT LINE MISSING</xsl:text>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='TitAccessionDate'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
                                             <b>Accession Date: </b><xsl:call-template name="date"><xsl:with-param name="input_date"><xsl:value-of select="atom[@name='TitAccessionDate']" /></xsl:with-param></xsl:call-template>
                                         </td>
                                     </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='TitAccessionDate'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue" style="color: red;">
+                                            <xsl:text>ACCESSION DATE MISSING</xsl:text>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='StaStocktakeStatus'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
                                             <b>Collection Rank: </b><xsl:value-of select="atom[@name='StaStocktakeStatus']" />
                                         </td>
                                     </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='StaStocktakeStatus'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue" style="color: red;">
+                                            <xsl:text>COLLECTION RANK MISSING</xsl:text>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                                 <xsl:choose>
                                     <xsl:when test="atom[@name='ValReasonForValuation'] != '' and atom[@name='ValValuationAmount'] != ''">
                                         <tr class="atomvalue">
@@ -336,17 +420,26 @@ p
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <tr class="atomvalue">
-                                            <td class="atomvalue">
-                                                <xsl:text>Value: </xsl:text>
+                                            <td class="atomvalue" style="color: red;">
+                                                <xsl:text>VALUATION MISSING</xsl:text>
                                             </td>
                                         </tr>
                                     </xsl:otherwise>
                                 </xsl:choose>
+                                <xsl:if test="atom[@name='ValDateValued'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
                                             <b>Date Valued: </b><xsl:call-template name="date"><xsl:with-param name="input_date"><xsl:value-of select="atom[@name='ValDateValued']"/></xsl:with-param></xsl:call-template>
                                         </td>
                                     </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='ValDateValued'] = ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue" style="color: red;">
+                                            <xsl:text>DATE VALUED MISSING</xsl:text>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
                             </table>
                         </td>
                     </tr>
@@ -364,11 +457,20 @@ p
                                 <b>Provenance: </b><xsl:value-of select="atom[@name='CreProvenance']" />
                             </td>
                         </tr>
+                    <xsl:if test="atom[@name='DeaDeaccessionNotes'] != ''">
                         <tr class="atomvalue">
                             <td class="atomvalue">
                                 <b>Reason for Deaccession: </b><xsl:value-of select="atom[@name='DeaDeaccessionNotes']" />
                             </td>
                         </tr>
+                    </xsl:if>
+                    <xsl:if test="atom[@name='DeaDeaccessionNotes'] = ''">
+                        <tr class="atomvalue">
+                            <td class="atomvalue" style="color: red; font-weight: bold;">
+                                <xsl:text>DEACCESSION NOTES MISSING</xsl:text>
+                            </td>
+                        </tr>
+                    </xsl:if>
                 </table>
             </td>
         </tr>        
