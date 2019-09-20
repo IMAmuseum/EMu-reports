@@ -90,6 +90,7 @@ tr.image
 table.picture
 {
     width: 100%;
+    padding-bottom: 2px;
 }
 table.header
 {

@@ -144,7 +144,6 @@ p
         <center>
             <img style="margin-top: 5px; margin-bottom: 10px;" height="75px" src="https://discovernewfields.org/application/files/2515/3608/3665/logo-ima-large.png"/>
         </center>
-        <!--Original Sort Order
         <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple[not(starts-with(atom[@name='TitAccessionNo'], 'C')) and not(starts-with(atom[@name='TitAccessionNo'], 'LH')) and not(starts-with(atom[@name='TitAccessionNo'], 'MH')) and not(starts-with(atom[@name='TitAccessionNo'], 'N')) and not(starts-with(atom[@name='TitAccessionNo'], 'S')) and not(starts-with(atom[@name='TitAccessionNo'], 'TR')) and not(starts-with(atom[@name='TitAccessionNo'], 'U')) and not(starts-with(atom[@name='TitAccessionNo'], 'WH'))]">
             <xsl:sort select="substring-before(atom[@name='TitAccessionNo'], '.')" data-type="number"/>
             <xsl:sort select="translate(substring-after(atom[@name='TitAccessionNo'], '.'), '-ABCDEFGHIJKLMNOPQRSTUVWXYZ', '')" data-type="number" />
@@ -209,13 +208,14 @@ p
                 <p />
             </xsl:if>
         </xsl:for-each>
-        -->
+        <!--No Sort Order
         <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple">
             <xsl:call-template name="record" />
             <xsl:if test="position() != last()">
                 <p />
             </xsl:if>
         </xsl:for-each>
+        -->
     </xsl:template>
     <!--
             Record template
@@ -235,7 +235,7 @@ p
         <tr class="meeting">
             <td class="meeting">
                 <center>
-                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Collections Committee Approval</span>
+                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Art Committee Approval</span>
                     <br/>
                     <span style="font-size: 14px; font-weight: bold; margin-top: 5px;"><xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
                     </xsl:if>

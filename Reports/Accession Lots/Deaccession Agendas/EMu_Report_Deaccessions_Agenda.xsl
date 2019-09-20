@@ -90,6 +90,7 @@ tr.image
 table.picture
 {
     width: 100%;
+    padding-bottom: 2px;
 }
 table.icon
 {
@@ -256,13 +257,6 @@ p
     <!--
         Image Table
     -->
-                <table class="picture">
-                        <tr class="atomvalue">
-                            <td class="atomvalue">
-                                <b>Board of Trustees Meeting, <xsl:value-of select="ancestor::atom[@name='AcqMeetingDate']"/></b>
-                            </td>
-                        </tr>
-                </table>
                 <table class="picture">
                     <tr class="picture">
                         <xsl:choose>
