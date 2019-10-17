@@ -96,16 +96,10 @@ table.picture
 {
     width: 100%;
 }
-table.icon
-{
-    border-width: 2px;
-    border-style: solid;
-    border-color: #c41230;
-}
 img.icon
 {
-    width: 150px;
-    height: auto;
+    width: auto;
+    max-height: 300px;
 }
 td.icon
 {
@@ -117,7 +111,7 @@ table.data
 }
 td.atomprompt
 {
-    width: 160px;
+    width: 250px;
     font-weight: bold;
     font-size: smaller;
     vertical-align: top;
@@ -134,7 +128,6 @@ td.horprompt
 {
     font-weight: bold;
     font-size: smaller;
-    width: 50%;
     vertical-align: top;
     padding-left: 0.5em;
     padding-right: 0.5em;
