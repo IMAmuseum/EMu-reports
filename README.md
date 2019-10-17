@@ -7,5 +7,3 @@ Reports maintained in this repository are all XSLT report formats, created to ou
 - Reports (opened in browser automatically after running)
 
 In the case of reports to be viewed outside of the application, PDF versions of the reports have been included along with the XSLT. Where necessary, information in the reports is redacted.
-
-### Note: this repository must be private until sensitive information in PDFs is redacted.
