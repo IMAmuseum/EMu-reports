@@ -570,7 +570,7 @@ textarea.meeting
                                 <xsl:if test="contains(table[@name='Dimensions']/tuple/atom[@name='PhyDimensionNotes'], 'Metric')">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
-                                            <b>Metric Dimensions: </b><xsl:for-each select="table[@name='Dimensions']/tuple[starts-with(atom[@name='PhyDimensionNotes'], 'Metric')]"><xsl:value-of select="translate(atom[@name='PhyDimensionNotes'], 'Metric: ', '')"/><xsl:if test="atom[@name='PhyType'] != ''"><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='PhyType']"/><xsl:text>)</xsl:text></xsl:if><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>
+                                            <b>Metric Dimensions: </b><xsl:for-each select="table[@name='Dimensions']/tuple[starts-with(atom[@name='PhyDimensionNotes'], 'Metric')]"><xsl:value-of select="atom[@name='PhyDimensionNotes']"/><!--<xsl:value-of select="translate(atom[@name='PhyDimensionNotes'], 'Metric: ', '')"/><xsl:if test="atom[@name='PhyType'] != ''"><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='PhyType']"/><xsl:text>)</xsl:text></xsl:if>--><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>
                                         </td>
                                     </tr>
                                 </xsl:if>

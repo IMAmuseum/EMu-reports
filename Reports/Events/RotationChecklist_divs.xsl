@@ -187,6 +187,20 @@ pre
                         <li><b>___ Deinstall</b></li>
                         <li><b>_<u>X</u>_ Move in Gallery</b></li>
                         </xsl:if>
+                        <xsl:if test="contains(translate(atom[@name='ObjAttachedObjectsNotes'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'move within')">
+                        <li><b>___ Install</b></li>
+                        <li><b>___ Deinstall</b></li>
+                        <li><b>_<u>X</u>_ Move in Gallery</b></li>
+                        </xsl:if>
+                        <xsl:if test="contains(translate(atom[@name='ObjAttachedObjectsNotes'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'blanket')">
+                        <li><b>Blanket Record</b></li>
+                        </xsl:if>
+                        <xsl:if test="contains(translate(atom[@name='ObjAttachedObjectsNotes'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'page turn')">
+                        <li><b>Rotation Type: Page Turn</b></li>
+                        </xsl:if>
+                        <xsl:if test="contains(translate(atom[@name='ObjAttachedObjectsNotes'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'turn page')">
+                        <li><b>Rotation Type: Page Turn</b></li>
+                        </xsl:if>
                         <br/>
                         <li><b>Accession No.: </b><xsl:value-of select="atom[@name='TitAccessionNo']"/></li>
                         <li><b>Location: </b><xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLocationCode']"/></li>
@@ -228,7 +242,7 @@ pre
                     <div>
                         <b>Max Lux: </b><xsl:value-of select="atom[@name='ConDispMaxLight']"/><br/>
                         <b>Max Length of Display: </b><xsl:value-of select="atom[@name='ConDispGenLight']"/><xsl:if test="atom[@name='IllExposurePeriod'] != ''"> - <xsl:value-of select="atom[@name='IllExposurePeriod']"/><xsl:text> </xsl:text><xsl:value-of select="atom[@name='IllExposurePeriodType']"/></xsl:if><br/><br/>
-                        <b>Installation Instructions: </b><xsl:value-of select="atom[@name='ConDispOtherInstructions']"/><br/><br/>
+                        <b>Display Instructions: </b><xsl:value-of select="atom[@name='ConDispOtherInstructions']"/><br/><br/>
                         <b>Handling Instructions: </b><xsl:value-of select="atom[@name='ConHandlingInstructions']"/>
                     </div>
                 </div>
@@ -249,15 +263,15 @@ pre
                 <xsl:choose>
                     <xsl:when test="contains(atom[@name='ConConditionDetails'], 'Treatment Needed:')">
                 <div>
-                    <b>Treatment Needed: </b><xsl:if test="contains(atom[@name='ConConditionDetails'], 'Treatment Needed: Y')">_____ No __<u>X</u>__ Yes<br/>
-                    <b>Timeframe: </b><xsl:value-of select="substring-before(substring-after(atom[@name='ConConditionDetails'], 'Timeframe: '), 'Condition Details')"/><br/>
-                    <b>Treatment to be Done: </b><xsl:value-of select="substring-before(substring-after(atom[@name='ConConditionDetails'], 'Treatment to be Done: '), 'Timeframe')"/></xsl:if><xsl:if test="contains(atom[@name='ConConditionDetails'], 'Treatment Needed: N')">__<u>X</u>__ No _____ Yes</xsl:if>
+                    <b>Treatment Needed: </b><xsl:if test="contains(translate(atom[@name='ConConditionDetails'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'treatment needed: y')">_____ No __<u>X</u>__ Yes</xsl:if><xsl:if test="contains(translate(atom[@name='ConConditionDetails'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'treatment needed: n')">__<u>X</u>__ No _____ Yes</xsl:if><br/>
+                    <b>Timeframe: </b><xsl:value-of select="substring-before(translate(substring-after(translate(atom[@name='ConConditionDetails'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'timeframe: '), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'treatment to be done')"/><br/>
+                    <b>Treatment to be Done: </b><xsl:value-of select="substring-before(translate(substring-after(translate(atom[@name='ConConditionDetails'], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'treatment to be done: '), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'condition details')"/>
                     <br/><br/>
                     <b>Condition Details: </b><br/><pre>
                     <xsl:value-of select="substring-after(atom[@name='ConConditionDetails'], 'Condition Details: ')"/></pre>
                 </div>
                     </xsl:when>
-                    <xsl:otherwise><div><span style="color: red;">Structured condition details not available.</span><xsl:if test="atom[@name='ConConditionDetails'] != ''"><br/><br/><b>Condition Details entered as:</b><br/><pre><xsl:value-of select="atom[@name='ConConditionDetails']"/></pre></xsl:if></div></xsl:otherwise>
+                    <xsl:otherwise><div><!--<span style="color: red;">Structured condition details not available.</span>--><xsl:if test="atom[@name='ConConditionDetails'] != ''"><br/><b>Condition Details entered as:</b><br/><pre><xsl:value-of select="atom[@name='ConConditionDetails']"/></pre></xsl:if></div></xsl:otherwise>
                 </xsl:choose>
             </div>
         </div>
