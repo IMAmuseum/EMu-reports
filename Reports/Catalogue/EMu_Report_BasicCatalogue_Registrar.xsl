@@ -66,15 +66,6 @@ td.meeting
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
-textarea.meeting
-{
-    font-family: Tahoma;
-    font-weight: bold;
-    text-align: center;
-    font-size: 20px;
-    border: none;
-    resize: none;
-}
 td.logo
 {
     align: center;
@@ -103,7 +94,7 @@ table.icon
 img.icon
 {
     max-width:100%;
-    max-height:150px;
+    max-height:300px;
     height: auto;
     width:auto;
 }
@@ -159,9 +150,6 @@ p
     <xsl:template name="body">
         <center>
             <img style="margin-top: 5px; margin-bottom: 10px;" height="75px" src="https://discovernewfields.org/application/files/2515/3608/3665/logo-ima-large.png"/>
-            <br/>
-            <textarea class="meeting" rows="1" cols="50">Enter Header Here</textarea>
-            <br/>
             <br/>
         </center>
         <xsl:for-each select="table[@name='ecatalogue']/tuple">
@@ -231,40 +219,43 @@ p
                                             </xsl:if>
                                         </xsl:for-each>
                                         </xsl:when>
-                                        <xsl:when test="table[@name='Nation']/tuple">
-                                            <xsl:value-of select="table[@name='Nation']/tuple[1]/atom[@name='CreCreationNationality2']"/>
-                                        </xsl:when>
                                         <xsl:otherwise>
-                                            <xsl:value-of select="table[@name='Creation']/tuple[1]/atom[@name='CreCountry']"/>
+                                            <xsl:value-of select="table[@name='CreCountry_tab']/tuple[1]/atom[@name='CreCountry']"/>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                     </td>
                                 </tr>
-                                <xsl:if test="atom[@name='TitMainTitle'] != ''">
-                                <tr class="atomvalue">
-                                    <td class="atomvalue" style="font-style: italic">
-                                        <b style="font-style: normal">Title: </b><xsl:value-of select="atom[@name='TitMainTitle']"/>
-                                    </td>
-                                </tr>
-                                </xsl:if>
-                                <xsl:if test="atom[@name='TitAccessionNo'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue" style="font-style: italic">
+                                            <b style="font-style: normal">Title: </b><xsl:value-of select="atom[@name='TitMainTitle']"/>
+                                        </td>
+                                    </tr>
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
                                         <b>Accession No.: </b><xsl:value-of select="atom[@name='TitAccessionNo']"/>
                                     </td>
                                 </tr>
-                                </xsl:if>
                                 <xsl:if test="atom[@name='CreDateCreated'] != ''">
                                 <tr class="atomvalue">
                                     <td class="atomvalue">
-                                        <b>Date Created: </b><xsl:value-of select="atom[@name='CreDateCreated']"/>
+                                        <b>Date: </b><xsl:value-of select="atom[@name='CreDateCreated']"/>
                                     </td>
                                 </tr>
                                 </xsl:if>
-                                <xsl:if test="atom[@name='CreDateDesigned'] != ''">
+                                <xsl:if test="atom[@name='CreDateCreated'] = ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
-                                            <b>Date Designed: </b><xsl:value-of select="atom[@name='CreDateCreated']"/>
+                                            <b><span style="color: red;">DATE MISSING</span></b>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="table[@name='Creation']">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Creation Location: </b>
+                                            <xsl:for-each select="table[@name='Creation']/tuple">
+                                                <xsl:if test="atom[@name='CreCity'] != ''"><xsl:value-of select="atom[@name='CreCity']"/><xsl:text>, </xsl:text></xsl:if><xsl:if test="atom[@name='CreState'] != ''"><xsl:value-of select="atom[@name='CreState']"/><xsl:text>, </xsl:text></xsl:if><xsl:if test="atom[@name='CreCountry'] != ''"><xsl:value-of select="atom[@name='CreCountry']"/></xsl:if>
+                                                <xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if></xsl:for-each>
                                         </td>
                                     </tr>
                                 </xsl:if>
@@ -279,6 +270,39 @@ p
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
                                             <b>Dimensions: </b><xsl:value-of select="atom[@name='PhyConvertedDims']"/>
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='CrePrimaryInscriptions'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Mark Description: </b><xsl:value-of select="atom[@name='CrePrimaryInscriptions']" />
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='SumCreditLine'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Credit Line: </b><xsl:value-of select="atom[@name='SumCreditLine']" />
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Current Location: </b><xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='SummaryData']" />
+                                        </td>
+                                    </tr>  
+                                <xsl:if test="atom[@name='CreProvenance'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Provenance: </b><xsl:value-of select="atom[@name='CreProvenance']" />
+                                        </td>
+                                    </tr>
+                                </xsl:if>
+                                <xsl:if test="atom[@name='NotRegistrarNotes'] != ''">
+                                    <tr class="atomvalue">
+                                        <td class="atomvalue">
+                                            <b>Registrar Notes: </b><xsl:value-of select="atom[@name='NotRegistrarNotes']" />
                                         </td>
                                     </tr>
                                 </xsl:if>
