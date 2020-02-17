@@ -164,8 +164,16 @@ p
             <br/>
             <br/>
         </center>
-        <xsl:for-each select="table[@name='ecatalogue']/tuple">
-            <xsl:sort select="table[@name='Creator']/tuple[1]/atom[@name='NamLast']"/>
+        <xsl:for-each select="table[@name='ecatalogue']/tuple[not(starts-with(atom[@name='TitAccessionNo'], 'C')) and not(starts-with(atom[@name='TitAccessionNo'], 'LH')) and not(starts-with(atom[@name='TitAccessionNo'], 'MH')) and not(starts-with(atom[@name='TitAccessionNo'], 'N')) and not(starts-with(atom[@name='TitAccessionNo'], 'S')) and not(starts-with(atom[@name='TitAccessionNo'], 'TR')) and not(starts-with(atom[@name='TitAccessionNo'], 'U')) and not(starts-with(atom[@name='TitAccessionNo'], 'WH'))]">
+            <xsl:sort select="substring-before(atom[@name='TitAccessionNo'], '.')" data-type="number"/>
+            <xsl:sort select="translate(substring-after(atom[@name='TitAccessionNo'], '.'), '-ABCDEFGHIJKLMNOPQRSTUVWXYZ', '')" data-type="number" />
+            <xsl:call-template name="record" />
+            <xsl:if test="position() != last()">
+                <p />
+            </xsl:if>
+        </xsl:for-each>
+        <xsl:for-each select="table[@name='ecatalogue']/tuple[starts-with(atom[@name='TitAccessionNo'], 'C') or starts-with(atom[@name='TitAccessionNo'], 'LH') or starts-with(atom[@name='TitAccessionNo'], 'MH') or starts-with(atom[@name='TitAccessionNo'], 'N') or starts-with(atom[@name='TitAccessionNo'], 'S') or starts-with(atom[@name='TitAccessionNo'], 'TR') or starts-with(atom[@name='TitAccessionNo'], 'U') or starts-with(atom[@name='TitAccessionNo'], 'WH')]">
+            <xsl:sort select="atom[@name='TitAccessionNo']"/>
             <xsl:call-template name="record" />
             <xsl:if test="position() != last()">
                 <p />
