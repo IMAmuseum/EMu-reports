@@ -206,18 +206,16 @@ pre
                         <li><b>Location: </b><xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLocationCode']"/></li>
                         <li><b>Title: </b><xsl:value-of select="atom[@name='TitMainTitle']"/></li>
 <!-- Creator logic -->
-                        <xsl:choose>
-                            <xsl:when test="table[@name='Creator1']">
+                            <xsl:if test="table[@name='Creator1']">
                                 <xsl:for-each select="table[@name='Creator1']/tuple">
-                        <li><b><xsl:value-of select="atom[@name='CreRole']"/>: </b><xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='UlaName'] != ''"><xsl:value-of select="atom[@name='UlaName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:when test="atom[@name='ColCollaborationName']!= ''"><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:when></xsl:choose></li>
+                                    <li><xsl:if test="atom[@name='CreRole'] != ''"><b><xsl:value-of select="atom[@name='CreRole']"/>: </b></xsl:if><xsl:if test="atom[@name='CreRole'] = ''"><b>Creator: </b></xsl:if><xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='UlaName'] != ''"><xsl:value-of select="atom[@name='UlaName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:when test="atom[@name='ColCollaborationName']!= ''"><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:when></xsl:choose></li>
                                 </xsl:for-each>
-                            </xsl:when>
-                            <xsl:when test="table[@name='Creator2']">
+                            </xsl:if>
+                            <xsl:if test="table[@name='Creator2']">
                                 <xsl:for-each select="table[@name='Creator2']/tuple">
                         <li><xsl:if test="atom[@name='CreCreatorAttribution'] != ''"><xsl:value-of select="atom[@name='CreCreatorAttribution']"/> </xsl:if><xsl:choose><xsl:when test="atom[@name='CreCreationCultureOrPeople'] != ''"><xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/></xsl:when><xsl:when test="atom[@name='CreCreationNationality2'] != ''"><xsl:value-of select="atom[@name='CreCreationNationality2']"/></xsl:when></xsl:choose></li>
                                 </xsl:for-each>
-                            </xsl:when>
-                        </xsl:choose>
+                            </xsl:if>
                         <xsl:if test="atom[@name='CreDateCreated'] = '' and atom[@name='CreDateDesigned'] = ''">
                         <li><b><span style="color: red;">DATE NEEDED</span></b></li>
                         </xsl:if>
@@ -233,8 +231,8 @@ pre
                         <xsl:if test="atom[@name='PhyConvertedDims'] != ''">
                         <li><b>Dimensions: </b><xsl:value-of select="atom[@name='PhyConvertedDims']"/></li>
                         </xsl:if>
-                        <xsl:if test="atom[@name='StaStockTakeStatus'] != ''">
-                        <li><b>Collection Ranking: </b><xsl:value-of select="atom[@name='StaStockTakeStatus']"/></li>
+                        <xsl:if test="atom[@name='StaStocktakeStatus'] != ''">
+                        <li><b>Collection Ranking: </b><xsl:value-of select="atom[@name='StaStocktakeStatus']"/></li>
                         </xsl:if>
                     </ul>
                 </div>
