@@ -288,7 +288,12 @@ p
                                     <td class="atomvalue">
                                         <b>Current Location: </b><xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='SummaryData']" />
                                     </td>
-                                </tr>  
+                                </tr>
+                                <tr class="atomvalue">
+                                    <td class="atomvalue">
+                                        <b>Permanent Location: </b><xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='SummaryData']" />
+                                    </td>
+                                </tr>
                                 <xsl:if test="atom[@name='PhyConvertedDims'] != ''">
                                     <tr class="atomvalue">
                                         <td class="atomvalue">
