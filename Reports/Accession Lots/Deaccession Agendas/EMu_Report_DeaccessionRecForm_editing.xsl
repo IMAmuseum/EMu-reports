@@ -488,6 +488,8 @@ p
     
     <xsl:template name="date">
         <xsl:param name="input_date"/>
+<xsl:choose>
+    <xsl:when test="string-length($input_date) = 10">
         <xsl:if test="contains($input_date, '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring($input_date,9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
         </xsl:if>
         <xsl:if test="contains($input_date, '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring($input_date,9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
@@ -512,5 +514,38 @@ p
         </xsl:if>
         <xsl:if test="contains($input_date, '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring($input_date,9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
         </xsl:if>
+    </xsl:when>
+    <xsl:when test="string-length($input_date) = 8">
+        <xsl:if test="contains($input_date, '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-02-')"><xsl:text>February </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-03-')"><xsl:text>March </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-04-')"><xsl:text>April </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-05-')"><xsl:text>May </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-06-')"><xsl:text>June </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-07-')"><xsl:text>July </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-08-')"><xsl:text>August </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-09-')"><xsl:text>September </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-10-')"><xsl:text>October </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-11-')"><xsl:text>November </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+        <xsl:if test="contains($input_date, '-12-')"><xsl:text>December </xsl:text><xsl:value-of select="substring($input_date,1,4)"/>
+        </xsl:if>
+    </xsl:when>
+    <xsl:when test="string-length($input_date) = 4">
+        <xsl:value-of select="$input_date"/>
+    </xsl:when>
+    <xsl:otherwise>
+    </xsl:otherwise>
+</xsl:choose>    
     </xsl:template>
 </xsl:stylesheet>
