@@ -196,7 +196,7 @@ p
      -->
     <xsl:template name="record">
         <center>
-            <table border="1" class="sheet" style="page-break-after: always">
+            <table border="1" class="sheet">
                 <xsl:call-template name="heading" />
                 <xsl:for-each select="table[@name='AccAccessionLotRef']/tuple[not(starts-with(atom[@name='TitAccessionNo'], 'C')) and not(starts-with(atom[@name='TitAccessionNo'], 'LH')) and not(starts-with(atom[@name='TitAccessionNo'], 'MH')) and not(starts-with(atom[@name='TitAccessionNo'], 'N')) and not(starts-with(atom[@name='TitAccessionNo'], 'S')) and not(starts-with(atom[@name='TitAccessionNo'], 'TR')) and not(starts-with(atom[@name='TitAccessionNo'], 'U')) and not(starts-with(atom[@name='TitAccessionNo'], 'WH'))]">
                     <xsl:sort select="substring-before(atom[@name='TitAccessionNo'], '.')" data-type="number"/>

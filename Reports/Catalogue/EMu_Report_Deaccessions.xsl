@@ -226,14 +226,27 @@ p
                                             </xsl:if>
                                         </xsl:for-each>
                                         </xsl:when>
-                                        <xsl:when test="table[@name='CreCreationCultureOrPeople_tab']">
-                                            <xsl:for-each select="table[@name='CreCreationCultureOrPeople_tab']/tuple">
-                                                <b style="font-style: normal">Culture or People: </b><xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/><xsl:if test="position() != last()"><br/></xsl:if>
+                                        <xsl:when test="table[@name='Culture']">
+                                            <xsl:for-each select="table[@name='Culture']/tuple">
+                                                <xsl:if test="atom[@name='CreCreationAttribution']">
+                                                    <xsl:value-of select="atom[@name='CreCreationAttribution']"/><xsl:text> </xsl:text></xsl:if>
+                                                <xsl:choose>
+                                                    <xsl:when test="atom[@name='CreCreationCultureOrPeople'] and atom[@name='CreCreationNationality2']">
+                                                        <xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='CreCreationNationality2']"/><xsl:text>)</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="atom[@name='CreCreationCultureOrPeople']">
+                                                        <xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:value-of select="atom[@name='CreCreationNationality2']"/>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
                                             </xsl:for-each>
+                                            <xsl:if test="position() != last()">
+                                                <br/>
+                                            </xsl:if>
                                         </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:value-of select="table[@name='CreCountry_tab']/tuple[1]/atom[@name='CreCountry']"/>
-                                        </xsl:otherwise>
+                                        <xsl:otherwise></xsl:otherwise>
                                     </xsl:choose>
                                     </td>
                                 </tr>
