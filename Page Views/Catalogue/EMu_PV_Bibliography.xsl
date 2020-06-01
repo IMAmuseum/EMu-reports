@@ -73,6 +73,17 @@ td.display
     padding-left: 0em;
     padding-right: 0em;
 }
+td.display2
+{
+    background-color: #c84630;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding-left: 0em;
+    padding-right: 0em;
+}
 td.condition
 {
     background-color: #0ea547;
@@ -151,7 +162,13 @@ function loaded()
                 <xsl:call-template name="heading" />
                 <xsl:call-template name="tombstone" />
                 <xsl:call-template name="subheading1" />
-                <xsl:call-template name="book" />
+                <xsl:if test="table[@name='Biblio']/tuple/atom[@name='BibRecordType'] = 'Book'"><xsl:call-template name="book" /></xsl:if>
+                <xsl:if test="table[@name='Biblio']/tuple/atom[@name='BibRecordType'] = 'Catalogue'"><xsl:call-template name="catalogue" /></xsl:if>
+                <xsl:if test="table[@name='Biblio']/tuple/atom[@name='BibRecordType'] = 'Journal'"><xsl:call-template name="journal" /></xsl:if>
+                <xsl:if test="table[@name='Biblio']/tuple/atom[@name='BibRecordType'] = 'Article'"><xsl:call-template name="article" /></xsl:if>
+                <xsl:if test="table[@name='Biblio']/tuple/atom[@name='BibRecordType'] = 'Chapter'"><xsl:call-template name="chapter" /></xsl:if>
+                <xsl:if test="table[@name='Biblio']/tuple/atom[@name='BibRecordType'] = 'Digital'"><xsl:call-template name="digital" /></xsl:if>
+                <xsl:if test="table[@name='Biblio']/tuple/atom[@name='BibRecordType'] = 'Other'"><xsl:call-template name="other" /></xsl:if>
             </table>
         </center>
     </xsl:template>
@@ -329,7 +346,7 @@ function loaded()
         </tr>        
     </xsl:template>
     <!--
-            Conservation History Heading template
+            Biblio Heading template
      -->
     <xsl:template name="subheading1">
                 <tr class="display">
@@ -342,10 +359,16 @@ function loaded()
             Book template
      -->
     <xsl:template name="book">
+        <tr class="display2">
+            <td class="display2">
+                Books
+            </td>
+        </tr>
         <xsl:for-each select="table[@name='Biblio']/tuple[atom[@name='BibRecordType'] = 'Book']">
+            <xsl:sort select="atom[@name='BooPublicationDate']" data-type="number" order="descending"/>
             <tr class="condition">
                 <td class="condition">
-                    <xsl:value-of select="atom[@name='BibRecordType']"/>
+                    <xsl:value-of select="atom[@name='BibRecordType']"/><xsl:text> - </xsl:text><i><xsl:value-of select="atom[@name='BooTitle']"/></i>
                 </td>
             </tr>
             <tr class="image">
@@ -367,7 +390,17 @@ function loaded()
                         Title
                     </td>
                     <td class="atomvalue">
-                        <xsl:value-of select="atom[@name='BooTitle']" />
+                        <i><xsl:value-of select="atom[@name='BooTitle']" /></i>
+                    </td>
+                </tr>
+            </xsl:if>
+            <xsl:if test="atom[@name='BooAbbreviatedTitle'] != ''">
+                <tr class="atomvalue">
+                    <td class="atomprompt">
+                        Abbreviated Title
+                    </td>
+                    <td class="atomvalue">
+                        <i><xsl:value-of select="atom[@name='BooAbbreviatedTitle']" /></i>
                     </td>
                 </tr>
             </xsl:if>
@@ -378,21 +411,11 @@ function loaded()
                     </td>
                     <td class="atomvalue">
                         <xsl:for-each select="table[@name='Authors']/tuple">
-                            <xsl:value-of select="atom[@name='BooRole']" /><xsl:text>: </xsl:text><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
+                            <xsl:if test="atom[@name='BooRole'] != ''"><xsl:value-of select="atom[@name='BooRole']" /><xsl:text>: </xsl:text></xsl:if><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
                             <xsl:if test="position() != last()">
                                 <br/>
                             </xsl:if>
                         </xsl:for-each>
-                    </td>
-                </tr>
-            </xsl:if>
-            <xsl:if test="atom[@name='BooAbbreviatedTitle'] != ''">
-                <tr class="atomvalue">
-                    <td class="atomprompt">
-                        Abbreviated Title
-                    </td>
-                    <td class="atomvalue">
-                        <xsl:value-of select="atom[@name='BooAbbreviatedTitle']" />
                     </td>
                 </tr>
             </xsl:if>
@@ -456,6 +479,16 @@ function loaded()
                     </td>
                 </tr>
             </xsl:if>
+            <xsl:if test="table[@name='BooPublisher']">
+                <tr class="atomvalue">
+                    <td class="atomprompt">
+                        Publisher
+                    </td>
+                    <td class="atomvalue">
+                        <xsl:value-of select="table[@name='BooPublisher']/tuple/tuple/atom[@name='SummaryData']" />
+                    </td>
+                </tr>
+            </xsl:if>
             <xsl:if test="atom[@name='BooPublicationLanguage'] != ''">
                 <tr class="atomvalue">
                     <td class="atomprompt">
@@ -472,6 +505,788 @@ function loaded()
                                 </xsl:call-template>
                 </xsl:if>
             </table>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+    <!--
+            Catalogue template
+     -->
+    <xsl:template name="catalogue">
+        <tr class="display2">
+            <td class="display2">
+                Catalogues
+            </td>
+        </tr>
+        <xsl:for-each select="table[@name='Biblio']/tuple[atom[@name='BibRecordType'] = 'Catalogue']">
+            <xsl:sort select="atom[@name='CatPublicationDate']" data-type="number" order="descending"/>
+            <tr class="condition">
+                <td class="condition">
+                    <xsl:value-of select="atom[@name='BibRecordType']"/><xsl:text> - </xsl:text><i><xsl:value-of select="atom[@name='CatTitle']"/></i>
+                </td>
+            </tr>
+            <tr class="image">
+                <td class="image">
+                    <table border="0" class="data" id="datatable">
+                        <xsl:if test="atom[@name='RefBibliographicNotes'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Reference Notes
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='RefBibliographicNotes']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='CatTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Title
+                                </td>
+                                <td class="atomvalue">
+                                    <i><xsl:value-of select="atom[@name='CatTitle']" /></i>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='CatAbbreviatedTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Abbreviated Title
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='CatAbbreviatedTitle']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='Authors']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Author(s)
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:for-each select="table[@name='Authors']/tuple">
+                                        <xsl:if test="atom[@name='CatRole'] != ''"><xsl:value-of select="atom[@name='CatRole']" /><xsl:text>: </xsl:text></xsl:if><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
+                                        <xsl:if test="position() != last()">
+                                            <br/>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='CatPages'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Pages
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='CatPages']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='BooISBN'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    ISBN
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='BooISBN']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='CatPublicationDate'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Publication Date
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='CatPublicationDate']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='CatPublicationCity'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Publication City
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='CatPublicationCity']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='CatPublisher']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Publisher
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='CatPublisher']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='CatPublicationLanguage'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Language
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='CatPublicationLanguage']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="contains(atom[@name='NotNotes'], 'http')">
+                            <xsl:call-template name="tokenize">
+                                <xsl:with-param name="text" select="atom[@name='NotNotes']"/>
+                            </xsl:call-template>
+                        </xsl:if>
+                    </table>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+    <!--
+            Journal template
+     -->
+    <xsl:template name="journal">
+        <tr class="display2">
+            <td class="display2">
+                Journals
+            </td>
+        </tr>
+        <xsl:for-each select="table[@name='Biblio']/tuple[atom[@name='BibRecordType'] = 'Journal']">
+            <xsl:sort select="atom[@name='JouPublicationDates']" data-type="number" order="descending"/>
+            <tr class="condition">
+                <td class="condition">
+                    <xsl:value-of select="atom[@name='BibRecordType']"/><xsl:text> - </xsl:text><i><xsl:value-of select="atom[@name='JouTitle']"/></i>
+                </td>
+            </tr>
+            <tr class="image">
+                <td class="image">
+                    <table border="0" class="data" id="datatable">
+                        <xsl:if test="atom[@name='RefBibliographicNotes'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Reference Notes
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='RefBibliographicNotes']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='JouTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Title
+                                </td>
+                                <td class="atomvalue">
+                                    <i><xsl:value-of select="atom[@name='JouTitle']" /></i>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='JouAbbreviatedTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Abbreviated Title
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='JouAbbreviatedTitle']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='Authors']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Author(s)
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:for-each select="table[@name='Authors']/tuple">
+                                        <xsl:if test="atom[@name='JouRole'] != ''"><xsl:value-of select="atom[@name='JouRole']" /><xsl:text>: </xsl:text></xsl:if><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
+                                        <xsl:if test="position() != last()">
+                                            <br/>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='JouISSN'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    ISSN
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='JouISSN']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='JouPublicationDates'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Publication Dates
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='JouPublicationDates']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='JouPublicationCity'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Publication City
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='JouPublicationCity']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='JouPublisher']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Publisher
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='JouPublisher']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='JouParent']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Published In
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='JouParent']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='JouPublicationLanguage'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Language
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='JouPublicationLanguage']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="contains(atom[@name='NotNotes'], 'http')">
+                            <xsl:call-template name="tokenize">
+                                <xsl:with-param name="text" select="atom[@name='NotNotes']"/>
+                            </xsl:call-template>
+                        </xsl:if>
+                    </table>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+    <!--
+            Article template
+     -->
+    <xsl:template name="article">
+        <tr class="display2">
+            <td class="display2">
+                Articles
+            </td>
+        </tr>
+        <xsl:for-each select="table[@name='Biblio']/tuple[atom[@name='BibRecordType'] = 'Article']">
+            <xsl:sort select="atom[@name='ArtPublicationDate']" data-type="number" order="descending"/>
+            <tr class="condition">
+                <td class="condition">
+                    <xsl:value-of select="atom[@name='BibRecordType']"/><xsl:text> - </xsl:text><i><xsl:value-of select="atom[@name='ArtTitle']"/></i>
+                </td>
+            </tr>
+            <tr class="image">
+                <td class="image">
+                    <table border="0" class="data" id="datatable">
+                        <xsl:if test="atom[@name='RefBibliographicNotes'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Reference Notes
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='RefBibliographicNotes']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Title
+                                </td>
+                                <td class="atomvalue">
+                                    <i><xsl:value-of select="atom[@name='ArtTitle']" /></i>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='Authors']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Author(s)
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:for-each select="table[@name='Authors']/tuple">
+                                        <xsl:if test="atom[@name='ArtRole'] != ''"><xsl:value-of select="atom[@name='ArtRole']" /><xsl:text>: </xsl:text></xsl:if><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
+                                        <xsl:if test="position() != last()">
+                                            <br/>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtVolume'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Volume
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ArtVolume']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtIssue'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Issue
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ArtIssue']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtIssuePages'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Issue Pages
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ArtIssuePages']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtPages'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Article Pages
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ArtPages']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='BooISBN'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    ISBN
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='BooISBN']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtPublicationDate'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Publication Date
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ArtPublicationDate']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='ArtParent']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Published In
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='ArtParent']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtPublicationLanguage'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Language
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ArtPublicationLanguage']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="contains(atom[@name='NotNotes'], 'http')">
+                            <xsl:call-template name="tokenize">
+                                <xsl:with-param name="text" select="atom[@name='NotNotes']"/>
+                            </xsl:call-template>
+                        </xsl:if>
+                    </table>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+    <!--
+            Chapter template
+     -->
+    <xsl:template name="chapter">
+        <tr class="display2">
+            <td class="display2">
+                Chapters
+            </td>
+        </tr>
+        <xsl:for-each select="table[@name='Biblio']/tuple[atom[@name='BibRecordType'] = 'Chapter']">
+            <tr class="condition">
+                <td class="condition">
+                    <xsl:value-of select="atom[@name='BibRecordType']"/><xsl:text> - </xsl:text><xsl:value-of select="atom[@name='ChaTitle']"/>
+                </td>
+            </tr>
+            <tr class="image">
+                <td class="image">
+                    <table border="0" class="data" id="datatable">
+                        <xsl:if test="atom[@name='RefBibliographicNotes'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Reference Notes
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='RefBibliographicNotes']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ChaTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Title
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ChaTitle']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='Authors']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Author(s)
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:for-each select="table[@name='Authors']/tuple">
+                                        <xsl:if test="atom[@name='ChaRole'] != ''"><xsl:value-of select="atom[@name='ChaRole']" /><xsl:text>: </xsl:text></xsl:if><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
+                                        <xsl:if test="position() != last()">
+                                            <br/>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ArtChapter'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Chapter
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ChaChapter']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ChaPages'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Chapter Pages
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ChaPages']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='BooISBN'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    ISBN
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='BooISBN']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='ChaParent']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Published In
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='ChaParent']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='ChaPublicationLanguage'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Language
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='ChaPublicationLanguage']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="contains(atom[@name='NotNotes'], 'http')">
+                            <xsl:call-template name="tokenize">
+                                <xsl:with-param name="text" select="atom[@name='NotNotes']"/>
+                            </xsl:call-template>
+                        </xsl:if>
+                    </table>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+    <!--
+            Digital template
+     -->
+    <xsl:template name="digital">
+        <tr class="display2">
+            <td class="display2">
+                Digital
+            </td>
+        </tr>
+        <xsl:for-each select="table[@name='Biblio']/tuple[atom[@name='BibRecordType'] = 'Digital']">
+            <xsl:sort select="atom[@name='DigProductionDate']" data-type="number" order="descending"/>
+            <tr class="condition">
+                <td class="condition">
+                    <xsl:value-of select="atom[@name='BibRecordType']"/><xsl:text> - </xsl:text><i><xsl:value-of select="atom[@name='DigTitle']"/></i>
+                </td>
+            </tr>
+            <tr class="image">
+                <td class="image">
+                    <table border="0" class="data" id="datatable">
+                        <xsl:if test="atom[@name='RefBibliographicNotes'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Reference Notes
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='RefBibliographicNotes']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='DigTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Title
+                                </td>
+                                <td class="atomvalue">
+                                    <i><xsl:value-of select="atom[@name='DigTitle']" /></i>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='Authors']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Author(s)
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:for-each select="table[@name='Authors']/tuple">
+                                        <xsl:if test="atom[@name='DigRole'] != ''"><xsl:value-of select="atom[@name='DigRole']" /><xsl:text>: </xsl:text></xsl:if><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
+                                        <xsl:if test="position() != last()">
+                                            <br/>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='DigFormat'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Format
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='DigFormat']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='DigEdition'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Edition
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='DigEdition']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='BooISBN'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    ISBN
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='BooISBN']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='DigProductionDate'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Production Date
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='DigProductionDate']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='DigProductionPlace'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Production Place
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='DigProductionPlace']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='DigProducer']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Producer
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='DigProducer']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='DigParent']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Part Of
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='DigParent']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='DigPublicationLanguage'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Language
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='DigPublicationLanguage']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="contains(atom[@name='NotNotes'], 'http')">
+                            <xsl:call-template name="tokenize">
+                                <xsl:with-param name="text" select="atom[@name='NotNotes']"/>
+                            </xsl:call-template>
+                        </xsl:if>
+                    </table>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+    <!--
+            Other template
+     -->
+    <xsl:template name="other">
+        <tr class="display2">
+            <td class="display2">
+                Other
+            </td>
+        </tr>
+        <xsl:for-each select="table[@name='Biblio']/tuple[atom[@name='BibRecordType'] = 'Other']">
+            <tr class="condition">
+                <td class="condition">
+                    <xsl:value-of select="atom[@name='BibRecordType']"/><xsl:text> - </xsl:text><i><xsl:value-of select="atom[@name='OthTitle']"/></i>
+                </td>
+            </tr>
+            <tr class="image">
+                <td class="image">
+                    <table border="0" class="data" id="datatable">
+                        <xsl:if test="atom[@name='RefBibliographicNotes'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Reference Notes
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='RefBibliographicNotes']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='OthTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Title
+                                </td>
+                                <td class="atomvalue">
+                                    <i><xsl:value-of select="atom[@name='OthTitle']" /></i>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='OthAbbreviatedTitle'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Abbreviated Title
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='OthAbbreviatedTitle']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='Authors']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Author(s)
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:for-each select="table[@name='Authors']/tuple">
+                                        <xsl:if test="atom[@name='OthRole'] != ''"><xsl:value-of select="atom[@name='OthRole']" /><xsl:text>: </xsl:text></xsl:if><xsl:value-of select="atom[@name='BibMultiAuthorText']"/>
+                                        <xsl:if test="position() != last()">
+                                            <br/>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='OthPages'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Pages
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='OthPages']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='BooISBN'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    ISBN
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='BooISBN']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="table[@name='OthParent']">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Part Of
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="table[@name='OthParent']/tuple/tuple/atom[@name='SummaryData']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="atom[@name='OthPublicationLanguage'] != ''">
+                            <tr class="atomvalue">
+                                <td class="atomprompt">
+                                    Language
+                                </td>
+                                <td class="atomvalue">
+                                    <xsl:value-of select="atom[@name='OthPublicationLanguage']" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="contains(atom[@name='NotNotes'], 'http')">
+                            <xsl:call-template name="tokenize">
+                                <xsl:with-param name="text" select="atom[@name='NotNotes']"/>
+                            </xsl:call-template>
+                        </xsl:if>
+                    </table>
                 </td>
             </tr>
         </xsl:for-each>
@@ -521,7 +1336,7 @@ function loaded()
                             <xsl:attribute name="target">
                                 _blank
                             </xsl:attribute>
-                            Document Link
+                            Rights and Repro Photocopy PDF
                         </xsl:element>
                     </td>
                 </tr>
@@ -571,7 +1386,7 @@ function loaded()
                                     <xsl:attribute name="target">
                                         _blank
                                     </xsl:attribute>
-                                    Document Link
+                                    Rights and Repro Photocopy PDF
                                 </xsl:element>
                             </td>
                         </tr>
@@ -589,7 +1404,7 @@ function loaded()
                                     <xsl:attribute name="target">
                                         _blank
                                     </xsl:attribute>
-                                    Document Link
+                                    Rights and Repro Photocopy PDF
                                 </xsl:element>
                             </td>
                         </tr>
