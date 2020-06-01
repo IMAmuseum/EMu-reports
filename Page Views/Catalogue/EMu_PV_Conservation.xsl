@@ -437,12 +437,24 @@ function loaded()
                         </td>
                         <td class="atomvalue">
                             <xsl:if test="table[@name='ProposalAuth']/tuple/atom[@name='SummaryData'] != ''"><xsl:text>Authorizor: </xsl:text><xsl:value-of select="table[@name='ProposalAuth']/tuple/atom[@name='SummaryData']" /><xsl:if test="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationApproved'] != '' or table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationDate'] != ''"><br/></xsl:if></xsl:if>
-                            <xsl:if test="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationApproved'] != ''"><xsl:text>Authorized?: </xsl:text><xsl:value-of select="table[@name='Proposal']/tuple/atom[@name='ProAuthorisationApproved']"/><xsl:if test="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationDate'] != ''"><br/></xsl:if></xsl:if>
+                            <xsl:if test="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationApproved'] != ''"><xsl:text>Authorized?: </xsl:text><xsl:value-of select="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationApproved']"/><xsl:if test="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationDate'] != ''"><br/></xsl:if></xsl:if>
                             <xsl:if test="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationDate'] != ''"><xsl:text>Date: </xsl:text><xsl:value-of select="table[@name='ProposalAuth']/tuple/atom[@name='ProAuthorisationDate']"/></xsl:if>
                         </td>
                     </tr>
                 </xsl:if>
                 <xsl:if test="atom[@name='ReqActualCompletionDate'] != ''">
+                    <xsl:choose>
+                        <xsl:when test="contains(atom[@name='InfRecordType'], 'Exam')">
+                    <tr class="atomvalue">
+                        <td class="atomprompt">
+                            Examination Date
+                        </td>
+                        <td class="atomvalue">
+                            <xsl:value-of select="atom[@name='ReqActualCompletionDate']" />
+                        </td>
+                    </tr>
+                        </xsl:when>
+                        <xsl:otherwise>
                     <tr class="atomvalue">
                         <td class="atomprompt">
                             Completion Date
@@ -451,6 +463,8 @@ function loaded()
                             <xsl:value-of select="atom[@name='ReqActualCompletionDate']" />
                         </td>
                     </tr>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:if>
                 <xsl:if test="table[@name='TreatedBy']/tuple/atom[@name='SummaryData'] != ''">
                     <tr class="atomvalue">
