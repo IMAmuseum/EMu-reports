@@ -354,7 +354,7 @@ p
         <tr class="meeting">
             <td class="meeting">
                 <center>
-                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Collections Committee Practice Meeting</span>
+                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Art Committee Practice Meeting</span>
                     <br/>
                     <textarea class="date" rows="1" cols="50">Enter meeting date.</textarea>
                     <br/>

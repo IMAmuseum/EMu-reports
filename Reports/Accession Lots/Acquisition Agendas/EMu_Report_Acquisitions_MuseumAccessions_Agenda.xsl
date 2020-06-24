@@ -236,7 +236,7 @@ p
         <tr class="meeting">
             <td class="meeting">
                 <center>
-                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Collections Committee Meeting</span>
+                    <span style="font-family: Tahoma; font-weight: bold; font-size: 16px;">Art Committee Meeting</span>
                     <br/>
                     <span style="font-size: 14px; font-weight: bold; margin-top: 5px;"><xsl:if test="contains(ancestor::tuple/atom[@name='AcqMeetingDate'], '-01-')"><xsl:text>January </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],9,2)"/><xsl:text>, </xsl:text><xsl:value-of select="substring(ancestor::tuple/atom[@name='AcqMeetingDate'],1,4)"/>
                     </xsl:if>
