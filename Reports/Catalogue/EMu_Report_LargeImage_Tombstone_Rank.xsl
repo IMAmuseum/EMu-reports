@@ -225,9 +225,9 @@
                                         <th>Dimensions</th>
                                         <td>    <xsl:choose>
                                             <xsl:when test="contains(atom[@name='PhyConvertedDims'],'&#10;')">
-                                                <xsl:value-of select="substring-before(atom[@name='PhyConvertedDims'],'&#10;')"/>
-                                                <br/>
-                                                <xsl:value-of select="substring-after(atom[@name='PhyConvertedDims'],'&#10;')"/>
+                                                <xsl:call-template name="tokenize">
+                                                    <xsl:with-param name="text" select="atom[@name='PhyConvertedDims']"/>
+                                                </xsl:call-template>
                                             </xsl:when>
                                             <xsl:otherwise>
                                                 <xsl:value-of select="atom[@name='PhyConvertedDims']"/>
@@ -242,6 +242,10 @@
                                         <th>Accession Number</th>
                                         <td><xsl:value-of select="atom[@name='TitAccessionNo']"/></td>
                                     </tr>
+                                    <tr>
+                                        <th>Collection Ranking</th>
+                                        <td><xsl:value-of select="atom[@name='StaStocktakeStatus']"/></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </center>             
@@ -252,5 +256,25 @@
                 </body>
             </div>
         </html>
+    </xsl:template>
+    
+    <!--
+            Delimiter Split template
+    -->
+    <xsl:template name="tokenize">
+        <xsl:param name="text" select="."/>
+        <xsl:param name="separator" select="'&#10;'"/>
+        <xsl:choose>
+            <xsl:when test="not(contains($text, $separator))">
+                <xsl:value-of select="$text"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="substring-before($text,$separator)"/>
+                <br/>
+                <xsl:call-template name="tokenize">
+                    <xsl:with-param name="text" select="substring-after($text, $separator)"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
