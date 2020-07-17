@@ -245,9 +245,10 @@ p
                                                 <xsl:when test="atom[@name='CreCreationCultureOrPeople']">
                                                     <b>Culture or People: </b><xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/>
                                                 </xsl:when>
-                                                <xsl:otherwise>
+                                                <xsl:when test="atom[@name='CreCreationNationality2'] != ''">
                                                     <b>Creator: </b><xsl:value-of select="atom[@name='CreCreationNationality2']"/>
-                                                </xsl:otherwise>
+                                                </xsl:when>
+                                                <xsl:otherwise></xsl:otherwise>
                                                 </xsl:choose>
                                             </xsl:for-each>
                                             <xsl:if test="position() != last()">

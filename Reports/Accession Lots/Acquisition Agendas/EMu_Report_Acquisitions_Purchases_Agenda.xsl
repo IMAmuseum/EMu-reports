@@ -145,7 +145,7 @@ p
             <img style="margin: 5px" height="75px" src="https://discovernewfields.org/application/files/2515/3608/3665/logo-ima-large.png"/>
             <br/>
         </center>
-        <!-- Original Sort Order
+        <!-- Original Sort Order -->
         <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple[not(starts-with(atom[@name='TitAccessionNo'], 'C')) and not(starts-with(atom[@name='TitAccessionNo'], 'LH')) and not(starts-with(atom[@name='TitAccessionNo'], 'MH')) and not(starts-with(atom[@name='TitAccessionNo'], 'N')) and not(starts-with(atom[@name='TitAccessionNo'], 'S')) and not(starts-with(atom[@name='TitAccessionNo'], 'TR')) and not(starts-with(atom[@name='TitAccessionNo'], 'U')) and not(starts-with(atom[@name='TitAccessionNo'], 'WH'))]">
             <xsl:sort select="substring-before(atom[@name='TitAccessionNo'], '.')" data-type="number"/>
             <xsl:sort select="translate(substring-after(atom[@name='TitAccessionNo'], '.'), '-ABCDEFGHIJKLMNOPQRSTUVWXYZ', '')" data-type="number" />
@@ -183,10 +183,11 @@ p
             <xsl:sort select="atom[@name='TitAccessionNo']"/>
             <xsl:call-template name="record" />
         </xsl:for-each>
-        -->
+        <!-- No sort order 
         <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple">
             <xsl:call-template name="record" />
         </xsl:for-each>
+        -->
     </xsl:template>
     <!--
             Record template
