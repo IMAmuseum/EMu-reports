@@ -259,22 +259,23 @@ p
                                         </xsl:if>
                                         <xsl:if test="table[@name='Culture']">
                                             <xsl:for-each select="table[@name='Culture']/tuple">
+                                                <xsl:if test="atom[@name='CreCreationAttribution']">
+                                                    <xsl:value-of select="atom[@name='CreCreationAttribution']"/><xsl:text> </xsl:text></xsl:if>
                                                 <xsl:choose>
-                                                <xsl:when test="atom[@name='CreCreationCultureOrPeople'] and atom[@name='CreCreationNationality2']">
-                                                    <b>Culture or People: </b><xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='CreCreationNationality2']"/><xsl:text>)</xsl:text>
-                                                </xsl:when>
-                                                <xsl:when test="atom[@name='CreCreationCultureOrPeople']">
-                                                    <b>Culture or People: </b><xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/>
-                                                </xsl:when>
-                                                <xsl:when test="atom[@name='CreCreationNationality2'] != ''">
-                                                    <b>Creator: </b><xsl:value-of select="atom[@name='CreCreationNationality2']"/>
-                                                </xsl:when>
-                                                <xsl:otherwise></xsl:otherwise>
+                                                    <xsl:when test="atom[@name='CreCreationCultureOrPeople'] and atom[@name='CreCreationNationality2']">
+                                                        <xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/><xsl:text> (</xsl:text><xsl:value-of select="atom[@name='CreCreationNationality2']"/><xsl:text>)</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="atom[@name='CreCreationCultureOrPeople']">
+                                                        <xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:value-of select="atom[@name='CreCreationNationality2']"/>
+                                                    </xsl:otherwise>
                                                 </xsl:choose>
+                                                <xsl:if test="position() != last()">
+                                                    <br/>
+                                                </xsl:if>
                                             </xsl:for-each>
-                                            <xsl:if test="position() != last()">
-                                                <br/>
-                                            </xsl:if>
                                         </xsl:if>
                                         <xsl:choose>
                                             <xsl:when test="table[@name='Creator']">

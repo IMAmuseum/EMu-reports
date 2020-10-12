@@ -301,10 +301,10 @@ p
                                                     <xsl:value-of select="atom[@name='CreCreationNationality2']"/>
                                                 </xsl:otherwise>
                                                 </xsl:choose>
-                                            </xsl:for-each>
                                             <xsl:if test="position() != last()">
                                                 <br/>
                                             </xsl:if>
+                                            </xsl:for-each>
                                         </xsl:if>
                                         <xsl:choose>
                                             <xsl:when test="table[@name='Creator']">
