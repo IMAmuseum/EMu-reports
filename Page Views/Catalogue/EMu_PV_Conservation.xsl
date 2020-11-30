@@ -344,6 +344,8 @@ function loaded()
             Conservation Data template
      -->
     <xsl:template name="condata">
+        <xsl:choose>
+        <xsl:when test="table[@name='ObjObjectsConservedRef_tab']">
         <xsl:for-each select="table[@name='ObjObjectsConservedRef_tab']/tuple">
             <xsl:sort select="atom[@name='ReqConservationIdentifier']" order="descending"/>
             <tr class="condition">
@@ -532,6 +534,15 @@ function loaded()
                 </td>
             </tr>
         </xsl:for-each>
+        </xsl:when>
+        <xsl:otherwise>
+            <tr class="atomvalue">
+                <td class="atomvalue">
+                    No cataloged Conservation activities in EMu.
+                </td>
+            </tr>
+        </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <!--
             Condition Details Heading template
@@ -539,7 +550,7 @@ function loaded()
     <xsl:template name="subheading2">
         <tr class="display">
             <td class="display">
-                Condition Details
+                Condition Check
             </td>
         </tr>
     </xsl:template>
@@ -549,6 +560,17 @@ function loaded()
     <xsl:template name="condetails">
         <tr class="atomvalue">
             <td class="atomvalue">
+                <b><xsl:text>Date Checked: </xsl:text></b><xsl:value-of select="atom[@name='ConDateChecked']"/>
+            </td>
+        </tr>
+        <tr class="atomvalue">
+            <td class="atomvalue">
+                <b><xsl:text>Checked By: </xsl:text></b><xsl:value-of select="tuple[@name='ConCheckedByRef']/atom[@name='NamFullName']"/>
+            </td>
+        </tr>
+        <tr class="atomvalue">
+            <td class="atomvalue">
+                <b><xsl:text>Condition Details:</xsl:text></b><br/>
                 <xsl:call-template name="break">
                     <xsl:with-param name="text" select="atom[@name='ConConditionDetails']"/>
                 </xsl:call-template>
