@@ -308,6 +308,7 @@ p
                                         </xsl:if>
                                         <xsl:choose>
                                             <xsl:when test="table[@name='Creator']">
+                                                <xsl:if test="table[@name='Culture']"><br/></xsl:if>
                                                 <xsl:for-each select="table[@name='Creator']/tuple">
                                                     <xsl:if test="atom[@name='CreRole'] != ''"><xsl:value-of select="atom[@name='CreRole']"/><xsl:text>: </xsl:text></xsl:if>
                                                     <xsl:choose>
@@ -341,6 +342,7 @@ p
                                         </xsl:for-each>
                                         </xsl:when>
                                         <xsl:otherwise>
+                                            <xsl:if test="table[@name='Culture']"><br/></xsl:if>
                                             <xsl:value-of select="table[@name='CreCountry_tab']/tuple[1]/atom[@name='CreCountry']"/>
                                         </xsl:otherwise>
                                     </xsl:choose>

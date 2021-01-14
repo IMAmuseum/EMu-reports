@@ -344,6 +344,7 @@ p
                                 <tr class="atomvalue">
                                     <td class="atomvalue" style="font-weight: bold">
                                         <xsl:if test="table[@name='Culture']">
+                                            <xsl:if test="table[@name='Culture']"><br/></xsl:if>
                                             <xsl:for-each select="table[@name='Culture']/tuple">
                                                 <xsl:if test="atom[@name='CreCreatorAttribution']">
                                                     <xsl:value-of select="atom[@name='CreCreatorAttribution']"/><xsl:text> </xsl:text></xsl:if>
@@ -398,6 +399,7 @@ p
                                         </xsl:for-each>
                                         </xsl:when>
                                         <xsl:otherwise>
+                                            <xsl:if test="table[@name='Culture']"><br/></xsl:if>
                                             <xsl:value-of select="table[@name='CreCountry_tab']/tuple[1]/atom[@name='CreCountry']"/>
                                         </xsl:otherwise>
                                     </xsl:choose>
