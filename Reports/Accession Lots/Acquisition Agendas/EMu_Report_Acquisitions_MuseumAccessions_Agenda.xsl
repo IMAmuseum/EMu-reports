@@ -523,22 +523,28 @@ p
                                         </td>
                                     </tr>
                                 </xsl:if>
-                                <xsl:choose>
-                                    <xsl:when test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='NamFullName'] != ''">
-                                        <tr class="atomvalue">
-                                            <td class="atomvalue">
-                                                <b>Source: </b><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='NamFullName']"/><br/><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostStreet'] != ''"><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostStreet']"/><br/></xsl:if><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostCity'] != ''"><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostCity']"/></xsl:if><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostState'] != ''"><xsl:text>, </xsl:text><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostState']"/></xsl:if><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostPost'] != ''"><xsl:text> </xsl:text><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostPost']"/></xsl:if>
-                                            </td>
-                                        </tr>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <tr class="atomvalue">
-                                            <td class="atomvalue">
-                                                <b>Source: </b><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='NamOrganisation']"/><br/><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostStreet'] != ''"><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostStreet']"/><br/></xsl:if><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostCity'] != ''"><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostCity']"/></xsl:if><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostState'] != ''"><xsl:text>, </xsl:text><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostState']"/></xsl:if><xsl:if test="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostPost'] != ''"><xsl:text> </xsl:text><xsl:value-of select="ancestor::tuple/table[@name='Source']/tuple/atom[@name='AddPostPost']"/></xsl:if>
-                                            </td>
-                                        </tr>
-                                    </xsl:otherwise>
-                                </xsl:choose> 
+                                <xsl:for-each select="ancestor::tuple/table[@name='Source']/tuple">
+                                    <xsl:choose>
+                                        <xsl:when test="atom[@name='NamFullName'] != ''">
+                                            <tr class="atomvalue">
+                                                <td class="atomvalue">
+                                                    <b>Source: </b><xsl:value-of select="atom[@name='NamFullName']"/><br/>
+                                                    <xsl:if test="atom[@name='AddPostStreet'] != ''"><xsl:value-of select="atom[@name='AddPostStreet']"/><br/>
+                                                    </xsl:if><xsl:if test="atom[@name='AddPostCity'] != ''"><xsl:value-of select="atom[@name='AddPostCity']"/></xsl:if><xsl:if test="atom[@name='AddPostState'] != ''"><xsl:text>, </xsl:text><xsl:value-of select="atom[@name='AddPostState']"/></xsl:if><xsl:if test="atom[@name='AddPostPost'] != ''"><xsl:text> </xsl:text><xsl:value-of select="atom[@name='AddPostPost']"/></xsl:if>
+                                                </td>
+                                            </tr>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <tr class="atomvalue">
+                                                <td class="atomvalue">
+                                                    <b>Source: </b><xsl:value-of select="atom[@name='NamOrganisation']"/><br/>
+                                                    <xsl:if test="atom[@name='AddPostStreet'] != ''"><xsl:value-of select="atom[@name='AddPostStreet']"/><br/>
+                                                    </xsl:if><xsl:if test="atom[@name='AddPostCity'] != ''"><xsl:value-of select="atom[@name='AddPostCity']"/></xsl:if><xsl:if test="atom[@name='AddPostState'] != ''"><xsl:text>, </xsl:text><xsl:value-of select="atom[@name='AddPostState']"/></xsl:if><xsl:if test="atom[@name='AddPostPost'] != ''"><xsl:text> </xsl:text><xsl:value-of select="atom[@name='AddPostPost']"/></xsl:if>
+                                                </td>
+                                            </tr>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
                             </table>
                         </td>
     <!--
