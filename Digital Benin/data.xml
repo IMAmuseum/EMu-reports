@@ -1,0 +1,1864 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE table
+[
+  <!ELEMENT table	(tuple)*>
+  <!ATTLIST table
+            name	CDATA #REQUIRED
+  >
+
+  <!ELEMENT tuple	(table|tuple|atom)*>
+  <!ATTLIST tuple
+            name	CDATA #IMPLIED
+  >
+
+  <!ELEMENT atom	(#PCDATA)*>
+  <!ATTLIST atom
+            name	CDATA #REQUIRED
+            type	CDATA "text"
+            size	CDATA "short"
+  >
+]
+>
+<?schema
+  table           ecatalogue
+    integer         irn
+    text short      AdmPublishWebNoPassword
+    text short      TitAccessionNo
+    text short      TitPreviousAccessionNo
+    text short      TitObjectStatus
+    date            TitAccessionDate
+    integer         TitNumberOfParts
+    text long       TitMainTitle
+    text short      TitObjectType
+    table           ObjectTypes
+      text short      PhyMediaCategory
+    end
+    text short      CreDateCreated
+    text short      CreCreationPeriod
+    text long       CreCreationDynasty
+    table           Creator1
+      text short      CreRole
+      text long       CreCreatorAfterFollower
+      integer         irn
+      text long       SummaryData
+    end
+    table           Creator2
+      text long       CreCreatorAttribution
+      text long       CreCreationCultureOrPeople
+      text long       CreCreationNationality2
+    end
+    table           CreLocation
+      text short      CreCountry
+      text short      CreState
+      text short      CreDistrict
+      text short      CreCity
+    end
+    table           Medium
+      text long       PhyMedium
+    end
+    table           Support
+      text short      PhySupport
+    end
+    text long       PhyMediumAndSupport
+    text long       PhyConvertedDims
+    table           Dimensions
+      text short      PhyType
+      float           PhyHeight
+      float           PhyWidth
+      float           PhyDepth
+      float           PhyDiameter
+      text short      PhyUnitLength
+      float           PhyWeight
+      text short      PhyUnitWeight
+      text short      PhyDimensionNotes
+    end
+    text long       SumCreditLine
+    table           Rights
+      text long       RigAcknowledgement
+    end
+    text long       CreProvenance
+    text short      PhyCollectionArea
+    tuple           AssParentObjectRef
+      integer         irn
+    end
+    text short      AssIsParent
+    table           Children
+      integer         irn
+      text long       TitMainTitle
+      table           Grandchildren
+        integer         irn
+        text long       TitMainTitle
+      end
+    end
+    table           Related
+      text short      AssRelationship
+      integer         irn
+    end
+    text short      AdmPublishWebNoPassword
+    table           Homepage
+      text short      RefBibliographicNotes
+      integer         irn
+      text long       EleTitle
+      text short      EleIdentifier
+    end
+    table           Narratives
+      integer         irn
+      text short      DesPurpose
+      text long       NarTitle
+      table           NarDate0
+        date            NarDate
+      end
+      text long       NarNarrative
+      table           NarAuthorsRef_tab
+        text long       SummaryData
+      end
+      table           EveEventsRef_tab
+        text long       SummaryData
+      end
+    end
+    table           Exhibitions
+      integer         irn
+      text short      EveTypeOfEvent
+      text short      EveEventNumber
+      text long       EveEventTitle
+      date            DatCommencementDate
+      date            DatCompletionDate
+    end
+  end
+?>
+<!-- Data -->
+<table name="ecatalogue">
+
+  <!-- Row 1 -->
+  <tuple>
+    <atom name="irn">1105</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.1569</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/1445 | E84.43</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate"></atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">bowl</atom>
+    <atom name="TitObjectType">Containers</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">bowls</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">late 19th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">gold</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass with gold covering</atom>
+    <atom name="PhyConvertedDims">9 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">9.0000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 22.9 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Christie's London) sold on June 25, 1984 to Harrison Eiteljorg [1903-1997] of Indianapolis; donated to the IMA 1989</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">29429</atom>
+        <atom name="irn">3347</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.1569</atom>
+        <atom name="EleIdentifier">29429</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">623</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.1569_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;The prominent face on this bowl depicts a European, specifically a Portuguese man.  Depictions of Portuguese, the first Europeans to visit the Benin Kingdom in the late 1400's, are considered positive images on Benin royal objects.  The Portuguese, who at one time were allies with the Benin Kingdom, symbolize wealth and power.&lt;/p&gt; &lt;p&gt;Brass casters were influenced by imported bowls, boxes and other types of objects acquired through coastal trade with Europeans.  Although this bowl, which is missing its lid, was made by Benin brass casters, its shape is clearly derived from European bowls.  The application of gold to the surface is unusual in Benin art and the technology was probably learned from European visitors.&lt;/p&gt; &lt;p&gt;A pattern of interlacing lines is a popular design element in Benin art.  It can be seen on the rim, stem and base of this bowl and on other Benin objects.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 2 -->
+  <tuple>
+    <atom name="irn">3266</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.823</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/664 | E76.17 | E2263</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">altar ram's head (uhmwogho)</atom>
+    <atom name="TitObjectType">Components</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">20th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">wood</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMedium">coconut shell</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">wood</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">wood, coconut shell</atom>
+    <atom name="PhyConvertedDims">13-3/4 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">13.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 34.9 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Mamadou Koita, New York, New York); sold on 12 June 1976 to Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 130 ill.</atom>
+        <atom name="irn">1842</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">29395</atom>
+        <atom name="irn">5496</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.823</atom>
+        <atom name="EleIdentifier">29395</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">775</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.823_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Important male ancestors may be honored with wooden ram heads.  These heads are kept on altars where they provide a link between living family members and the deceased.  The ram is a common animal of sacrifice in Western Africa and is often associated with ancestors.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 3 -->
+  <tuple>
+    <atom name="irn">4056</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1992.61</atom>
+    <atom name="TitPreviousAccessionNo">TR7715</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1992-07-01</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">lid in the form of a leopard head</atom>
+    <atom name="TitObjectType">Containers</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">lids</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">mid-15th century - mid-17th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass</atom>
+    <atom name="PhyConvertedDims">7-3/4 x 4-1/4 x 2-1/2 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">7.7500</atom>
+        <atom name="PhyWidth">4.2500</atom>
+        <atom name="PhyDepth">2.5000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 19.7 x 10.8 x 6.4 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of the Alliance of the Indianapolis Museum of Art</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Merton Simpson Gallery, Inc., New York, New York); purchased by the Indianapolis Museum of Art at Newfields, Indianapolis, Indiana in 1992.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 77 (reproduced in color)</atom>
+        <atom name="irn">20</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">29427</atom>
+        <atom name="irn">6280</atom>
+        <atom name="EleTitle">Dagwood ID for 1992.61</atom>
+        <atom name="EleIdentifier">29427</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">908</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1992.61_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;This lid in the form of a leopard head covered a brass container holding cola nuts, a mild stimulant, or personal items of a royal person. The leopard is closely connected to the power of the king.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 4 -->
+  <tuple>
+    <atom name="irn">7010</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.831</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/672 | E87.11</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">face mask for Ekpo association</atom>
+    <atom name="TitObjectType">Costume</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">masks</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">1920-1950</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">pigment</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">wood</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">wood, pigment</atom>
+    <atom name="PhyConvertedDims">14-1/16 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">14.0625</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 35.7 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Jerry Mulholland, Cincinnati, Ohio); sold on 16 March 1987 to Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">29302</atom>
+        <atom name="irn">9225</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.831</atom>
+        <atom name="EleIdentifier">29302</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">777</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.831_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;&lt;em&gt;Ekpo&lt;/em&gt; masks embody beings from the spirit world and honor local heroes and gods.  This masking tradition supports local leaders and helps to maintain the independence of villages from the central authority and cultural influence of the king in Benin City.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 5 -->
+  <tuple>
+    <atom name="irn">8019</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1996.322</atom>
+    <atom name="TitPreviousAccessionNo">TR8682</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1996-12-19</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">pendant with horse and rider</atom>
+    <atom name="TitObjectType">Costume Accessories</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">pendants</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">17th-19th centuries</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass</atom>
+    <atom name="PhyConvertedDims">8-1/8 x 6-1/4 x 3/4 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">8.1250</atom>
+        <atom name="PhyWidth">6.2500</atom>
+        <atom name="PhyDepth">0.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 20.6 x 15.9 x 1.9 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">E. Hardey Adriance Fine Arts Acquisition Fund in memory of Marguerite Hardey Adriance</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(The Grayson Gallery, Inc., Chicago, Illinois); purchased by the Indianapolis Museum of Art at Newfields, Indianapolis, Indiana in 1996.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">30245</atom>
+        <atom name="irn">10230</atom>
+        <atom name="EleTitle">Dagwood ID for 1996.322</atom>
+        <atom name="EleIdentifier">30245</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">1065</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1996.322_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;This pendant with horse and rider was worn by important men associated with the royal court.  The horseman is a widespread symbol of male success in many areas of Western Africa.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 6 -->
+  <tuple>
+    <atom name="irn">8591</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.821</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/660 | E77.438</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">head of queen mother</atom>
+    <atom name="TitObjectType">Components</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">late 18th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">iron</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass, iron</atom>
+    <atom name="PhyConvertedDims">17-1/8 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">17.1250</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 43.5 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(W.D. Webster [1863-1913], England); Pitt-Rivers Museum, Farnham, Dorset, England; Charles Alfred Marius Ratton [1895-1986] Paris, France; (Papa Diop [1948-2012], Los Angeles, CA and Robert Jones, Indianapolis) {1} sold on December 14, 1977 to Harrison Eitlejorg [1903-1997] of Indianapolis; donated to the IMA 1989; {1} Robert Jones also sold under the name Robert Fitzgerald</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">Plate XX; p.119-110</atom>
+        <atom name="irn">1835</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">Figure 2; p.61</atom>
+        <atom name="irn">1836</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 176; Figure 6.8</atom>
+        <atom name="irn">1837</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes"></atom>
+        <atom name="irn">1838</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">no. 0/61. p. 88</atom>
+        <atom name="irn">1974</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">ill. no 4</atom>
+        <atom name="irn">1972</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">no. 30 ill. </atom>
+        <atom name="irn">1845</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">no. 0/61. p. 2.1.2</atom>
+        <atom name="irn">1973</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 122-123 c. ill.</atom>
+        <atom name="irn">1842</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">40372</atom>
+        <atom name="irn">10798</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.821</atom>
+        <atom name="EleIdentifier">40372</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">774</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.821_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Altars were maintained to commemorate past kings (&lt;em&gt;Obas&lt;/em&gt;).  These altars supported a variety of ritual objects, such as human heads of cast brass, which were the focus of periodic rituals.  These rituals honored past royals.  The altar heads served as a spiritual link between royal ancestors and the Edo people of the Benin Kingdom.&lt;/p&gt; &lt;p&gt;All queen mother heads include a distinct one-shaped crown and collar.  In life, the crown and collar were composed primarily of high status imported red coral beads.  Over the eyes are scarifications, and between these are two marks indicating smears of sacrificial blood.&lt;/p&gt; &lt;p&gt;Objects of cast brass are made by the lost-wax technique.  A brass caster begins with a lump of beeswax, which is modeled into the object being made.  Details are impressed into the wax or applied with threads of additional wax.  After the wax model is finished, it is covered with clay and left to dry for several days.&lt;/p&gt; &lt;p&gt;The clay covering is then heated to remove the wax, hence the term 'lost-wax.' Molten brass is poured into the empty space once occupied by the wax.  The clay mold is plunged into water and broken open.  The brass casting is then removed and its surface is cleaned.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+    <table name="Exhibitions">
+      <tuple>
+        <atom name="irn">4607</atom>
+        <atom name="EveTypeOfEvent">Exhibition Prior to IMA Acquisition</atom>
+        <atom name="EveEventNumber">HIST1980.6</atom>
+        <atom name="EveEventTitle">Selections from the Harrison Eiteljorg Collection of Arfican Art</atom>
+        <atom name="DatCommencementDate">1980</atom>
+        <atom name="DatCompletionDate">1980</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">4604</atom>
+        <atom name="EveTypeOfEvent">Exhibition Prior to IMA Acquisition</atom>
+        <atom name="EveEventNumber">HIST1980.5</atom>
+        <atom name="EveEventTitle">Royal Benin</atom>
+        <atom name="DatCommencementDate">1980</atom>
+        <atom name="DatCompletionDate">1980</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 7 -->
+  <tuple>
+    <atom name="irn">10171</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1995.125</atom>
+    <atom name="TitPreviousAccessionNo">TR8477/11</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1995-12-21</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">face mask</atom>
+    <atom name="TitObjectType">Costume</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">masks</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">1850-1897</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">pigment</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">wood</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">wood, pigment</atom>
+    <atom name="PhyConvertedDims">12 x 8-1/2 x 9-1/2 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">12.0000</atom>
+        <atom name="PhyWidth">8.5000</atom>
+        <atom name="PhyDepth">9.5000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 30.5 x 21.6 x 24.1 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Mr. and Mrs. Harrison Eiteljorg, Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1995.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">2787</atom>
+        <atom name="irn">12368</atom>
+        <atom name="EleTitle">Dagwood ID for 1995.125</atom>
+        <atom name="EleIdentifier">2787</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">983</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1995.125_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;This mask was taken by the British during their 1897 military expedition to Benin City.  It was probably used in one of the village masquerades such as &lt;em&gt;Ekpo&lt;/em&gt;.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 8 -->
+  <tuple>
+    <atom name="irn">13946</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.790</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/629 | E81.16</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">bell</atom>
+    <atom name="TitObjectType">Sound Devices</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">bells</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">20th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass</atom>
+    <atom name="PhyConvertedDims">5-3/4 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">5.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 14.6 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Collection of the Pitt-Rivers Museum Oxford, England before 1900...(Thomas Slater, Indianapolis) sold on July 7, 1981 to Harrison Eiteljorg [1903-1997] of Indianapolis; donated to the IMA 1989</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">pl. 12  fig. 74</atom>
+        <atom name="irn">1835</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 124 ill.</atom>
+        <atom name="irn">1842</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">14511</atom>
+        <atom name="irn">16124</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.790</atom>
+        <atom name="EleIdentifier">14511</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 9 -->
+  <tuple>
+    <atom name="irn">14037</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.816</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/655 | E84.57</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">female figure</atom>
+    <atom name="TitObjectType">Components</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">ceremonial objects</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">figures</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">1850-1897</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">coconut shell</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">ivory</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">ivory, coconut shell</atom>
+    <atom name="PhyConvertedDims">10-7/8 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">10.8800</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 27.6 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Thomas Slater, Indianapolis, Indiana) sold on 25 October 1984 to Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">28966</atom>
+        <atom name="irn">16215</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.816</atom>
+        <atom name="EleIdentifier">28966</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">771</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.816_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;This female figure depicts an attendant to the queen mother, that is, the mother of the king.  It was placed on an altar along with other royal objects.  This example is a rare instance of nudity in Benin art.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 10 -->
+  <tuple>
+    <atom name="irn">17433</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">S6749.88.3</atom>
+    <atom name="TitPreviousAccessionNo">TR6749/3</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1988-09-29</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">seated human figure</atom>
+    <atom name="TitObjectType">Visual Works: Sculpture</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">20th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">cast brass</atom>
+    <atom name="PhyConvertedDims">17 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">17.0000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 43.2 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Butler University</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Butler University, Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1988.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">3171</atom>
+        <atom name="irn">19591</atom>
+        <atom name="EleTitle">Dagwood ID for S6749.88.3</atom>
+        <atom name="EleIdentifier">3171</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 11 -->
+  <tuple>
+    <atom name="irn">17944</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.845</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/686 | E77.55</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">palace plaque depicting warrior</atom>
+    <atom name="TitObjectType">Visual Works: Sculpture</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">16th-18th centuries</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">brass</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass</atom>
+    <atom name="PhyConvertedDims">21-1/8 x 14-3/4 x 3 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">21.1250</atom>
+        <atom name="PhyWidth">14.7500</atom>
+        <atom name="PhyDepth">3.0000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 53.7 x 37.5 x 7.6 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Pitt-Rivers Museum Farnham, Dorset, England; Jeff C. Leff [1925-2000] Uniontown, PA; (Judith Ganeles, New York) sold on May 25, 1977 to Harrison Eiteljorg [1903-1997] of Indianapolis; donated to the IMA 1989</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 76 (reproduced in color)</atom>
+        <atom name="irn">20</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 179; Figure 6.10</atom>
+        <atom name="irn">1837</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 19 (figs. 113-114)</atom>
+        <atom name="irn">1969</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">no. 299</atom>
+        <atom name="irn">1970</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">fig. 30</atom>
+        <atom name="irn">1971</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">no. 9 ill.</atom>
+        <atom name="irn">1972</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">no. 29 ill.</atom>
+        <atom name="irn">1845</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">fig. 6</atom>
+        <atom name="irn">1849</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">no. 0/56, p. 2.1.2</atom>
+        <atom name="irn">1973</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 120-121 c. ill.</atom>
+        <atom name="irn">1842</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">40394</atom>
+        <atom name="irn">20099</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.845</atom>
+        <atom name="EleIdentifier">40394</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">783</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.845_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Plaques made by the 'lost wax' process were once displayed within the palace complex at Benin City.  The subject matter of the plaques includes formally posed kings, chiefs, court attendants, leopards and other animals.  Unfortunately, it is very difficult to link a particular individual or historic event with a given plaque.&lt;/p&gt; &lt;p&gt;This plaque depicts an important military leader.  The ceremonial sword in his left hand; anklets; bracelets; and collar assembly of coral beads, leopard teeth and brass bell indicate rank.  The barbed spear in his right hand and the sheathed sword at his waist are typical weapons.  He wears a garment from which beads or bells are suspended.  His hat has leather or cloth side pieces and a front panel possibly of metal.&lt;/p&gt; &lt;p&gt;The background surface of this plaque is adorned with leaf patterns and circular designs; the side panels are covered with a pattern of interlacing curved lines.  The holes reveal the placement of nails to attach this plaque to a palace wall.  As is typical of Benin court art, the surface of this object is completely covered.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+    <table name="Exhibitions">
+      <tuple>
+        <atom name="irn">5174</atom>
+        <atom name="EveTypeOfEvent">Exhibition</atom>
+        <atom name="EveEventNumber">EX2005.30</atom>
+        <atom name="EveEventTitle">What's Coming</atom>
+        <atom name="DatCommencementDate">2005-05-06</atom>
+        <atom name="DatCompletionDate"></atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 12 -->
+  <tuple>
+    <atom name="irn">18331</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1995.130</atom>
+    <atom name="TitPreviousAccessionNo">TR8477/16</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1995-12-21</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">altar of the hand</atom>
+    <atom name="TitObjectType">Components</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">altars</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">20th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">wood</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">wood</atom>
+    <atom name="PhyConvertedDims">13-1/4 x 7-1/2 x 7-1/4 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">13.2500</atom>
+        <atom name="PhyWidth">7.5000</atom>
+        <atom name="PhyDepth">7.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 33.7 x 19.1 x 18.4 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Mr. and Mrs. Harrison Eiteljorg, Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1995.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">29445</atom>
+        <atom name="irn">20483</atom>
+        <atom name="EleTitle">Dagwood ID for 1995.130</atom>
+        <atom name="EleIdentifier">29445</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">985</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1995.130_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Within the Benin Kingdom, a man can establish an 'altar to his hand,' a representation of personal achievement.  The object is missing its separately carved base.  Unlike this example, royal 'altars of the hand' of the Benin Kingdom court were made of cast brass.  Royal altars probably served as models for the more common wooden types.&lt;/p&gt; &lt;p&gt;The upper projection once held a tusk or a horn.  The images refer to the importance of the altar's owner, the central figure with a sword of authority in his right hand.  Gunpowder flasks appear at his sides.  His left hand is supported by an attendant holding a spear.  Additional images found on this object are two other subordinates, two severed enemy heads and a horse.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 13 -->
+  <tuple>
+    <atom name="irn">20258</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.1566</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/1442</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">female figure</atom>
+    <atom name="TitObjectType">Visual Works: Sculpture</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">ceremonial objects</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">figures</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">18th-19th centuries</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">ivory</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">ivory</atom>
+    <atom name="PhyConvertedDims">8-1/2 x 2-1/2 x 3-1/4 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">8.5000</atom>
+        <atom name="PhyWidth">2.5000</atom>
+        <atom name="PhyDepth">3.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 21.6 x 6.4 x 8.3 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Mr. and Mrs. Harrison Eiteljorg, Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">28940</atom>
+        <atom name="irn">22402</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.1566</atom>
+        <atom name="EleIdentifier">28940</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 14 -->
+  <tuple>
+    <atom name="irn">20486</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.819</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/658 | E81.53</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">human head</atom>
+    <atom name="TitObjectType">Visual Works: Sculpture</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">mid-16th century - late-18th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">ceramic</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">wood</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">ceramic, wood</atom>
+    <atom name="PhyConvertedDims">8-7/8 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">8.8750</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 22.5 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Dr. Robert Plant Armstrong [1919-1984], Dallas, Texas; (John Buxton, Shango Galleries, Dallas); purchased 24 June 1981 by Harrison Eiteljorg [1903-1997], Indianapolis, Indiana; given to the Indianapolis Museum of Art in 1989.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">fig. 3</atom>
+        <atom name="irn">1979</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 126-127 c. ill.</atom>
+        <atom name="irn">1842</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">29428</atom>
+        <atom name="irn">22630</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.819</atom>
+        <atom name="EleIdentifier">29428</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">773</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.819_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Representations of human heads made of baked clay are found on altars of Benin City brass casters and honor Igueghae, who in the 1300's is believed to have come from the sacred Yoruba city of Ife to introduce the art of brass casting to the Benin Kingdom.  In the past, such heads may have appeared on royal ancestor altars.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 15 -->
+  <tuple>
+    <atom name="irn">26019</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1998.70</atom>
+    <atom name="TitPreviousAccessionNo">TR9002/1</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1998-05-21</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">pendant with two entwined mudfish</atom>
+    <atom name="TitObjectType">Costume Accessories</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">pendants</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">17th-19th centuries</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">bone</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMedium">ivory</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass, bone, ivory</atom>
+    <atom name="PhyConvertedDims">6-1/4 x 6-1/2 x 1-1/2 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">6.2500</atom>
+        <atom name="PhyWidth">6.5000</atom>
+        <atom name="PhyDepth">1.5000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 15.9 x 16.5 x 3.8 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Anonymous Art Fund in memory of Louisa A. Vonnegut Peirce</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Tom Slater, Indianapolis, Indiana); purchased by the Indianapolis Museum of Art at Newfields in 1998.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">29426</atom>
+        <atom name="irn">28137</atom>
+        <atom name="EleTitle">Dagwood ID for 1998.70</atom>
+        <atom name="EleIdentifier">29426</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">1211</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1998.70_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;This pendant of two entwined mudfish was worn by important men associated with the royal court.  Mudfish, a significant source of food, symbolize wealth. &lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 16 -->
+  <tuple>
+    <atom name="irn">27069</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.839</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/680 | E87.20</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">ceremonial sword</atom>
+    <atom name="TitObjectType">Weapons and Ammunition</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">swords</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">mid-19th century - early 20th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">iron</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">iron</atom>
+    <atom name="PhyConvertedDims">39-1/2 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">39.5000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 100.3 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Sotheby's, London, England) on 30 March 1987 lot 69; Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">29432</atom>
+        <atom name="irn">29186</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.839</atom>
+        <atom name="EleIdentifier">29432</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">779</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.839_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Swords with fan-shaped blades are an important part of Benin ceremonies.  They are carried before a chief in processions and used by him in a dance paying respect to the king.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 17 -->
+  <tuple>
+    <atom name="irn">29175</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1992.62</atom>
+    <atom name="TitPreviousAccessionNo">TR7728</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1992-07-01</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">staff with bird figure</atom>
+    <atom name="TitObjectType">Tools and Equipment</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">sculptures</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">staffs</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">mid-18th century to mid-19th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass</atom>
+    <atom name="PhyConvertedDims">10-1/2 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">10.5000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 26.7 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Emma Harter Sweetser Fund</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Pace Primitive Gallery, New York, New York); purchased by the Indianapolis Museum of Art at Newfields, Indianapolis, Indiana  in 1992.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">29431</atom>
+        <atom name="irn">31279</atom>
+        <atom name="EleTitle">Dagwood ID for 1992.62</atom>
+        <atom name="EleIdentifier">29431</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">909</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1992.62_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Bird staffs serve as hand-held clappers during court rituals.  They are played by striking the bird's beak with a metal rod.  These staffs symbolize the power of the king over natural and supernatural forces, and recall a famous military victory of a Benin King.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 18 -->
+  <tuple>
+    <atom name="irn">33276</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">1989.828</atom>
+    <atom name="TitPreviousAccessionNo">TR6937/669 | E72.3</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">1990-01-18</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">face mask for Ekpo association</atom>
+    <atom name="TitObjectType">Costume</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">masks</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">mid-20th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">pigment</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">wood</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">wood, pigment</atom>
+    <atom name="PhyConvertedDims">10-1/4 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">10.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 26 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mr. and Mrs. Harrison Eiteljorg</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">(Lamine); sold on 15 September 1972 to Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">no, 30 fig. 9</atom>
+        <atom name="irn">1856</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">p. 131 fig, 118 ill. (black and white)</atom>
+        <atom name="irn">1842</atom>
+        <atom name="EleTitle"></atom>
+        <atom name="EleIdentifier"></atom>
+      </tuple>
+      <tuple>
+        <atom name="RefBibliographicNotes">18899</atom>
+        <atom name="irn">65939</atom>
+        <atom name="EleTitle">Dagwood ID for 1989.828</atom>
+        <atom name="EleIdentifier">18899</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">776</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">1989.828_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;&lt;em&gt;Ekpo&lt;/em&gt; masks embody beings from the spirit world and honor local heroes and gods.  This masking tradition supports local leaders and helps to maintain the independence of villages from the central authority and cultural influence of the king in Benin City.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 19 -->
+  <tuple>
+    <atom name="irn">56390</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitAccessionNo">2001.404</atom>
+    <atom name="TitPreviousAccessionNo">TR9763/6</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionDate">2002-03-21</atom>
+    <atom name="TitNumberOfParts">1</atom>
+    <atom name="TitMainTitle">chief's human face pendant</atom>
+    <atom name="TitObjectType">Costume</atom>
+    <table name="ObjectTypes">
+      <tuple>
+        <atom name="PhyMediaCategory">pendants</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">late 19th century</atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="Creator2">
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Benin Kingdom</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreCreationCultureOrPeople">Edo people</atom>
+      </tuple>
+    </table>
+    <table name="CreLocation">
+      <tuple>
+        <atom name="CreCountry">Nigeria</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">brass</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">brass</atom>
+    <atom name="PhyConvertedDims">7-1/2 x 5-1/2 x 2-1/4 in.</atom>
+    <table name="Dimensions">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyHeight">7.5000</atom>
+        <atom name="PhyWidth">5.5000</atom>
+        <atom name="PhyDepth">2.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 19.1 x 13.9 x 5.7 cm.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Bonnie and David Ross in memory of Harry and Peggy Ross</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">Bonnie and David Ross, Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 2001.</atom>
+    <atom name="PhyCollectionArea">906.1-African Art</atom>
+    <tuple name="AssParentObjectRef">
+        <atom name="irn"></atom>
+    </tuple>
+    <atom name="AssIsParent">No</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <table name="Homepage">
+      <tuple>
+        <atom name="RefBibliographicNotes">29430</atom>
+        <atom name="irn">88952</atom>
+        <atom name="EleTitle">Dagwood ID for 2001.404</atom>
+        <atom name="EleIdentifier">29430</atom>
+      </tuple>
+    </table>
+    <table name="Narratives">
+      <tuple>
+        <atom name="irn">1378</atom>
+        <atom name="DesPurpose">Object Label</atom>
+        <atom name="NarTitle">2001.404_v01</atom>
+        <atom name="NarNarrative">&lt;p&gt;Pendants with human faces such as this one served as badges of office and could only be worn by chiefs or other agents of kings.&lt;/p&gt;</atom>
+      </tuple>
+    </table>
+  </tuple>
+</table>
