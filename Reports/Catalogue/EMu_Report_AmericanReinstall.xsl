@@ -85,6 +85,25 @@
                 width: 70%;
                 border: none !important;
                 }
+                .table-narratives th{
+                font-family: Tahoma, Verdana, Segoe, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: bold;
+                text-align: right;
+                max-width: 20%;
+                border: none !important;
+                }
+                .table-narratives td{
+                font-family: Tahoma, Verdana, Segoe, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                width: 80%;
+                border: none !important;
+                }
             </style>
             <head>
                 <title>American Rehang Handout</title>
@@ -92,6 +111,7 @@
             <div class="container-fluid">
                 <body>
         <xsl:for-each select="tuple">
+            <xsl:variable name="dagwood"><xsl:value-of select="table[@name='Dagwood']/tuple/atom[@name='EleIdentifier']"/></xsl:variable>
             <xsl:choose>
                 <xsl:when test="position() != last()">
 <!--Header with Newfields logo and exhibition name-->
@@ -147,6 +167,10 @@
                             <td><xsl:value-of select="atom[@name='PhyMediumAndSupport']"/></td>
                         </tr>
                         <tr>
+                            <th>Dimensions</th>
+                            <td><xsl:value-of select="atom[@name='PhyConvertedDims']"/></td>
+                        </tr>
+                        <tr>
                             <th>Credit Line</th>
                             <td><xsl:value-of select="atom[@name='SumCreditLine']"/></td>
                         </tr>
@@ -164,28 +188,33 @@
             </div>
             <div class="page">
                 <center>
-                    <table class="table table-condensed">
+                    <xsl:element name="a">
+                        <xsl:attribute name="href">http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/></xsl:attribute>http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/>
+                    </xsl:element>
+                    <table class="table table-narratives">
                         <tbody>
                             <tr>
                                 <th>Artist Bio</th>
                                 <td>Artist bio will go here.</td>
                             </tr>
                             <tr>
-                                <th>Context</th>
-                                <td>Contextual information about the hanging will go here.</td>
+                                <th>Rationale</th>
+                                <td>Rationale for the hanging will go here.</td>
                             </tr>
                             <xsl:for-each select="table[@name='Narratives']/tuple">
+                                <xsl:if test="atom[@name='AdmPublishWebNoPassword'] = 'Yes'">
                                 <xsl:if test="atom[@name='DesPurpose'] = 'Object Label'">
                             <tr>
                                 <th>Gallery Label</th>
-                                <td><xsl:value-of select="atom[@name='NarNarrative']"/></td>
+                                <td><xsl:copy><xsl:call-template name="remove-markup"><xsl:with-param name="string" select="atom[@name='NarNarrative']"/></xsl:call-template></xsl:copy></td>
                             </tr>
                                 </xsl:if>
                                 <xsl:if test="atom[@name='DesPurpose'] = 'Exhibition Label'">
                             <tr>
                                 <th>Gallery Label</th>
-                                <td><xsl:value-of select="atom[@name='NarNarrative']"/></td>
+                                <td><xsl:copy><xsl:call-template name="remove-markup"><xsl:with-param name="string" select="atom[@name='NarNarrative']"/></xsl:call-template></xsl:copy></td>
                             </tr>
+                                </xsl:if>
                                 </xsl:if>
                             </xsl:for-each>
                         </tbody>
@@ -247,6 +276,10 @@
                                         <td><xsl:value-of select="atom[@name='PhyMediumAndSupport']"/></td>
                                     </tr>
                                     <tr>
+                                        <th>Dimensions</th>
+                                        <td><xsl:value-of select="atom[@name='PhyConvertedDims']"/></td>
+                                    </tr>
+                                    <tr>
                                         <th>Credit Line</th>
                                         <td><xsl:value-of select="atom[@name='SumCreditLine']"/></td>
                                     </tr>
@@ -264,9 +297,35 @@
                     </div>
                     <div class="lastpage">
                         <center>
-                            <table class="table table-condensed">
+                            <xsl:element name="a">
+                                <xsl:attribute name="href">http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/></xsl:attribute>http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/>
+                            </xsl:element>
+                            <table class="table table-narratives">
                                 <tbody>
-                                    
+                                    <tr>
+                                        <th>Artist Bio</th>
+                                        <td>Artist bio will go here.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Rationale</th>
+                                        <td>Rational for the hanging will go here.</td>
+                                    </tr>
+                                    <xsl:for-each select="table[@name='Narratives']/tuple">
+                                        <xsl:if test="atom[@name='AdmPublishWebNoPassword'] = 'Yes'">
+                                        <xsl:if test="atom[@name='DesPurpose'] = 'Object Label'">
+                                            <tr>
+                                                <th>Gallery Label</th>
+                                                <td><xsl:copy><xsl:call-template name="remove-markup"><xsl:with-param name="string" select="atom[@name='NarNarrative']"/></xsl:call-template></xsl:copy></td>
+                                            </tr>
+                                        </xsl:if>
+                                        <xsl:if test="atom[@name='DesPurpose'] = 'Exhibition Label'">
+                                            <tr>
+                                                <th>Gallery Label</th>
+                                                <td><xsl:copy><xsl:call-template name="remove-markup"><xsl:with-param name="string" select="atom[@name='NarNarrative']"/></xsl:call-template></xsl:copy></td>
+                                            </tr>
+                                        </xsl:if>
+                                        </xsl:if>
+                                    </xsl:for-each>
                                 </tbody>
                             </table>
                         </center>
@@ -278,4 +337,21 @@
             </div>
         </html>
     </xsl:template>
+    
+    <xsl:template name="remove-markup">
+        <xsl:param name="string"/> 
+        <xsl:choose>
+            <xsl:when test="contains($string, '&lt;')">
+                <xsl:value-of select="substring-before($string, '&lt;')" />
+                <!-- recursive call -->
+                <xsl:call-template name="remove-markup">
+                    <xsl:with-param name="string" select="substring-after($string, '&gt;')"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$string"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
 </xsl:stylesheet>
