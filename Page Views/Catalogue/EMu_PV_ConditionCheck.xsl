@@ -408,6 +408,14 @@ function loaded()
                             <xsl:value-of select="atom[@name='RecDisplayReq']" />
                         </td>
                     </tr>
+                    <tr class="atomvalue">
+                        <td class="atomprompt">
+                            Display Instructions
+                        </td>
+                        <td class="atomvalue">
+                            <xsl:value-of select="atom[@name='ConDispOtherInstructions']" />
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
