@@ -188,9 +188,7 @@
             </div>
             <div class="page">
                 <center>
-                    <xsl:element name="a">
-                        <xsl:attribute name="href">http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/></xsl:attribute>http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/>
-                    </xsl:element>
+                        http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/>
                     <table class="table table-narratives">
                         <tbody>
                             <tr>
@@ -297,9 +295,7 @@
                     </div>
                     <div class="lastpage">
                         <center>
-                            <xsl:element name="a">
-                                <xsl:attribute name="href">http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/></xsl:attribute>http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/>
-                            </xsl:element>
+                            http://collection.imamuseum.org/artwork/<xsl:value-of select="translate($dagwood, ' ', '')"/>
                             <table class="table table-narratives">
                                 <tbody>
                                     <tr>
