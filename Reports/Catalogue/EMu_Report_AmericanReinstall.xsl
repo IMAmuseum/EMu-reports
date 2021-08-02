@@ -237,8 +237,8 @@
                             <h3>
                                 <!--Creator Information-->            
                                 <xsl:choose>
-                                    <xsl:when test="table[@name='Creator']">
-                                        <xsl:for-each select="table[@name='Creator']/tuple">
+                                    <xsl:when test="table[@name='Creator1']">
+                                        <xsl:for-each select="table[@name='Creator1']/tuple">
                                             <xsl:if test="atom[@name='CreRole'] != ''"><xsl:value-of select="atom[@name='CreRole']"/><xsl:text>: </xsl:text></xsl:if>
                                             <xsl:choose>
                                                 <xsl:when test="atom[@name='BioNationality'] != '' and atom[@name='BioBirthDate'] != ''">
