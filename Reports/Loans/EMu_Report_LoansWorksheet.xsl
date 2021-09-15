@@ -356,7 +356,7 @@ pre
                                 <tr class="atomvalue">
                                     <td class="atomvalue" style="font-weight: bold">
                                         <xsl:for-each select="table[@name='Creator']/tuple">
-                                            <xsl:if test="atom[@name='CreRole'] != ''"><xsl:value-of select="atom[@name='CreRole']"/>: </xsl:if><xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:otherwise><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:otherwise></xsl:choose>
+                                            <xsl:if test="atom[@name='CreRole'] != ''"><xsl:value-of select="atom[@name='CreRole']"/>: </xsl:if><xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''"><xsl:value-of select="atom[@name='NamFullName']"/></xsl:when><xsl:when test="atom[@name='NamOrganisation'] != ''"><xsl:value-of select="atom[@name='NamOrganisation']"/></xsl:when><xsl:when test="atom[@name='ColCollaborationName'] != ''"><xsl:value-of select="atom[@name='ColCollaborationName']"/></xsl:when><xsl:when test="atom[@name='CreCreationCultureOrPeople'] != ''"><xsl:value-of select="atom[@name='CreCreationCultureOrPeople']"/></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose>
                                             <xsl:if test="position() != last()">
                                                 <br/>
                                             </xsl:if>
