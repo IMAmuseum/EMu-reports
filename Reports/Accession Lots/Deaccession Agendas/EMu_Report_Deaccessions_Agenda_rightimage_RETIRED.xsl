@@ -101,10 +101,6 @@ img.icon
     max-width: 150px;
     max-height: 150px;
 }
-td.icon
-{
-    width: 0px;
-}
 table.data
 {
     width: 100%;

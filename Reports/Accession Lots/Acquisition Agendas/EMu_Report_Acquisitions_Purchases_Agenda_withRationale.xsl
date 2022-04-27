@@ -91,10 +91,6 @@ img.icon
 {
     width: 250px;
 }
-td.icon
-{
-    width: 0px;
-}
 table.data
 {
     width: 100%;

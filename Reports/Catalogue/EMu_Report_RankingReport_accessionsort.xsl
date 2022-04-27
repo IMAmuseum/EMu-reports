@@ -150,10 +150,6 @@ img.icon
     width: 150px;
     height: auto;
 }
-td.icon
-{
-    width: 0px;
-}
 table.data
 {
     width: 100%;

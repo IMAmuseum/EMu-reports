@@ -98,10 +98,6 @@ img.icon
     height: auto;
     width:auto;
 }
-td.icon
-{
-    width: 0px;
-}
 table.data
 {
     width: 100%;
