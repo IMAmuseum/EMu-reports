@@ -204,7 +204,8 @@ p
             </xsl:when>
             <xsl:when test="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple[starts-with(atom[@name='TitAccessionNo'], 'TR')]">
                 <xsl:for-each select="table[@name='eaccessionlots']/tuple/table[@name='AccAccessionLotRef']/tuple">
-                    <xsl:sort select="atom[@name='TitAccessionNo']"/>
+                    <xsl:sort select="substring-before(atom[@name='TitAccessionNo'], '/')" data-type="text"/>
+                    <xsl:sort select="translate(substring-after(atom[@name='TitAccessionNo'], '/'), '-ABCDEFGHIJKLMNOPQRSTUVWXYZ', '')" data-type="number" />
                     <xsl:call-template name="record" />
                     <xsl:if test="position() != last()">
                         <p />

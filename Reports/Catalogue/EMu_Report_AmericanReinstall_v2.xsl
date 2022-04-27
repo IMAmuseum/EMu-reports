@@ -201,7 +201,7 @@
                                 <th>Provenance</th>
                                 <td><xsl:choose><xsl:when test="atom[@name='CreProvenance'] != ''"><xsl:copy><xsl:call-template name="remove-markup"><xsl:with-param name="string" select="atom[@name='CreProvenance']"/></xsl:call-template></xsl:copy></xsl:when><xsl:otherwise>Not Available</xsl:otherwise></xsl:choose></td>
                             </tr>
-                            <xsl:for-each select="table[@name='Narratives']/tuple">
+                            <!--<xsl:for-each select="table[@name='Narratives']/tuple">
                                 <xsl:if test="atom[@name='AdmPublishWebNoPassword'] = 'Yes'">
                                 <xsl:if test="atom[@name='DesPurpose'] = 'Object Label'">
                             <tr>
@@ -216,7 +216,7 @@
                             </tr>
                                 </xsl:if>
                                 </xsl:if>
-                            </xsl:for-each>
+                            </xsl:for-each>-->
                         </tbody>
                     </table>
                 </center>
@@ -310,7 +310,7 @@
                                         <th>Provenance</th>
                                         <td><xsl:choose><xsl:when test="atom[@name='CreProvenance'] != ''"><xsl:copy><xsl:call-template name="remove-markup"><xsl:with-param name="string" select="atom[@name='CreProvenance']"/></xsl:call-template></xsl:copy></xsl:when><xsl:otherwise>Not Available</xsl:otherwise></xsl:choose></td>
                                     </tr>
-                                    <xsl:for-each select="table[@name='Narratives']/tuple">
+                                    <!--<xsl:for-each select="table[@name='Narratives']/tuple">
                                         <xsl:if test="atom[@name='AdmPublishWebNoPassword'] = 'Yes'">
                                         <xsl:if test="atom[@name='DesPurpose'] = 'Object Label'">
                                             <tr>
@@ -325,7 +325,7 @@
                                             </tr>
                                         </xsl:if>
                                         </xsl:if>
-                                    </xsl:for-each>
+                                    </xsl:for-each>-->
                                 </tbody>
                             </table>
                         </center>
