@@ -1,3 +1,3 @@
 cd C:\EMu-reports\Scheduled Exports\
 
-java -jar C:\saxon\saxon9he.jar -s:extract\catalogue_fullexport_LASample.xml -xsl:transform\catalogue_fullexport.xsl -o:load\catalogue_fullexport_LASample.json
+java -jar C:\saxon\saxon9he.jar -s:extract\parties_fullexport_LASample.xml -xsl:transform\parties_fullexport.xsl -o:load\parties_fullexport_LASample.json
