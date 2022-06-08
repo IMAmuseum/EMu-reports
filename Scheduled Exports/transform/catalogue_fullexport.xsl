@@ -21,15 +21,15 @@
         "creators": [<xsl:for-each select="table[@name='Creator']/tuple">
             {
                 "irn": <xsl:value-of select="atom[@name='irn']"/>,
-                "role": <xsl:choose><xsl:when test="atom[@name='CreRole'] != ''">"<xsl:value-of select="replace(atom[@name='CreRole'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-                "attribution": <xsl:choose><xsl:when test="atom[@name='CreCreatorAfterFollower'] != ''">"<xsl:value-of select="replace(atom[@name='CreCreatorAfterFollower'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+                "role": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreRole']) != ''">"<xsl:value-of select="replace(atom[@name='CreRole'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+                "attribution": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreCreatorAfterFollower']) != ''">"<xsl:value-of select="replace(atom[@name='CreCreatorAfterFollower'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
                 "dateModified": "<xsl:value-of select="atom[@name='AdmDateModified']"/>"
             }<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>],
         "cultures": [<xsl:for-each select="table[@name='Culture']/tuple">
             {
-                "attribution": <xsl:choose><xsl:when test="atom[@name='CreCreatorAttribution'] != ''">"<xsl:value-of select="replace(atom[@name='CreCreatorAttribution'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-                "culture": <xsl:choose><xsl:when test="atom[@name='CreCreationCultureOrPeople'] != ''">"<xsl:value-of select="replace(atom[@name='CreCreationCultureOrPeople'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-                "nationality": <xsl:choose><xsl:when test="atom[@name='CreCreationNationality2'] != ''">"<xsl:value-of select="replace(atom[@name='CreCreationNationality2'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>
+                "attribution": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreCreatorAttribution']) != ''">"<xsl:value-of select="replace(atom[@name='CreCreatorAttribution'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+                "culture": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreCreationCultureOrPeople']) != ''">"<xsl:value-of select="replace(atom[@name='CreCreationCultureOrPeople'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+                "nationality": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreCreationNationality2']) != ''">"<xsl:value-of select="replace(atom[@name='CreCreationNationality2'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>
             }<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>],
         "dateCreated": <xsl:choose><xsl:when test="atom[@name='CreDateCreated'] != ''">"<xsl:value-of select="replace(atom[@name='CreDateCreated'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "dateCreatedEarliest": <xsl:choose><xsl:when test="atom[@name='CreEarliestDate'] != ''">"<xsl:value-of select="atom[@name='CreEarliestDate']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
@@ -40,10 +40,10 @@
         "period": <xsl:choose><xsl:when test="atom[@name='CreCreationPeriod'] != ''">"<xsl:value-of select="replace(atom[@name='CreCreationPeriod'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "dynasty": <xsl:choose><xsl:when test="atom[@name='CreCreationDynasty'] != ''">"<xsl:value-of select="replace(atom[@name='CreCreationDynasty'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "creationLocations": [<xsl:for-each select="table[@name='CreLocation']/tuple">{
-            "country": <xsl:choose><xsl:when test="atom[@name='CreCountry'] != ''">"<xsl:value-of select="replace(atom[@name='CreCountry'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "state": <xsl:choose><xsl:when test="atom[@name='CreState'] != ''">"<xsl:value-of select="replace(atom[@name='CreState'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "district": <xsl:choose><xsl:when test="atom[@name='CreDistrict'] != ''">"<xsl:value-of select="replace(atom[@name='CreDistrict'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "city": <xsl:choose><xsl:when test="atom[@name='CreCity'] != ''">"<xsl:value-of select="replace(atom[@name='CreCity'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>}<xsl:if test="position() != last()">,
+            "country": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreCountry']) != ''">"<xsl:value-of select="replace(atom[@name='CreCountry'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+            "state": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreState']) != ''">"<xsl:value-of select="replace(atom[@name='CreState'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+            "district": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreDistrict']) != ''">"<xsl:value-of select="replace(atom[@name='CreDistrict'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+            "city": <xsl:choose><xsl:when test="normalize-space(atom[@name='CreCity']) != ''">"<xsl:value-of select="replace(atom[@name='CreCity'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>}<xsl:if test="position() != last()">,
             </xsl:if></xsl:for-each>],
         "recordType": <xsl:choose><xsl:when test="atom[@name='TitObjectType'] != ''">"<xsl:value-of select="replace(atom[@name='TitObjectType'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "objectTypes": [<xsl:for-each select="table[@name='ObjType']/tuple">"<xsl:value-of select="replace(atom[@name='PhyMediaCategory'], '&quot;', '\\&quot;')"/>"<xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
@@ -55,11 +55,7 @@
         "mark": {
             "markType": <xsl:choose><xsl:when test="table[@name='MarkType']/atom[@name='CreMarkType'] != ''">"<xsl:value-of select="replace(table[@name='MarkType']/atom[@name='CreMarkType'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
             "inscription": <xsl:choose><xsl:when test="table[@name='MarkType']/atom[@name='CrePrimaryInscriptions'] != ''">"<xsl:value-of select="replace(replace(table[@name='MarkType']/atom[@name='CrePrimaryInscriptions'], '\n', '\\n'), '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>
-        },
-        "physicalDescription": <xsl:choose><xsl:when test="atom[@name='PhyDecription'] != ''">"<xsl:value-of select="replace(replace(atom[@name='PhyDescription'], '\n', '\\n'), '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-        "subjectDescription": <xsl:choose><xsl:when test="atom[@name='CreSubjectDescription'] != ''">"<xsl:value-of select="replace(replace(atom[@name='CreSubjectDescriptions'], '\n', '\\n'), '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-        "subjectIdentity": <xsl:choose><xsl:when test="atom[@name='CreSubjectIdentification'] != ''">"<xsl:value-of select="replace(replace(atom[@name='CreSubjectIdentification'], '\n', '\\n'), '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-        "subjectInterpretation": <xsl:choose><xsl:when test="atom[@name='CreSubjectInterpretation'] != ''">"<xsl:value-of select="replace(replace(atom[@name='CreSubjectInterpretation'], '\n', '\\n'), '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,<xsl:if test="table[@name='Printer']">
+        },<xsl:if test="table[@name='Printer']">
         "printer": {
             "irn": <xsl:value-of select="table[@name='Printer']/atom[@name='irn']"/>,
             "dateModified": "<xsl:value-of select="table[@name='Printer']/atom[@name='AdmDateModified']"/>"
@@ -90,9 +86,7 @@
         "rights": [<xsl:for-each select="table[@name='Rights']/tuple">
             {
                 "irn": <xsl:value-of select="atom[@name='irn']"/>,
-                "dateModified": "<xsl:value-of select="atom[@name='AdmDateModified']"/>",
-                "type": <xsl:choose><xsl:when test="atom[@name='RigType'] != ''">"<xsl:value-of select="atom[@name='RigType']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-                "rightsStatement": <xsl:choose><xsl:when test="atom[@name='RigAcknowledgement'] != ''">"<xsl:value-of select="replace(replace(atom[@name='RigAcknowledgement'], '\n', '\\n'), '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>
+                "dateModified": "<xsl:value-of select="atom[@name='AdmDateModified']"/>"
             }<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>],</xsl:if>
         "provenance": <xsl:choose><xsl:when test="atom[@name='CreProvenance'] != ''">"<xsl:value-of select="replace(replace(atom[@name='CreProvenance'], '\n', '\\n'), '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "department": <xsl:choose><xsl:when test="atom[@name='PhyCollectionArea'] != ''">"<xsl:value-of select="replace(atom[@name='PhyCollectionArea'], '&quot;', '\\&quot;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
@@ -110,22 +104,14 @@
             "locationLevel6": <xsl:choose><xsl:when test="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel6'] != ''">"<xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel6']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
             "locationLevel7": <xsl:choose><xsl:when test="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel7'] != ''">"<xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel7']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
             "locationLevel8": <xsl:choose><xsl:when test="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel8'] != ''">"<xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel8']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>
-        },</xsl:if><xsl:if test="tuple[@name='LocPermanentLocationRef']/atom[@name='irn'] != ''">
-        "permLocation": {
-            "irn": <xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='irn']"/>,
-            "dateModified": "<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='AdmDateModified']"/>",
-            "locationType": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLocationType'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLocationType']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationCode": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLocationCode'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLocationCode']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel1": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel1'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel1']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel2": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel2'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel2']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel3": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel3'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel3']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel4": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel4'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel4']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel5": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel5'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel5']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel6": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel6'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel6']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel7": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel7'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel7']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-            "locationLevel8": <xsl:choose><xsl:when test="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel8'] != ''">"<xsl:value-of select="tuple[@name='LocPermanentLocationRef']/atom[@name='LocLevel8']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>
         },</xsl:if><xsl:if test="tuple[@name='AssParentObjectRef']/atom[@name='irn'] !=''">
-        "parentIRN": <xsl:value-of select="tuple[@name='AssParentObjectRef']/atom[@name='irn']"/>,</xsl:if><xsl:if test="atom[@name='TitObjectStatus'] = 'Deaccessioned'">
+        "parentIRN": <xsl:value-of select="tuple[@name='AssParentObjectRef']/atom[@name='irn']"/>,</xsl:if>
+        "relatedObjects": [<xsl:for-each select="table[@name='Related']/tuple">
+            {
+                "relationship": "<xsl:value-of select="atom[@name='AssRelationship']"/>",
+                "irn": <xsl:value-of select="atom[@name='irn']"/>,
+                "dateModified": "<xsl:value-of select="atom[@name='AdmDateModified']"/>"
+            }<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>],<xsl:if test="atom[@name='TitObjectStatus'] = 'Deaccessioned'">
         "deaccession": {
             "deaccessionMethod": <xsl:choose><xsl:when test="table[@name='DeaccessionDetails']/tuple/atom[@name='DeaDeaccessionMethod'] != ''">"<xsl:value-of select="table[@name='DeaccessionDetails']/tuple/atom[@name='DeaDeaccessionMethod']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
             "deaccessionDate": <xsl:choose><xsl:when test="table[@name='DeaccessionDetails']/tuple/atom[@name='DeaDeaccessionDate'] != ''">"<xsl:value-of select="table[@name='DeaccessionDetails']/tuple/atom[@name='DeaDeaccessionDate']"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,

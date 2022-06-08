@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE table
+[
+  <!ELEMENT table	(tuple)*>
+  <!ATTLIST table
+            name	CDATA #REQUIRED
+  >
+
+  <!ELEMENT tuple	(table|tuple|atom)*>
+  <!ATTLIST tuple
+            name	CDATA #IMPLIED
+  >
+
+  <!ELEMENT atom	(#PCDATA)*>
+  <!ATTLIST atom
+            name	CDATA #REQUIRED
+            type	CDATA "text"
+            size	CDATA "short"
+  >
+]
+>
+<?schema
+  table           erights
+    integer         irn
+    date            AdmDateModified
+    text short      RigNumber
+    text short      RigType
+    text short      RigStatus
+    text short      RigRequiresAcknowledgement
+    text long       RigAcknowledgement
+    table           GUIDs
+      text short      AdmGUIDIsPreferred
+      text short      AdmGUIDType
+      text short      AdmGUIDValue
+    end
+  end
+?>
+<!-- Data -->
+<table name="erights">
+
+  <!-- Row 1 -->
+  <tuple>
+    <atom name="irn">19</atom>
+    <atom name="AdmDateModified">2022-06-08</atom>
+    <atom name="RigNumber">RT2006.18</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Contact for each usage</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Fundació Antoni Tàpies/Artists Rights Society (ARS), New York / VEGAP, Madrid</atom>
+    <table name="GUIDs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred">No</atom>
+        <atom name="AdmGUIDType">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue">http://rightsstatements.org/vocab/InC/1.0/</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 2 -->
+  <tuple>
+    <atom name="irn">96</atom>
+    <atom name="AdmDateModified">2015-09-15</atom>
+    <atom name="RigNumber">RT2006.95</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Researching Rights Holder</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© The Estates of William J. and Constance Forsyth</atom>
+  </tuple>
+
+  <!-- Row 3 -->
+  <tuple>
+    <atom name="irn">117</atom>
+    <atom name="AdmDateModified">2011-03-30</atom>
+    <atom name="RigNumber">RT2006.116</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Researching Rights Holder</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© The Estate of Gabor F. Peterdi</atom>
+  </tuple>
+
+  <!-- Row 4 -->
+  <tuple>
+    <atom name="irn">196</atom>
+    <atom name="AdmDateModified">2022-06-08</atom>
+    <atom name="RigNumber">RT2007.19</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Contact for each usage</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Morgan Art Foundation/Artists Rights Society (ARS), New York</atom>
+    <table name="GUIDs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred">No</atom>
+        <atom name="AdmGUIDType">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue">http://rightsstatements.org/vocab/InC/1.0/</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 5 -->
+  <tuple>
+    <atom name="irn">432</atom>
+    <atom name="AdmDateModified">2014-07-07</atom>
+    <atom name="RigNumber">RT2011.74</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Signed Agreement / See Use Instructions</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Jurgen Bey</atom>
+  </tuple>
+
+  <!-- Row 6 -->
+  <tuple>
+    <atom name="irn">503</atom>
+    <atom name="AdmDateModified">2022-06-08</atom>
+    <atom name="RigNumber">RT2011.138</atom>
+    <atom name="RigType">Public Domain</atom>
+    <atom name="RigStatus">Estate Information</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain 
+Courtesy the Estates of William J. and Constance Forsyth</atom>
+    <table name="GUIDs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred">No</atom>
+        <atom name="AdmGUIDType">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 7 -->
+  <tuple>
+    <atom name="irn">599</atom>
+    <atom name="AdmDateModified">2017-01-27</atom>
+    <atom name="RigNumber">RT2011.233</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Signed Agreement</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Los Carpinteros. Courtesy Sean Kelly Gallery, New York.</atom>
+  </tuple>
+
+  <!-- Row 8 -->
+  <tuple>
+    <atom name="irn">662</atom>
+    <atom name="AdmDateModified">2011-03-30</atom>
+    <atom name="RigNumber">RT2011.295</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Researching Rights Holder</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Gaetano Pesce</atom>
+  </tuple>
+
+  <!-- Row 9 -->
+  <tuple>
+    <atom name="irn">800</atom>
+    <atom name="AdmDateModified">2022-06-08</atom>
+    <atom name="RigNumber">RT2012.3</atom>
+    <atom name="RigType">PD-901.1</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+    <table name="GUIDs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred">No</atom>
+        <atom name="AdmGUIDType">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 10 -->
+  <tuple>
+    <atom name="irn">802</atom>
+    <atom name="AdmDateModified">2022-06-08</atom>
+    <atom name="RigNumber">RT2012.4</atom>
+    <atom name="RigType">PD-901.2</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+    <table name="GUIDs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred">No</atom>
+        <atom name="AdmGUIDType">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 11 -->
+  <tuple>
+    <atom name="irn">803</atom>
+    <atom name="AdmDateModified">2022-06-08</atom>
+    <atom name="RigNumber">RT2012.5</atom>
+    <atom name="RigType">PD-902.1</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+    <table name="GUIDs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred">No</atom>
+        <atom name="AdmGUIDType">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
+      </tuple>
+    </table>
+  </tuple>
+
+  <!-- Row 12 -->
+  <tuple>
+    <atom name="irn">807</atom>
+    <atom name="AdmDateModified">2016-10-14</atom>
+    <atom name="RigNumber">RT2012.9</atom>
+    <atom name="RigType">PD-904.1</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+  </tuple>
+
+  <!-- Row 13 -->
+  <tuple>
+    <atom name="irn">808</atom>
+    <atom name="AdmDateModified">2012-09-16</atom>
+    <atom name="RigNumber">RT2012.10</atom>
+    <atom name="RigType">PD-904.2</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+  </tuple>
+
+  <!-- Row 14 -->
+  <tuple>
+    <atom name="irn">809</atom>
+    <atom name="AdmDateModified">2012-09-16</atom>
+    <atom name="RigNumber">RT2012.11</atom>
+    <atom name="RigType">PD-905.1-.2</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+  </tuple>
+
+  <!-- Row 15 -->
+  <tuple>
+    <atom name="irn">810</atom>
+    <atom name="AdmDateModified">2022-02-14</atom>
+    <atom name="RigNumber">RT2012.12</atom>
+    <atom name="RigType">PD-906.3</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+  </tuple>
+
+  <!-- Row 16 -->
+  <tuple>
+    <atom name="irn">813</atom>
+    <atom name="AdmDateModified">2012-09-16</atom>
+    <atom name="RigNumber">RT2012.14</atom>
+    <atom name="RigType">PD-908</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+  </tuple>
+
+  <!-- Row 17 -->
+  <tuple>
+    <atom name="irn">1429</atom>
+    <atom name="AdmDateModified">2014-07-07</atom>
+    <atom name="RigNumber">RT2014.182</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Contact for each usage</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
+  </tuple>
+
+  <!-- Row 18 -->
+  <tuple>
+    <atom name="irn">1473</atom>
+    <atom name="AdmDateModified">2016-04-13</atom>
+    <atom name="RigNumber">RT2014.226</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Researching Rights Holder</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Halston</atom>
+  </tuple>
+
+  <!-- Row 19 -->
+  <tuple>
+    <atom name="irn">1529</atom>
+    <atom name="AdmDateModified">2014-07-22</atom>
+    <atom name="RigNumber">RT2014.280</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Researching Rights Holder</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Issey Miyake</atom>
+  </tuple>
+
+  <!-- Row 20 -->
+  <tuple>
+    <atom name="irn">1644</atom>
+    <atom name="AdmDateModified">2016-06-20</atom>
+    <atom name="RigNumber">RT2015.14</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">No Known Estate or Heirs</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Wayman Adams</atom>
+  </tuple>
+
+  <!-- Row 21 -->
+  <tuple>
+    <atom name="irn">1645</atom>
+    <atom name="AdmDateModified">2015-01-27</atom>
+    <atom name="RigNumber">RT2015.15</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Researching Rights Holder</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Dines Carlsen</atom>
+  </tuple>
+
+  <!-- Row 22 -->
+  <tuple>
+    <atom name="irn">1702</atom>
+    <atom name="AdmDateModified">2016-10-14</atom>
+    <atom name="RigNumber">RT2015.49</atom>
+    <atom name="RigType">OW-904.1</atom>
+    <atom name="RigStatus">No Known Estate or Heirs</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+  </tuple>
+
+  <!-- Row 23 -->
+  <tuple>
+    <atom name="irn">1704</atom>
+    <atom name="AdmDateModified">2016-09-15</atom>
+    <atom name="RigNumber">RT2015.51</atom>
+    <atom name="RigType">OW-905.1-.2</atom>
+    <atom name="RigStatus">No Known Estate or Heirs</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+  </tuple>
+
+  <!-- Row 24 -->
+  <tuple>
+    <atom name="irn">1705</atom>
+    <atom name="AdmDateModified">2022-02-14</atom>
+    <atom name="RigNumber">RT2015.52</atom>
+    <atom name="RigType">OW-906.3</atom>
+    <atom name="RigStatus">No Known Estate or Heirs</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+  </tuple>
+
+  <!-- Row 25 -->
+  <tuple>
+    <atom name="irn">1707</atom>
+    <atom name="AdmDateModified">2016-08-18</atom>
+    <atom name="RigNumber">RT2015.54</atom>
+    <atom name="RigType">OW-908</atom>
+    <atom name="RigStatus">No Known Estate or Heirs</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+  </tuple>
+
+  <!-- Row 26 -->
+  <tuple>
+    <atom name="irn">1708</atom>
+    <atom name="AdmDateModified">2015-03-02</atom>
+    <atom name="RigNumber">RT2015.55</atom>
+    <atom name="RigType">OW-981</atom>
+    <atom name="RigStatus">No Known Estate or Heirs</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+  </tuple>
+
+  <!-- Row 27 -->
+  <tuple>
+    <atom name="irn">1760</atom>
+    <atom name="AdmDateModified">2015-06-17</atom>
+    <atom name="RigNumber">RT2015.99</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Researching Rights Holder</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">© Paul Edward Beem</atom>
+  </tuple>
+
+  <!-- Row 28 -->
+  <tuple>
+    <atom name="irn">1972</atom>
+    <atom name="AdmDateModified">2016-10-14</atom>
+    <atom name="RigNumber">RT2016.19</atom>
+    <atom name="RigType">Controlled</atom>
+    <atom name="RigStatus">Public Domain</atom>
+    <atom name="RigRequiresAcknowledgement">Yes</atom>
+    <atom name="RigAcknowledgement">Public Domain</atom>
+  </tuple>
+</table>
