@@ -22,9 +22,9 @@
 <?schema
   table           eparties
     integer         irn
-    date            AdmDateModified
     text short      NamPartyType
     text long       NamFullName
+    text short      NamTitle
     text short      NamFirst
     text short      NamMiddle
     text short      NamLast
@@ -34,7 +34,6 @@
     end
     text short      NamSex
     text short      BioNationality
-    text short      BioEthnicity
     table           Identities
       text short      BioCulturalInfluences
     end
@@ -42,14 +41,10 @@
     date            BioBirthEarliestDate
     date            BioBirthLatestDate
     text short      BioBirthPlace
-    text short      BioDeceased
     text short      BioDeathDate
     date            BioDeathEarliestDate
     date            BioDeathLatestDate
     text short      BioDeathPlace
-    date            BioCommencementDate
-    date            BioCompletionDate
-    text long       BioCommencementNotes
     text long       NamOrganisation
     text short      NamOrganisationAcronym
     table           OtherOrgNames
@@ -58,16 +53,12 @@
     text short      IMAHisCommenced
     date            IMAHisBeginEarliestDate
     date            IMAHisBeginLatestDate
-    text long       IMAHisBeginDateNotes
     text short      IMAHisCompleted
     date            IMAHisEndEarliestDate
     date            IMAHisEndLatestDate
-    text long       IMAHisEndDateNotes
     text short      ColCollaborationName
     table           Collaborators
       text short      ColRole
-    end
-    table           ColCollaboratorsRef_tab
       integer         irn
       date            AdmDateModified
     end
@@ -79,6 +70,7 @@
       text short      AdmGUIDType
       text short      AdmGUIDValue
     end
+    date            AdmDateModified
   end
 ?>
 <!-- Data -->
@@ -87,9 +79,9 @@
   <!-- Row 1 -->
   <tuple>
     <atom name="irn">733</atom>
-    <atom name="AdmDateModified">2022-02-18</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Charles J. Fiscus</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Charles</atom>
     <atom name="NamMiddle">J.</atom>
     <atom name="NamLast">Fiscus</atom>
@@ -101,7 +93,6 @@
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">Caucasian</atom>
@@ -114,110 +105,92 @@
     <atom name="BioBirthEarliestDate">1861</atom>
     <atom name="BioBirthLatestDate">1861</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1884</atom>
     <atom name="BioDeathEarliestDate">1884</atom>
     <atom name="BioDeathLatestDate">1884</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">Lived/Active: Indiana</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-18</atom>
   </tuple>
 
   <!-- Row 2 -->
   <tuple>
     <atom name="irn">5060</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Paul E. Beem</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Paul</atom>
     <atom name="NamMiddle">Edward</atom>
     <atom name="NamLast">Beem</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1908</atom>
     <atom name="BioBirthEarliestDate">1908</atom>
     <atom name="BioBirthLatestDate">1908</atom>
     <atom name="BioBirthPlace">Indianapolis, Indiana</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1979</atom>
     <atom name="BioDeathEarliestDate">1979</atom>
     <atom name="BioDeathLatestDate">1979</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 3 -->
   <tuple>
     <atom name="irn">2741</atom>
-    <atom name="AdmDateModified">2019-05-09</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Unknown</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Unknown</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -257,43 +230,37 @@
         <atom name="NamRoles">Creator</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-05-09</atom>
   </tuple>
 
   <!-- Row 4 -->
   <tuple>
     <atom name="irn">610521</atom>
-    <atom name="AdmDateModified">2016-08-17</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">James Thornhill</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">James</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Thornhill</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">British</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1675</atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1734</atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -327,43 +294,37 @@
         <atom name="NamRoles">teacher</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2016-08-17</atom>
   </tuple>
 
   <!-- Row 5 -->
   <tuple>
     <atom name="irn">619988</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Jonathan Richardson the elder</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Jonathan</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Richardson</atom>
     <atom name="NamSuffix">the elder</atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">British</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1665</atom>
     <atom name="BioBirthEarliestDate">1665</atom>
     <atom name="BioBirthLatestDate">1665</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1745</atom>
     <atom name="BioDeathEarliestDate">1745</atom>
     <atom name="BioDeathLatestDate">1745</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -385,86 +346,74 @@
         <atom name="NamRoles">collector</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 6 -->
   <tuple>
     <atom name="irn">737</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Henry Wolf</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Henry</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Wolf</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1852</atom>
     <atom name="BioBirthEarliestDate">1852</atom>
     <atom name="BioBirthLatestDate">1916</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1916</atom>
     <atom name="BioDeathEarliestDate">1852</atom>
     <atom name="BioDeathLatestDate">1916</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 7 -->
   <tuple>
     <atom name="irn">612140</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">James A. Whistler</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">James</atom>
     <atom name="NamMiddle">Abbott McNeill</atom>
     <atom name="NamLast">Whistler</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1834</atom>
     <atom name="BioBirthEarliestDate">1834</atom>
     <atom name="BioBirthLatestDate">1834</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1903</atom>
     <atom name="BioDeathEarliestDate">1903</atom>
     <atom name="BioDeathLatestDate">1903</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -484,21 +433,21 @@
         <atom name="AdmGUIDValue">500012432</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
   <!-- Row 8 -->
   <tuple>
     <atom name="irn">600630</atom>
-    <atom name="AdmDateModified">2022-02-24</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Dines Carlsen</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Dines</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Carlsen</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">Caucasian</atom>
@@ -511,27 +460,18 @@
     <atom name="BioBirthEarliestDate">1901</atom>
     <atom name="BioBirthLatestDate">1901</atom>
     <atom name="BioBirthPlace">New York City, New York</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1966</atom>
     <atom name="BioDeathEarliestDate">1966</atom>
     <atom name="BioDeathLatestDate">1966</atom>
     <atom name="BioDeathPlace">New York City, New York</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">DO NOT US IRN 510.  USE CORRECTED IRN 600630.
-
-b. March 28, 1901
-d. October 1, 1966</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -541,14 +481,15 @@ d. October 1, 1966</atom>
         <atom name="NamRoles">painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-24</atom>
   </tuple>
 
   <!-- Row 9 -->
   <tuple>
     <atom name="irn">615130</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Robert Indiana</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Robert</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Indiana</atom>
@@ -566,30 +507,22 @@ d. October 1, 1966</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1928</atom>
     <atom name="BioBirthEarliestDate">1928</atom>
     <atom name="BioBirthLatestDate">1928</atom>
     <atom name="BioBirthPlace">New Castle, Indiana</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">2018</atom>
     <atom name="BioDeathEarliestDate">2018</atom>
     <atom name="BioDeathLatestDate">2018</atom>
     <atom name="BioDeathPlace">Vinalhaven, Maine</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">b. September 13, 1928
-d. May 19, 2018</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -609,33 +542,29 @@ d. May 19, 2018</atom>
         <atom name="AdmGUIDValue">500015478</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
   <!-- Row 10 -->
   <tuple>
     <atom name="irn">10433</atom>
-    <atom name="AdmDateModified">2019-02-18</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Lippincott, LLC</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Lippincott, LLC</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <table name="OtherOrgNames">
@@ -649,11 +578,9 @@ d. May 19, 2018</atom>
     <atom name="IMAHisCommenced">1966</atom>
     <atom name="IMAHisBeginEarliestDate">1966</atom>
     <atom name="IMAHisBeginLatestDate">1966</atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -663,14 +590,15 @@ d. May 19, 2018</atom>
         <atom name="NamRoles">foundry</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-02-18</atom>
   </tuple>
 
   <!-- Row 11 -->
   <tuple>
     <atom name="irn">592</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Utagawa Hiroshige</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Utagawa Hiroshige 歌川広重</atom>
@@ -694,29 +622,22 @@ d. May 19, 2018</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1797</atom>
     <atom name="BioBirthEarliestDate">1797</atom>
     <atom name="BioBirthLatestDate">1797</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1858</atom>
     <atom name="BioDeathEarliestDate">1858</atom>
     <atom name="BioDeathLatestDate">1858</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -735,21 +656,21 @@ d. May 19, 2018</atom>
         <atom name="AdmGUIDValue">Q200798</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
   <!-- Row 12 -->
   <tuple>
     <atom name="irn">606727</atom>
-    <atom name="AdmDateModified">2022-02-18</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">James C. Beckwith</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">James</atom>
     <atom name="NamMiddle">Carroll</atom>
     <atom name="NamLast">Beckwith</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">Caucasian</atom>
@@ -762,27 +683,18 @@ d. May 19, 2018</atom>
     <atom name="BioBirthEarliestDate">1852</atom>
     <atom name="BioBirthLatestDate">1852</atom>
     <atom name="BioBirthPlace">Hannibal, Missouri</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1917</atom>
     <atom name="BioDeathEarliestDate">1917</atom>
     <atom name="BioDeathLatestDate">1917</atom>
     <atom name="BioDeathPlace">New York, New York</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">DO NOT USE IRN 345.  USE CORRECTED IRN 606727.
-
-b. September 23, 1852
-d. October 24, 1917</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -792,57 +704,52 @@ d. October 24, 1917</atom>
         <atom name="NamRoles">painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-18</atom>
   </tuple>
 
   <!-- Row 13 -->
   <tuple>
     <atom name="irn">10661</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Unknown 作者不詳</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Unknown 作者不詳</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">about 19th Century</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 14 -->
   <tuple>
     <atom name="irn">11481</atom>
-    <atom name="AdmDateModified">2021-07-29</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Halston</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Halston</atom>
@@ -857,7 +764,6 @@ d. October 24, 1917</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">LGBTQ+</atom>
@@ -867,26 +773,18 @@ d. October 24, 1917</atom>
     <atom name="BioBirthEarliestDate">1932</atom>
     <atom name="BioBirthLatestDate">1932</atom>
     <atom name="BioBirthPlace">Des Moines, Iowa</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1990</atom>
     <atom name="BioDeathEarliestDate">1990</atom>
     <atom name="BioDeathLatestDate">1990</atom>
     <atom name="BioDeathPlace">San Francisco, California</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">DO NOT USE IRN 651528.  USE CORRECTED IRN 11481.
-b. April 23, 1932
-d. March 26, 1990</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -899,14 +797,15 @@ d. March 26, 1990</atom>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-07-29</atom>
   </tuple>
 
   <!-- Row 15 -->
   <tuple>
     <atom name="irn">11366</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Utagawa Kunisada 歌川国貞</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Utagawa Kunisada 歌川国貞</atom>
@@ -966,29 +865,22 @@ d. March 26, 1990</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1786</atom>
     <atom name="BioBirthEarliestDate">1786</atom>
     <atom name="BioBirthLatestDate">1786</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1864</atom>
     <atom name="BioDeathEarliestDate">1864</atom>
     <atom name="BioDeathLatestDate">1864</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1001,43 +893,37 @@ d. March 26, 1990</atom>
         <atom name="NamRoles">illustrator</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 16 -->
   <tuple>
     <atom name="irn">600739</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Hieronymus Bosch</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Hieronymus</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Bosch</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Netherlandish</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1450</atom>
     <atom name="BioBirthEarliestDate">1450</atom>
     <atom name="BioBirthLatestDate">1450</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1516</atom>
     <atom name="BioDeathEarliestDate">1516</atom>
     <atom name="BioDeathLatestDate">1516</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1056,14 +942,15 @@ d. March 26, 1990</atom>
         <atom name="AdmGUIDValue">Q130531</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
   <!-- Row 17 -->
   <tuple>
     <atom name="irn">11566</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">T. C. Steele</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">T.</atom>
     <atom name="NamMiddle">C.</atom>
     <atom name="NamLast">Steele</atom>
@@ -1075,7 +962,6 @@ d. March 26, 1990</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">Caucasian</atom>
@@ -1088,26 +974,18 @@ d. March 26, 1990</atom>
     <atom name="BioBirthEarliestDate">1847</atom>
     <atom name="BioBirthLatestDate">1847</atom>
     <atom name="BioBirthPlace">Gosport, Indiana</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1926</atom>
     <atom name="BioDeathEarliestDate">1926</atom>
     <atom name="BioDeathLatestDate">1926</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">DO NOT USE IRN 631822.  USE CORRECTED IRN 11566.
-b. September 11, 1847
-d.</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1121,44 +999,37 @@ d.</atom>
         <atom name="AdmGUIDValue">500032522</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
   <!-- Row 18 -->
   <tuple>
     <atom name="irn">626263</atom>
-    <atom name="AdmDateModified">2019-07-29</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Joseph Mallord William Turner</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Joseph</atom>
     <atom name="NamMiddle">Mallord William</atom>
     <atom name="NamLast">Turner</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">English</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1775</atom>
     <atom name="BioBirthEarliestDate">1775</atom>
     <atom name="BioBirthLatestDate">1775</atom>
     <atom name="BioBirthPlace">London, England</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1851</atom>
     <atom name="BioDeathEarliestDate">1851</atom>
     <atom name="BioDeathLatestDate">1851</atom>
     <atom name="BioDeathPlace">Chelsea, England</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">b. April 23, 1775
-d. December 19, 1851</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1177,43 +1048,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">landscapist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-29</atom>
   </tuple>
 
   <!-- Row 19 -->
   <tuple>
     <atom name="irn">832</atom>
-    <atom name="AdmDateModified">2019-11-14</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">William Miller</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">William</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Miller</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">English</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1796</atom>
     <atom name="BioBirthEarliestDate">1796</atom>
     <atom name="BioBirthLatestDate">1796</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1882</atom>
     <atom name="BioDeathEarliestDate">1882</atom>
     <atom name="BioDeathLatestDate">1882</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1223,14 +1088,15 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">engraver</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-11-14</atom>
   </tuple>
 
   <!-- Row 20 -->
   <tuple>
     <atom name="irn">8686</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Utagawa Hirokage</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Utagawa Hirokage</atom>
@@ -1242,43 +1108,37 @@ d. December 19, 1851</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">Flourished 1855-1865</atom>
     <atom name="IMAHisBeginEarliestDate">1855</atom>
     <atom name="IMAHisBeginLatestDate">1865</atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 21 -->
   <tuple>
     <atom name="irn">11362</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Katsushika Hokusai 葛飾北斎</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Katsushika Hokusai 葛飾北斎</atom>
@@ -1323,29 +1183,22 @@ d. December 19, 1851</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1760</atom>
     <atom name="BioBirthEarliestDate">1760</atom>
     <atom name="BioBirthLatestDate">1760</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1849</atom>
     <atom name="BioDeathEarliestDate">1849</atom>
     <atom name="BioDeathLatestDate">1849</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1370,43 +1223,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">marine painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 22 -->
   <tuple>
     <atom name="irn">611106</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Antoni Tàpies</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Antoni</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Tàpies</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Spanish</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1923</atom>
     <atom name="BioBirthEarliestDate">1923</atom>
     <atom name="BioBirthLatestDate">1923</atom>
     <atom name="BioBirthPlace">Barcelona, Spain</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">2012</atom>
     <atom name="BioDeathEarliestDate">2012</atom>
     <atom name="BioDeathLatestDate">2012</atom>
     <atom name="BioDeathPlace">Barcelona, Spain</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">d. February 06, 2012</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1416,82 +1263,69 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 23 -->
   <tuple>
     <atom name="irn">5679</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Curatorial Not Verified</atom>
     <atom name="NamFullName">Jurgen Bey</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Jurgen</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Bey</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Dutch</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1965</atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 24 -->
   <tuple>
     <atom name="irn">612112</atom>
-    <atom name="AdmDateModified">2018-09-14</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Gaetano Pesce</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Gaetano</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Pesce</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Italian</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1939</atom>
     <atom name="BioBirthEarliestDate">1939</atom>
     <atom name="BioBirthLatestDate">1939</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">Paris (Ville de Paris department, Île-de-France, France)
-5600392409/New York City (New York state, United States)</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1504,33 +1338,29 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">furniture designer</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2018-09-14</atom>
   </tuple>
 
   <!-- Row 25 -->
   <tuple>
     <atom name="irn">6507</atom>
-    <atom name="AdmDateModified">2021-09-20</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">B&amp;B Italia, S.p.A.</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality">Italian</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">B&amp;B Italia, S.p.A.</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <table name="OtherOrgNames">
@@ -1544,11 +1374,9 @@ d. December 19, 1851</atom>
     <atom name="IMAHisCommenced">1974</atom>
     <atom name="IMAHisBeginEarliestDate">1974</atom>
     <atom name="IMAHisBeginLatestDate">1974</atom>
-    <atom name="IMAHisBeginDateNotes">Originated in 1966 as C &amp; B (Cesare Cassina &amp; Pietro Busnelli) Italia but became B &amp; B Italia in 1974 (Bulgari &amp; Busnelli). Italian Modern furniture manufacturer specializing in Polyurethane furniture.</atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1561,99 +1389,81 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-09-20</atom>
   </tuple>
 
   <!-- Row 26 -->
   <tuple>
     <atom name="irn">7052</atom>
-    <atom name="AdmDateModified">2021-06-23</atom>
     <atom name="NamPartyType">Collaboration</atom>
     <atom name="NamFullName">Los Carpinteros</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality">Cuban</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">1992</atom>
     <atom name="IMAHisBeginEarliestDate">1992</atom>
     <atom name="IMAHisBeginLatestDate">1992</atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName">Los Carpinteros</atom>
     <table name="Collaborators">
       <tuple>
         <atom name="ColRole">Collaborator</atom>
-      </tuple>
-      <tuple>
-        <atom name="ColRole">Collaborator</atom>
-      </tuple>
-    </table>
-    <table name="ColCollaboratorsRef_tab">
-      <tuple>
         <atom name="irn">7051</atom>
         <atom name="AdmDateModified">2019-01-09</atom>
       </tuple>
       <tuple>
+        <atom name="ColRole">Collaborator</atom>
         <atom name="irn">7050</atom>
         <atom name="AdmDateModified">2019-01-10</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-06-23</atom>
   </tuple>
 
   <!-- Row 27 -->
   <tuple>
     <atom name="irn">12571</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Naoki Takizawa</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Naoki Takizawa</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1960</atom>
     <atom name="BioBirthEarliestDate">1960</atom>
     <atom name="BioBirthLatestDate">1960</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1663,86 +1473,74 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">fashion designer</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 28 -->
   <tuple>
     <atom name="irn">683459</atom>
-    <atom name="AdmDateModified">2018-09-14</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Issey Miyake</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Issey</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Miyake</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1938</atom>
     <atom name="BioBirthEarliestDate">1938</atom>
     <atom name="BioBirthLatestDate">1938</atom>
     <atom name="BioBirthPlace">Hiroshima, Japan</atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">fashion designer</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2018-09-14</atom>
   </tuple>
 
   <!-- Row 29 -->
   <tuple>
     <atom name="irn">613279</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Roy Lichtenstein</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Roy</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Lichtenstein</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1923</atom>
     <atom name="BioBirthEarliestDate">1923</atom>
     <atom name="BioBirthLatestDate">1923</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1997</atom>
     <atom name="BioDeathEarliestDate">1997</atom>
     <atom name="BioDeathLatestDate">1997</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1765,43 +1563,37 @@ d. December 19, 1851</atom>
         <atom name="AdmGUIDValue">500013596</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
   <!-- Row 30 -->
   <tuple>
     <atom name="irn">7062</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Peter Muller-Munk</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Peter</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Muller-Munk</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1904</atom>
     <atom name="BioBirthEarliestDate">1904</atom>
     <atom name="BioBirthLatestDate">1904</atom>
     <atom name="BioBirthPlace">Germany</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1967</atom>
     <atom name="BioDeathEarliestDate">1967</atom>
     <atom name="BioDeathLatestDate">1967</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1811,43 +1603,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 31 -->
   <tuple>
     <atom name="irn">12032</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Val Saint Lambert</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Belgian</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Val Saint Lambert</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">1826</atom>
     <atom name="IMAHisBeginEarliestDate">1826</atom>
     <atom name="IMAHisBeginLatestDate">1826</atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1857,14 +1643,15 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">designer</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 32 -->
   <tuple>
     <atom name="irn">2515</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName"></atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">H^oeid^o</atom>
@@ -1876,158 +1663,133 @@ d. December 19, 1851</atom>
     </table>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">(Shop name.  Individual is Takenouchi Magohachi)</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">publisher</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 33 -->
   <tuple>
     <atom name="irn">2514</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Takenouchi Magohachi</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Takenouchi Magohachi</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">publisher</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 34 -->
   <tuple>
     <atom name="irn">7689</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Edo-ya Matsugor^o</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Edo-ya Matsugor^o</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">Publisher active during the Edo period</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate">1868</atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">publisher</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 35 -->
   <tuple>
     <atom name="irn">2407</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Tsujioka-ya Bunsuke</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Tsujioka-ya Bunsuke</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2037,86 +1799,74 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">publisher</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 36 -->
   <tuple>
     <atom name="irn">3152</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Laurence Sterne</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Laurence</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Sterne</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">British</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1713</atom>
     <atom name="BioBirthEarliestDate">1713</atom>
     <atom name="BioBirthLatestDate">1713</atom>
     <atom name="BioBirthPlace">Clonmel, Republic of Ireland</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1768</atom>
     <atom name="BioDeathEarliestDate">1768</atom>
     <atom name="BioDeathLatestDate">1768</atom>
     <atom name="BioDeathPlace">London, England</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">author</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 37 -->
   <tuple>
     <atom name="irn">2793</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName"></atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Touchstone Publishers, Ltd.</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2126,43 +1876,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">printer</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 38 -->
   <tuple>
     <atom name="irn">621818</atom>
-    <atom name="AdmDateModified">2016-10-06</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Gabor F. Peterdi</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Gabor</atom>
     <atom name="NamMiddle">F.</atom>
     <atom name="NamLast">Peterdi</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1915</atom>
     <atom name="BioBirthEarliestDate">1915</atom>
     <atom name="BioBirthLatestDate">1915</atom>
     <atom name="BioBirthPlace">Hungary</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">2001</atom>
     <atom name="BioDeathEarliestDate">2001</atom>
     <atom name="BioDeathLatestDate">2001</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2175,86 +1919,74 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">printmaker</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2016-10-06</atom>
   </tuple>
 
   <!-- Row 39 -->
   <tuple>
     <atom name="irn">2108</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Virgil Solis</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Virgil</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Solis</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">German</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1514</atom>
     <atom name="BioBirthEarliestDate">1514</atom>
     <atom name="BioBirthLatestDate">1514</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1562</atom>
     <atom name="BioDeathEarliestDate">1562</atom>
     <atom name="BioDeathLatestDate">1562</atom>
     <atom name="BioDeathPlace">Nuremberg, Germany</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 40 -->
   <tuple>
     <atom name="irn">7051</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Dagoberto Rodríguez Sánchez</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Dagoberto</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Rodríguez Sánchez</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Cuban</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1969</atom>
     <atom name="BioBirthEarliestDate">1969</atom>
     <atom name="BioBirthLatestDate">1969</atom>
     <atom name="BioBirthPlace">Cuba</atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2264,43 +1996,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">collaborator</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 41 -->
   <tuple>
     <atom name="irn">7050</atom>
-    <atom name="AdmDateModified">2019-01-10</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Marco A. Castillo Valdés</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Marco</atom>
     <atom name="NamMiddle">Antonio</atom>
     <atom name="NamLast">Castillo Valdés</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Cuban</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1971</atom>
     <atom name="BioBirthEarliestDate">1971</atom>
     <atom name="BioBirthLatestDate">1971</atom>
     <atom name="BioBirthPlace">Cuba</atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2310,43 +2036,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">collaborator</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 
   <!-- Row 42 -->
   <tuple>
     <atom name="irn">610793</atom>
-    <atom name="AdmDateModified">2016-08-17</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Rembrandt van Rijn</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Rembrandt van Rijn</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Dutch</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1606</atom>
     <atom name="BioBirthEarliestDate">1606</atom>
     <atom name="BioBirthLatestDate">1606</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1669</atom>
     <atom name="BioDeathEarliestDate">1669</atom>
     <atom name="BioDeathLatestDate">1669</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">Amsterdam (North Holland, Netherlands)</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2368,119 +2088,103 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">teacher</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2016-08-17</atom>
   </tuple>
 
   <!-- Row 43 -->
   <tuple>
     <atom name="irn">14152</atom>
-    <atom name="AdmDateModified">2021-07-19</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Lilly House and Gardens</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Lilly House and Gardens</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">Owner</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-07-19</atom>
   </tuple>
 
   <!-- Row 44 -->
   <tuple>
     <atom name="irn">14200</atom>
-    <atom name="AdmDateModified">2021-08-09</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Newfields Horticulture Department</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Newfields Horticulture Department</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">department</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-08-09</atom>
   </tuple>
 
   <!-- Row 45 -->
   <tuple>
     <atom name="irn">13148</atom>
-    <atom name="AdmDateModified">2019-11-05</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Agnes Etherington Art Centre, Queen's University</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Canadian</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Agnes Etherington Art Centre, Queen's University</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <table name="OtherOrgNames">
@@ -2491,56 +2195,46 @@ d. December 19, 1851</atom>
     <atom name="IMAHisCommenced">1957</atom>
     <atom name="IMAHisBeginEarliestDate">1957</atom>
     <atom name="IMAHisBeginLatestDate">1957</atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">Borrower</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-11-05</atom>
   </tuple>
 
   <!-- Row 46 -->
   <tuple>
     <atom name="irn">710264</atom>
-    <atom name="AdmDateModified">2016-08-17</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Alexander Hesler</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Alexander</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Hesler</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1823</atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1895</atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">Madison (Dane county, Wisconsin, United States)
-5600065682/Chicago (Cook county, Illinois, United States)
-5600124805/Evanston (Cook county, Illinois, United States)</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2553,43 +2247,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2016-08-17</atom>
   </tuple>
 
   <!-- Row 47 -->
   <tuple>
     <atom name="irn">11785</atom>
-    <atom name="AdmDateModified">2019-01-09</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">George B. Ayers</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">George</atom>
     <atom name="NamMiddle">B.</atom>
     <atom name="NamLast">Ayers</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1867</atom>
     <atom name="BioBirthEarliestDate">1867</atom>
     <atom name="BioBirthLatestDate">1867</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">unknown</atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2599,43 +2287,37 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">photographer</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 
   <!-- Row 48 -->
   <tuple>
     <atom name="irn">621886</atom>
-    <atom name="AdmDateModified">2016-08-17</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Richard B. Gruelle</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Richard</atom>
     <atom name="NamMiddle">Buckner</atom>
     <atom name="NamLast">Gruelle</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1851</atom>
     <atom name="BioBirthEarliestDate">1851</atom>
     <atom name="BioBirthLatestDate">1851</atom>
     <atom name="BioBirthPlace">Cynthiana, Kentucky</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1914</atom>
     <atom name="BioDeathEarliestDate">1914</atom>
     <atom name="BioDeathLatestDate">1914</atom>
     <atom name="BioDeathPlace">Indianapolis, Indiana</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2645,21 +2327,21 @@ d. December 19, 1851</atom>
         <atom name="NamRoles">artist</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2016-08-17</atom>
   </tuple>
 
   <!-- Row 49 -->
   <tuple>
     <atom name="irn">632625</atom>
-    <atom name="AdmDateModified">2022-02-18</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Samuel G. Richards</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Samuel</atom>
     <atom name="NamMiddle">G.</atom>
     <atom name="NamLast">Richards</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">Caucasian</atom>
@@ -2672,46 +2354,39 @@ d. December 19, 1851</atom>
     <atom name="BioBirthEarliestDate">1853</atom>
     <atom name="BioBirthLatestDate">1853</atom>
     <atom name="BioBirthPlace">Spencer, IN</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1893</atom>
     <atom name="BioDeathEarliestDate">1893</atom>
     <atom name="BioDeathLatestDate">1893</atom>
     <atom name="BioDeathPlace">Denver, CO</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">b. 1853
-d. 1893</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-18</atom>
   </tuple>
 
   <!-- Row 50 -->
   <tuple>
     <atom name="irn">655000</atom>
-    <atom name="AdmDateModified">2022-02-18</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">William J. Forsyth</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">William</atom>
     <atom name="NamMiddle">J.</atom>
     <atom name="NamLast">Forsyth</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">Caucasian</atom>
@@ -2724,25 +2399,18 @@ d. 1893</atom>
     <atom name="BioBirthEarliestDate">1854</atom>
     <atom name="BioBirthLatestDate">1854</atom>
     <atom name="BioBirthPlace">California, Hamilton County, Ohio</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1935</atom>
     <atom name="BioDeathEarliestDate">1935</atom>
     <atom name="BioDeathLatestDate">1935</atom>
     <atom name="BioDeathPlace">Indianapolis, Indiana</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">b. October 15, 1854
-d. March 29, 1935</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2752,14 +2420,15 @@ d. March 29, 1935</atom>
         <atom name="NamRoles">painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-18</atom>
   </tuple>
 
   <!-- Row 51 -->
   <tuple>
     <atom name="irn">12293</atom>
-    <atom name="AdmDateModified">2021-01-28</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Kjell Wangensteen</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Kjell</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Wangensteen</atom>
@@ -2771,181 +2440,148 @@ d. March 29, 1935</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate">2017-09-11</atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">09/11/2017 - Assistant Curator of European Art</atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">IMA Staff</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-01-28</atom>
   </tuple>
 
   <!-- Row 52 -->
   <tuple>
     <atom name="irn">31</atom>
-    <atom name="AdmDateModified">2022-02-11</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Sherry D'Asto Peglow</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Sherry</atom>
     <atom name="NamMiddle">D'Asto</atom>
     <atom name="NamLast">Peglow</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate">1990-02-14</atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">Indianapolis Museum of Art:
-01/22/2021: Director of Registration
-2009-01/21/2021: Registrar for Collections
-July 2007-2009: Associate Registrar for Collections
-August 1999-July 2007: Associate Registrar for Exhibitions
-August 1990-July 1999: Assistant Registrar for Exhibitions
-February 1990-July 1990: Registration Assistant</atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">IMA Staff</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-11</atom>
   </tuple>
 
   <!-- Row 53 -->
   <tuple>
     <atom name="irn">117</atom>
-    <atom name="AdmDateModified">2022-06-07</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Dr. Lisa Freiman</atom>
+    <atom name="NamTitle">Dr.</atom>
     <atom name="NamFirst">Lisa</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Freiman</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate">2002-08-30</atom>
-    <atom name="BioCompletionDate">2013-06-11</atom>
-    <atom name="BioCommencementNotes">- a 12/10/2007 email from Lisa states her title as Curator of Contemporary Art
-- a 07/21/2008 email from Lisa states her title as Senior Curator of Contemporary Art
-
-- a 06/28/2011 email from Lisa states her title as Senior Curator and Chair, Department of Contemporary Art</atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">IMA Staff</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-07</atom>
   </tuple>
 
   <!-- Row 54 -->
   <tuple>
     <atom name="irn">7789</atom>
-    <atom name="AdmDateModified">2021-01-28</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Lara Huchteman</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Lara</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Huchteman</atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">IMA Staff</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-01-28</atom>
   </tuple>
 
   <!-- Row 55 -->
   <tuple>
     <atom name="irn">5527</atom>
-    <atom name="AdmDateModified">2022-03-03</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Brittany Minton</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Brittany</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Minton</atom>
@@ -2957,113 +2593,51 @@ February 1990-July 1990: Registration Assistant</atom>
     </table>
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate">2008-05-05</atom>
-    <atom name="BioCompletionDate">2013-09-03</atom>
-    <atom name="BioCommencementNotes">2007: IMA summer intern
-2008-2010: Assistant Registrar for Exhibitions
-2011-2012: Associate Registrar for Exhibitions
-2012-2013: Registrar for Exhibitions
-2013: Registrar Peabody Essex Museum</atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">IMA Staff</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-03</atom>
   </tuple>
 
   <!-- Row 56 -->
   <tuple>
     <atom name="irn">1</atom>
-    <atom name="AdmDateModified">2021-03-20</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Indianapolis Museum of Art at Newfields</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">Collections Management System Timeline:
-
-1883 – Cross reference Accession Card Catalogue (into 2005)
-
-1985 - SNAP!
-•	1985-1990 Vanessa Burkhart (10% database, 90% registrar)
-•	1990-1997 Terry Harley-Wilson (50% database, 50% registrar)
-
-1997 – Argus
-•	1997-2001 Terry Harley-Wilson (50% database, 50% registrar)
-o	IT administrator assistance from Terry Myers
-•	2001-2002 Mike Rippey (100% database administrator)
-
-1998 - External Internet
-
-2001 - Began data scrub in Argus in preparation for the website
-•	2001-2002 Terry Harley-Wilson (50% database, 50% registrar)
-•	2001-2002 Rebekah Marshall (20% database, 80% registrar)
-
-2002 - Continued data scrub in Argus 
-•	2002 Koven Smith (100% database administrator)
-
-2003 - Began transfer from Argus to Emu 
-•	2003 Koven Smith (100% database administrator)
-o	Maintained Argus for website pull
-
-2004 - Began testing Emu
-•	2004 Koven Smith (100% database administrator)
-o	He then moved to the IT department, non-database focus
-o	Maintained Argus for website pull
-o	IT website assistance 2004 Lindsay Stewart
-•	2004-2005 Rebekah Marshall (50% database, 50% registrar)
-
-2005 – Emu 
-•	2005 last printing of the Accession Card Catalogue
-•	2005 website pulling from EMu 
-•	2005-2007 Rebekah Marshall (50% database, 50% registrar)
-•	2007-2013 Maureen Tucker (50% database, 50% registrar)
-o	IT administrator assistance 2005-2016 Lindsay Stewart
-o	IT website assistance 2009-2013 Charlie Moad
-o	IT website assistance 2013-2014 (?) 2015(?) Kyle Jaebker
-	2013-present Sherry Peglow (40% database, 60% registrar)
-o	IT website assistance 2013-2016 Lindsay Stewart
-	2014-present Jennifer Rigsby (50% database, 50% registrar)
-o	IT website assistance 2016-2017 Lawrence Carver (minimal data assistance 2016-2020)
-o	IT data assistance 2017-present Sami Norling 
-o	IT website assistance 2018-2020 Rich Lemke
-o	2020-present minimal data assistance</atom>
     <atom name="NamOrganisation">Indianapolis Museum of Art at Newfields</atom>
     <atom name="NamOrganisationAcronym">IMA</atom>
     <table name="OtherOrgNames">
@@ -3083,18 +2657,9 @@ o	2020-present minimal data assistance</atom>
     <atom name="IMAHisCommenced">1883</atom>
     <atom name="IMAHisBeginEarliestDate">1883</atom>
     <atom name="IMAHisBeginLatestDate">1883</atom>
-    <atom name="IMAHisBeginDateNotes">See also Notes field
-
-07/14/2016 - Per Alba Fernandez-Keys, IMA Librarian, "The John Herron Art Institute Architectural Drawings collection (BAG001) is now open for research in the IMA Archives.  This collection is comprised of architectural drawings of the buildings and grounds of the John Herron Art Museum (Vonnegut &amp; Bohn, 1906) and the John Herron Art School (Paul Philippe Cret, 1929), including additions and upgrades made to those buildings and grounds through the 1960s.  Drawings include elevations, sections, lighting, electrical, landscape, and floor plans in the form of blueprints and architectural drawings on drafting paper.  Primary creators of these drawings are the architects Bernard Vonnegut, Arthur Bohn, Paul Philippe Cret, Foltz, Osler &amp; Thompson, and Lawrence V. Sheridan.  The full finding with additional historical information is available on the IMA website."</atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes">10/16/2017 The new website, www.imamuseum.org/discovernewfields, launched.  The new emails, @DiscoverNewfields.org, will be instated and contacts have been asked to whitelist DiscoverNewfields.org for incoming messages. 
-
-09/05/2017 Press Release: About Newfields: Newfields offers dynamic experiences with art and nature for guests of all ages. The 152-acre cultural campus features art galleries, lush gardens, a historic home, performance spaces, a nature preserve and sculpture park. From inspiring exhibitions in the IMA Galleries, to concerts in The Toby, to a stroll through The Garden with a glass of something cold, guests are invited to interact with art and nature in exciting new ways. Newfields is home to the Indianapolis Museum of Art, among the ten largest and ten oldest
-general art museums in the nation; the Lilly House, a National Historic Landmark; The Garden, featuring 40 acres of contemporary and historic gardens, a working greenhouse and an orchard; and The Virginia B. Fairbanks Art &amp; Nature Park: 100 Acres, one of the largest art and nature parks in the country. The Newfields campus extends outside of Indianapolis with Miller House and Garden in Columbus, Indiana - one of the nation’s most highly regarded examples of mid-century Modernist architecture. For more information visit www.imamuseum.org.
-
-08/15/2017 Press Release: The Indianapolis Museum of Art named its diverse, 152-acre campus for the first time. Newfields, a Place for Nature and the Arts, is the name of the dynamic cultural campus with venues including the Indianapolis Museum of Art, Lilly House, The Garden, The Virginia B. Fairbanks Art &amp; Nature Park: 100 Acres, and performance spaces.</atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -3104,100 +2669,89 @@ general art museums in the nation; the Lilly House, a National Historic Landmark
         <atom name="NamRoles">Owner</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-03-20</atom>
   </tuple>
 
   <!-- Row 57 -->
   <tuple>
     <atom name="irn">14466</atom>
-    <atom name="AdmDateModified">2022-04-12</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Landesmuseum</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex"></atom>
     <atom name="BioNationality">German</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">No</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Landesmuseum</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">1937</atom>
     <atom name="IMAHisBeginEarliestDate">1937</atom>
     <atom name="IMAHisBeginLatestDate">1937</atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">Borrower</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-04-12</atom>
   </tuple>
 
   <!-- Row 58 -->
   <tuple>
     <atom name="irn">7660</atom>
-    <atom name="AdmDateModified">2019-04-08</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Wallraf-Richartz Museum &amp; Fondation Corboud</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst"></atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast"></atom>
     <atom name="NamSuffix"></atom>
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality"></atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate"></atom>
     <atom name="BioBirthEarliestDate"></atom>
     <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate"></atom>
     <atom name="BioDeathEarliestDate"></atom>
     <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation">Wallraf-Richartz Museum &amp; Fondation Corboud</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
         <atom name="NamRoles">Borrower</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-04-08</atom>
   </tuple>
 
   <!-- Row 59 -->
   <tuple>
     <atom name="irn">620</atom>
-    <atom name="AdmDateModified">2022-02-18</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Wayman Adams</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">Wayman</atom>
     <atom name="NamMiddle"></atom>
     <atom name="NamLast">Adams</atom>
@@ -3209,7 +2763,6 @@ general art museums in the nation; the Lilly House, a National Historic Landmark
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <table name="Identities">
       <tuple>
         <atom name="BioCulturalInfluences">Caucasian</atom>
@@ -3222,25 +2775,18 @@ general art museums in the nation; the Lilly House, a National Historic Landmark
     <atom name="BioBirthEarliestDate">1883</atom>
     <atom name="BioBirthLatestDate">1883</atom>
     <atom name="BioBirthPlace">Muncie, Indiana</atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1959</atom>
     <atom name="BioDeathEarliestDate">1959</atom>
     <atom name="BioDeathLatestDate">1959</atom>
     <atom name="BioDeathPlace">Austin, Texas</atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes">b. Sept. 23, 1883
-d. April 7, 1959</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -3250,14 +2796,15 @@ d. April 7, 1959</atom>
         <atom name="NamRoles">painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-18</atom>
   </tuple>
 
   <!-- Row 60 -->
   <tuple>
     <atom name="irn">614379</atom>
-    <atom name="AdmDateModified">2022-01-04</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">John O. Adams</atom>
+    <atom name="NamTitle"></atom>
     <atom name="NamFirst">John</atom>
     <atom name="NamMiddle">Ottis</atom>
     <atom name="NamLast">Adams</atom>
@@ -3269,29 +2816,22 @@ d. April 7, 1959</atom>
     </table>
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
-    <atom name="BioEthnicity"></atom>
     <atom name="BioBirthDate">1851</atom>
     <atom name="BioBirthEarliestDate">1851</atom>
     <atom name="BioBirthLatestDate">1851</atom>
     <atom name="BioBirthPlace"></atom>
-    <atom name="BioDeceased">Yes</atom>
     <atom name="BioDeathDate">1927</atom>
     <atom name="BioDeathEarliestDate">1927</atom>
     <atom name="BioDeathLatestDate">1927</atom>
     <atom name="BioDeathPlace"></atom>
-    <atom name="BioCommencementDate"></atom>
-    <atom name="BioCompletionDate"></atom>
-    <atom name="BioCommencementNotes"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
     <atom name="IMAHisBeginEarliestDate"></atom>
     <atom name="IMAHisBeginLatestDate"></atom>
-    <atom name="IMAHisBeginDateNotes"></atom>
     <atom name="IMAHisCompleted"></atom>
     <atom name="IMAHisEndEarliestDate"></atom>
     <atom name="IMAHisEndLatestDate"></atom>
-    <atom name="IMAHisEndDateNotes"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -3301,5 +2841,160 @@ d. April 7, 1959</atom>
         <atom name="NamRoles">painter</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-01-04</atom>
+  </tuple>
+
+  <!-- Row 61 -->
+  <tuple>
+    <atom name="irn">14044</atom>
+    <atom name="NamPartyType">Organisation</atom>
+    <atom name="NamFullName">Jacomme &amp; Cie</atom>
+    <atom name="NamTitle"></atom>
+    <atom name="NamFirst"></atom>
+    <atom name="NamMiddle"></atom>
+    <atom name="NamLast"></atom>
+    <atom name="NamSuffix"></atom>
+    <atom name="NamSex"></atom>
+    <atom name="BioNationality"></atom>
+    <atom name="BioBirthDate"></atom>
+    <atom name="BioBirthEarliestDate"></atom>
+    <atom name="BioBirthLatestDate"></atom>
+    <atom name="BioBirthPlace"></atom>
+    <atom name="BioDeathDate"></atom>
+    <atom name="BioDeathEarliestDate"></atom>
+    <atom name="BioDeathLatestDate"></atom>
+    <atom name="BioDeathPlace"></atom>
+    <atom name="NamOrganisation">Jacomme &amp; Cie</atom>
+    <atom name="NamOrganisationAcronym"></atom>
+    <atom name="IMAHisCommenced"></atom>
+    <atom name="IMAHisBeginEarliestDate"></atom>
+    <atom name="IMAHisBeginLatestDate"></atom>
+    <atom name="IMAHisCompleted"></atom>
+    <atom name="IMAHisEndEarliestDate"></atom>
+    <atom name="IMAHisEndLatestDate"></atom>
+    <atom name="ColCollaborationName"></atom>
+    <table name="Roles">
+      <tuple>
+        <atom name="NamRoles">Printer</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2020-12-14</atom>
+  </tuple>
+
+  <!-- Row 62 -->
+  <tuple>
+    <atom name="irn">12095</atom>
+    <atom name="NamPartyType">Person</atom>
+    <atom name="NamFullName">François Delarue</atom>
+    <atom name="NamTitle"></atom>
+    <atom name="NamFirst">François</atom>
+    <atom name="NamMiddle"></atom>
+    <atom name="NamLast">Delarue</atom>
+    <atom name="NamSuffix"></atom>
+    <table name="OtherPersonNames">
+      <tuple>
+        <atom name="NamOtherNames">Francois Delarue</atom>
+      </tuple>
+    </table>
+    <atom name="NamSex">Male</atom>
+    <atom name="BioNationality">French</atom>
+    <atom name="BioBirthDate"></atom>
+    <atom name="BioBirthEarliestDate"></atom>
+    <atom name="BioBirthLatestDate"></atom>
+    <atom name="BioBirthPlace"></atom>
+    <atom name="BioDeathDate"></atom>
+    <atom name="BioDeathEarliestDate"></atom>
+    <atom name="BioDeathLatestDate"></atom>
+    <atom name="BioDeathPlace"></atom>
+    <atom name="NamOrganisation"></atom>
+    <atom name="NamOrganisationAcronym"></atom>
+    <atom name="IMAHisCommenced">circa 1850's</atom>
+    <atom name="IMAHisBeginEarliestDate">1845</atom>
+    <atom name="IMAHisBeginLatestDate">1859</atom>
+    <atom name="IMAHisCompleted">circa 1860's</atom>
+    <atom name="IMAHisEndEarliestDate">1855</atom>
+    <atom name="IMAHisEndLatestDate">1869</atom>
+    <atom name="ColCollaborationName"></atom>
+    <table name="Roles">
+      <tuple>
+        <atom name="NamRoles">artist</atom>
+      </tuple>
+      <tuple>
+        <atom name="NamRoles">printer</atom>
+      </tuple>
+      <tuple>
+        <atom name="NamRoles">publisher</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
+  </tuple>
+
+  <!-- Row 63 -->
+  <tuple>
+    <atom name="irn">601</atom>
+    <atom name="NamPartyType">Place Holder</atom>
+    <atom name="NamFullName">Alexandre Calame</atom>
+    <atom name="NamTitle"></atom>
+    <atom name="NamFirst">Alexandre</atom>
+    <atom name="NamMiddle"></atom>
+    <atom name="NamLast">Calame</atom>
+    <atom name="NamSuffix"></atom>
+    <atom name="NamSex">Male</atom>
+    <atom name="BioNationality">Swiss</atom>
+    <atom name="BioBirthDate">1810</atom>
+    <atom name="BioBirthEarliestDate">1810</atom>
+    <atom name="BioBirthLatestDate">1810</atom>
+    <atom name="BioBirthPlace"></atom>
+    <atom name="BioDeathDate">1864</atom>
+    <atom name="BioDeathEarliestDate">1864</atom>
+    <atom name="BioDeathLatestDate">1864</atom>
+    <atom name="BioDeathPlace"></atom>
+    <atom name="NamOrganisation"></atom>
+    <atom name="NamOrganisationAcronym"></atom>
+    <atom name="IMAHisCommenced"></atom>
+    <atom name="IMAHisBeginEarliestDate"></atom>
+    <atom name="IMAHisBeginLatestDate"></atom>
+    <atom name="IMAHisCompleted"></atom>
+    <atom name="IMAHisEndEarliestDate"></atom>
+    <atom name="IMAHisEndLatestDate"></atom>
+    <atom name="ColCollaborationName"></atom>
+    <table name="Roles">
+      <tuple>
+        <atom name="NamRoles">artist</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2019-01-09</atom>
+  </tuple>
+
+  <!-- Row 64 -->
+  <tuple>
+    <atom name="irn">10987</atom>
+    <atom name="NamPartyType">Registration Verified</atom>
+    <atom name="NamFullName">Unknown Factory</atom>
+    <atom name="NamTitle"></atom>
+    <atom name="NamFirst"></atom>
+    <atom name="NamMiddle"></atom>
+    <atom name="NamLast"></atom>
+    <atom name="NamSuffix"></atom>
+    <atom name="NamSex">Unknown</atom>
+    <atom name="BioNationality">German</atom>
+    <atom name="BioBirthDate"></atom>
+    <atom name="BioBirthEarliestDate"></atom>
+    <atom name="BioBirthLatestDate"></atom>
+    <atom name="BioBirthPlace"></atom>
+    <atom name="BioDeathDate"></atom>
+    <atom name="BioDeathEarliestDate"></atom>
+    <atom name="BioDeathLatestDate"></atom>
+    <atom name="BioDeathPlace"></atom>
+    <atom name="NamOrganisation">Unknown Factory</atom>
+    <atom name="NamOrganisationAcronym"></atom>
+    <atom name="IMAHisCommenced"></atom>
+    <atom name="IMAHisBeginEarliestDate"></atom>
+    <atom name="IMAHisBeginLatestDate"></atom>
+    <atom name="IMAHisCompleted"></atom>
+    <atom name="IMAHisEndEarliestDate"></atom>
+    <atom name="IMAHisEndLatestDate"></atom>
+    <atom name="ColCollaborationName"></atom>
+    <atom name="AdmDateModified">2019-01-09</atom>
   </tuple>
 </table>

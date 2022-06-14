@@ -22,7 +22,9 @@
 <?schema
   table           ecatalogue
     integer         irn
-    date            AdmDateModified
+    table           Flags
+      text short      TitObjectRating
+    end
     text short      AdmPublishWebNoPassword
     text short      TitObjectStatus
     text short      TitAccessionNo
@@ -72,6 +74,9 @@
     text long       PhyMediumAndSupport
     text short      PhyTechnique
     text short      PhyStyle
+    table           MarkType
+      text short      CreMarkType
+    end
     text long       CrePrimaryInscriptions
     table           Printer
       integer         irn
@@ -96,7 +101,13 @@
     text long       SumCreditLine
     table           Rights
       integer         irn
+      text long       RigAcknowledgement
       date            AdmDateModified
+    end
+    table           RightsURIs
+      text short      AdmGUIDIsPreferred_tab
+      text long       AdmGUIDType_tab
+      text long       AdmGUIDValue_tab
     end
     text long       CreProvenance
     text short      PhyCollectionArea
@@ -143,24 +154,25 @@
       integer         irn
       date            AdmDateModified
     end
+    table           GUIDs
+      text short      AdmGUIDIsPreferred
+      text short      AdmGUIDType
+      text short      AdmGUIDValue
+    end
     table           DeaccessionDetails
       text short      DeaDeaccessionMethod
       date            DeaDeaccessionDate
       text long       DeaDeaccessionNotes
-      date            DeaTransferDate
-      text long       DeaTransferNotes
     end
     table           DeaccessionedTo
       tuple           DeaReceivingPartyRef
         integer         irn
         date            AdmDateModified
       end
+      date            DeaTransferDate
+      text long       DeaTransferNotes
     end
-    table           GUIDs
-      text short      AdmGUIDIsPreferred
-      text short      AdmGUIDType
-      text short      AdmGUIDValue
-    end
+    date            AdmDateModified
   end
 ?>
 <!-- Data -->
@@ -169,7 +181,6 @@
   <!-- Row 1 -->
   <tuple>
     <atom name="irn">46950</atom>
-    <atom name="AdmDateModified">2022-06-07</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">05.19</atom>
@@ -214,7 +225,12 @@
     <table name="Rights">
       <tuple>
         <atom name="irn">1707</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2016-08-18</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -245,12 +261,12 @@
         <atom name="AdmGUIDValue">34951</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-07</atom>
   </tuple>
 
   <!-- Row 2 -->
   <tuple>
     <atom name="irn">21137</atom>
-    <atom name="AdmDateModified">2022-06-07</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">06.137</atom>
@@ -310,6 +326,17 @@
     <atom name="PhyMediumAndSupport">ink on paper, color woodblock print</atom>
     <atom name="PhyTechnique">woodcutting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Seal</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Inscriptions</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed by artist: Hiroshige ga
 Publisher's mark: Hōeidō (Takenouchi Magohachi)
 Seal with subtitle: Kosuizu
@@ -338,7 +365,12 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Purchased by the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1906.</atom>
@@ -380,15 +412,6 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
-    <table name="DeaccessionDetails">
-      <tuple>
-        <atom name="DeaDeaccessionMethod"></atom>
-        <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">John Teramoto, IMA Curator of Asian Art, this is a late printing.</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
-      </tuple>
-    </table>
     <table name="GUIDs">
       <tuple>
         <atom name="AdmGUIDIsPreferred">No</atom>
@@ -396,12 +419,19 @@ Inscribed: title and series title</atom>
         <atom name="AdmGUIDValue">80085</atom>
       </tuple>
     </table>
+    <table name="DeaccessionDetails">
+      <tuple>
+        <atom name="DeaDeaccessionMethod"></atom>
+        <atom name="DeaDeaccessionDate"></atom>
+        <atom name="DeaDeaccessionNotes">John Teramoto, IMA Curator of Asian Art, this is a late printing.</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-06-07</atom>
   </tuple>
 
   <!-- Row 3 -->
   <tuple>
     <atom name="irn">16356</atom>
-    <atom name="AdmDateModified">2022-06-07</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">07.7</atom>
@@ -459,6 +489,11 @@ Inscribed: title and series title</atom>
     <atom name="PhyMediumAndSupport">ink on paper, wood engraving</atom>
     <atom name="PhyTechnique">engraving {printing process}</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed in pencil, below image, lower right: Henry Wolf sculpt</atom>
     <atom name="PhyConvertedDims">8 x 9-1/16 in. (image)
 11-1/4 x 12-1/4 in. (sheet)</atom>
@@ -482,7 +517,12 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">807</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -531,12 +571,12 @@ Inscribed: title and series title</atom>
         <atom name="AdmGUIDValue">80096</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-07</atom>
   </tuple>
 
   <!-- Row 4 -->
   <tuple>
     <atom name="irn">47035</atom>
-    <atom name="AdmDateModified">2022-04-26</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">08.19</atom>
@@ -592,7 +632,12 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">808</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -616,12 +661,17 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-04-26</atom>
   </tuple>
 
   <!-- Row 5 -->
   <tuple>
     <atom name="irn">89724</atom>
-    <atom name="AdmDateModified">2019-06-14</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">09.28A-C</atom>
@@ -687,7 +737,12 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">807</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -729,12 +784,12 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
   <!-- Row 6 -->
   <tuple>
     <atom name="irn">16168</atom>
-    <atom name="AdmDateModified">2019-06-14</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">09.28C</atom>
@@ -805,7 +860,12 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">807</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -864,12 +924,23 @@ Inscribed: title and series title</atom>
         <atom name="AdmDateModified">2019-07-01</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
   <!-- Row 7 -->
   <tuple>
     <atom name="irn">21288</atom>
-    <atom name="AdmDateModified">2022-05-19</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Diversity Cataloging Project</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Male</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">White</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">10.8</atom>
@@ -920,6 +991,11 @@ Inscribed: title and series title</atom>
     <atom name="PhyMediumAndSupport">oil on canvas</atom>
     <atom name="PhyTechnique">painting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed and dated, l.l.: Carroll Beckwith, 1882</atom>
     <atom name="PhyConvertedDims">78 x 38 in. (canvas)
 85-1/2 x 45-1/8 in. (framed)</atom>
@@ -943,7 +1019,15 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">802</atom>
-        <atom name="AdmDateModified">2016-10-14</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">Given by the artist  to the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1910.</atom>
@@ -985,12 +1069,12 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-05-19</atom>
   </tuple>
 
   <!-- Row 8 -->
   <tuple>
     <atom name="irn">16502</atom>
-    <atom name="AdmDateModified">2020-02-26</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">11.81</atom>
@@ -1072,7 +1156,15 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">802</atom>
-        <atom name="AdmDateModified">2016-10-14</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -1114,12 +1206,12 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-02-26</atom>
   </tuple>
 
   <!-- Row 9 -->
   <tuple>
     <atom name="irn">49409</atom>
-    <atom name="AdmDateModified">2020-10-01</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">13.357</atom>
@@ -1169,7 +1261,12 @@ Inscribed: title and series title</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">808</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Excavated at British School of Archaeology site in Egypt (1912-1913); given to the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1913.</atom>
@@ -1211,12 +1308,17 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-10-01</atom>
   </tuple>
 
   <!-- Row 10 -->
   <tuple>
     <atom name="irn">92384</atom>
-    <atom name="AdmDateModified">2021-05-03</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">13.1A</atom>
@@ -1289,7 +1391,12 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -1355,16 +1462,19 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
         <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-05-03</atom>
   </tuple>
 
   <!-- Row 11 -->
   <tuple>
     <atom name="irn">24693</atom>
-    <atom name="AdmDateModified">2019-09-30</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">13.1A-C</atom>
@@ -1437,7 +1547,12 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -1484,16 +1599,19 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
         <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-09-30</atom>
   </tuple>
 
   <!-- Row 12 -->
   <tuple>
     <atom name="irn">92385</atom>
-    <atom name="AdmDateModified">2021-05-03</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">13.1B</atom>
@@ -1557,7 +1675,12 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -1623,16 +1746,19 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
         <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-05-03</atom>
   </tuple>
 
   <!-- Row 13 -->
   <tuple>
     <atom name="irn">92386</atom>
-    <atom name="AdmDateModified">2021-05-03</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">13.1C</atom>
@@ -1696,7 +1822,12 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -1762,16 +1893,31 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
         <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-05-03</atom>
   </tuple>
 
   <!-- Row 14 -->
   <tuple>
     <atom name="irn">1065</atom>
-    <atom name="AdmDateModified">2022-05-16</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Approved for Off-site Use - Westerley Only</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Diversity Cataloging Project</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Male</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">White</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">14.55</atom>
@@ -1822,6 +1968,11 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <atom name="PhyMediumAndSupport">oil on canvas</atom>
     <atom name="PhyTechnique">painting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed, l.r.: C FISCUS</atom>
     <atom name="PhyConvertedDims">27-1/4 x 16-1/4 in. (canvas)
 34-3/4 x 24-3/4 x 4 in. (framed)</atom>
@@ -1847,7 +1998,15 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">802</atom>
-        <atom name="AdmDateModified">2016-10-14</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -1889,12 +2048,17 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-05-16</atom>
   </tuple>
 
   <!-- Row 15 -->
   <tuple>
     <atom name="irn">16410</atom>
-    <atom name="AdmDateModified">2020-06-19</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">14.231</atom>
@@ -1970,7 +2134,12 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1705</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2022-02-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Collected by Arthur Henn, Hugh McKennan Landon Expedition to Ecuador and Peru under the direction of Dr. Carl H. Eigenmann of Indiana University; Hugh McKennan Landon [1868-1947] Indianapolis, Indiana; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, Indianapolis, Indiana in 1914.</atom>
@@ -2017,16 +2186,19 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
         <atom name="DeaDeaccessionNotes">This work was identifed during the 2015-2017 Collection Ranking Project as a candidate for deaccession, due to its ethnographic nature it is not suitable for an art museum.</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-06-19</atom>
   </tuple>
 
   <!-- Row 16 -->
   <tuple>
     <atom name="irn">89367</atom>
-    <atom name="AdmDateModified">2022-02-23</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">16.924A</atom>
@@ -2102,7 +2274,12 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -2163,12 +2340,17 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         <atom name="AdmDateModified">2022-02-23</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
   <!-- Row 17 -->
   <tuple>
     <atom name="irn">25098</atom>
-    <atom name="AdmDateModified">2022-02-23</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">16.924A-C</atom>
@@ -2222,6 +2404,14 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
     <atom name="PhyMediumAndSupport">ink on paper, color woodblock print</atom>
     <atom name="PhyTechnique">woodcutting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Seal</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed by artist: Gototei Kunisada ga
 Censor's seal: single kiwame</atom>
     <table name="Publisher">
@@ -2245,7 +2435,12 @@ Censor's seal: single kiwame</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -2287,12 +2482,17 @@ Censor's seal: single kiwame</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
   <!-- Row 18 -->
   <tuple>
     <atom name="irn">89368</atom>
-    <atom name="AdmDateModified">2022-02-23</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">16.924B</atom>
@@ -2368,7 +2568,12 @@ Censor's seal: single kiwame</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -2429,12 +2634,17 @@ Censor's seal: single kiwame</atom>
         <atom name="AdmDateModified">2022-02-23</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
   <!-- Row 19 -->
   <tuple>
     <atom name="irn">89369</atom>
-    <atom name="AdmDateModified">2022-02-23</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">16.924C</atom>
@@ -2488,6 +2698,14 @@ Censor's seal: single kiwame</atom>
     <atom name="PhyMediumAndSupport">ink on paper, color woodblock print</atom>
     <atom name="PhyTechnique">woodcutting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Seal</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed by artist: Gototei Kunisada ga
 Censor's seal: single kiwame</atom>
     <table name="Publisher">
@@ -2511,7 +2729,12 @@ Censor's seal: single kiwame</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -2572,12 +2795,12 @@ Censor's seal: single kiwame</atom>
         <atom name="AdmDateModified">2022-02-23</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
   <!-- Row 20 -->
   <tuple>
     <atom name="irn">25274</atom>
-    <atom name="AdmDateModified">2020-12-11</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">25.6</atom>
@@ -2645,7 +2868,12 @@ Censor's seal: single kiwame</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">807</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -2687,12 +2915,26 @@ Censor's seal: single kiwame</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-12-11</atom>
   </tuple>
 
   <!-- Row 21 -->
   <tuple>
     <atom name="irn">29270</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Diversity Cataloging Project</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">White</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Male</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">26.189</atom>
@@ -2743,6 +2985,11 @@ Censor's seal: single kiwame</atom>
     <atom name="PhyMediumAndSupport">oil on canvas</atom>
     <atom name="PhyTechnique">painting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed, l.l.: Wayman Adams</atom>
     <atom name="PhyConvertedDims">82-1/4 x 54-1/4 in. (canvas)
 86-1/2 x 59 x 2-1/2 in. (framed)</atom>
@@ -2767,7 +3014,12 @@ Censor's seal: single kiwame</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1644</atom>
+        <atom name="RigAcknowledgement">© Wayman Adams</atom>
         <atom name="AdmDateModified">2016-06-20</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Purchased from the artist by a group of local patrons for the museum.</atom>
@@ -2821,12 +3073,160 @@ Censor's seal: single kiwame</atom>
         <atom name="AdmGUIDValue">41696</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
   <!-- Row 22 -->
   <tuple>
+    <atom name="irn">21444</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">27.25</atom>
+    <atom name="TitPreviousAccessionNo">TR941/2</atom>
+    <atom name="TitAccessionDate">1927-10-18</atom>
+    <atom name="TitMainTitle">Souvenir de la Scheideges</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">601</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Artist</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">19th century</atom>
+    <atom name="CreEarliestDate">1801</atom>
+    <atom name="CreLatestDate">1900</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Visual Works: Prints</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">prints</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">lithographs</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">ink</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">paper</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">lithograph on chine collé</atom>
+    <atom name="PhyTechnique">lithography</atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Inscriptions</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Inscribed in plate above image: Oeuvres de A. Calame
+Inscribed in plate below image: Imp. Jacomme &amp; Cie R. de Lancry, 18 Paris, du Cabinet de M. Mussard Cons. d' Etat'. F. Delarue Editeur, rue J. J. Rousseau, 18, Paris
+Signed in plate: 1094 B. A. Calame - 7ime Livraison - 1853 - No. 7</atom>
+    <table name="Printer">
+      <tuple>
+        <atom name="irn">14044</atom>
+        <atom name="AdmDateModified">2020-12-14</atom>
+      </tuple>
+    </table>
+    <table name="Publisher">
+      <tuple>
+        <atom name="irn">12095</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+      </tuple>
+    </table>
+    <atom name="PhyConvertedDims">7-1/8 x 9-1/8 in. (image)
+12 x 18 in. (sheet)</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Image Dimensions</atom>
+        <atom name="PhyHeight">7.1250</atom>
+        <atom name="PhyWidth">9.1250</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 18.1 x 23.2 (image)</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyType">Sheet Dimensions</atom>
+        <atom name="PhyHeight">12.0000</atom>
+        <atom name="PhyWidth">18.0000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">Metric: 30.5 x 45.7 (sheet)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Anonymous Gift</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">807</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance"></atom>
+    <atom name="PhyCollectionArea">904.1-Prints, Drawings, and Photographs</atom>
+    <atom name="LocMovementType">Inventory</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">9972</atom>
+          <atom name="AdmDateModified">2009-06-18</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">F25.cg6.r4.lv12</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Print Storage</atom>
+          <atom name="LocLevel3">F25</atom>
+          <atom name="LocLevel4">cg6</atom>
+          <atom name="LocLevel5">r4</atom>
+          <atom name="LocLevel6">lv12</atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="PermLoc">
+      <tuple>
+        <tuple name="LocPermanentLocationRef">
+          <atom name="irn">9972</atom>
+          <atom name="AdmDateModified">2009-06-18</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">F25.cg6.r4.lv12</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Print Storage</atom>
+          <atom name="LocLevel3">F25</atom>
+          <atom name="LocLevel4">cg6</atom>
+          <atom name="LocLevel5">r4</atom>
+          <atom name="LocLevel6">lv12</atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2020-12-14</atom>
+  </tuple>
+
+  <!-- Row 23 -->
+  <tuple>
     <atom name="irn">18672</atom>
-    <atom name="AdmDateModified">2022-02-18</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">29.93</atom>
@@ -2910,7 +3310,15 @@ Censor's seal: single kiwame</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">802</atom>
-        <atom name="AdmDateModified">2016-10-14</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -2952,12 +3360,12 @@ Censor's seal: single kiwame</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-18</atom>
   </tuple>
 
-  <!-- Row 23 -->
+  <!-- Row 24 -->
   <tuple>
     <atom name="irn">51330</atom>
-    <atom name="AdmDateModified">2019-07-16</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">30.388</atom>
@@ -3009,6 +3417,20 @@ Censor's seal: single kiwame</atom>
     <atom name="PhyMediumAndSupport">color woodblock print</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Seal</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Publisher's mark</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Engraver's mark</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed by artist: Hirokage ga
 Date seal: Sheep 6 (1859, 6th month)
 Publisher's seal: Tsujioka-ya Bunsuke (Kinkōdō)
@@ -3041,7 +3463,12 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Eliza M. Niblack, Indianapolis, Indiana; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1930.</atom>
@@ -3083,12 +3510,12 @@ Engraver's seal: Horisen</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-16</atom>
   </tuple>
 
-  <!-- Row 24 -->
+  <!-- Row 25 -->
   <tuple>
     <atom name="irn">14365</atom>
-    <atom name="AdmDateModified">2022-02-22</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">33.1812</atom>
@@ -3138,7 +3565,12 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">813</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -3185,16 +3617,19 @@ Engraver's seal: Horisen</atom>
         <atom name="DeaDeaccessionMethod"></atom>
         <atom name="DeaDeaccessionDate"></atom>
         <atom name="DeaDeaccessionNotes">Per Niloo - keep</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-22</atom>
   </tuple>
 
-  <!-- Row 25 -->
+  <!-- Row 26 -->
   <tuple>
     <atom name="irn">3521</atom>
-    <atom name="AdmDateModified">2022-05-09</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">42.07</atom>
@@ -3255,6 +3690,14 @@ Engraver's seal: Horisen</atom>
     <atom name="PhyMediumAndSupport">oil on canvas</atom>
     <atom name="PhyTechnique">painting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Date</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed and dated, l.r.: PAUL E BEEM 30</atom>
     <atom name="PhyConvertedDims">22 x 24 in. (canvas)
 29 x 31 x 2-3/4 in. (framed)</atom>
@@ -3280,7 +3723,12 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1760</atom>
+        <atom name="RigAcknowledgement">© Paul Edward Beem</atom>
         <atom name="AdmDateModified">2015-06-17</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -3322,12 +3770,12 @@ Engraver's seal: Horisen</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-05-09</atom>
   </tuple>
 
-  <!-- Row 26 -->
+  <!-- Row 27 -->
   <tuple>
     <atom name="irn">52481</atom>
-    <atom name="AdmDateModified">2022-02-22</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">44.91</atom>
@@ -3371,6 +3819,11 @@ Engraver's seal: Horisen</atom>
     <atom name="PhyMediumAndSupport">color woodblock print</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Inscriptions</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Kyoka poem</atom>
     <atom name="PhyConvertedDims">8-3/4 x 12 in.</atom>
     <table name="Dims">
@@ -3385,7 +3838,12 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1704</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2016-09-15</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -3427,12 +3885,12 @@ Engraver's seal: Horisen</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-22</atom>
   </tuple>
 
-  <!-- Row 27 -->
+  <!-- Row 28 -->
   <tuple>
     <atom name="irn">17123</atom>
-    <atom name="AdmDateModified">2022-03-28</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">55.26</atom>
@@ -3508,7 +3966,15 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">802</atom>
-        <atom name="AdmDateModified">2016-10-14</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">Owned by Winifred Brady Adams (wife of the artist); given to the museum by sons of the artist</atom>
@@ -3556,12 +4022,12 @@ Engraver's seal: Horisen</atom>
         <atom name="AdmDateModified">2021-04-02</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 28 -->
+  <!-- Row 29 -->
   <tuple>
     <atom name="irn">1032</atom>
-    <atom name="AdmDateModified">2021-10-25</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">60.63</atom>
@@ -3621,7 +4087,12 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">809</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Jan W.A. Kleijkamp); purchased by Eli Lilly, Indianapolis, Indiana, May 1950 ( list noting 15 November 1950 $950.); given to the John Herron Art Institute, now the Indianapolis Museum of Art, in 1960.</atom>
@@ -3663,12 +4134,17 @@ Engraver's seal: Horisen</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-10-25</atom>
   </tuple>
 
-  <!-- Row 29 -->
+  <!-- Row 30 -->
   <tuple>
     <atom name="irn">14617</atom>
-    <atom name="AdmDateModified">2022-02-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Deaccessioned</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Deaccessioned</atom>
     <atom name="TitAccessionNo">67.10.48</atom>
@@ -3748,7 +4224,12 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1708</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2015-03-02</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">J.K. Lilly, Jr, Indianapolis, Indiana; by descent to his children; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1967.</atom>
@@ -3795,8 +4276,6 @@ Engraver's seal: Horisen</atom>
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2021-05-03</atom>
         <atom name="DeaDeaccessionNotes">Lilly House deaccession</atom>
-        <atom name="DeaTransferDate">2021-05-03</atom>
-        <atom name="DeaTransferNotes">Lilly House reclassification</atom>
       </tuple>
     </table>
     <table name="DeaccessionedTo">
@@ -3805,14 +4284,27 @@ Engraver's seal: Horisen</atom>
           <atom name="irn">14152</atom>
           <atom name="AdmDateModified">2021-07-19</atom>
         </tuple>
+        <atom name="DeaTransferDate">2021-05-03</atom>
+        <atom name="DeaTransferNotes">Lilly House reclassification</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-24</atom>
   </tuple>
 
-  <!-- Row 30 -->
+  <!-- Row 31 -->
   <tuple>
     <atom name="irn">17425</atom>
-    <atom name="AdmDateModified">2019-06-14</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">AMICO</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Web</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">74.10</atom>
@@ -3894,7 +4386,12 @@ Engraver's seal: Horisen</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">813</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Amish People, Lancaster County, Pennsylvania. (Alexander Suggs Gallery, Clayton, Missouri); purchased by the Indianapolis Museum of Art in 1974.</atom>
@@ -3936,12 +4433,23 @@ Engraver's seal: Horisen</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 31 -->
+  <!-- Row 32 -->
   <tuple>
     <atom name="irn">8543</atom>
-    <atom name="AdmDateModified">2019-06-14</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">AMICO</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Web</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">75.107</atom>
@@ -4006,6 +4514,14 @@ Engraver's seal: Horisen</atom>
     <atom name="PhyMediumAndSupport">cotton, appliquéd and quilted, cotton and silk embroidery</atom>
     <atom name="PhyTechnique">quilting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Date</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Inscriptions</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Embroidered, banner in central medallion: E. PLURIBUS UNUM
 Embroidered, beneath banner in central medallion: 18 53
 Embroidered, one state name on each star, clockwise from top center: Massachusetts / N Hampshire / N Jersey / S Carolina / Georgia / Connecticut / N York / Delaware / R Island / Maryland / N Carolina / Pennsylvania / Virginia</atom>
@@ -4023,7 +4539,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">813</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Cora Ginsberg, Inc. Tarrytown, New York); purchased by the Indianapolis Museum of Art in 1975.</atom>
@@ -4065,12 +4586,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 32 -->
+  <!-- Row 33 -->
   <tuple>
     <atom name="irn">20419</atom>
-    <atom name="AdmDateModified">2022-04-26</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">75.174</atom>
@@ -4118,6 +4639,20 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <atom name="PhyMediumAndSupport">Cor-ten steel</atom>
     <atom name="PhyTechnique">welding</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Date</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Foundry Mark</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Stamped, lower proper right edge of the "E" along the full length: 1 [gapped]  [copyright symbol] R INDIANA  [in stencilled font] 1970  [HF symbol for Herbert Feuerlicht, Technical Supervisor of Triad Designs] [three stacked lines of smaller text] WORK EXECUTED BY  |  Lippincott  |  NORTH HAVEN CONN</atom>
     <atom name="PhyConvertedDims">144 x 144 x 72 in.</atom>
     <table name="Dims">
@@ -4160,7 +4695,15 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">196</atom>
-        <atom name="AdmDateModified">2011-08-08</atom>
+        <atom name="RigAcknowledgement">© Morgan Art Foundation/Artists Rights Society (ARS), New York</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/InC/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">(Robert Indiana, New York, New York); Purchased by the Indianapolis Museum of Art, Indinianapolis, Indiana, in 1975.</atom>
@@ -4184,12 +4727,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-04-26</atom>
   </tuple>
 
-  <!-- Row 33 -->
+  <!-- Row 34 -->
   <tuple>
     <atom name="irn">1448</atom>
-    <atom name="AdmDateModified">2022-02-23</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">78.168</atom>
@@ -4237,6 +4780,14 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <atom name="PhyMediumAndSupport">etching, engraving and drypoint</atom>
     <atom name="PhyTechnique">etching | engraving | drypoint</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Inscriptions</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">inscribed in pencil, below image, L.L.: h.c. 9-10 | signed and dated in pencil, below image, L.R.: Peterdi ' 67</atom>
     <table name="Publisher">
       <tuple>
@@ -4279,7 +4830,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">117</atom>
+        <atom name="RigAcknowledgement">© The Estate of Gabor F. Peterdi</atom>
         <atom name="AdmDateModified">2011-03-30</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -4321,12 +4877,20 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
-  <!-- Row 34 -->
+  <!-- Row 35 -->
   <tuple>
     <atom name="irn">17577</atom>
-    <atom name="AdmDateModified">2021-12-06</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Approved for Off-site Use - Westerley Only</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.650</atom>
@@ -4410,7 +4974,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">1645</atom>
+        <atom name="RigAcknowledgement">© Dines Carlsen</atom>
         <atom name="AdmDateModified">2015-01-27</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -4452,12 +5021,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-12-06</atom>
   </tuple>
 
-  <!-- Row 35 -->
+  <!-- Row 36 -->
   <tuple>
     <atom name="irn">55312</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.1596</atom>
@@ -4499,7 +5068,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">1702</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Richard Philip Hart Durkee</atom>
@@ -4533,12 +5107,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 36 -->
+  <!-- Row 37 -->
   <tuple>
     <atom name="irn">41018</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.1596.1</atom>
@@ -4603,7 +5177,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">807</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -4639,12 +5218,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 37 -->
+  <!-- Row 38 -->
   <tuple>
     <atom name="irn">41019</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.1596.2</atom>
@@ -4709,7 +5288,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">807</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -4744,12 +5328,17 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 38 -->
+  <!-- Row 39 -->
   <tuple>
     <atom name="irn">89163</atom>
-    <atom name="AdmDateModified">2019-09-09</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.262A</atom>
@@ -4799,7 +5388,12 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <table name="Rights">
       <tuple>
         <atom name="irn">1473</atom>
+        <atom name="RigAcknowledgement">© Halston</atom>
         <atom name="AdmDateModified">2016-04-13</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.</atom>
@@ -4860,12 +5454,17 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         <atom name="AdmDateModified">2019-09-09</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-09-09</atom>
   </tuple>
 
-  <!-- Row 39 -->
+  <!-- Row 40 -->
   <tuple>
     <atom name="irn">24892</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.262A-C</atom>
@@ -4940,7 +5539,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1473</atom>
+        <atom name="RigAcknowledgement">© Halston</atom>
         <atom name="AdmDateModified">2016-04-13</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Halston Limited in care of Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.</atom>
@@ -4982,12 +5586,17 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 40 -->
+  <!-- Row 41 -->
   <tuple>
     <atom name="irn">89164</atom>
-    <atom name="AdmDateModified">2019-09-09</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.262B</atom>
@@ -5042,7 +5651,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1473</atom>
+        <atom name="RigAcknowledgement">© Halston</atom>
         <atom name="AdmDateModified">2016-04-13</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.</atom>
@@ -5103,12 +5717,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-09-09</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-09-09</atom>
   </tuple>
 
-  <!-- Row 41 -->
+  <!-- Row 42 -->
   <tuple>
     <atom name="irn">89165</atom>
-    <atom name="AdmDateModified">2019-09-09</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">80.262C</atom>
@@ -5158,7 +5777,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1473</atom>
+        <atom name="RigAcknowledgement">© Halston</atom>
         <atom name="AdmDateModified">2016-04-13</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.</atom>
@@ -5219,12 +5843,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-09-09</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-09-09</atom>
   </tuple>
 
-  <!-- Row 42 -->
+  <!-- Row 43 -->
   <tuple>
     <atom name="irn">37383</atom>
-    <atom name="AdmDateModified">2022-06-08</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">89.1</atom>
@@ -5275,6 +5904,14 @@ C) sash: length 81 in.</atom>
     <atom name="PhyMediumAndSupport">oil on canvas</atom>
     <atom name="PhyTechnique">painting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Date</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed and dated, l.l.: T.C.Steele .87.</atom>
     <atom name="PhyConvertedDims">30 x 45-1/4 in. (canvas)
 36-3/4 x 51-3/4 x 3-1/4 in. (framed)</atom>
@@ -5308,7 +5945,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1972</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Purchased from the artist by the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art in 1889.</atom>
@@ -5372,12 +6014,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmGUIDValue">Q27898818</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
-  <!-- Row 43 -->
+  <!-- Row 44 -->
   <tuple>
     <atom name="irn">37087</atom>
-    <atom name="AdmDateModified">2022-05-19</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">EP Priority</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">94.1</atom>
@@ -5451,7 +6098,15 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">802</atom>
-        <atom name="AdmDateModified">2016-10-14</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">Purchased from the artist by the Art Association of Indianapolis for the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1894.</atom>
@@ -5493,12 +6148,12 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-05-19</atom>
   </tuple>
 
-  <!-- Row 44 -->
+  <!-- Row 45 -->
   <tuple>
     <atom name="irn">6136</atom>
-    <atom name="AdmDateModified">2021-04-12</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">1983.100</atom>
@@ -5559,7 +6214,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1704</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2016-09-15</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -5601,12 +6261,17 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-04-12</atom>
   </tuple>
 
-  <!-- Row 45 -->
+  <!-- Row 46 -->
   <tuple>
     <atom name="irn">8407</atom>
-    <atom name="AdmDateModified">2019-06-14</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">1984.124</atom>
@@ -5671,6 +6336,11 @@ C) sash: length 81 in.</atom>
     <atom name="PhyMediumAndSupport">wool and cotton, pieced and quilted</atom>
     <atom name="PhyTechnique">quilting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Inscriptions</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Sewn, back side, lower corner: S P</atom>
     <atom name="PhyConvertedDims">70 x 72-1/2 in.</atom>
     <table name="Dims">
@@ -5686,7 +6356,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">813</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2012-09-16</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Mrs. J. Irwin Miller, Columbus, Indiana; given to Indianapolis Museum of Art in 1984.</atom>
@@ -5728,12 +6403,17 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 46 -->
+  <!-- Row 47 -->
   <tuple>
     <atom name="irn">1105</atom>
-    <atom name="AdmDateModified">2022-02-23</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Geographic Location: Africa</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">1989.1569</atom>
@@ -5796,7 +6476,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">810</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2022-02-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Christie's London) sold on 25 June 1984 to Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.</atom>
@@ -5838,12 +6523,12 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
-  <!-- Row 47 -->
+  <!-- Row 48 -->
   <tuple>
     <atom name="irn">6855</atom>
-    <atom name="AdmDateModified">2020-08-05</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">1996.114</atom>
@@ -5908,7 +6593,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">810</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2022-02-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Dr. and Mrs. David Ross, Indianapolis, Indiana given to the Indianapolis Museum of Art at Newfields in 1996.</atom>
@@ -5950,12 +6640,12 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-08-05</atom>
   </tuple>
 
-  <!-- Row 48 -->
+  <!-- Row 49 -->
   <tuple>
     <atom name="irn">63355</atom>
-    <atom name="AdmDateModified">2022-03-28</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Partial Accession</atom>
     <atom name="TitAccessionNo">2005.87</atom>
@@ -6014,7 +6704,15 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">19</atom>
-        <atom name="AdmDateModified">2011-02-25</atom>
+        <atom name="RigAcknowledgement">© Fundació Antoni Tàpies/Artists Rights Society (ARS), New York / VEGAP, Madrid</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/InC/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">(Pace Gallery, New York, New York); Gerald and Dorit Paul, Indianapolis, Indiana; given to the Indianapolis Museum of Art in 2005.</atom>
@@ -6056,12 +6754,20 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 49 -->
+  <!-- Row 50 -->
   <tuple>
     <atom name="irn">64018</atom>
-    <atom name="AdmDateModified">2020-04-02</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Geographic Location: Africa</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2007.4A</atom>
@@ -6125,7 +6831,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1705</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2022-02-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.
@@ -6188,12 +6899,20 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2020-04-02</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-04-02</atom>
   </tuple>
 
-  <!-- Row 50 -->
+  <!-- Row 51 -->
   <tuple>
     <atom name="irn">64017</atom>
-    <atom name="AdmDateModified">2020-04-10</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Geographic Location: Africa</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2007.4A-B</atom>
@@ -6254,7 +6973,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1705</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2022-02-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Probably with (Rhoda Levinsohn, Cleveland, Ohio) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; purchased by the Indianapolis Museum of Art, Indianapolis, Indiana in 2007.
@@ -6280,12 +7004,20 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-04-10</atom>
   </tuple>
 
-  <!-- Row 51 -->
+  <!-- Row 52 -->
   <tuple>
     <atom name="irn">64019</atom>
-    <atom name="AdmDateModified">2020-04-02</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Geographic Location: Africa</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2007.4B</atom>
@@ -6346,7 +7078,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1705</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2022-02-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.
@@ -6409,12 +7146,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2020-04-02</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-04-02</atom>
   </tuple>
 
-  <!-- Row 52 -->
+  <!-- Row 53 -->
   <tuple>
     <atom name="irn">64628</atom>
-    <atom name="AdmDateModified">2022-03-30</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.1-.16</atom>
@@ -6517,7 +7259,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Studio Makkink &amp; Bey, Rotterdam, The Netherlands); purchased by the Indianapolis Museum of Art in 2009.</atom>
@@ -6541,12 +7288,17 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 53 -->
+  <!-- Row 54 -->
   <tuple>
     <atom name="irn">68186</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.3</atom>
@@ -6628,7 +7380,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -6736,12 +7493,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 54 -->
+  <!-- Row 55 -->
   <tuple>
     <atom name="irn">68187</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.4</atom>
@@ -6821,7 +7583,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -6929,12 +7696,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 55 -->
+  <!-- Row 56 -->
   <tuple>
     <atom name="irn">68188</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.5</atom>
@@ -7014,7 +7786,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -7140,12 +7917,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 56 -->
+  <!-- Row 57 -->
   <tuple>
     <atom name="irn">68189</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.6</atom>
@@ -7225,7 +8007,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -7333,12 +8120,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 57 -->
+  <!-- Row 58 -->
   <tuple>
     <atom name="irn">68190</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.7</atom>
@@ -7418,7 +8210,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -7526,12 +8323,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 58 -->
+  <!-- Row 59 -->
   <tuple>
     <atom name="irn">68191</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.8</atom>
@@ -7611,7 +8413,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -7737,12 +8544,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 59 -->
+  <!-- Row 60 -->
   <tuple>
     <atom name="irn">68192</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.9</atom>
@@ -7822,7 +8634,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -7948,12 +8765,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 60 -->
+  <!-- Row 61 -->
   <tuple>
     <atom name="irn">68193</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.10</atom>
@@ -8033,7 +8855,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -8141,12 +8968,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 61 -->
+  <!-- Row 62 -->
   <tuple>
     <atom name="irn">68194</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.11</atom>
@@ -8226,7 +9058,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -8334,12 +9171,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 62 -->
+  <!-- Row 63 -->
   <tuple>
     <atom name="irn">68195</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.12</atom>
@@ -8421,7 +9263,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -8529,12 +9376,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 63 -->
+  <!-- Row 64 -->
   <tuple>
     <atom name="irn">68196</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.13</atom>
@@ -8614,7 +9466,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -8740,12 +9597,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 64 -->
+  <!-- Row 65 -->
   <tuple>
     <atom name="irn">68197</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.14</atom>
@@ -8825,7 +9687,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -8951,12 +9818,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 65 -->
+  <!-- Row 66 -->
   <tuple>
     <atom name="irn">68198</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.15</atom>
@@ -9036,7 +9908,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -9162,12 +10039,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 66 -->
+  <!-- Row 67 -->
   <tuple>
     <atom name="irn">68199</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.16</atom>
@@ -9247,7 +10129,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -9373,12 +10260,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 67 -->
+  <!-- Row 68 -->
   <tuple>
     <atom name="irn">68181</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.1A</atom>
@@ -9455,7 +10347,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -9498,12 +10395,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 68 -->
+  <!-- Row 69 -->
   <tuple>
     <atom name="irn">68180</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.1A-B</atom>
@@ -9580,7 +10482,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -9688,12 +10595,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 69 -->
+  <!-- Row 70 -->
   <tuple>
     <atom name="irn">68182</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.1B</atom>
@@ -9757,7 +10669,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -9800,12 +10717,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 70 -->
+  <!-- Row 71 -->
   <tuple>
     <atom name="irn">68184</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.2A</atom>
@@ -9869,7 +10791,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -9907,12 +10834,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 71 -->
+  <!-- Row 72 -->
   <tuple>
     <atom name="irn">68183</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.2A-B</atom>
@@ -9988,7 +10920,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -10096,12 +11033,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 72 -->
+  <!-- Row 73 -->
   <tuple>
     <atom name="irn">68185</atom>
-    <atom name="AdmDateModified">2019-06-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.390.2B</atom>
@@ -10165,7 +11107,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">432</atom>
+        <atom name="RigAcknowledgement">© Jurgen Bey</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -10208,12 +11155,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 73 -->
+  <!-- Row 74 -->
   <tuple>
     <atom name="irn">69062</atom>
-    <atom name="AdmDateModified">2022-03-30</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.646A</atom>
@@ -10283,7 +11235,12 @@ C) sash: length 81 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">662</atom>
+        <atom name="RigAcknowledgement">© Gaetano Pesce</atom>
         <atom name="AdmDateModified">2011-03-30</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.</atom>
@@ -10321,12 +11278,17 @@ C) sash: length 81 in.</atom>
         <atom name="AdmDateModified">2022-03-30</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 74 -->
+  <!-- Row 75 -->
   <tuple>
     <atom name="irn">67743</atom>
-    <atom name="AdmDateModified">2022-03-30</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.646A-B</atom>
@@ -10404,7 +11366,12 @@ B) ottoman: diam.: 22 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">662</atom>
+        <atom name="RigAcknowledgement">© Gaetano Pesce</atom>
         <atom name="AdmDateModified">2011-03-30</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.</atom>
@@ -10446,12 +11413,17 @@ B) ottoman: diam.: 22 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 75 -->
+  <!-- Row 76 -->
   <tuple>
     <atom name="irn">69063</atom>
-    <atom name="AdmDateModified">2022-03-30</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2009.646B</atom>
@@ -10519,7 +11491,12 @@ B) ottoman: diam.: 22 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">662</atom>
+        <atom name="RigAcknowledgement">© Gaetano Pesce</atom>
         <atom name="AdmDateModified">2011-03-30</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.</atom>
@@ -10557,12 +11534,12 @@ B) ottoman: diam.: 22 in.</atom>
         <atom name="AdmDateModified">2022-03-30</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 76 -->
+  <!-- Row 77 -->
   <tuple>
     <atom name="irn">68903</atom>
-    <atom name="AdmDateModified">2020-11-13</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2010.217</atom>
@@ -10620,7 +11597,12 @@ B) ottoman: diam.: 22 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">599</atom>
+        <atom name="RigAcknowledgement">© Los Carpinteros. Courtesy Sean Kelly Gallery, New York.</atom>
         <atom name="AdmDateModified">2017-01-27</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Commissioned by the Indianapolis Museum of Art.</atom>
@@ -10644,12 +11626,12 @@ B) ottoman: diam.: 22 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-11-13</atom>
   </tuple>
 
-  <!-- Row 77 -->
+  <!-- Row 78 -->
   <tuple>
     <atom name="irn">81052</atom>
-    <atom name="AdmDateModified">2022-03-30</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.298</atom>
@@ -10727,7 +11709,12 @@ B) ottoman: diam.: 22 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1529</atom>
+        <atom name="RigAcknowledgement">© Issey Miyake</atom>
         <atom name="AdmDateModified">2014-07-22</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">The Ebony Fashion Fair Collection; (Leslie Hindman Auctioneers, Chicago, Illinois), 19 March 2013, lot 334A; purchased by the Indianapolis Museum of Art in 2013.</atom>
@@ -10769,12 +11756,17 @@ B) ottoman: diam.: 22 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 78 -->
+  <!-- Row 79 -->
   <tuple>
     <atom name="irn">85257</atom>
-    <atom name="AdmDateModified">2019-07-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443A</atom>
@@ -10817,6 +11809,11 @@ B) ottoman: diam.: 22 in.</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element A) 372 x 36 x 11 in.</atom>
     <table name="Dims">
@@ -10841,7 +11838,12 @@ B) ottoman: diam.: 22 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -10909,12 +11911,17 @@ B) ottoman: diam.: 22 in.</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 79 -->
+  <!-- Row 80 -->
   <tuple>
     <atom name="irn">82696</atom>
-    <atom name="AdmDateModified">2021-02-11</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443A-E.4</atom>
@@ -10957,6 +11964,11 @@ B) ottoman: diam.: 22 in.</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element A) 372 x 36 x 11 in.
 Element B) 98 x 357 x 10-1/4 in.
@@ -11009,7 +12021,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York); purchased by the Indianapolis Museum of Art in 2013.</atom>
@@ -11033,12 +12050,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-02-11</atom>
   </tuple>
 
-  <!-- Row 80 -->
+  <!-- Row 81 -->
   <tuple>
     <atom name="irn">85258</atom>
-    <atom name="AdmDateModified">2019-07-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443B</atom>
@@ -11081,6 +12103,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element B) 98 x 357 x 10-1/4 in.</atom>
     <table name="Dims">
@@ -11105,7 +12132,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -11173,12 +12205,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 81 -->
+  <!-- Row 82 -->
   <tuple>
     <atom name="irn">85259</atom>
-    <atom name="AdmDateModified">2020-06-05</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443C</atom>
@@ -11221,6 +12258,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element C) 104 x 271 x 12 in.</atom>
     <table name="Dims">
@@ -11245,7 +12287,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -11313,12 +12360,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-06-05</atom>
   </tuple>
 
-  <!-- Row 82 -->
+  <!-- Row 83 -->
   <tuple>
     <atom name="irn">85260</atom>
-    <atom name="AdmDateModified">2019-07-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443D</atom>
@@ -11361,6 +12413,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element D) 228 x 100 x 11 in.</atom>
     <table name="Dims">
@@ -11385,7 +12442,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -11453,12 +12515,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 83 -->
+  <!-- Row 84 -->
   <tuple>
     <atom name="irn">85261</atom>
-    <atom name="AdmDateModified">2019-07-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443E.1</atom>
@@ -11501,6 +12568,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Dims">
@@ -11525,7 +12597,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -11593,12 +12670,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 84 -->
+  <!-- Row 85 -->
   <tuple>
     <atom name="irn">85262</atom>
-    <atom name="AdmDateModified">2019-07-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443E.2</atom>
@@ -11641,6 +12723,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Dims">
@@ -11665,7 +12752,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -11733,12 +12825,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 85 -->
+  <!-- Row 86 -->
   <tuple>
     <atom name="irn">85263</atom>
-    <atom name="AdmDateModified">2019-07-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443E.3</atom>
@@ -11781,6 +12878,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Dims">
@@ -11805,7 +12907,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -11873,12 +12980,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 86 -->
+  <!-- Row 87 -->
   <tuple>
     <atom name="irn">85264</atom>
-    <atom name="AdmDateModified">2019-07-24</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2013.443E.4</atom>
@@ -11921,6 +13033,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">painted aluminum</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Incised</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">rf Lichtenstein 83-84 AP &lt;copyright&gt; The Roy Lichtenstein Foundation, 2012</atom>
     <atom name="PhyConvertedDims">Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Dims">
@@ -11945,7 +13062,12 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1429</atom>
+        <atom name="RigAcknowledgement">© Roy Lichtenstein Foundation</atom>
         <atom name="AdmDateModified">2014-07-07</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(Roy Lichtenstein Foundation, New York, New York)</atom>
@@ -12013,12 +13135,1279 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2019-07-24</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 87 -->
+  <!-- Row 88 -->
+  <tuple>
+    <atom name="irn">88757</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177A.1</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68A.1</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">coffee pot for Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">A.1) coffee pot: 4-3/4 x 6 x 3-1/4 in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions A.1</atom>
+        <atom name="PhyHeight">4.7500</atom>
+        <atom name="PhyWidth">6.0000</atom>
+        <atom name="PhyDepth">3.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">A.1) Metric: 12.1 x 15.2 x 8.3 (coffee pot)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Exhibition Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">14628</atom>
+          <atom name="AdmDateModified">2013-09-12</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">H203.p2</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
+          <atom name="LocLevel3">H203</atom>
+          <atom name="LocLevel4">p2</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Parent">
+      <tuple>
+        <tuple name="AssParentObjectRef">
+          <atom name="irn">83398</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Related">
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88761</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88762</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88763</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88772</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88773</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88774</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 89 -->
+  <tuple>
+    <atom name="irn">83398</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177A.1-E.2</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68A.1-E.2</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">A.1) coffee pot: 4-3/4 x 6 x 3-1/4 in.
+A.2) coffee pot lid: 2 x 2-1/2 (diam.) in.
+B) sugar bowl: 2 x 4-1/4 x 2-3/4 in.
+C) egg cup: 4 x 2-3/4 (diam.) in.
+D) plate: 3/4 x 8-3/4 (diam.) in.
+E.1) platter: 1/2 x 7-1/4 (diam.) in.
+E.2) platter lid: 3 x 6 (diam.) in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions A.1</atom>
+        <atom name="PhyHeight">4.7500</atom>
+        <atom name="PhyWidth">6.0000</atom>
+        <atom name="PhyDepth">3.2500</atom>
+        <atom name="PhyDiameter"></atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">A.1) Metric: 12.1 x 15.2 x 8.3 (coffee pot)</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyType">Dimensions A.2</atom>
+        <atom name="PhyHeight">2.0000</atom>
+        <atom name="PhyWidth"></atom>
+        <atom name="PhyDepth"></atom>
+        <atom name="PhyDiameter">2.5000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">A.2) Metric: 5.1 x 6.4 (coffee pot lid)</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyType">Dimensions B</atom>
+        <atom name="PhyHeight">2.0000</atom>
+        <atom name="PhyWidth">4.2500</atom>
+        <atom name="PhyDepth">2.7500</atom>
+        <atom name="PhyDiameter"></atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">B) Metric: 5.1 x 10.8 x 7 (sugar bowl)</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyType">Dimensions C</atom>
+        <atom name="PhyHeight">4.0000</atom>
+        <atom name="PhyDiameter">2.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">C) Metric: 10.2 x 7 (egg cup)</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyType">Dimensions D</atom>
+        <atom name="PhyHeight">0.7500</atom>
+        <atom name="PhyDiameter">8.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">D) Metric: 1.9 x 22.2 (plate)</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyType">Dimensions E.1</atom>
+        <atom name="PhyHeight">0.5000</atom>
+        <atom name="PhyDiameter">7.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">E.1) Metric: 1.3 x 18.4 (platter)</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyType">Dimensions E.2</atom>
+        <atom name="PhyHeight">3.0000</atom>
+        <atom name="PhyDiameter">6.0000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">E.2) Metric: 7.6 x 15.2 (platter lid)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer </atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Exhibition Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">68</atom>
+          <atom name="AdmDateModified">2008-03-24</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">see related parts</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">see related parts</atom>
+          <atom name="LocLevel3"></atom>
+          <atom name="LocLevel4"></atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 90 -->
+  <tuple>
+    <atom name="irn">88761</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177A.2</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68A2</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">coffee pot lid for Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">A.2) coffee pot lid: 2 x 2-1/2 (diam.) in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions A.2</atom>
+        <atom name="PhyHeight">2.0000</atom>
+        <atom name="PhyDiameter">2.5000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">A.2) Metric: 5.1 x 6.4 (coffee pot lid)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Exhibition Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">14628</atom>
+          <atom name="AdmDateModified">2013-09-12</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">H203.p2</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
+          <atom name="LocLevel3">H203</atom>
+          <atom name="LocLevel4">p2</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Parent">
+      <tuple>
+        <tuple name="AssParentObjectRef">
+          <atom name="irn">83398</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Related">
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88757</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88762</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88763</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88772</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88773</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88774</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 91 -->
+  <tuple>
+    <atom name="irn">88762</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177B</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68B</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">sugar bowl for Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">B) sugar bowl: 2 x 4-1/4 x 2-3/4 in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions B</atom>
+        <atom name="PhyHeight">2.0000</atom>
+        <atom name="PhyWidth">4.2500</atom>
+        <atom name="PhyDepth">2.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">B) Metric: 5.1 x 10.8 x 7 (sugar bowl)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Inventory Beginning 2018 - ten year schedule for upcoming reaccreditation</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">8013</atom>
+          <atom name="AdmDateModified">2008-07-08</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">Lc8.lv4</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">storage</atom>
+          <atom name="LocLevel3">Lc8</atom>
+          <atom name="LocLevel4">lv4</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="PermLoc">
+      <tuple>
+        <tuple name="LocPermanentLocationRef">
+          <atom name="irn">8013</atom>
+          <atom name="AdmDateModified">2008-07-08</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">Lc8.lv4</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">storage</atom>
+          <atom name="LocLevel3">Lc8</atom>
+          <atom name="LocLevel4">lv4</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Parent">
+      <tuple>
+        <tuple name="AssParentObjectRef">
+          <atom name="irn">83398</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Related">
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88757</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88761</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88763</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88772</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88773</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88774</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 92 -->
+  <tuple>
+    <atom name="irn">88763</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177C</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68C</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">egg cup for Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">C) egg cup: 4 x 2-3/4 (diam.) in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions C</atom>
+        <atom name="PhyHeight">4.0000</atom>
+        <atom name="PhyDiameter">2.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">C) Metric: 10.2 x 7 (egg cup)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Exhibition Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">14628</atom>
+          <atom name="AdmDateModified">2013-09-12</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">H203.p2</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
+          <atom name="LocLevel3">H203</atom>
+          <atom name="LocLevel4">p2</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Parent">
+      <tuple>
+        <tuple name="AssParentObjectRef">
+          <atom name="irn">83398</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Related">
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88757</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88761</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88762</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88772</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88773</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88774</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 93 -->
+  <tuple>
+    <atom name="irn">88772</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177D</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68D</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">plate for Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">D) plate: 3/4 x 8-3/4 (diam.) in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions D</atom>
+        <atom name="PhyHeight">0.7500</atom>
+        <atom name="PhyDiameter">8.7500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">D) Metric: 1.9 x 22.2 (plate)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Exhibition Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">14628</atom>
+          <atom name="AdmDateModified">2013-09-12</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">H203.p2</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
+          <atom name="LocLevel3">H203</atom>
+          <atom name="LocLevel4">p2</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Parent">
+      <tuple>
+        <tuple name="AssParentObjectRef">
+          <atom name="irn">83398</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Related">
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88757</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88761</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88762</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88763</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88773</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88774</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 94 -->
+  <tuple>
+    <atom name="irn">88773</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177E.1</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68A.1-E.2</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">platter for Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">ceramics</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">pottery</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">dishes</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">platters</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">E.1) platter: 1/2 x 7-1/4 (diam.) in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions E.1</atom>
+        <atom name="PhyHeight">0.5000</atom>
+        <atom name="PhyDiameter">7.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">E.1) Metric: 1.3 x 18.4 (platter)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Exhibition Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">14628</atom>
+          <atom name="AdmDateModified">2013-09-12</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">H203.p2</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
+          <atom name="LocLevel3">H203</atom>
+          <atom name="LocLevel4">p2</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Parent">
+      <tuple>
+        <tuple name="AssParentObjectRef">
+          <atom name="irn">83398</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Related">
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88757</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88761</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88762</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88763</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88772</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88774</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 95 -->
+  <tuple>
+    <atom name="irn">88774</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="TitObjectStatus">Accessioned</atom>
+    <atom name="TitAccessionNo">2015.177E.2</atom>
+    <atom name="TitPreviousAccessionNo">TR11716/68A.1-E.2</atom>
+    <atom name="TitAccessionDate">2015-12-31</atom>
+    <atom name="TitMainTitle">platter lid for Metropolis Breakfast Set</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Creator">
+      <tuple>
+        <atom name="irn">7431</atom>
+        <atom name="AdmDateModified">2021-08-11</atom>
+        <atom name="CreRole">Designer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">9599</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Retailer</atom>
+      </tuple>
+      <tuple>
+        <atom name="irn">10987</atom>
+        <atom name="AdmDateModified">2019-01-09</atom>
+        <atom name="CreRole">Manufacturer</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated">about 1935</atom>
+    <atom name="CreEarliestDate">1935</atom>
+    <atom name="CreLatestDate">1935</atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <atom name="TitObjectType">Furnishings and Equipment</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">ceramics</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">pottery</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">dishes</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">breakfast services</atom>
+      </tuple>
+      <tuple>
+        <atom name="PhyMediaCategory">lids</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">glaze</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">glazed earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Stamp</atom>
+      </tuple>
+    </table>
+    <atom name="CrePrimaryInscriptions">Marked, bottom: Ebeling &amp; Reuss and Made in Germany</atom>
+    <atom name="PhyConvertedDims">E.2) platter lid: 3 x 6 (diam.) in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions E.2</atom>
+        <atom name="PhyHeight">3.0000</atom>
+        <atom name="PhyDiameter">6.0000</atom>
+        <atom name="PhyUnitLength">in.</atom>
+        <atom name="PhyDimensionNotes">E.2) Metric: 7.6 x 15.2 (platter lid)</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift from the Collection of William Swann and William Leazer</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1983</atom>
+        <atom name="RigAcknowledgement">© Belle Kogan</atom>
+        <atom name="AdmDateModified">2016-07-19</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance">William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.</atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Exhibition Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">14628</atom>
+          <atom name="AdmDateModified">2013-09-12</atom>
+          <atom name="LocLocationType">Location</atom>
+          <atom name="LocLocationCode">H203.p2</atom>
+          <atom name="LocLevel1">IMA</atom>
+          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
+          <atom name="LocLevel3">H203</atom>
+          <atom name="LocLevel4">p2</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Parent">
+      <tuple>
+        <tuple name="AssParentObjectRef">
+          <atom name="irn">83398</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="Related">
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88757</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88761</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88762</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88763</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88772</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+      <tuple>
+        <atom name="AssRelationship">set (part of)</atom>
+        <atom name="irn">88773</atom>
+        <atom name="AdmDateModified">2022-03-30</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
+  </tuple>
+
+  <!-- Row 96 -->
   <tuple>
     <atom name="irn">91744</atom>
-    <atom name="AdmDateModified">2022-03-30</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2017.139</atom>
@@ -12064,6 +14453,14 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">oil on canvas</atom>
     <atom name="PhyTechnique">painting</atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+      <tuple>
+        <atom name="CreMarkType">Date</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed and dated in black paint, lower right: T C Steele  |  1899</atom>
     <atom name="PhyConvertedDims">18 x 28 in. (canvas)
 21-7/8 x 31-3/4 in. (framed)</atom>
@@ -12123,12 +14520,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 88 -->
+  <!-- Row 97 -->
   <tuple>
     <atom name="irn">92158</atom>
-    <atom name="AdmDateModified">2022-03-28</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2017.64A</atom>
@@ -12171,6 +14573,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">glass</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Engraver's mark</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Engraved on bottom: Val St Lambert</atom>
     <atom name="PhyConvertedDims">A) 5-3/4 x 3-3/4 x 3-1/2 in.</atom>
     <table name="Dims">
@@ -12242,12 +14649,17 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         <atom name="AdmDateModified">2022-03-28</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 89 -->
+  <!-- Row 98 -->
   <tuple>
     <atom name="irn">90817</atom>
-    <atom name="AdmDateModified">2022-03-28</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Blanket Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2017.64A-C</atom>
@@ -12290,6 +14702,11 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="PhyMediumAndSupport">glass</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Engraver's mark</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Engraved on bottom: Val St Lambert</atom>
     <atom name="PhyConvertedDims">A) 5-3/4 x 3-3/4 x 3-1/2 in.
 B) 4-1/2 x 3-3/4 x 3-1/4 in.
@@ -12360,12 +14777,17 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 90 -->
+  <!-- Row 99 -->
   <tuple>
     <atom name="irn">92159</atom>
-    <atom name="AdmDateModified">2022-03-28</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2017.64B</atom>
@@ -12408,6 +14830,11 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <atom name="PhyMediumAndSupport">glass</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Engraver's mark</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Engraved on bottom: Val St Lambert</atom>
     <atom name="PhyConvertedDims">B) 4-1/2 x 3-3/4 x 3-1/4 in.</atom>
     <table name="Dims">
@@ -12479,12 +14906,17 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
         <atom name="AdmDateModified">2022-03-28</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 91 -->
+  <!-- Row 100 -->
   <tuple>
     <atom name="irn">92160</atom>
-    <atom name="AdmDateModified">2022-03-28</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2017.64C</atom>
@@ -12527,6 +14959,11 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <atom name="PhyMediumAndSupport">glass</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Engraver's mark</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Engraved on bottom: Val St Lambert</atom>
     <atom name="PhyConvertedDims">C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <table name="Dims">
@@ -12598,12 +15035,17 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
         <atom name="AdmDateModified">2022-03-28</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 92 -->
+  <!-- Row 101 -->
   <tuple>
     <atom name="irn">33886</atom>
-    <atom name="AdmDateModified">2022-03-30</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">WWII-Era Provenance Research</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Accessioned</atom>
     <atom name="TitAccessionNo">2020.1</atom>
@@ -12652,6 +15094,11 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <atom name="PhyMediumAndSupport">oil on panel</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">No Mark Found</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Not Inscribed</atom>
     <atom name="PhyConvertedDims">23-3/4 x 19-1/4 in.
 30-1/8 x 26 in. (framed)</atom>
@@ -12675,7 +15122,15 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">803</atom>
-        <atom name="AdmDateModified">2012-09-16</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">Gustav von Gerhardt, Budapest, Hungary, until 1911.{1} Mrs. Moric Palugyay and Mrs. Moric Tomcsanyi. Budapest, by 1927.{2} (Ivan N. Podgoursky, New York, New York); George Henry Alexander Clowes, Indianapolis, Indiana, in 1944; The Clowes Fund, Indianapolis, from 1958–2020, and on long-term loan to the Indianapolis Museum of Art, since 1971; given to the Indianapolis Museum of Art at Newfields, in 2020.
@@ -12720,12 +15175,17 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 93 -->
+  <!-- Row 102 -->
   <tuple>
     <atom name="irn">33140</atom>
-    <atom name="AdmDateModified">2022-04-05</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">EP Priority</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Loan Permanent Collection</atom>
     <atom name="TitAccessionNo">C10063</atom>
@@ -12801,7 +15261,15 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">803</atom>
-        <atom name="AdmDateModified">2012-09-16</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">Possibly sale at (Pieter Locquet, Amsterdam, 22 September 1783, lot no. 325; 
@@ -12856,12 +15324,17 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-04-05</atom>
   </tuple>
 
-  <!-- Row 94 -->
+  <!-- Row 103 -->
   <tuple>
     <atom name="irn">62243</atom>
-    <atom name="AdmDateModified">2021-10-13</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Deaccessioned</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Deaccessioned</atom>
     <atom name="TitAccessionNo">LH2003.90A-D</atom>
@@ -12957,8 +15430,6 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2021-05-03</atom>
         <atom name="DeaDeaccessionNotes">Lilly House deaccession</atom>
-        <atom name="DeaTransferDate">2021-05-03</atom>
-        <atom name="DeaTransferNotes">Lilly House reclassification</atom>
       </tuple>
     </table>
     <table name="DeaccessionedTo">
@@ -12967,14 +15438,24 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
           <atom name="irn">14152</atom>
           <atom name="AdmDateModified">2021-07-19</atom>
         </tuple>
+        <atom name="DeaTransferDate">2021-05-03</atom>
+        <atom name="DeaTransferNotes">Lilly House reclassification</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-10-13</atom>
   </tuple>
 
-  <!-- Row 95 -->
+  <!-- Row 104 -->
   <tuple>
     <atom name="irn">93739</atom>
-    <atom name="AdmDateModified">2021-10-19</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Part Record</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Deaccessioned</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Deaccessioned</atom>
     <atom name="TitAccessionNo">PROP_1120A</atom>
@@ -13020,7 +15501,15 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
     <table name="Rights">
       <tuple>
         <atom name="irn">800</atom>
-        <atom name="AdmDateModified">2015-11-18</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -13056,8 +15545,6 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2018-10-10</atom>
         <atom name="DeaDeaccessionNotes">Per Charles L. Venable, The Melvin &amp; Bren Simon Director and Chief Executive Officer, this piece is not of museum quality. To be deaccessioned for future use on the IMA grounds.</atom>
-        <atom name="DeaTransferDate">2021-10-14</atom>
-        <atom name="DeaTransferNotes">Transferred to the Newfields Horticulture Department</atom>
       </tuple>
     </table>
     <table name="DeaccessionedTo">
@@ -13066,14 +15553,24 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
           <atom name="irn">14200</atom>
           <atom name="AdmDateModified">2021-08-09</atom>
         </tuple>
+        <atom name="DeaTransferDate">2021-10-14</atom>
+        <atom name="DeaTransferNotes">Transferred to the Newfields Horticulture Department</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2021-10-19</atom>
   </tuple>
 
-  <!-- Row 96 -->
+  <!-- Row 105 -->
   <tuple>
     <atom name="irn">19677</atom>
-    <atom name="AdmDateModified">2022-02-03</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Study Collection</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Deaccessioned</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Deaccessioned</atom>
     <atom name="TitAccessionNo">S4344.81.1</atom>
@@ -13141,7 +15638,12 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
     <table name="Rights">
       <tuple>
         <atom name="irn">1707</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
         <atom name="AdmDateModified">2016-08-18</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">Edgar B. Howard, New York; given to the Indianapolis Museum of Art, Indianapolis, Indiana, 17 December 1981.</atom>
@@ -13188,16 +15690,14 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2021-11-16</atom>
         <atom name="DeaDeaccessionNotes">Niloo Paydar, Curator of Textile and Fashion Arts, recommends this piece for deaccession because it is not museum quality.</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-03</atom>
   </tuple>
 
-  <!-- Row 97 -->
+  <!-- Row 106 -->
   <tuple>
     <atom name="irn">87369</atom>
-    <atom name="AdmDateModified">2019-06-14</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Loan Exhibition</atom>
     <atom name="TitAccessionNo">TR6990</atom>
@@ -13240,6 +15740,11 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
     <atom name="PhyMediumAndSupport">oil on canvas</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
+    <table name="MarkType">
+      <tuple>
+        <atom name="CreMarkType">Signature</atom>
+      </tuple>
+    </table>
     <atom name="CrePrimaryInscriptions">Signed, l.r. : T.C. Steele
 Inscribed in unknown hand, l.r. : 1890</atom>
     <atom name="PhyConvertedDims">18-1/8 x 24-7/8 in.</atom>
@@ -13256,7 +15761,12 @@ Inscribed in unknown hand, l.r. : 1890</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1972</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance">(T.C. Steele): Dr. and Mrs. Roger A. Hurwitz, loaned to the Indianapolis Museum of Art in 2015</atom>
@@ -13280,12 +15790,12 @@ Inscribed in unknown hand, l.r. : 1890</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 98 -->
+  <!-- Row 107 -->
   <tuple>
     <atom name="irn">95907</atom>
-    <atom name="AdmDateModified">2019-08-08</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Loan Exhibition</atom>
     <atom name="TitAccessionNo">TR7026</atom>
@@ -13353,11 +15863,23 @@ Inscribed in unknown hand, l.r. : 1890</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">96</atom>
+        <atom name="RigAcknowledgement">© The Estates of William J. and Constance Forsyth</atom>
         <atom name="AdmDateModified">2015-09-15</atom>
       </tuple>
       <tuple>
         <atom name="irn">503</atom>
-        <atom name="AdmDateModified">2014-11-13</atom>
+        <atom name="RigAcknowledgement">Public Domain 
+Courtesy the Estates of William J. and Constance Forsyth</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance">Lilly Endowment, Indianapolis, Indiana</atom>
@@ -13393,12 +15915,12 @@ Inscribed in unknown hand, l.r. : 1890</atom>
         <atom name="AdmDateModified">2019-08-08</atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2019-08-08</atom>
   </tuple>
 
-  <!-- Row 99 -->
+  <!-- Row 108 -->
   <tuple>
     <atom name="irn">5076</atom>
-    <atom name="AdmDateModified">2022-02-25</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Loan Exhibition</atom>
     <atom name="TitAccessionNo">TR8666/1</atom>
@@ -13462,7 +15984,12 @@ Inscribed in unknown hand, l.r. : 1890</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1972</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -13504,12 +16031,12 @@ Inscribed in unknown hand, l.r. : 1890</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-25</atom>
   </tuple>
 
-  <!-- Row 100 -->
+  <!-- Row 109 -->
   <tuple>
     <atom name="irn">4634</atom>
-    <atom name="AdmDateModified">2022-05-19</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Loan Exhibition</atom>
     <atom name="TitAccessionNo">TR8666/2</atom>
@@ -13582,7 +16109,12 @@ Inscribed in unknown hand, l.r. : 1890</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">1972</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
         <atom name="AdmDateModified">2016-10-14</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -13624,12 +16156,12 @@ Inscribed in unknown hand, l.r. : 1890</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-05-19</atom>
   </tuple>
 
-  <!-- Row 101 -->
+  <!-- Row 110 -->
   <tuple>
     <atom name="irn">16848</atom>
-    <atom name="AdmDateModified">2022-02-25</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="TitObjectStatus">Loan Exhibition</atom>
     <atom name="TitAccessionNo">TR9825/1</atom>
@@ -13700,7 +16232,15 @@ Inscribed in unknown hand, l.r. : 1890</atom>
     <table name="Rights">
       <tuple>
         <atom name="irn">802</atom>
-        <atom name="AdmDateModified">2016-10-14</atom>
+        <atom name="RigAcknowledgement">Public Domain</atom>
+        <atom name="AdmDateModified">2022-06-08</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+        <atom name="AdmGUIDIsPreferred_tab">No</atom>
+        <atom name="AdmGUIDType_tab">RightsStatements.org URI</atom>
+        <atom name="AdmGUIDValue_tab">http://rightsstatements.org/vocab/NoC-US/1.0/</atom>
       </tuple>
     </table>
     <atom name="CreProvenance"></atom>
@@ -13742,12 +16282,20 @@ Inscribed in unknown hand, l.r. : 1890</atom>
         </tuple>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2022-02-25</atom>
   </tuple>
 
-  <!-- Row 102 -->
+  <!-- Row 111 -->
   <tuple>
     <atom name="irn">3457</atom>
-    <atom name="AdmDateModified">2020-04-22</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Unidentified</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Luce Digitization Project</atom>
+      </tuple>
+    </table>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="TitObjectStatus">Unknown</atom>
     <atom name="TitAccessionNo">U477</atom>
@@ -13852,9 +16400,8 @@ Inscribed in unknown hand, l.r. : 1890</atom>
         <atom name="DeaDeaccessionMethod">Abandoned Property Fulfilled</atom>
         <atom name="DeaDeaccessionDate">2018-12-05</atom>
         <atom name="DeaDeaccessionNotes">Abandoned Property Advertisement Notice published by Indianapolis Star in accordance with IC-32-34-5 on September 29, 2018 and October 06, 2018. The Indianapolis Museum of Art will claim clear title on December 05, 2018.</atom>
-        <atom name="DeaTransferDate"></atom>
-        <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <atom name="AdmDateModified">2020-04-22</atom>
   </tuple>
 </table>
