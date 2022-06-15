@@ -22,6 +22,7 @@
 <?schema
   table           eparties
     integer         irn
+    text short      AdmPublishWebNoPassword
     text short      NamPartyType
     text long       NamFullName
     text short      NamTitle
@@ -79,6 +80,7 @@
   <!-- Row 1 -->
   <tuple>
     <atom name="irn">733</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Charles J. Fiscus</atom>
     <atom name="NamTitle"></atom>
@@ -129,6 +131,7 @@
   <!-- Row 2 -->
   <tuple>
     <atom name="irn">5060</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Paul E. Beem</atom>
     <atom name="NamTitle"></atom>
@@ -166,6 +169,7 @@
   <!-- Row 3 -->
   <tuple>
     <atom name="irn">2741</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Unknown</atom>
     <atom name="NamTitle"></atom>
@@ -236,6 +240,7 @@
   <!-- Row 4 -->
   <tuple>
     <atom name="irn">610521</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">James Thornhill</atom>
     <atom name="NamTitle"></atom>
@@ -300,6 +305,7 @@
   <!-- Row 5 -->
   <tuple>
     <atom name="irn">619988</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Jonathan Richardson the elder</atom>
     <atom name="NamTitle"></atom>
@@ -352,6 +358,7 @@
   <!-- Row 6 -->
   <tuple>
     <atom name="irn">737</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Henry Wolf</atom>
     <atom name="NamTitle"></atom>
@@ -389,6 +396,7 @@
   <!-- Row 7 -->
   <tuple>
     <atom name="irn">612140</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">James A. Whistler</atom>
     <atom name="NamTitle"></atom>
@@ -439,6 +447,7 @@
   <!-- Row 8 -->
   <tuple>
     <atom name="irn">600630</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Dines Carlsen</atom>
     <atom name="NamTitle"></atom>
@@ -487,6 +496,7 @@
   <!-- Row 9 -->
   <tuple>
     <atom name="irn">615130</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Robert Indiana</atom>
     <atom name="NamTitle"></atom>
@@ -548,6 +558,7 @@
   <!-- Row 10 -->
   <tuple>
     <atom name="irn">10433</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Lippincott, LLC</atom>
     <atom name="NamTitle"></atom>
@@ -596,6 +607,7 @@
   <!-- Row 11 -->
   <tuple>
     <atom name="irn">592</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Utagawa Hiroshige</atom>
     <atom name="NamTitle"></atom>
@@ -662,6 +674,7 @@
   <!-- Row 12 -->
   <tuple>
     <atom name="irn">606727</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">James C. Beckwith</atom>
     <atom name="NamTitle"></atom>
@@ -710,6 +723,7 @@
   <!-- Row 13 -->
   <tuple>
     <atom name="irn">10661</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Unknown 作者不詳</atom>
     <atom name="NamTitle"></atom>
@@ -747,6 +761,7 @@
   <!-- Row 14 -->
   <tuple>
     <atom name="irn">11481</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Halston</atom>
     <atom name="NamTitle"></atom>
@@ -803,6 +818,7 @@
   <!-- Row 15 -->
   <tuple>
     <atom name="irn">11366</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Utagawa Kunisada 歌川国貞</atom>
     <atom name="NamTitle"></atom>
@@ -899,6 +915,7 @@
   <!-- Row 16 -->
   <tuple>
     <atom name="irn">600739</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Hieronymus Bosch</atom>
     <atom name="NamTitle"></atom>
@@ -948,6 +965,7 @@
   <!-- Row 17 -->
   <tuple>
     <atom name="irn">11566</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">T. C. Steele</atom>
     <atom name="NamTitle"></atom>
@@ -1005,6 +1023,7 @@
   <!-- Row 18 -->
   <tuple>
     <atom name="irn">626263</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Joseph Mallord William Turner</atom>
     <atom name="NamTitle"></atom>
@@ -1054,6 +1073,7 @@
   <!-- Row 19 -->
   <tuple>
     <atom name="irn">832</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">William Miller</atom>
     <atom name="NamTitle"></atom>
@@ -1094,6 +1114,7 @@
   <!-- Row 20 -->
   <tuple>
     <atom name="irn">8686</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Utagawa Hirokage</atom>
     <atom name="NamTitle"></atom>
@@ -1136,6 +1157,7 @@
   <!-- Row 21 -->
   <tuple>
     <atom name="irn">11362</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Katsushika Hokusai 葛飾北斎</atom>
     <atom name="NamTitle"></atom>
@@ -1229,6 +1251,7 @@
   <!-- Row 22 -->
   <tuple>
     <atom name="irn">611106</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Antoni Tàpies</atom>
     <atom name="NamTitle"></atom>
@@ -1269,6 +1292,7 @@
   <!-- Row 23 -->
   <tuple>
     <atom name="irn">5679</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Curatorial Not Verified</atom>
     <atom name="NamFullName">Jurgen Bey</atom>
     <atom name="NamTitle"></atom>
@@ -1301,6 +1325,7 @@
   <!-- Row 24 -->
   <tuple>
     <atom name="irn">612112</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Gaetano Pesce</atom>
     <atom name="NamTitle"></atom>
@@ -1344,6 +1369,7 @@
   <!-- Row 25 -->
   <tuple>
     <atom name="irn">6507</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">B&amp;B Italia, S.p.A.</atom>
     <atom name="NamTitle"></atom>
@@ -1395,6 +1421,7 @@
   <!-- Row 26 -->
   <tuple>
     <atom name="irn">7052</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Collaboration</atom>
     <atom name="NamFullName">Los Carpinteros</atom>
     <atom name="NamTitle"></atom>
@@ -1439,6 +1466,7 @@
   <!-- Row 27 -->
   <tuple>
     <atom name="irn">12571</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Naoki Takizawa</atom>
     <atom name="NamTitle"></atom>
@@ -1479,6 +1507,7 @@
   <!-- Row 28 -->
   <tuple>
     <atom name="irn">683459</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Issey Miyake</atom>
     <atom name="NamTitle"></atom>
@@ -1516,6 +1545,7 @@
   <!-- Row 29 -->
   <tuple>
     <atom name="irn">613279</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Roy Lichtenstein</atom>
     <atom name="NamTitle"></atom>
@@ -1569,6 +1599,7 @@
   <!-- Row 30 -->
   <tuple>
     <atom name="irn">7062</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Peter Muller-Munk</atom>
     <atom name="NamTitle"></atom>
@@ -1609,6 +1640,7 @@
   <!-- Row 31 -->
   <tuple>
     <atom name="irn">12032</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Val Saint Lambert</atom>
     <atom name="NamTitle"></atom>
@@ -1649,6 +1681,7 @@
   <!-- Row 32 -->
   <tuple>
     <atom name="irn">2515</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName"></atom>
     <atom name="NamTitle"></atom>
@@ -1691,6 +1724,7 @@
   <!-- Row 33 -->
   <tuple>
     <atom name="irn">2514</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Takenouchi Magohachi</atom>
     <atom name="NamTitle"></atom>
@@ -1728,6 +1762,7 @@
   <!-- Row 34 -->
   <tuple>
     <atom name="irn">7689</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Edo-ya Matsugor^o</atom>
     <atom name="NamTitle"></atom>
@@ -1765,6 +1800,7 @@
   <!-- Row 35 -->
   <tuple>
     <atom name="irn">2407</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Tsujioka-ya Bunsuke</atom>
     <atom name="NamTitle"></atom>
@@ -1805,6 +1841,7 @@
   <!-- Row 36 -->
   <tuple>
     <atom name="irn">3152</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Laurence Sterne</atom>
     <atom name="NamTitle"></atom>
@@ -1842,6 +1879,7 @@
   <!-- Row 37 -->
   <tuple>
     <atom name="irn">2793</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName"></atom>
     <atom name="NamTitle"></atom>
@@ -1882,6 +1920,7 @@
   <!-- Row 38 -->
   <tuple>
     <atom name="irn">621818</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">Gabor F. Peterdi</atom>
     <atom name="NamTitle"></atom>
@@ -1925,6 +1964,7 @@
   <!-- Row 39 -->
   <tuple>
     <atom name="irn">2108</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Virgil Solis</atom>
     <atom name="NamTitle"></atom>
@@ -1962,6 +2002,7 @@
   <!-- Row 40 -->
   <tuple>
     <atom name="irn">7051</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Dagoberto Rodríguez Sánchez</atom>
     <atom name="NamTitle"></atom>
@@ -2002,6 +2043,7 @@
   <!-- Row 41 -->
   <tuple>
     <atom name="irn">7050</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Marco A. Castillo Valdés</atom>
     <atom name="NamTitle"></atom>
@@ -2042,6 +2084,7 @@
   <!-- Row 42 -->
   <tuple>
     <atom name="irn">610793</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Rembrandt van Rijn</atom>
     <atom name="NamTitle"></atom>
@@ -2094,6 +2137,7 @@
   <!-- Row 43 -->
   <tuple>
     <atom name="irn">14152</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Lilly House and Gardens</atom>
     <atom name="NamTitle"></atom>
@@ -2131,6 +2175,7 @@
   <!-- Row 44 -->
   <tuple>
     <atom name="irn">14200</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Newfields Horticulture Department</atom>
     <atom name="NamTitle"></atom>
@@ -2168,6 +2213,7 @@
   <!-- Row 45 -->
   <tuple>
     <atom name="irn">13148</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Agnes Etherington Art Centre, Queen's University</atom>
     <atom name="NamTitle"></atom>
@@ -2210,6 +2256,7 @@
   <!-- Row 46 -->
   <tuple>
     <atom name="irn">710264</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Alexander Hesler</atom>
     <atom name="NamTitle"></atom>
@@ -2253,6 +2300,7 @@
   <!-- Row 47 -->
   <tuple>
     <atom name="irn">11785</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">George B. Ayers</atom>
     <atom name="NamTitle"></atom>
@@ -2293,6 +2341,7 @@
   <!-- Row 48 -->
   <tuple>
     <atom name="irn">621886</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Richard B. Gruelle</atom>
     <atom name="NamTitle"></atom>
@@ -2333,6 +2382,7 @@
   <!-- Row 49 -->
   <tuple>
     <atom name="irn">632625</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Samuel G. Richards</atom>
     <atom name="NamTitle"></atom>
@@ -2378,6 +2428,7 @@
   <!-- Row 50 -->
   <tuple>
     <atom name="irn">655000</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">William J. Forsyth</atom>
     <atom name="NamTitle"></atom>
@@ -2426,6 +2477,7 @@
   <!-- Row 51 -->
   <tuple>
     <atom name="irn">12293</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Kjell Wangensteen</atom>
     <atom name="NamTitle"></atom>
@@ -2468,6 +2520,7 @@
   <!-- Row 52 -->
   <tuple>
     <atom name="irn">31</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Sherry D'Asto Peglow</atom>
     <atom name="NamTitle"></atom>
@@ -2505,6 +2558,7 @@
   <!-- Row 53 -->
   <tuple>
     <atom name="irn">117</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Dr. Lisa Freiman</atom>
     <atom name="NamTitle">Dr.</atom>
@@ -2542,6 +2596,7 @@
   <!-- Row 54 -->
   <tuple>
     <atom name="irn">7789</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Lara Huchteman</atom>
     <atom name="NamTitle"></atom>
@@ -2579,6 +2634,7 @@
   <!-- Row 55 -->
   <tuple>
     <atom name="irn">5527</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">IMA Staff</atom>
     <atom name="NamFullName">Brittany Minton</atom>
     <atom name="NamTitle"></atom>
@@ -2621,6 +2677,7 @@
   <!-- Row 56 -->
   <tuple>
     <atom name="irn">1</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Indianapolis Museum of Art at Newfields</atom>
     <atom name="NamTitle"></atom>
@@ -2675,6 +2732,7 @@
   <!-- Row 57 -->
   <tuple>
     <atom name="irn">14466</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Landesmuseum</atom>
     <atom name="NamTitle"></atom>
@@ -2712,6 +2770,7 @@
   <!-- Row 58 -->
   <tuple>
     <atom name="irn">7660</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Wallraf-Richartz Museum &amp; Fondation Corboud</atom>
     <atom name="NamTitle"></atom>
@@ -2749,6 +2808,7 @@
   <!-- Row 59 -->
   <tuple>
     <atom name="irn">620</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Wayman Adams</atom>
     <atom name="NamTitle"></atom>
@@ -2802,6 +2862,7 @@
   <!-- Row 60 -->
   <tuple>
     <atom name="irn">614379</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">John O. Adams</atom>
     <atom name="NamTitle"></atom>
@@ -2847,6 +2908,7 @@
   <!-- Row 61 -->
   <tuple>
     <atom name="irn">14044</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Organisation</atom>
     <atom name="NamFullName">Jacomme &amp; Cie</atom>
     <atom name="NamTitle"></atom>
@@ -2884,6 +2946,7 @@
   <!-- Row 62 -->
   <tuple>
     <atom name="irn">12095</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Person</atom>
     <atom name="NamFullName">François Delarue</atom>
     <atom name="NamTitle"></atom>
@@ -2932,6 +2995,7 @@
   <!-- Row 63 -->
   <tuple>
     <atom name="irn">601</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="NamPartyType">Place Holder</atom>
     <atom name="NamFullName">Alexandre Calame</atom>
     <atom name="NamTitle"></atom>
@@ -2969,6 +3033,7 @@
   <!-- Row 64 -->
   <tuple>
     <atom name="irn">10987</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="NamPartyType">Registration Verified</atom>
     <atom name="NamFullName">Unknown Factory</atom>
     <atom name="NamTitle"></atom>

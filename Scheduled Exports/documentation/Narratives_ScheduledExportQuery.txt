@@ -1,0 +1,16 @@
+select all
+from enarratives
+where true and
+(
+	(
+		DesPurpose contains '\"Exhibition Label\"'
+	)
+	or
+	(
+		DesPurpose contains '\"Object Label\"'
+	)
+	or
+	(
+		DesPurpose contains '\"Artist Bio\"'
+	)
+)

@@ -1,6 +1,7 @@
 {"parties": [
     {
         "irn": 1,
+        "publish": false,
         "partyType": "Registration Verified",
         "fullName": "Indianapolis Museum of Art at Newfields",
         "title": null,
@@ -37,6 +38,7 @@
     },
     {
         "irn": 31,
+        "publish": false,
         "partyType": "IMA Staff",
         "fullName": "Sherry D'Asto Peglow",
         "title": null,
@@ -73,6 +75,7 @@
     },
     {
         "irn": 117,
+        "publish": false,
         "partyType": "IMA Staff",
         "fullName": "Dr. Lisa Freiman",
         "title": "Dr.",
@@ -109,6 +112,7 @@
     },
     {
         "irn": 592,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Utagawa Hiroshige",
         "title": null,
@@ -155,6 +159,7 @@
     },
     {
         "irn": 601,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Alexandre Calame",
         "title": null,
@@ -191,6 +196,7 @@
     },
     {
         "irn": 620,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Wayman Adams",
         "title": null,
@@ -227,6 +233,7 @@
     },
     {
         "irn": 733,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Charles J. Fiscus",
         "title": null,
@@ -263,6 +270,7 @@
     },
     {
         "irn": 737,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Henry Wolf",
         "title": null,
@@ -299,6 +307,7 @@
     },
     {
         "irn": 832,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "William Miller",
         "title": null,
@@ -335,6 +344,7 @@
     },
     {
         "irn": 2108,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Virgil Solis",
         "title": null,
@@ -371,6 +381,7 @@
     },
     {
         "irn": 2407,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Tsujioka-ya Bunsuke",
         "title": null,
@@ -407,6 +418,7 @@
     },
     {
         "irn": 2514,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Takenouchi Magohachi",
         "title": null,
@@ -443,6 +455,7 @@
     },
     {
         "irn": 2515,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": null,
         "title": null,
@@ -479,6 +492,7 @@
     },
     {
         "irn": 2741,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Unknown",
         "title": null,
@@ -515,6 +529,7 @@
     },
     {
         "irn": 2793,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": null,
         "title": null,
@@ -551,6 +566,7 @@
     },
     {
         "irn": 3152,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Laurence Sterne",
         "title": null,
@@ -587,6 +603,7 @@
     },
     {
         "irn": 5060,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Paul E. Beem",
         "title": null,
@@ -623,6 +640,7 @@
     },
     {
         "irn": 5527,
+        "publish": false,
         "partyType": "IMA Staff",
         "fullName": "Brittany Minton",
         "title": null,
@@ -659,6 +677,7 @@
     },
     {
         "irn": 5679,
+        "publish": false,
         "partyType": "Curatorial Not Verified",
         "fullName": "Jurgen Bey",
         "title": null,
@@ -695,6 +714,7 @@
     },
     {
         "irn": 6507,
+        "publish": true,
         "partyType": "Organisation",
         "fullName": "B&B Italia, S.p.A.",
         "title": null,
@@ -731,6 +751,7 @@
     },
     {
         "irn": 7050,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Marco A. Castillo Valdés",
         "title": null,
@@ -767,6 +788,7 @@
     },
     {
         "irn": 7051,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Dagoberto Rodríguez Sánchez",
         "title": null,
@@ -803,6 +825,7 @@
     },
     {
         "irn": 7052,
+        "publish": false,
         "partyType": "Collaboration",
         "fullName": "Los Carpinteros",
         "title": null,
@@ -849,6 +872,7 @@
     },
     {
         "irn": 7062,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Peter Muller-Munk",
         "title": null,
@@ -885,6 +909,7 @@
     },
     {
         "irn": 7660,
+        "publish": false,
         "partyType": "Organisation",
         "fullName": "Wallraf-Richartz Museum & Fondation Corboud",
         "title": null,
@@ -921,6 +946,7 @@
     },
     {
         "irn": 7689,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Edo-ya Matsugor^o",
         "title": null,
@@ -957,6 +983,7 @@
     },
     {
         "irn": 7789,
+        "publish": false,
         "partyType": "IMA Staff",
         "fullName": "Lara Huchteman",
         "title": null,
@@ -993,6 +1020,7 @@
     },
     {
         "irn": 8686,
+        "publish": true,
         "partyType": "Registration Verified",
         "fullName": "Utagawa Hirokage",
         "title": null,
@@ -1029,6 +1057,7 @@
     },
     {
         "irn": 10433,
+        "publish": true,
         "partyType": "Organisation",
         "fullName": "Lippincott, LLC",
         "title": null,
@@ -1065,6 +1094,7 @@
     },
     {
         "irn": 10661,
+        "publish": false,
         "partyType": "Person",
         "fullName": "Unknown 作者不詳",
         "title": null,
@@ -1101,6 +1131,7 @@
     },
     {
         "irn": 10987,
+        "publish": false,
         "partyType": "Registration Verified",
         "fullName": "Unknown Factory",
         "title": null,
@@ -1137,6 +1168,7 @@
     },
     {
         "irn": 11362,
+        "publish": false,
         "partyType": "Person",
         "fullName": "Katsushika Hokusai 葛飾北斎",
         "title": null,
@@ -1173,6 +1205,7 @@
     },
     {
         "irn": 11366,
+        "publish": false,
         "partyType": "Person",
         "fullName": "Utagawa Kunisada 歌川国貞",
         "title": null,
@@ -1209,6 +1242,7 @@
     },
     {
         "irn": 11481,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Halston",
         "title": null,
@@ -1245,6 +1279,7 @@
     },
     {
         "irn": 11566,
+        "publish": false,
         "partyType": "Registration Verified",
         "fullName": "T. C. Steele",
         "title": null,
@@ -1286,6 +1321,7 @@
     },
     {
         "irn": 11785,
+        "publish": false,
         "partyType": "Person",
         "fullName": "George B. Ayers",
         "title": null,
@@ -1322,6 +1358,7 @@
     },
     {
         "irn": 12032,
+        "publish": false,
         "partyType": "Organisation",
         "fullName": "Val Saint Lambert",
         "title": null,
@@ -1358,6 +1395,7 @@
     },
     {
         "irn": 12095,
+        "publish": true,
         "partyType": "Person",
         "fullName": "François Delarue",
         "title": null,
@@ -1394,6 +1432,7 @@
     },
     {
         "irn": 12293,
+        "publish": false,
         "partyType": "IMA Staff",
         "fullName": "Kjell Wangensteen",
         "title": null,
@@ -1430,6 +1469,7 @@
     },
     {
         "irn": 12571,
+        "publish": false,
         "partyType": "Person",
         "fullName": "Naoki Takizawa",
         "title": null,
@@ -1466,6 +1506,7 @@
     },
     {
         "irn": 13148,
+        "publish": true,
         "partyType": "Organisation",
         "fullName": "Agnes Etherington Art Centre, Queen's University",
         "title": null,
@@ -1502,6 +1543,7 @@
     },
     {
         "irn": 14044,
+        "publish": false,
         "partyType": "Organisation",
         "fullName": "Jacomme & Cie",
         "title": null,
@@ -1538,6 +1580,7 @@
     },
     {
         "irn": 14152,
+        "publish": false,
         "partyType": "Organisation",
         "fullName": "Lilly House and Gardens",
         "title": null,
@@ -1574,6 +1617,7 @@
     },
     {
         "irn": 14200,
+        "publish": false,
         "partyType": "Organisation",
         "fullName": "Newfields Horticulture Department",
         "title": null,
@@ -1610,6 +1654,7 @@
     },
     {
         "irn": 14466,
+        "publish": true,
         "partyType": "Organisation",
         "fullName": "Landesmuseum",
         "title": null,
@@ -1646,6 +1691,7 @@
     },
     {
         "irn": 600630,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Dines Carlsen",
         "title": null,
@@ -1682,6 +1728,7 @@
     },
     {
         "irn": 600739,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Hieronymus Bosch",
         "title": null,
@@ -1728,6 +1775,7 @@
     },
     {
         "irn": 606727,
+        "publish": true,
         "partyType": "Person",
         "fullName": "James C. Beckwith",
         "title": null,
@@ -1764,6 +1812,7 @@
     },
     {
         "irn": 610521,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "James Thornhill",
         "title": null,
@@ -1800,6 +1849,7 @@
     },
     {
         "irn": 610793,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Rembrandt van Rijn",
         "title": null,
@@ -1836,6 +1886,7 @@
     },
     {
         "irn": 611106,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Antoni Tàpies",
         "title": null,
@@ -1872,6 +1923,7 @@
     },
     {
         "irn": 612112,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Gaetano Pesce",
         "title": null,
@@ -1908,6 +1960,7 @@
     },
     {
         "irn": 612140,
+        "publish": true,
         "partyType": "Person",
         "fullName": "James A. Whistler",
         "title": null,
@@ -1949,6 +2002,7 @@
     },
     {
         "irn": 613279,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Roy Lichtenstein",
         "title": null,
@@ -1990,6 +2044,7 @@
     },
     {
         "irn": 614379,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "John O. Adams",
         "title": null,
@@ -2026,6 +2081,7 @@
     },
     {
         "irn": 615130,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Robert Indiana",
         "title": null,
@@ -2067,6 +2123,7 @@
     },
     {
         "irn": 619988,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Jonathan Richardson the elder",
         "title": null,
@@ -2103,6 +2160,7 @@
     },
     {
         "irn": 621818,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Gabor F. Peterdi",
         "title": null,
@@ -2139,6 +2197,7 @@
     },
     {
         "irn": 621886,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Richard B. Gruelle",
         "title": null,
@@ -2175,6 +2234,7 @@
     },
     {
         "irn": 626263,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Joseph Mallord William Turner",
         "title": null,
@@ -2211,6 +2271,7 @@
     },
     {
         "irn": 632625,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Samuel G. Richards",
         "title": null,
@@ -2247,6 +2308,7 @@
     },
     {
         "irn": 655000,
+        "publish": true,
         "partyType": "Person",
         "fullName": "William J. Forsyth",
         "title": null,
@@ -2283,6 +2345,7 @@
     },
     {
         "irn": 683459,
+        "publish": true,
         "partyType": "Person",
         "fullName": "Issey Miyake",
         "title": null,
@@ -2319,6 +2382,7 @@
     },
     {
         "irn": 710264,
+        "publish": true,
         "partyType": "Place Holder",
         "fullName": "Alexander Hesler",
         "title": null,

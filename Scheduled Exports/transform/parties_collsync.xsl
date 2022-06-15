@@ -9,6 +9,7 @@
 <xsl:template match="/">{"parties": [
     <xsl:for-each select="table[@name='eparties']/tuple"><xsl:sort select="atom[@name='irn']" data-type="number"/>{
         "irn": <xsl:value-of select="atom[@name='irn']"/>,
+        "publish": <xsl:choose><xsl:when test="atom[@name='AdmPublishWebNoPassword'] = 'Yes'">true</xsl:when><xsl:otherwise>false</xsl:otherwise></xsl:choose>,
         "partyType": <xsl:choose><xsl:when test="atom[@name='NamPartyType'] != ''">"<xsl:value-of select="replace(replace(atom[@name='NamPartyType'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "fullName": <xsl:choose><xsl:when test="atom[@name='NamFullName'] != ''">"<xsl:value-of select="replace(replace(atom[@name='NamFullName'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "title": <xsl:choose><xsl:when test="atom[@name='NamTitle'] !=''">"<xsl:value-of select="replace(replace(atom[@name='NamTitle'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
