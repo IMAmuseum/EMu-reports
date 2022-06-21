@@ -39,12 +39,8 @@
       text short      BioCulturalInfluences
     end
     text short      BioBirthDate
-    date            BioBirthEarliestDate
-    date            BioBirthLatestDate
     text short      BioBirthPlace
     text short      BioDeathDate
-    date            BioDeathEarliestDate
-    date            BioDeathLatestDate
     text short      BioDeathPlace
     text long       NamOrganisation
     text short      NamOrganisationAcronym
@@ -52,11 +48,7 @@
       text long       NamOrganisationOtherNames
     end
     text short      IMAHisCommenced
-    date            IMAHisBeginEarliestDate
-    date            IMAHisBeginLatestDate
     text short      IMAHisCompleted
-    date            IMAHisEndEarliestDate
-    date            IMAHisEndLatestDate
     text short      ColCollaborationName
     table           Collaborators
       text short      ColRole
@@ -104,21 +96,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1861</atom>
-    <atom name="BioBirthEarliestDate">1861</atom>
-    <atom name="BioBirthLatestDate">1861</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1884</atom>
-    <atom name="BioDeathEarliestDate">1884</atom>
-    <atom name="BioDeathLatestDate">1884</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -142,21 +126,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1908</atom>
-    <atom name="BioBirthEarliestDate">1908</atom>
-    <atom name="BioBirthLatestDate">1908</atom>
     <atom name="BioBirthPlace">Indianapolis, Indiana</atom>
     <atom name="BioDeathDate">1979</atom>
-    <atom name="BioDeathEarliestDate">1979</atom>
-    <atom name="BioDeathLatestDate">1979</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -180,21 +156,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -251,21 +219,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">British</atom>
     <atom name="BioBirthDate">1675</atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1734</atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -316,21 +276,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">British</atom>
     <atom name="BioBirthDate">1665</atom>
-    <atom name="BioBirthEarliestDate">1665</atom>
-    <atom name="BioBirthLatestDate">1665</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1745</atom>
-    <atom name="BioDeathEarliestDate">1745</atom>
-    <atom name="BioDeathLatestDate">1745</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -369,21 +321,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1852</atom>
-    <atom name="BioBirthEarliestDate">1852</atom>
-    <atom name="BioBirthLatestDate">1916</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1916</atom>
-    <atom name="BioDeathEarliestDate">1852</atom>
-    <atom name="BioDeathLatestDate">1916</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -407,21 +351,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1834</atom>
-    <atom name="BioBirthEarliestDate">1834</atom>
-    <atom name="BioBirthLatestDate">1834</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1903</atom>
-    <atom name="BioDeathEarliestDate">1903</atom>
-    <atom name="BioDeathLatestDate">1903</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -466,21 +402,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1901</atom>
-    <atom name="BioBirthEarliestDate">1901</atom>
-    <atom name="BioBirthLatestDate">1901</atom>
     <atom name="BioBirthPlace">New York City, New York</atom>
     <atom name="BioDeathDate">1966</atom>
-    <atom name="BioDeathEarliestDate">1966</atom>
-    <atom name="BioDeathLatestDate">1966</atom>
     <atom name="BioDeathPlace">New York City, New York</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -518,21 +446,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1928</atom>
-    <atom name="BioBirthEarliestDate">1928</atom>
-    <atom name="BioBirthLatestDate">1928</atom>
     <atom name="BioBirthPlace">New Castle, Indiana</atom>
     <atom name="BioDeathDate">2018</atom>
-    <atom name="BioDeathEarliestDate">2018</atom>
-    <atom name="BioDeathLatestDate">2018</atom>
     <atom name="BioDeathPlace">Vinalhaven, Maine</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -569,12 +489,8 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Lippincott, LLC</atom>
     <atom name="NamOrganisationAcronym"></atom>
@@ -587,11 +503,7 @@
       </tuple>
     </table>
     <atom name="IMAHisCommenced">1966</atom>
-    <atom name="IMAHisBeginEarliestDate">1966</atom>
-    <atom name="IMAHisBeginLatestDate">1966</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -635,21 +547,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate">1797</atom>
-    <atom name="BioBirthEarliestDate">1797</atom>
-    <atom name="BioBirthLatestDate">1797</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1858</atom>
-    <atom name="BioDeathEarliestDate">1858</atom>
-    <atom name="BioDeathLatestDate">1858</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -693,21 +597,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1852</atom>
-    <atom name="BioBirthEarliestDate">1852</atom>
-    <atom name="BioBirthLatestDate">1852</atom>
     <atom name="BioBirthPlace">Hannibal, Missouri</atom>
     <atom name="BioDeathDate">1917</atom>
-    <atom name="BioDeathEarliestDate">1917</atom>
-    <atom name="BioDeathLatestDate">1917</atom>
     <atom name="BioDeathPlace">New York, New York</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -734,21 +630,13 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -785,21 +673,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1932</atom>
-    <atom name="BioBirthEarliestDate">1932</atom>
-    <atom name="BioBirthLatestDate">1932</atom>
     <atom name="BioBirthPlace">Des Moines, Iowa</atom>
     <atom name="BioDeathDate">1990</atom>
-    <atom name="BioDeathEarliestDate">1990</atom>
-    <atom name="BioDeathLatestDate">1990</atom>
     <atom name="BioDeathPlace">San Francisco, California</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -882,21 +762,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate">1786</atom>
-    <atom name="BioBirthEarliestDate">1786</atom>
-    <atom name="BioBirthLatestDate">1786</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1864</atom>
-    <atom name="BioDeathEarliestDate">1864</atom>
-    <atom name="BioDeathLatestDate">1864</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -926,21 +798,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Netherlandish</atom>
     <atom name="BioBirthDate">1450</atom>
-    <atom name="BioBirthEarliestDate">1450</atom>
-    <atom name="BioBirthLatestDate">1450</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1516</atom>
-    <atom name="BioDeathEarliestDate">1516</atom>
-    <atom name="BioDeathLatestDate">1516</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -989,21 +853,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1847</atom>
-    <atom name="BioBirthEarliestDate">1847</atom>
-    <atom name="BioBirthLatestDate">1847</atom>
     <atom name="BioBirthPlace">Gosport, Indiana</atom>
     <atom name="BioDeathDate">1926</atom>
-    <atom name="BioDeathEarliestDate">1926</atom>
-    <atom name="BioDeathLatestDate">1926</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1034,21 +890,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">English</atom>
     <atom name="BioBirthDate">1775</atom>
-    <atom name="BioBirthEarliestDate">1775</atom>
-    <atom name="BioBirthLatestDate">1775</atom>
     <atom name="BioBirthPlace">London, England</atom>
     <atom name="BioDeathDate">1851</atom>
-    <atom name="BioDeathEarliestDate">1851</atom>
-    <atom name="BioDeathLatestDate">1851</atom>
     <atom name="BioDeathPlace">Chelsea, England</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1084,21 +932,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">English</atom>
     <atom name="BioBirthDate">1796</atom>
-    <atom name="BioBirthEarliestDate">1796</atom>
-    <atom name="BioBirthLatestDate">1796</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1882</atom>
-    <atom name="BioDeathEarliestDate">1882</atom>
-    <atom name="BioDeathLatestDate">1882</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1130,21 +970,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">Flourished 1855-1865</atom>
-    <atom name="IMAHisBeginEarliestDate">1855</atom>
-    <atom name="IMAHisBeginLatestDate">1865</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1206,21 +1038,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate">1760</atom>
-    <atom name="BioBirthEarliestDate">1760</atom>
-    <atom name="BioBirthLatestDate">1760</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1849</atom>
-    <atom name="BioDeathEarliestDate">1849</atom>
-    <atom name="BioDeathLatestDate">1849</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1262,21 +1086,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Spanish</atom>
     <atom name="BioBirthDate">1923</atom>
-    <atom name="BioBirthEarliestDate">1923</atom>
-    <atom name="BioBirthLatestDate">1923</atom>
     <atom name="BioBirthPlace">Barcelona, Spain</atom>
     <atom name="BioDeathDate">2012</atom>
-    <atom name="BioDeathEarliestDate">2012</atom>
-    <atom name="BioDeathLatestDate">2012</atom>
     <atom name="BioDeathPlace">Barcelona, Spain</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1303,21 +1119,13 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Dutch</atom>
     <atom name="BioBirthDate">1965</atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
@@ -1336,21 +1144,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Italian</atom>
     <atom name="BioBirthDate">1939</atom>
-    <atom name="BioBirthEarliestDate">1939</atom>
-    <atom name="BioBirthLatestDate">1939</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1380,12 +1180,8 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality">Italian</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">B&amp;B Italia, S.p.A.</atom>
     <atom name="NamOrganisationAcronym"></atom>
@@ -1398,11 +1194,7 @@
       </tuple>
     </table>
     <atom name="IMAHisCommenced">1974</atom>
-    <atom name="IMAHisBeginEarliestDate">1974</atom>
-    <atom name="IMAHisBeginLatestDate">1974</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1432,21 +1224,13 @@
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality">Cuban</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">1992</atom>
-    <atom name="IMAHisBeginEarliestDate">1992</atom>
-    <atom name="IMAHisBeginLatestDate">1992</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName">Los Carpinteros</atom>
     <table name="Collaborators">
       <tuple>
@@ -1477,21 +1261,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate">1960</atom>
-    <atom name="BioBirthEarliestDate">1960</atom>
-    <atom name="BioBirthLatestDate">1960</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1518,21 +1294,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate">1938</atom>
-    <atom name="BioBirthEarliestDate">1938</atom>
-    <atom name="BioBirthLatestDate">1938</atom>
     <atom name="BioBirthPlace">Hiroshima, Japan</atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1556,21 +1324,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1923</atom>
-    <atom name="BioBirthEarliestDate">1923</atom>
-    <atom name="BioBirthLatestDate">1923</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1997</atom>
-    <atom name="BioDeathEarliestDate">1997</atom>
-    <atom name="BioDeathLatestDate">1997</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1610,21 +1370,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1904</atom>
-    <atom name="BioBirthEarliestDate">1904</atom>
-    <atom name="BioBirthLatestDate">1904</atom>
     <atom name="BioBirthPlace">Germany</atom>
     <atom name="BioDeathDate">1967</atom>
-    <atom name="BioDeathEarliestDate">1967</atom>
-    <atom name="BioDeathLatestDate">1967</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1651,21 +1403,13 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Belgian</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Val Saint Lambert</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">1826</atom>
-    <atom name="IMAHisBeginEarliestDate">1826</atom>
-    <atom name="IMAHisBeginLatestDate">1826</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1697,21 +1441,13 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1735,21 +1471,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1773,21 +1501,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Japanese</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate">1868</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1811,21 +1531,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1852,21 +1564,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">British</atom>
     <atom name="BioBirthDate">1713</atom>
-    <atom name="BioBirthEarliestDate">1713</atom>
-    <atom name="BioBirthLatestDate">1713</atom>
     <atom name="BioBirthPlace">Clonmel, Republic of Ireland</atom>
     <atom name="BioDeathDate">1768</atom>
-    <atom name="BioDeathEarliestDate">1768</atom>
-    <atom name="BioDeathLatestDate">1768</atom>
     <atom name="BioDeathPlace">London, England</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1890,21 +1594,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Touchstone Publishers, Ltd.</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1931,21 +1627,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1915</atom>
-    <atom name="BioBirthEarliestDate">1915</atom>
-    <atom name="BioBirthLatestDate">1915</atom>
     <atom name="BioBirthPlace">Hungary</atom>
     <atom name="BioDeathDate">2001</atom>
-    <atom name="BioDeathEarliestDate">2001</atom>
-    <atom name="BioDeathLatestDate">2001</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -1975,21 +1663,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">German</atom>
     <atom name="BioBirthDate">1514</atom>
-    <atom name="BioBirthEarliestDate">1514</atom>
-    <atom name="BioBirthLatestDate">1514</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1562</atom>
-    <atom name="BioDeathEarliestDate">1562</atom>
-    <atom name="BioDeathLatestDate">1562</atom>
     <atom name="BioDeathPlace">Nuremberg, Germany</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2013,21 +1693,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Cuban</atom>
     <atom name="BioBirthDate">1969</atom>
-    <atom name="BioBirthEarliestDate">1969</atom>
-    <atom name="BioBirthLatestDate">1969</atom>
     <atom name="BioBirthPlace">Cuba</atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2054,21 +1726,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Cuban</atom>
     <atom name="BioBirthDate">1971</atom>
-    <atom name="BioBirthEarliestDate">1971</atom>
-    <atom name="BioBirthLatestDate">1971</atom>
     <atom name="BioBirthPlace">Cuba</atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2095,21 +1759,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Dutch</atom>
     <atom name="BioBirthDate">1606</atom>
-    <atom name="BioBirthEarliestDate">1606</atom>
-    <atom name="BioBirthLatestDate">1606</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1669</atom>
-    <atom name="BioDeathEarliestDate">1669</atom>
-    <atom name="BioDeathLatestDate">1669</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2148,21 +1804,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Lilly House and Gardens</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2186,21 +1834,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Newfields Horticulture Department</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2224,12 +1864,8 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">Canadian</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Agnes Etherington Art Centre, Queen's University</atom>
     <atom name="NamOrganisationAcronym"></atom>
@@ -2239,11 +1875,7 @@
       </tuple>
     </table>
     <atom name="IMAHisCommenced">1957</atom>
-    <atom name="IMAHisBeginEarliestDate">1957</atom>
-    <atom name="IMAHisBeginLatestDate">1957</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2267,21 +1899,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1823</atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1895</atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2311,21 +1935,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1867</atom>
-    <atom name="BioBirthEarliestDate">1867</atom>
-    <atom name="BioBirthLatestDate">1867</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">unknown</atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2352,21 +1968,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1851</atom>
-    <atom name="BioBirthEarliestDate">1851</atom>
-    <atom name="BioBirthLatestDate">1851</atom>
     <atom name="BioBirthPlace">Cynthiana, Kentucky</atom>
     <atom name="BioDeathDate">1914</atom>
-    <atom name="BioDeathEarliestDate">1914</atom>
-    <atom name="BioDeathLatestDate">1914</atom>
     <atom name="BioDeathPlace">Indianapolis, Indiana</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2401,21 +2009,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1853</atom>
-    <atom name="BioBirthEarliestDate">1853</atom>
-    <atom name="BioBirthLatestDate">1853</atom>
     <atom name="BioBirthPlace">Spencer, IN</atom>
     <atom name="BioDeathDate">1893</atom>
-    <atom name="BioDeathEarliestDate">1893</atom>
-    <atom name="BioDeathLatestDate">1893</atom>
     <atom name="BioDeathPlace">Denver, CO</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2447,21 +2047,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1854</atom>
-    <atom name="BioBirthEarliestDate">1854</atom>
-    <atom name="BioBirthLatestDate">1854</atom>
     <atom name="BioBirthPlace">California, Hamilton County, Ohio</atom>
     <atom name="BioDeathDate">1935</atom>
-    <atom name="BioDeathEarliestDate">1935</atom>
-    <atom name="BioDeathLatestDate">1935</atom>
     <atom name="BioDeathPlace">Indianapolis, Indiana</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2493,21 +2085,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2531,21 +2115,13 @@
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2569,21 +2145,13 @@
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2607,21 +2175,13 @@
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2650,21 +2210,13 @@
     <atom name="NamSex">Female</atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">IMA</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2688,12 +2240,8 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Indianapolis Museum of Art at Newfields</atom>
     <atom name="NamOrganisationAcronym">IMA</atom>
@@ -2712,11 +2260,7 @@
       </tuple>
     </table>
     <atom name="IMAHisCommenced">1883</atom>
-    <atom name="IMAHisBeginEarliestDate">1883</atom>
-    <atom name="IMAHisBeginLatestDate">1883</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2743,21 +2287,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality">German</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Landesmuseum</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">1937</atom>
-    <atom name="IMAHisBeginEarliestDate">1937</atom>
-    <atom name="IMAHisBeginLatestDate">1937</atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2781,21 +2317,13 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Wallraf-Richartz Museum &amp; Fondation Corboud</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2832,21 +2360,13 @@
       </tuple>
     </table>
     <atom name="BioBirthDate">1883</atom>
-    <atom name="BioBirthEarliestDate">1883</atom>
-    <atom name="BioBirthLatestDate">1883</atom>
     <atom name="BioBirthPlace">Muncie, Indiana</atom>
     <atom name="BioDeathDate">1959</atom>
-    <atom name="BioDeathEarliestDate">1959</atom>
-    <atom name="BioDeathLatestDate">1959</atom>
     <atom name="BioDeathPlace">Austin, Texas</atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2878,21 +2398,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">American</atom>
     <atom name="BioBirthDate">1851</atom>
-    <atom name="BioBirthEarliestDate">1851</atom>
-    <atom name="BioBirthLatestDate">1851</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1927</atom>
-    <atom name="BioDeathEarliestDate">1927</atom>
-    <atom name="BioDeathLatestDate">1927</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2919,21 +2431,13 @@
     <atom name="NamSex"></atom>
     <atom name="BioNationality"></atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Jacomme &amp; Cie</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -2962,21 +2466,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">French</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced">circa 1850's</atom>
-    <atom name="IMAHisBeginEarliestDate">1845</atom>
-    <atom name="IMAHisBeginLatestDate">1859</atom>
     <atom name="IMAHisCompleted">circa 1860's</atom>
-    <atom name="IMAHisEndEarliestDate">1855</atom>
-    <atom name="IMAHisEndLatestDate">1869</atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -3006,21 +2502,13 @@
     <atom name="NamSex">Male</atom>
     <atom name="BioNationality">Swiss</atom>
     <atom name="BioBirthDate">1810</atom>
-    <atom name="BioBirthEarliestDate">1810</atom>
-    <atom name="BioBirthLatestDate">1810</atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate">1864</atom>
-    <atom name="BioDeathEarliestDate">1864</atom>
-    <atom name="BioDeathLatestDate">1864</atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation"></atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <table name="Roles">
       <tuple>
@@ -3044,22 +2532,79 @@
     <atom name="NamSex">Unknown</atom>
     <atom name="BioNationality">German</atom>
     <atom name="BioBirthDate"></atom>
-    <atom name="BioBirthEarliestDate"></atom>
-    <atom name="BioBirthLatestDate"></atom>
     <atom name="BioBirthPlace"></atom>
     <atom name="BioDeathDate"></atom>
-    <atom name="BioDeathEarliestDate"></atom>
-    <atom name="BioDeathLatestDate"></atom>
     <atom name="BioDeathPlace"></atom>
     <atom name="NamOrganisation">Unknown Factory</atom>
     <atom name="NamOrganisationAcronym"></atom>
     <atom name="IMAHisCommenced"></atom>
-    <atom name="IMAHisBeginEarliestDate"></atom>
-    <atom name="IMAHisBeginLatestDate"></atom>
     <atom name="IMAHisCompleted"></atom>
-    <atom name="IMAHisEndEarliestDate"></atom>
-    <atom name="IMAHisEndLatestDate"></atom>
     <atom name="ColCollaborationName"></atom>
     <atom name="AdmDateModified">2019-01-09</atom>
+  </tuple>
+
+  <!-- Row 65 -->
+  <tuple>
+    <atom name="irn">9711</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="NamPartyType">IMA Staff</atom>
+    <atom name="NamFullName">Leslie Anderson-Perkins</atom>
+    <atom name="NamTitle"></atom>
+    <atom name="NamFirst">Leslie</atom>
+    <atom name="NamMiddle"></atom>
+    <atom name="NamLast">Anderson-Perkins</atom>
+    <atom name="NamSuffix"></atom>
+    <table name="OtherPersonNames">
+      <tuple>
+        <atom name="NamOtherNames">Leslie Anne Anderson</atom>
+      </tuple>
+    </table>
+    <atom name="NamSex">Female</atom>
+    <atom name="BioNationality"></atom>
+    <atom name="BioBirthDate"></atom>
+    <atom name="BioBirthPlace"></atom>
+    <atom name="BioDeathDate"></atom>
+    <atom name="BioDeathPlace"></atom>
+    <atom name="NamOrganisation">IMA</atom>
+    <atom name="NamOrganisationAcronym"></atom>
+    <atom name="IMAHisCommenced"></atom>
+    <atom name="IMAHisCompleted"></atom>
+    <atom name="ColCollaborationName"></atom>
+    <table name="Roles">
+      <tuple>
+        <atom name="NamRoles">IMA Staff</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-03-02</atom>
+  </tuple>
+
+  <!-- Row 66 -->
+  <tuple>
+    <atom name="irn">10748</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="NamPartyType">IMA Staff</atom>
+    <atom name="NamFullName">Anna Stein</atom>
+    <atom name="NamTitle"></atom>
+    <atom name="NamFirst">Anna</atom>
+    <atom name="NamMiddle"></atom>
+    <atom name="NamLast">Stein</atom>
+    <atom name="NamSuffix"></atom>
+    <atom name="NamSex">Female</atom>
+    <atom name="BioNationality">American</atom>
+    <atom name="BioBirthDate"></atom>
+    <atom name="BioBirthPlace"></atom>
+    <atom name="BioDeathDate"></atom>
+    <atom name="BioDeathPlace"></atom>
+    <atom name="NamOrganisation">IMA</atom>
+    <atom name="NamOrganisationAcronym"></atom>
+    <atom name="IMAHisCommenced"></atom>
+    <atom name="IMAHisCompleted"></atom>
+    <atom name="ColCollaborationName"></atom>
+    <table name="Roles">
+      <tuple>
+        <atom name="NamRoles">IMA Staff</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2021-01-28</atom>
   </tuple>
 </table>
