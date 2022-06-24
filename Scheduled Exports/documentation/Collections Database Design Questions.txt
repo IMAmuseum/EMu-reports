@@ -1,0 +1,30 @@
+# Collections Database Design Questions
+
+## Overall design approach
+
+- data type preferences? currently using int, boolean (bit?), varchar (no n specified), varchar(max), date, decimal(18,4)
+- deleted records - setup a scheduled export from the Audit module to identify EMu records that have been deleted to then remove from the database?
+
+
+
+## Objects Table
+
+- dateAccessioned, dateCreatedEarliest, etc. are sometimes a full date ("2022-06-20"), sometimes just a year ("2022"), possibly just a year and month value ("2022-06"). Currently represented in the JSON as a string of format YYYY-MM-DD. Do I need to reformat in the transformation for db ingest? How do we want to store in the db?
+--- decision: break into Y/M/D columns. Will update the db design and transformation to store in JSON as separate integers
+
+- separate out deaccessions? I believe this is how the Dagwood database handles main collection vs. deaccessions, but we could use the object records' status column value to identify deaccessions which should be returned form the deaccession endpoint. [note: still need to design deaccession-related tables/columns in db, pending decision]
+
+
+
+## Object Locations
+
+- any way to get insight on the current collection database set-up for managing locations?
+--- Daniel said he would look into pulling
+- using movement type = 'Exhibition Location' to determine if onView true/false
+
+
+
+## Parties Table
+
+- how to handle "unknown" creators? Should not be identified by the unique ID, because it arbitrarily links objects to a common creator when they're all just Unknown.
+- possibly suggest that Registration use the After/Follower field with "Unknown" value, instead of a linked Party record?

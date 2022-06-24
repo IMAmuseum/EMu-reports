@@ -31,19 +31,15 @@
     text long       NarNarrative
     table           authors
       integer         irn
-      date            AdmDateModified
     end
     table           objects
       integer         irn
-      date            AdmDateModified
     end
     table           events
       integer         irn
-      date            AdmDateModified
     end
     table           parties
       integer         irn
-      date            AdmDateModified
     end
     date            AdmDateModified
   end
@@ -61,7 +57,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">25098</atom>
-        <atom name="AdmDateModified">2022-02-23</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-07-28</atom>
@@ -77,7 +72,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">1105</atom>
-        <atom name="AdmDateModified">2022-02-23</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-07-30</atom>
@@ -93,7 +87,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">64017</atom>
-        <atom name="AdmDateModified">2020-04-10</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-04</atom>
@@ -109,7 +102,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">17425</atom>
-        <atom name="AdmDateModified">2019-06-14</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-06</atom>
@@ -125,7 +117,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">8543</atom>
-        <atom name="AdmDateModified">2019-06-14</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-06</atom>
@@ -141,7 +132,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">24892</atom>
-        <atom name="AdmDateModified">2019-06-13</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-06</atom>
@@ -157,7 +147,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">33140</atom>
-        <atom name="AdmDateModified">2022-04-05</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-06</atom>
@@ -176,7 +165,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">17123</atom>
-        <atom name="AdmDateModified">2022-03-28</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-09-08</atom>
@@ -200,19 +188,16 @@
     <table name="authors">
       <tuple>
         <atom name="irn">9711</atom>
-        <atom name="AdmDateModified">2022-03-02</atom>
       </tuple>
     </table>
     <table name="objects">
       <tuple>
         <atom name="irn">1065</atom>
-        <atom name="AdmDateModified">2022-05-16</atom>
       </tuple>
     </table>
     <table name="events">
       <tuple>
         <atom name="irn">4357</atom>
-        <atom name="AdmDateModified">2021-08-27</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2017-01-09</atom>
@@ -236,19 +221,16 @@
     <table name="authors">
       <tuple>
         <atom name="irn">10748</atom>
-        <atom name="AdmDateModified">2021-01-28</atom>
       </tuple>
     </table>
     <table name="objects">
       <tuple>
         <atom name="irn">17123</atom>
-        <atom name="AdmDateModified">2022-03-28</atom>
       </tuple>
     </table>
     <table name="events">
       <tuple>
         <atom name="irn">5014</atom>
-        <atom name="AdmDateModified">2017-09-09</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2017-08-24</atom>
@@ -264,7 +246,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">17123</atom>
-        <atom name="AdmDateModified">2022-03-28</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2017-08-24</atom>
@@ -280,7 +261,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">20419</atom>
-        <atom name="AdmDateModified">2022-04-26</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-06</atom>
@@ -304,19 +284,16 @@
     <table name="authors">
       <tuple>
         <atom name="irn">9711</atom>
-        <atom name="AdmDateModified">2022-03-02</atom>
       </tuple>
     </table>
     <table name="objects">
       <tuple>
         <atom name="irn">37087</atom>
-        <atom name="AdmDateModified">2022-05-19</atom>
       </tuple>
     </table>
     <table name="events">
       <tuple>
         <atom name="irn">4357</atom>
-        <atom name="AdmDateModified">2021-08-27</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2017-01-09</atom>
@@ -332,7 +309,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">37087</atom>
-        <atom name="AdmDateModified">2022-05-19</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2017-01-09</atom>
@@ -348,7 +324,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">4634</atom>
-        <atom name="AdmDateModified">2022-05-19</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-06</atom>
@@ -372,19 +347,16 @@
     <table name="authors">
       <tuple>
         <atom name="irn">9711</atom>
-        <atom name="AdmDateModified">2022-03-02</atom>
       </tuple>
     </table>
     <table name="objects">
       <tuple>
         <atom name="irn">18672</atom>
-        <atom name="AdmDateModified">2022-02-18</atom>
       </tuple>
     </table>
     <table name="events">
       <tuple>
         <atom name="irn">4357</atom>
-        <atom name="AdmDateModified">2021-08-27</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2017-01-09</atom>
@@ -402,7 +374,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">21288</atom>
-        <atom name="AdmDateModified">2022-05-19</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-06</atom>
@@ -420,7 +391,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">21288</atom>
-        <atom name="AdmDateModified">2022-05-19</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2021-03-14</atom>
@@ -436,7 +406,6 @@
     <table name="objects">
       <tuple>
         <atom name="irn">29270</atom>
-        <atom name="AdmDateModified">2022-06-08</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2015-08-04</atom>

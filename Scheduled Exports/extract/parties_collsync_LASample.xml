@@ -53,7 +53,6 @@
     table           Collaborators
       text short      ColRole
       integer         irn
-      date            AdmDateModified
     end
     table           Roles
       text short      NamRoles
@@ -1236,12 +1235,10 @@
       <tuple>
         <atom name="ColRole">Collaborator</atom>
         <atom name="irn">7051</atom>
-        <atom name="AdmDateModified">2019-01-09</atom>
       </tuple>
       <tuple>
         <atom name="ColRole">Collaborator</atom>
         <atom name="irn">7050</atom>
-        <atom name="AdmDateModified">2019-01-10</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2021-06-23</atom>
