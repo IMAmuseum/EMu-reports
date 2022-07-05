@@ -61,10 +61,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "(Jan W.A. Kleijkamp); purchased by Eli Lilly, Indianapolis, Indiana, May 1950 ( list noting 15 November 1950 $950.); given to the John Herron Art Institute, now the Indianapolis Museum of Art, in 1960.",
-        "department": "905.1-Asian Art (Chinese and other Asian)",
+        "department": "Asian Art (Chinese and other Asian)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -150,10 +149,9 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -227,7 +225,7 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "(Christie's London) sold on 25 June 1984 to Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.",
-        "department": "906.1-African Art",
+        "department": "African Art",
         "on_view": true,
         "current_location": {
             "location_irn": 14099,
@@ -239,8 +237,7 @@
             "level_5": "riser",
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -344,10 +341,9 @@
         "rights": ["© The Estate of Gabor F. Peterdi"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -416,10 +412,9 @@
         "rights": [],
         "rights_uris": [],
         "provenance": "Unknown Source, Abandoned Property Advertisement Notice published by Indianapolis Star in accordance with IC-32-34-5 on September 29, 2018 and October 06, 2018. The Indianapolis Museum of Art claimed clear title on December 5, 2018.",
-        "department": "906.2-Native Arts of the Americas",
+        "department": "Native Arts of the Americas",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -506,10 +501,9 @@
         "rights": ["© Paul Edward Beem"],
         "rights_uris": [],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -589,7 +583,7 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": true,
         "current_location": {
             "location_irn": 14787,
@@ -601,8 +595,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -671,10 +664,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -743,10 +735,9 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.1-Asian Art (Chinese and other Asian)",
+        "department": "Asian Art (Chinese and other Asian)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -815,10 +806,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "Dr. and Mrs. David Ross, Indianapolis, Indiana given to the Indianapolis Museum of Art at Newfields in 1996.",
-        "department": "906.2-Native Arts of the Americas",
+        "department": "Native Arts of the Americas",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -894,10 +884,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "Mrs. J. Irwin Miller, Columbus, Indiana; given to Indianapolis Museum of Art in 1984.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -973,10 +962,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "(Cora Ginsberg, Inc. Tarrytown, New York); purchased by the Indianapolis Museum of Art in 1975.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1034,10 +1022,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1122,10 +1109,9 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": "J.K. Lilly, Jr, Indianapolis, Indiana; by descent to his children; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1967.",
-        "department": "981-Lilly House",
+        "department": "Lilly House",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1135,7 +1121,8 @@
             "deaccession_date_month": 5,
             "deaccession_date_day": 3,
             "deaccession_notes": "Lilly House deaccession",
-            "recipient": 14152
+            "recipient": 14152,
+            "transfer_notes": "Lilly House reclassification"
         },
         "date_modified": "2022-02-24"
     },
@@ -1206,10 +1193,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 89724,
         "related_objects": [
             {
@@ -1304,10 +1290,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1376,10 +1361,9 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": "Collected by Arthur Henn, Hugh McKennan Landon Expedition to Ecuador and Peru under the direction of Dr. Carl H. Eigenmann of Indiana University; Hugh McKennan Landon [1868-1947] Indianapolis, Indiana; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, Indianapolis, Indiana in 1914.",
-        "department": "906.2-Native Arts of the Americas",
+        "department": "Native Arts of the Americas",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1463,10 +1447,9 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1550,10 +1533,9 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1637,7 +1619,7 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": "Owned by Winifred Brady Adams (wife of the artist); given to the museum by sons of the artist",
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": true,
         "current_location": {
             "location_irn": 14784,
@@ -1649,8 +1631,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [
             {
@@ -1728,10 +1709,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "Amish People, Lancaster County, Pennsylvania. (Alexander Suggs Gallery, Clayton, Missouri); purchased by the Indianapolis Museum of Art in 1974.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1811,10 +1791,9 @@
         "rights": ["© Dines Carlsen"],
         "rights_uris": [],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1898,10 +1877,9 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1970,10 +1948,9 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": "Edgar B. Howard, New York; given to the Indianapolis Museum of Art, Indianapolis, Indiana, 17 December 1981.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -1983,7 +1960,8 @@
             "deaccession_date_month": 11,
             "deaccession_date_day": 16,
             "deaccession_notes": "Niloo Paydar, Curator of Textile and Fashion Arts, recommends this piece for deaccession because it is not museum quality.",
-            "recipient": null
+            "recipient": null,
+            "transfer_notes": ""
         },
         "date_modified": "2022-02-03"
     },
@@ -2104,7 +2082,7 @@
                 "uri": "http://rightsstatements.org/vocab/InC/1.0/"
             }],
         "provenance": "(Robert Indiana, New York, New York); Purchased by the Indianapolis Museum of Art, Indinianapolis, Indiana, in 1975.",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": true,
         "current_location": {
             "location_irn": 14825,
@@ -2116,8 +2094,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2188,10 +2165,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "Purchased by the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1906.",
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2277,7 +2253,7 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": "Given by the artist  to the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1910.",
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": true,
         "current_location": {
             "location_irn": 14787,
@@ -2289,8 +2265,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2368,10 +2343,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2451,10 +2425,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2545,10 +2518,9 @@
         "rights": ["© Halston"],
         "rights_uris": [],
         "provenance": "Halston Limited in care of Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2619,10 +2591,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2696,10 +2667,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2781,10 +2751,9 @@
         "rights": ["© Wayman Adams"],
         "rights_uris": [],
         "provenance": "Purchased from the artist by a group of local patrons for the museum.",
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [
@@ -2873,7 +2842,7 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": "Possibly sale at (Pieter Locquet, Amsterdam, 22 September 1783, lot no. 325; \nPossibly Pierre Yver.{1}  \nPurchased from a Dutch diplomat in Vienna, Austria, about 1840 by the Polish Count Adolf Husarzewski;{2} \nTo his son, Count Jozef Husarzewski, and his wife, Karolina, née Princess Jablonowska; \nTo their daughter, Countess Eleonora Husarzewska [1866-1940], wife of Prince Andrzej Lubomirski, in their castle at Przeworsk (now Poland);\nTo their son, Prince Jerzy Rafal Lubomirski [1887-1978], Geneva; \n(Frederick Mont and Newhouse Galleries, New York, New York) in 1951{3};  \nG.H.A. Clowes [1877-1958], Indianapolis, in 1951; \nClowes Fund Collection, Indianapolis, since 1958; \nOn long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum of Art at Newfields, since 1971 (C10063).\n-------\n{1} Cornelis Hofstede de Groot, A Catalogue Raisonné of the Works of the Most Eminent Dutch Painters of the Seventeenth Century, volume 6, London, 1916, no. 549, cites this early provenance, but the authors of the Rembrandt Research Project believe it applies to another version.  For a thorough study of IMA's painting including provenance and exhibition history, see Stephanie S. Dickey, Rembrandt Face to Face, Indianapolis Museum of Art, 2006.\n{2} See contributions by Jerzy Mycielski and Leon Pininski in Miecislas Treter, ed., Album de l'Exposition des Maîtres Anciens, avec cinquante reproductions, Ossolinski National Institute, Lvov, 1911.\n{3}See correspondence in IMA Clowes Registration Archive (C10063).",
-        "department": "902.1-European Painting and Sculpture Before 1800",
+        "department": "European Painting and Sculpture Before 1800",
         "on_view": true,
         "current_location": {
             "location_irn": 14746,
@@ -2885,8 +2854,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -2972,10 +2940,9 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": "Gustav von Gerhardt, Budapest, Hungary, until 1911.{1} Mrs. Moric Palugyay and Mrs. Moric Tomcsanyi. Budapest, by 1927.{2} (Ivan N. Podgoursky, New York, New York); George Henry Alexander Clowes, Indianapolis, Indiana, in 1944; The Clowes Fund, Indianapolis, from 1958–2020, and on long-term loan to the Indianapolis Museum of Art, since 1971; given to the Indianapolis Museum of Art at Newfields, in 2020.\n\n{1} Sammlung des. Königl[ichen]. Ungar[ischen]. Hofrats Gustav von Gerhardt, Budapest : Zweiter Teil : Gemälde Alter Meister, sale catalogue, Rudolph Lepke’s Kunst-Auctions-Haus, Berlin, 10 November 1911, no. 61, plate 30.\n{2} Catalogue de l’Exposition Belge d’art Ancien et Moderne, Budapest: Imp. de la Société Anonyme Athenaeum, 1927, 34, no. 191.",
-        "department": "902.1-European Painting and Sculpture Before 1800",
+        "department": "European Painting and Sculpture Before 1800",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -3059,15 +3026,14 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": "Purchased from the artist by the Art Association of Indianapolis for the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1894.",
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
         "deaccession": {},
-        "date_modified": "2022-05-19"
+        "date_modified": "2022-06-29"
     },
     {
         "emu_irn": 37383,
@@ -3144,10 +3110,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "Purchased from the artist by the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art in 1889.",
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3245,10 +3210,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3341,10 +3305,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3410,10 +3373,9 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": null,
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -3478,10 +3440,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -3546,15 +3507,14 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "Excavated at British School of Archaeology site in Egypt (1912-1913); given to the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1913.",
-        "department": "904.2-Classical Art",
+        "department": "Classical Art",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
         "deaccession": {},
-        "date_modified": "2020-10-01"
+        "date_modified": "2022-06-29"
     },
     {
         "emu_irn": 51330,
@@ -3631,10 +3591,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "Eliza M. Niblack, Indianapolis, Indiana; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1930.",
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -3705,10 +3664,9 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -3772,10 +3730,9 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": "Richard Philip Hart Durkee",
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3853,7 +3810,7 @@
         "rights": [],
         "rights_uris": [],
         "provenance": "Lilly family; gift of the children of J.K. Lilly, Jr. to the Indianapolis Museum of Art in 2003.",
-        "department": "981-Lilly House",
+        "department": "Lilly House",
         "on_view": true,
         "current_location": {
             "location_irn": 8358,
@@ -3865,8 +3822,7 @@
             "level_5": "lv2",
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -3876,7 +3832,8 @@
             "deaccession_date_month": 5,
             "deaccession_date_day": 3,
             "deaccession_notes": "Lilly House deaccession",
-            "recipient": 14152
+            "recipient": 14152,
+            "transfer_notes": "Lilly House reclassification"
         },
         "date_modified": "2021-10-13"
     },
@@ -3942,10 +3899,9 @@
                 "uri": "http://rightsstatements.org/vocab/InC/1.0/"
             }],
         "provenance": "(Pace Gallery, New York, New York); Gerald and Dorit Paul, Indianapolis, Indiana; given to the Indianapolis Museum of Art in 2005.",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -4014,7 +3970,7 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": "Probably with (Rhoda Levinsohn, Cleveland, Ohio) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; purchased by the Indianapolis Museum of Art, Indianapolis, Indiana in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.",
-        "department": "906.1-African Art",
+        "department": "African Art",
         "on_view": true,
         "current_location": {
             "location_irn": 14123,
@@ -4026,8 +3982,7 @@
             "level_5": "wall",
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -4096,7 +4051,7 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": "Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.",
-        "department": "906.1-African Art",
+        "department": "African Art",
         "on_view": true,
         "current_location": {
             "location_irn": 14123,
@@ -4108,8 +4063,7 @@
             "level_5": "wall",
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64017,
         "related_objects": [
             {
@@ -4186,7 +4140,7 @@
         "rights": ["No Known Rights Holder"],
         "rights_uris": [],
         "provenance": "Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.",
-        "department": "906.1-African Art",
+        "department": "African Art",
         "on_view": true,
         "current_location": {
             "location_irn": 14123,
@@ -4198,8 +4152,7 @@
             "level_5": "wall",
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64017,
         "related_objects": [
             {
@@ -4277,7 +4230,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": "(Studio Makkink & Bey, Rotterdam, The Netherlands); purchased by the Indianapolis Museum of Art in 2009.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 68,
@@ -4289,8 +4242,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -4371,7 +4323,7 @@
         "rights": ["© Gaetano Pesce"],
         "rights_uris": [],
         "provenance": "Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 68,
@@ -4383,8 +4335,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -4449,7 +4400,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 68,
@@ -4461,8 +4412,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -4587,7 +4537,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -4599,8 +4549,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 68180,
         "related_objects": [
             {
@@ -4662,7 +4611,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -4674,8 +4623,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 68180,
         "related_objects": [
             {
@@ -4748,7 +4696,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 68,
@@ -4760,8 +4708,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -4875,7 +4822,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -4887,8 +4834,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 68183,
         "related_objects": [
             {
@@ -4946,7 +4892,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -4958,8 +4904,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 68183,
         "related_objects": [
             {
@@ -5032,7 +4977,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -5044,8 +4989,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5170,7 +5114,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -5182,8 +5126,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5308,10 +5251,9 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5436,7 +5378,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -5448,8 +5390,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5574,7 +5515,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -5586,8 +5527,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5712,10 +5652,9 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5840,10 +5779,9 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5968,7 +5906,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -5980,8 +5918,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6106,7 +6043,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -6118,8 +6055,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6244,7 +6180,7 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14069,
@@ -6256,8 +6192,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6382,10 +6317,9 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6510,10 +6444,9 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6638,10 +6571,9 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6766,10 +6698,9 @@
         "rights": ["© Jurgen Bey"],
         "rights_uris": [],
         "provenance": null,
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6883,7 +6814,7 @@
         "rights": ["© Los Carpinteros. Courtesy Sean Kelly Gallery, New York."],
         "rights_uris": [],
         "provenance": "Commissioned by the Indianapolis Museum of Art.",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": true,
         "current_location": {
             "location_irn": 452,
@@ -6895,8 +6826,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -6966,7 +6896,7 @@
         "rights": ["© Gaetano Pesce"],
         "rights_uris": [],
         "provenance": "Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14999,
@@ -6978,8 +6908,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 67743,
         "related_objects": [
             {
@@ -7053,7 +6982,7 @@
         "rights": ["© Gaetano Pesce"],
         "rights_uris": [],
         "provenance": "Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14999,
@@ -7065,8 +6994,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 67743,
         "related_objects": [
             {
@@ -7144,10 +7072,9 @@
         "rights": ["© Issey Miyake"],
         "rights_uris": [],
         "provenance": "The Ebony Fashion Fair Collection; (Leslie Hindman Auctioneers, Chicago, Illinois), 19 March 2013, lot 334A; purchased by the Indianapolis Museum of Art in 2013.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -7258,7 +7185,7 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York); purchased by the Indianapolis Museum of Art in 2013.",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": true,
         "current_location": {
             "location_irn": 326,
@@ -7270,8 +7197,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -7414,7 +7340,7 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 68,
@@ -7426,8 +7352,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -7505,10 +7430,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7614,10 +7538,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7723,10 +7646,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7832,10 +7754,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7941,10 +7862,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -8050,10 +7970,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -8159,10 +8078,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -8268,10 +8186,9 @@
         "rights": ["© Roy Lichtenstein Foundation"],
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
-        "department": "907-Contemporary",
+        "department": "Contemporary",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -8366,10 +8283,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": "(T.C. Steele): Dr. and Mrs. Roger A. Hurwitz, loaned to the Indianapolis Museum of Art in 2015",
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -8446,7 +8362,7 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14628,
@@ -8458,8 +8374,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -8560,7 +8475,7 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14628,
@@ -8572,8 +8487,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -8674,10 +8588,9 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -8778,7 +8691,7 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14628,
@@ -8790,8 +8703,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -8892,7 +8804,7 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14628,
@@ -8904,8 +8816,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -9006,7 +8917,7 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14628,
@@ -9018,8 +8929,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -9120,7 +9030,7 @@
         "rights": ["© Belle Kogan"],
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": true,
         "current_location": {
             "location_irn": 14628,
@@ -9132,8 +9042,7 @@
             "level_5": null,
             "level_6": null,
             "level_7": null,
-            "level_8": null
-        },
+            "level_8": null},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -9226,10 +9135,9 @@
         "rights": ["© Halston"],
         "rights_uris": [],
         "provenance": "Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 24892,
         "related_objects": [
             {
@@ -9306,10 +9214,9 @@
         "rights": ["© Halston"],
         "rights_uris": [],
         "provenance": "Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 24892,
         "related_objects": [
             {
@@ -9386,10 +9293,9 @@
         "rights": ["© Halston"],
         "rights_uris": [],
         "provenance": "Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
-        "department": "908-Textile and Fashion Arts",
+        "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 24892,
         "related_objects": [
             {
@@ -9466,10 +9372,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 25098,
         "related_objects": [
             {
@@ -9546,10 +9451,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 25098,
         "related_objects": [
             {
@@ -9628,10 +9532,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 25098,
         "related_objects": [
             {
@@ -9708,10 +9611,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "904.1-Prints, Drawings, and Photographs",
+        "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -9805,10 +9707,9 @@
         "rights": [],
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -9886,10 +9787,9 @@
         "rights": [],
         "rights_uris": [],
         "provenance": "From the artist to Lovell Bland Tongret, Indianapolis, Indiana [1890-1941]; to his wife, Anne Tongret [1886-1978] in 1941; by descent to her daughter, Marjorie Tongret Ostermeier, Wheaton, Illinois in 1978; given to Indianapolis Museum of Art at Newfields in 2017.",
-        "department": "901.2-American Painting and Sculpture 1800-1945",
+        "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [],
             "guids": [],
@@ -9961,10 +9861,9 @@
         "rights": [],
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 90817,
         "related_objects": [
             {
@@ -10044,10 +9943,9 @@
         "rights": [],
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 90817,
         "related_objects": [
             {
@@ -10127,10 +10025,9 @@
         "rights": [],
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
-        "department": "903.2-Design Arts",
+        "department": "Design Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 90817,
         "related_objects": [
             {
@@ -10218,10 +10115,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 24693,
         "related_objects": [
             {
@@ -10298,10 +10194,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 24693,
         "related_objects": [
             {
@@ -10378,10 +10273,9 @@
         "rights": ["Public Domain"],
         "rights_uris": [],
         "provenance": null,
-        "department": "905.2-Asian Art (Japanese and Korean)",
+        "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 24693,
         "related_objects": [
             {
@@ -10453,10 +10347,9 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": null,
-        "department": "903.1-Decorative Arts",
+        "department": "Decorative Arts",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": 53558,
         "related_objects": [],
             "guids": [],
@@ -10466,7 +10359,8 @@
             "deaccession_date_month": 10,
             "deaccession_date_day": 10,
             "deaccession_notes": "Per Charles L. Venable, The Melvin & Bren Simon Director and Chief Executive Officer, this piece is not of museum quality. To be deaccessioned for future use on the IMA grounds.",
-            "recipient": 14200
+            "recipient": 14200,
+            "transfer_notes": "Transferred to the Newfields Horticulture Department"
         },
         "date_modified": "2021-10-19"
     },
@@ -10543,10 +10437,9 @@
                 "uri": "http://rightsstatements.org/vocab/NoC-US/1.0/"
             }],
         "provenance": "Lilly Endowment, Indianapolis, Indiana",
-        "department": "916.4-Registration (Returned Loans)",
+        "department": "Registration (Returned Loans)",
         "on_view": false,
-        "current_location": {
-        },
+        "current_location": {},
         "parent_irn": null,
         "related_objects": [
             {
