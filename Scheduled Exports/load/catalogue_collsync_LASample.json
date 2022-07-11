@@ -58,15 +58,25 @@
                 "notes": "Metric: 43.8 cm."
             }],
         "credit_line": "Gift of Mr. and Mrs. Eli Lilly",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "(Jan W.A. Kleijkamp); purchased by Eli Lilly, Indianapolis, Indiana, May 1950 ( list noting 15 November 1950 $950.); given to the John Herron Art Institute, now the Indianapolis Museum of Art, in 1960.",
         "department": "Asian Art (Chinese and other Asian)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 738,
+            "location_code": "Ac1.lv1",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Ac1",
+            "level_4": "lv1",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2021-10-25"
     },
@@ -142,7 +152,7 @@
                 "notes": "Metric: 88.2 x 62.8 x 10.1 cm. (framed)"
             }],
         "credit_line": "Gift of the Artist's mother, Mrs. E.J. Fiscus",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -151,10 +161,20 @@
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 2351,
+            "location_code": "P.63w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "63w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-05-16"
     },
@@ -222,7 +242,7 @@
                 "notes": "Metric: 22.9 cm."
             }],
         "credit_line": "Gift of Mr. and Mrs. Harrison Eiteljorg",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "(Christie's London) sold on 25 June 1984 to Harrison Eiteljorg [1903-1997] of Indianapolis, Indiana; given to the Indianapolis Museum of Art at Newfields in 1989.",
         "department": "African Art",
@@ -240,7 +260,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-23"
     },
@@ -338,15 +358,25 @@
                 "notes": "Metric: 50.79999924 cm sheet height | 38.09999943 cm sheet width"
             }],
         "credit_line": "Martha Delzell Memorial Fund",
-        "rights": ["© The Estate of Gabor F. Peterdi"],
+        "rights": "© The Estate of Gabor F. Peterdi",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 9733,
+            "location_code": "F25.cg14.r7.lv9",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg14",
+            "level_5": "r7",
+            "level_6": "lv9",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-23"
     },
@@ -409,15 +439,25 @@
                 "notes": "Metric: 3.8 x 18.1 x 18.1 cm."
             }],
         "credit_line": "Museum Accession",
-        "rights": [],
+        "rights": null,
         "rights_uris": [],
         "provenance": "Unknown Source, Abandoned Property Advertisement Notice published by Indianapolis Star in accordance with IC-32-34-5 on September 29, 2018 and October 06, 2018. The Indianapolis Museum of Art claimed clear title on December 5, 2018.",
         "department": "Native Arts of the Americas",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 773,
+            "location_code": "Ec43.lv6",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Ec43",
+            "level_4": "lv6",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-04-22"
     },
@@ -498,15 +538,25 @@
                 "notes": "Metric: 73.7 x 78.7 x 7 cm. (framed)"
             }],
         "credit_line": "Gift of Hugh McK. Landon",
-        "rights": ["© Paul Edward Beem"],
+        "rights": "© Paul Edward Beem",
         "rights_uris": [],
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 3674,
+            "location_code": "P.10w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "10w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-05-09"
     },
@@ -580,7 +630,7 @@
                 "notes": "Metric: 107.9 x 90.8 x 11.4"
             }],
         "credit_line": "Indianapolis Literary Club",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
@@ -598,7 +648,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-06-17"
     },
@@ -661,15 +711,25 @@
                 "notes": "Metric: 85.5 x 131.4 x 11.4"
             }],
         "credit_line": "Indianapolis Literary Club on loan to the Indianapolis Museum of Art",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 3484,
+            "location_code": "P.170e",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "170e",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-25"
     },
@@ -732,15 +792,25 @@
                 "notes": "Metric: 27.1 x 9.7 cm."
             }],
         "credit_line": "Gift of Mr. Keith Uhl Clary",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Chinese and other Asian)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15826,
+            "location_code": "F25.sc1.lv10",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "sc1",
+            "level_5": "lv10",
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2021-04-12"
     },
@@ -803,15 +873,25 @@
                 "notes": "Metric: 11.4 x 6.9 x 11.4 cm."
             }],
         "credit_line": "Gift of Bonnie and David Ross",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "Dr. and Mrs. David Ross, Indianapolis, Indiana given to the Indianapolis Museum of Art at Newfields in 1996.",
         "department": "Native Arts of the Americas",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 1095,
+            "location_code": "Ec45.lv3",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Ec45",
+            "level_4": "lv3",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-08-05"
     },
@@ -881,15 +961,25 @@
                 "notes": "Metric: 177.8 x 184.2"
             }],
         "credit_line": "Gift of Mrs. J. Irwin Miller",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "Mrs. J. Irwin Miller, Columbus, Indiana; given to Indianapolis Museum of Art in 1984.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 7919,
+            "location_code": "Tc58.lv8",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc58",
+            "level_4": "lv8",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-14"
     },
@@ -959,15 +1049,25 @@
                 "notes": "Metric: 224.2 x 221"
             }],
         "credit_line": "Orville A. and Elma D. Wilkinson Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "(Cora Ginsberg, Inc. Tarrytown, New York); purchased by the Indianapolis Museum of Art in 1975.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 7246,
+            "location_code": "Tc58.lv2",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc58",
+            "level_4": "lv2",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-14"
     },
@@ -1019,15 +1119,25 @@
         "converted_dimensions": "22 x 23-1/2 in.",
         "dimensions": [],
         "credit_line": "The Eliza M. and Sarah L. Niblack Collection",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 4348,
+            "location_code": "Tc23.lv1",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc23",
+            "level_4": "lv1",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-22"
     },
@@ -1106,15 +1216,25 @@
                 "notes": "Metric: 114.6 x 99.1 x 6 cm. (framed)"
             }],
         "credit_line": "Gift of the Children of J.K. Lilly, Jr.",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": "J.K. Lilly, Jr, Indianapolis, Indiana; by descent to his children; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1967.",
         "department": "Lilly House",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 3965,
+            "location_code": "P.92w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "92w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {
             "deaccession_method": "Deaccession",
             "deaccession_date_year": 2021,
@@ -1190,12 +1310,22 @@
                 "notes": "Metric: 11.11 x 13.96"
             }],
         "credit_line": "Gift of Mrs. Anna J. Brownell and Miss Frances J. Brownell",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 9966,
+            "location_code": "F25.cg4.r15.lv4",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg4",
+            "level_5": "r15",
+            "level_6": "lv4",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 89724,
         "related_objects": [
             {
@@ -1206,7 +1336,7 @@
                 "relationship": "",
                 "object_irn": 35937
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-14"
     },
@@ -1287,15 +1417,25 @@
                 "notes": "Metric: 28.57 x 21.11 (sheet)"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 8644,
+            "location_code": "F25.cg2.r5.lv14",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg2",
+            "level_5": "r5",
+            "level_6": "lv14",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-06-07"
     },
@@ -1358,15 +1498,25 @@
                 "notes": "Metric: 31.8 x 6.4 x 0.9 cm."
             }],
         "credit_line": "Gift of Hugh McKennan Landon",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": "Collected by Arthur Henn, Hugh McKennan Landon Expedition to Ecuador and Peru under the direction of Dr. Carl H. Eigenmann of Indiana University; Hugh McKennan Landon [1868-1947] Indianapolis, Indiana; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, Indianapolis, Indiana in 1914.",
         "department": "Native Arts of the Americas",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 35,
+            "location_code": "Ec43.lv4",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Ec43",
+            "level_4": "lv4",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-06-19"
     },
@@ -1440,7 +1590,7 @@
                 "notes": "Metric: 74.93 x 88.583 x 3.175 (framed)"
             }],
         "credit_line": "Gift of Mrs. Addison Bybee",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -1449,10 +1599,20 @@
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 9474,
+            "location_code": "F25.bin8.lv1.sl6",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "bin8",
+            "level_5": "lv1",
+            "level_6": "sl6",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-02-26"
     },
@@ -1526,7 +1686,7 @@
                 "notes": "Metric: 111.75 x 85.4"
             }],
         "credit_line": "Indianapolis Literary Club",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -1535,10 +1695,20 @@
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 7349,
+            "location_code": "P.172w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "172w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-25"
     },
@@ -1612,7 +1782,7 @@
                 "notes": "Metric: 74.9 x 100.3 x 7.9 cm. (framed)"
             }],
         "credit_line": "Gift of Robert Brady Adams, John Alban Adams, and Edward Wolfe Adams",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -1638,7 +1808,7 @@
                 "relationship": "",
                 "object_irn": 44498
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-28"
     },
@@ -1706,15 +1876,25 @@
                 "notes": "Metric: 194.3 x 192.4"
             }],
         "credit_line": "Robert G. Wolcott Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "Amish People, Lancaster County, Pennsylvania. (Alexander Suggs Gallery, Clayton, Missouri); purchased by the Indianapolis Museum of Art in 1974.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 7243,
+            "location_code": "Tc58.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc58",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-14"
     },
@@ -1788,15 +1968,25 @@
                 "notes": "Metric: 98.4 x 83.8 x 6.4 cm. (framed)"
             }],
         "credit_line": "Gift of Dr. Gilbert Erlechman",
-        "rights": ["© Dines Carlsen"],
+        "rights": "© Dines Carlsen",
         "rights_uris": [],
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 3351,
+            "location_code": "P.17w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "17w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2021-12-06"
     },
@@ -1870,7 +2060,7 @@
                 "notes": "Metric: 87 x 73 x 6.4 cm. (framed)"
             }],
         "credit_line": "Gift of Mrs. Samuel Richards",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -1879,10 +2069,20 @@
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 7328,
+            "location_code": "P.81w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "81w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-18"
     },
@@ -1945,15 +2145,25 @@
                 "notes": "Metric: 213.4 x 218.4 cm."
             }],
         "credit_line": "Gift of Edgar B. Howard",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": "Edgar B. Howard, New York; given to the Indianapolis Museum of Art, Indianapolis, Indiana, 17 December 1981.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 7246,
+            "location_code": "Tc58.lv2",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc58",
+            "level_4": "lv2",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {
             "deaccession_method": "Deaccession",
             "deaccession_date_year": 2021,
@@ -2075,7 +2285,7 @@
                 "notes": "weight of E"
             }],
         "credit_line": "Gift of the Friends of the Indianapolis Museum of Art in memory of Henry F. DeBoest.  Restoration was made possible by Patricia J. and James E. LaCrosse.",
-        "rights": ["© Morgan Art Foundation/Artists Rights Society (ARS), New York"],
+        "rights": "© Morgan Art Foundation/Artists Rights Society (ARS), New York",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -2097,7 +2307,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-04-26"
     },
@@ -2162,15 +2372,25 @@
                 "notes": "Metric: 22.7 x 35.4 cm. (image)"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "Purchased by the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1906.",
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 10315,
+            "location_code": "F25.cg5.r6.lv4",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg5",
+            "level_5": "r6",
+            "level_6": "lv4",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-06-07"
     },
@@ -2246,7 +2466,7 @@
                 "notes": "Metric: 217.2 x 114.6 cm. (framed)"
             }],
         "credit_line": "Gift of the Artist",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -2268,7 +2488,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-05-19"
     },
@@ -2340,15 +2560,25 @@
                 "notes": "Metric: 30.5 x 45.7 (sheet)"
             }],
         "credit_line": "Anonymous Gift",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 9972,
+            "location_code": "F25.cg6.r4.lv12",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg6",
+            "level_5": "r4",
+            "level_6": "lv12",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-12-14"
     },
@@ -2422,15 +2652,25 @@
                 "notes": "B) Metric: 10.48 x 11.43 x 13.97"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 68,
+            "location_code": "see related parts",
+            "level_1": "IMA",
+            "level_2": "see related parts",
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-09-30"
     },
@@ -2515,15 +2755,25 @@
                 "notes": "C) Metric: 205.74 (sash)"
             }],
         "credit_line": "Gift of Halston Limited",
-        "rights": ["© Halston"],
+        "rights": "© Halston",
         "rights_uris": [],
         "provenance": "Halston Limited in care of Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 68,
+            "location_code": "see related parts",
+            "level_1": "IMA",
+            "level_2": "see related parts",
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -2588,15 +2838,25 @@
                 "notes": "Metric: 38.8 x 25.8 (image)"
             }],
         "credit_line": "Gift of Eliza M. Niblack",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 2634,
+            "location_code": "F25.cs7.lv8",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cs7",
+            "level_5": "lv8",
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-23"
     },
@@ -2664,15 +2924,25 @@
                 "notes": "Metric: 22.9 x 17.8"
             }],
         "credit_line": "Delavan Smith Bequest",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 9682,
+            "location_code": "F25.cg6.r8.lv4",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg6",
+            "level_5": "r8",
+            "level_6": "lv4",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-12-11"
     },
@@ -2748,15 +3018,25 @@
                 "notes": "Metric: 209.6 x 137.7 (canvas)"
             }],
         "credit_line": "Gift to the Art Association through popular subscription",
-        "rights": ["© Wayman Adams"],
+        "rights": "© Wayman Adams",
         "rights_uris": [],
         "provenance": "Purchased from the artist by a group of local patrons for the museum.",
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 1050,
+            "location_code": "P.18w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "18w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [
+        "guids": [
             {
                 "preferred": false,
                 "type": "Wikidata QID",
@@ -2835,7 +3115,7 @@
                 "notes": "Metric: 69.9 x 60.8 x 7 cm. (framed)"
             }],
         "credit_line": "Courtesy of The Clowes Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -2857,7 +3137,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-04-05"
     },
@@ -2933,7 +3213,7 @@
                 "notes": "Metric: 76.5 x 66 cm. (framed)"
             }],
         "credit_line": "The Clowes Collection",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -2942,10 +3222,20 @@
         "provenance": "Gustav von Gerhardt, Budapest, Hungary, until 1911.{1} Mrs. Moric Palugyay and Mrs. Moric Tomcsanyi. Budapest, by 1927.{2} (Ivan N. Podgoursky, New York, New York); George Henry Alexander Clowes, Indianapolis, Indiana, in 1944; The Clowes Fund, Indianapolis, from 1958–2020, and on long-term loan to the Indianapolis Museum of Art, since 1971; given to the Indianapolis Museum of Art at Newfields, in 2020.\n\n{1} Sammlung des. Königl[ichen]. Ungar[ischen]. Hofrats Gustav von Gerhardt, Budapest : Zweiter Teil : Gemälde Alter Meister, sale catalogue, Rudolph Lepke’s Kunst-Auctions-Haus, Berlin, 10 November 1911, no. 61, plate 30.\n{2} Catalogue de l’Exposition Belge d’art Ancien et Moderne, Budapest: Imp. de la Société Anonyme Athenaeum, 1927, 34, no. 191.",
         "department": "European Painting and Sculpture Before 1800",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 3674,
+            "location_code": "P.10w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "10w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -3019,7 +3309,7 @@
                 "notes": "Metric: 94 x 109.2 cm. (framed)"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -3028,10 +3318,20 @@
         "provenance": "Purchased from the artist by the Art Association of Indianapolis for the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1894.",
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 9950,
+            "location_code": "T13",
+            "level_1": "IMA",
+            "level_2": "Exhibition Holding",
+            "level_3": "T13",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-06-29"
     },
@@ -3107,12 +3407,22 @@
                 "notes": "Metric: 93.4 x 131.4 x 82 cm. (framed)"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "Purchased from the artist by the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art in 1889.",
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 6378,
+            "location_code": "P.91w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "91w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3123,7 +3433,7 @@
                 "relationship": "",
                 "object_irn": 43219
             }],
-            "guids": [
+        "guids": [
             {
                 "preferred": false,
                 "type": "Wikidata QID",
@@ -3207,12 +3517,22 @@
                 "notes": "Metric: 17.14499974 cm sheet height | 10.79499984 cm sheet width"
             }],
         "credit_line": "Bequest of Kurt F. Pantzer",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 68,
+            "location_code": "see related parts",
+            "level_1": "IMA",
+            "level_2": "see related parts",
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3223,7 +3543,7 @@
                 "relationship": "bound together in book",
                 "object_irn": 41019
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -3302,12 +3622,22 @@
                 "notes": "Metric: 17.14499974 cm sheet height | 10.79499984 cm sheet width"
             }],
         "credit_line": "Bequest of Kurt F. Pantzer",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 68,
+            "location_code": "see related parts",
+            "level_1": "IMA",
+            "level_2": "see related parts",
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3318,7 +3648,7 @@
                 "relationship": "",
                 "object_irn": 41018
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -3370,15 +3700,25 @@
         "converted_dimensions": "No measurement details.",
         "dimensions": [],
         "credit_line": "Gift of Mrs. Eli Lilly",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": null,
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 14916,
+            "location_code": "Location Not Verified",
+            "level_1": "IMA",
+            "level_2": "Location Not Verified",
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-06-07"
     },
@@ -3437,15 +3777,25 @@
                 "notes": null
             }],
         "credit_line": "Gift of Mary E. Nicholson",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 87,
+            "location_code": "On Loan",
+            "level_1": "On Loan",
+            "level_2": null,
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-04-26"
     },
@@ -3504,15 +3854,25 @@
                 "notes": "Metric: 9.52"
             }],
         "credit_line": "Gift of Egyptian Research Account, British School of Archaeology through William Flinders Petrie",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "Excavated at British School of Archaeology site in Egypt (1912-1913); given to the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1913.",
         "department": "Classical Art",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 136,
+            "location_code": "Cc3.lv3",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Cc3",
+            "level_4": "lv3",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-06-29"
     },
@@ -3588,15 +3948,25 @@
                 "notes": "Metric: 35.0 x 24.0"
             }],
         "credit_line": "Gift of Eliza M. Niblack",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "Eliza M. Niblack, Indianapolis, Indiana; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1930.",
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 10285,
+            "location_code": "F25.cg5.r3.lv11",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg5",
+            "level_5": "r3",
+            "level_6": "lv11",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-16"
     },
@@ -3661,15 +4031,25 @@
                 "notes": "sheet"
             }],
         "credit_line": "Gift of Charles C. Kryter",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 10326,
+            "location_code": "F25.cg5.r7.lv13",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg5",
+            "level_5": "r7",
+            "level_6": "lv13",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-22"
     },
@@ -3727,12 +4107,22 @@
                 "notes": "Metric: 16.50999975 cm height | 11.11249983 cm width | 3.174999952 cm depth"
             }],
         "credit_line": "Bequest of Kurt F. Pantzer",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": "Richard Philip Hart Durkee",
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 9921,
+            "location_code": "F25.cg10.r2.lv1",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cg10",
+            "level_5": "r2",
+            "level_6": "lv1",
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [
             {
@@ -3743,7 +4133,7 @@
                 "relationship": "",
                 "object_irn": 41019
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -3807,7 +4197,7 @@
                 "notes": "Metric: 21 x 14.9 x 2.5 cm. (each)"
             }],
         "credit_line": "Gift of the Children of J.K. Lilly, Jr.",
-        "rights": [],
+        "rights": null,
         "rights_uris": [],
         "provenance": "Lilly family; gift of the children of J.K. Lilly, Jr. to the Indianapolis Museum of Art in 2003.",
         "department": "Lilly House",
@@ -3825,7 +4215,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {
             "deaccession_method": "Deaccession",
             "deaccession_date_year": 2021,
@@ -3892,7 +4282,7 @@
                 "notes": "Metric: 46.4 x 54.6 x 3.8 cm."
             }],
         "credit_line": "Gift of Gerald and Dorit Paul",
-        "rights": ["© Fundació Antoni Tàpies/Artists Rights Society (ARS), New York / VEGAP, Madrid"],
+        "rights": "© Fundació Antoni Tàpies/Artists Rights Society (ARS), New York / VEGAP, Madrid",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -3901,10 +4291,20 @@
         "provenance": "(Pace Gallery, New York, New York); Gerald and Dorit Paul, Indianapolis, Indiana; given to the Indianapolis Museum of Art in 2005.",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 3715,
+            "location_code": "P.174w",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "174w",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-28"
     },
@@ -3967,7 +4367,7 @@
                 "notes": "Metric: 1.3 x 5.1 (diam.) cm."
             }],
         "credit_line": "General Memorial Art Fund",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": "Probably with (Rhoda Levinsohn, Cleveland, Ohio) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; purchased by the Indianapolis Museum of Art, Indianapolis, Indiana in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.",
         "department": "African Art",
@@ -3985,7 +4385,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-04-10"
     },
@@ -4048,7 +4448,7 @@
                 "notes": "Metric: 1.3 x 5.1"
             }],
         "credit_line": "General Memorial Art Fund",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": "Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.",
         "department": "African Art",
@@ -4074,7 +4474,7 @@
                 "relationship": "pair (one of)",
                 "object_irn": 64019
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-04-02"
     },
@@ -4137,7 +4537,7 @@
                 "notes": "Metric: 1.3 x 5.1 cm."
             }],
         "credit_line": "General Memorial Art Fund",
-        "rights": ["No Known Rights Holder"],
+        "rights": "No Known Rights Holder",
         "rights_uris": [],
         "provenance": "Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.",
         "department": "African Art",
@@ -4163,7 +4563,7 @@
                 "relationship": "pair (one of)",
                 "object_irn": 64018
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-04-02"
     },
@@ -4227,7 +4627,7 @@
                 "notes": "Metric: 20 × 22.2 × 12.1 cm."
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": "(Studio Makkink & Bey, Rotterdam, The Netherlands); purchased by the Indianapolis Museum of Art in 2009.",
         "department": "Design Arts",
@@ -4245,7 +4645,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -4320,7 +4720,7 @@
                 "notes": "B) Metric: 55.9 (diam.) cm."
             }],
         "credit_line": "Gift of Dr. Michael Sze",
-        "rights": ["© Gaetano Pesce"],
+        "rights": "© Gaetano Pesce",
         "rights_uris": [],
         "provenance": "Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.",
         "department": "Design Arts",
@@ -4338,7 +4738,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -4397,7 +4797,7 @@
                 "notes": "Metric: 26 x 12.7 x 8.9"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -4475,7 +4875,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -4534,7 +4934,7 @@
                 "notes": "Metric: 26 x 12.7 x 8.9"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -4560,7 +4960,7 @@
                 "relationship": "part",
                 "object_irn": 68182
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -4608,7 +5008,7 @@
         "converted_dimensions": "No measurement details.",
         "dimensions": [],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -4634,7 +5034,7 @@
                 "relationship": "part",
                 "object_irn": 68181
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -4693,7 +5093,7 @@
                 "notes": "Metric: 14.6 x 12.7"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -4771,7 +5171,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -4819,7 +5219,7 @@
         "converted_dimensions": "No measurement details.",
         "dimensions": [],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -4841,7 +5241,7 @@
                 "relationship": "part",
                 "object_irn": 68185
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -4889,7 +5289,7 @@
         "converted_dimensions": "No measurement details.",
         "dimensions": [],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -4915,7 +5315,7 @@
                 "relationship": "part",
                 "object_irn": 68184
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -4974,7 +5374,7 @@
                 "notes": "Metric: 7 x 7.6 x 5.1"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -5052,7 +5452,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -5111,7 +5511,7 @@
                 "notes": "Metric: 5.8 x 7"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -5189,7 +5589,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -5248,12 +5648,22 @@
                 "notes": "Metric: 5.8 x 7"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15153,
+            "location_code": "Hc2.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc2",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5316,7 +5726,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -5375,7 +5785,7 @@
                 "notes": "Metric: 5.1 x 6.4"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -5453,7 +5863,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -5512,7 +5922,7 @@
                 "notes": "Metric: 5.1 x 6.4"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -5590,7 +6000,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -5649,12 +6059,22 @@
                 "notes": "Metric: 1.3 x 11.4"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15153,
+            "location_code": "Hc2.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc2",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5717,7 +6137,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -5776,12 +6196,22 @@
                 "notes": "Metric: 2.2 x 11.4"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15153,
+            "location_code": "Hc2.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc2",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -5844,7 +6274,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -5903,7 +6333,7 @@
                 "notes": "Metric: 1.9 x 10.2"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -5981,7 +6411,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -6040,7 +6470,7 @@
                 "notes": "Metric: 1.9 x 10.2"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -6118,7 +6548,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -6177,7 +6607,7 @@
                 "notes": "Metric: 6.4 x 15.2 x 33"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
@@ -6255,7 +6685,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -6314,12 +6744,22 @@
                 "notes": "Metric: 1.9 x 16.5"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15153,
+            "location_code": "Hc2.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc2",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6382,7 +6822,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -6441,12 +6881,22 @@
                 "notes": "Metric: 1.9 x 16.5"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15153,
+            "location_code": "Hc2.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc2",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6509,7 +6959,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -6568,12 +7018,22 @@
                 "notes": "Metric: 1.9 x 16.5"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15153,
+            "location_code": "Hc2.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc2",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6636,7 +7096,7 @@
                 "relationship": "part",
                 "object_irn": 68199
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -6695,12 +7155,22 @@
                 "notes": "Metric: 1.9 x 16.5"
             }],
         "credit_line": "Deaccessioned Decorative/Design Arts Fund",
-        "rights": ["© Jurgen Bey"],
+        "rights": "© Jurgen Bey",
         "rights_uris": [],
         "provenance": null,
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15153,
+            "location_code": "Hc2.lv7",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc2",
+            "level_4": "lv7",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 64628,
         "related_objects": [
             {
@@ -6763,7 +7233,7 @@
                 "relationship": "part",
                 "object_irn": 68198
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-13"
     },
@@ -6811,7 +7281,7 @@
         "converted_dimensions": "various dimensions",
         "dimensions": [],
         "credit_line": "Commissioned by the Indianapolis Museum of Art, purchased with funds provided by the Griffith Foundation Gift, in memory of Melvin Simon",
-        "rights": ["© Los Carpinteros. Courtesy Sean Kelly Gallery, New York."],
+        "rights": "© Los Carpinteros. Courtesy Sean Kelly Gallery, New York.",
         "rights_uris": [],
         "provenance": "Commissioned by the Indianapolis Museum of Art.",
         "department": "Contemporary",
@@ -6829,7 +7299,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-11-13"
     },
@@ -6893,7 +7363,7 @@
                 "notes": "Metric: 104.1 x 91.4 x 114.3"
             }],
         "credit_line": "Gift of Dr. Michael Sze",
-        "rights": ["© Gaetano Pesce"],
+        "rights": "© Gaetano Pesce",
         "rights_uris": [],
         "provenance": "Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.",
         "department": "Design Arts",
@@ -6915,7 +7385,7 @@
                 "relationship": "part",
                 "object_irn": 69063
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -6979,7 +7449,7 @@
                 "notes": "Metric: 55.9 diameter"
             }],
         "credit_line": "Gift of Dr. Michael Sze",
-        "rights": ["© Gaetano Pesce"],
+        "rights": "© Gaetano Pesce",
         "rights_uris": [],
         "provenance": "Dr. Michael Sze, Wailuku, Hawaii; given to the Indianapolis Museum of Art in 2009.",
         "department": "Design Arts",
@@ -7001,7 +7471,7 @@
                 "relationship": "part",
                 "object_irn": 69062
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -7069,15 +7539,25 @@
                 "notes": "Metric: 137.2 x 57.2"
             }],
         "credit_line": "Fashion Arts Society Acquisition Fund",
-        "rights": ["© Issey Miyake"],
+        "rights": "© Issey Miyake",
         "rights_uris": [],
         "provenance": "The Ebony Fashion Fair Collection; (Leslie Hindman Auctioneers, Chicago, Illinois), 19 March 2013, lot 334A; purchased by the Indianapolis Museum of Art in 2013.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 1083,
+            "location_code": "Tc25.lv9",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc25",
+            "level_4": "lv9",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -7182,7 +7662,7 @@
                 "notes": "E) Metric: 1219.2 x 195.5 x 38.1 (assembled)"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York); purchased by the Indianapolis Museum of Art in 2013.",
         "department": "Contemporary",
@@ -7200,7 +7680,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2021-02-11"
     },
@@ -7337,7 +7817,7 @@
                 "notes": "E.2) Metric: 7.6 x 15.2 (platter lid)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer ",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
@@ -7355,7 +7835,7 @@
             "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -7427,12 +7907,22 @@
                 "notes": "A) Metric: 635.03 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7463,7 +7953,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85264
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-24"
     },
@@ -7535,12 +8025,22 @@
                 "notes": "B) Metric: 1769.0 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7571,7 +8071,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85264
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-24"
     },
@@ -7643,12 +8143,22 @@
                 "notes": "C) Metric: 1360.8 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7679,7 +8189,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85264
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2020-06-05"
     },
@@ -7751,12 +8261,22 @@
                 "notes": "D) Metric: 1179.3 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7787,7 +8307,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85264
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-24"
     },
@@ -7859,12 +8379,22 @@
                 "notes": "E.1) Metric: 1360.8 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -7895,7 +8425,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85264
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-24"
     },
@@ -7967,12 +8497,22 @@
                 "notes": "E.2) Metric: 453.59 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -8003,7 +8543,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85264
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-24"
     },
@@ -8075,12 +8615,22 @@
                 "notes": "E.3) Metric: 453.59 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -8111,7 +8661,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85264
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-24"
     },
@@ -8183,12 +8733,22 @@
                 "notes": "E.4) Metric: 272.16 kilograms"
             }],
         "credit_line": "Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation",
-        "rights": ["© Roy Lichtenstein Foundation"],
+        "rights": "© Roy Lichtenstein Foundation",
         "rights_uris": [],
         "provenance": "(Roy Lichtenstein Foundation, New York, New York)",
         "department": "Contemporary",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 82696,
         "related_objects": [
             {
@@ -8219,7 +8779,7 @@
                 "relationship": "group (part of)",
                 "object_irn": 85263
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-07-24"
     },
@@ -8280,15 +8840,25 @@
                 "notes": "Metric: 46.05 x 63.19"
             }],
         "credit_line": "On Loan from Dr. and Mrs. Roger A. Hurwitz",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": "(T.C. Steele): Dr. and Mrs. Roger A. Hurwitz, loaned to the Indianapolis Museum of Art in 2015",
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 10,
+            "location_code": "Returned",
+            "level_1": "Returned",
+            "level_2": null,
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-14"
     },
@@ -8359,7 +8929,7 @@
                 "notes": "A.1) Metric: 12.1 x 15.2 x 8.3 (coffee pot)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
@@ -8401,7 +8971,7 @@
                 "relationship": "set (part of)",
                 "object_irn": 88774
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -8472,7 +9042,7 @@
                 "notes": "A.2) Metric: 5.1 x 6.4 (coffee pot lid)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
@@ -8514,7 +9084,7 @@
                 "relationship": "set (part of)",
                 "object_irn": 88774
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -8585,12 +9155,22 @@
                 "notes": "B) Metric: 5.1 x 10.8 x 7 (sugar bowl)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 8013,
+            "location_code": "Lc8.lv4",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Lc8",
+            "level_4": "lv4",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 83398,
         "related_objects": [
             {
@@ -8617,7 +9197,7 @@
                 "relationship": "set (part of)",
                 "object_irn": 88774
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -8688,7 +9268,7 @@
                 "notes": "C) Metric: 10.2 x 7 (egg cup)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
@@ -8730,7 +9310,7 @@
                 "relationship": "set (part of)",
                 "object_irn": 88774
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -8801,7 +9381,7 @@
                 "notes": "D) Metric: 1.9 x 22.2 (plate)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
@@ -8843,7 +9423,7 @@
                 "relationship": "set (part of)",
                 "object_irn": 88774
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -8914,7 +9494,7 @@
                 "notes": "E.1) Metric: 1.3 x 18.4 (platter)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
@@ -8956,7 +9536,7 @@
                 "relationship": "set (part of)",
                 "object_irn": 88774
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -9027,7 +9607,7 @@
                 "notes": "E.2) Metric: 7.6 x 15.2 (platter lid)"
             }],
         "credit_line": "Gift from the Collection of William Swann and William Leazer",
-        "rights": ["© Belle Kogan"],
+        "rights": "© Belle Kogan",
         "rights_uris": [],
         "provenance": "William Swann and William Leazer, Irving, Texas; given to the Indianapolis Museum of Art in 2015.",
         "department": "Decorative Arts",
@@ -9069,7 +9649,7 @@
                 "relationship": "set (part of)",
                 "object_irn": 88773
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -9132,12 +9712,22 @@
                 "notes": "A) Metric: 57.15 (blouse)"
             }],
         "credit_line": "Gift of Halston Limited",
-        "rights": ["© Halston"],
+        "rights": "© Halston",
         "rights_uris": [],
         "provenance": "Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 319,
+            "location_code": "Tc46",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc46",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 24892,
         "related_objects": [
             {
@@ -9148,7 +9738,7 @@
                 "relationship": "part (ensemble)",
                 "object_irn": 89165
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-09-09"
     },
@@ -9211,12 +9801,22 @@
                 "notes": "B) Metric: 128.27 (skirt)"
             }],
         "credit_line": "Gift of Halston Limited",
-        "rights": ["© Halston"],
+        "rights": "© Halston",
         "rights_uris": [],
         "provenance": "Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 319,
+            "location_code": "Tc46",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc46",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 24892,
         "related_objects": [
             {
@@ -9227,7 +9827,7 @@
                 "relationship": "part (ensemble)",
                 "object_irn": 89165
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-09-09"
     },
@@ -9290,12 +9890,22 @@
                 "notes": "C) Metric: 205.74 (sash)"
             }],
         "credit_line": "Gift of Halston Limited",
-        "rights": ["© Halston"],
+        "rights": "© Halston",
         "rights_uris": [],
         "provenance": "Halston Limited c/o Micheal Lichtenstien, New York, New York ; given to the Indianapolis Museum of Art in 1980.",
         "department": "Textile and Fashion Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 319,
+            "location_code": "Tc46",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Tc46",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 24892,
         "related_objects": [
             {
@@ -9306,7 +9916,7 @@
                 "relationship": "part (ensemble)",
                 "object_irn": 89164
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-09-09"
     },
@@ -9369,12 +9979,22 @@
                 "notes": "Metric: 38.8 x 25.8 (image)"
             }],
         "credit_line": "Gift of Eliza M. Niblack",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 2634,
+            "location_code": "F25.cs7.lv8",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cs7",
+            "level_5": "lv8",
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 25098,
         "related_objects": [
             {
@@ -9385,7 +10005,7 @@
                 "relationship": "part (triptych)",
                 "object_irn": 89369
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-23"
     },
@@ -9448,12 +10068,22 @@
                 "notes": "Metric: 38.8 x 25.8 (image)"
             }],
         "credit_line": "Gift of Eliza M. Niblack",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 2634,
+            "location_code": "F25.cs7.lv8",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cs7",
+            "level_5": "lv8",
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 25098,
         "related_objects": [
             {
@@ -9464,7 +10094,7 @@
                 "relationship": "part (triptych)",
                 "object_irn": 89369
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-23"
     },
@@ -9529,12 +10159,22 @@
                 "notes": "Metric: 38.8 x 25.8 (image)"
             }],
         "credit_line": "Gift of Eliza M. Niblack",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 2634,
+            "location_code": "F25.cs7.lv8",
+            "level_1": "IMA",
+            "level_2": "Print Storage",
+            "level_3": "F25",
+            "level_4": "cs7",
+            "level_5": "lv8",
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 25098,
         "related_objects": [
             {
@@ -9545,7 +10185,7 @@
                 "relationship": "part (triptych)",
                 "object_irn": 89368
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-02-23"
     },
@@ -9608,15 +10248,25 @@
                 "notes": "Metric: 7.93 x 11.74"
             }],
         "credit_line": "Gift of Mrs. Anna J. Brownell and Miss Frances J. Brownell",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Prints, Drawings, and Photographs",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 68,
+            "location_code": "see related parts",
+            "level_1": "IMA",
+            "level_2": "see related parts",
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-06-14"
     },
@@ -9704,15 +10354,25 @@
                 "notes": "C) Metric: 8.25 x 8.89 x 8.58"
             }],
         "credit_line": "Gift of Jewel Stern in honor of Shelley Selim",
-        "rights": [],
+        "rights": null,
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 68,
+            "location_code": "see related parts",
+            "level_1": "IMA",
+            "level_2": "see related parts",
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-28"
     },
@@ -9784,15 +10444,25 @@
                 "notes": "Metric: 55.6 x 80.6 cm. (framed)"
             }],
         "credit_line": "Gift of Marjorie Tongret Ostermeier in memory of L. Bland Tongret",
-        "rights": [],
+        "rights": null,
         "rights_uris": [],
         "provenance": "From the artist to Lovell Bland Tongret, Indianapolis, Indiana [1890-1941]; to his wife, Anne Tongret [1886-1978] in 1941; by descent to her daughter, Marjorie Tongret Ostermeier, Wheaton, Illinois in 1978; given to Indianapolis Museum of Art at Newfields in 2017.",
         "department": "American Painting and Sculpture 1800-1945",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 4562,
+            "location_code": "P.72e",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "P",
+            "level_4": "72e",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-30"
     },
@@ -9858,12 +10528,22 @@
                 "notes": "A) Metric: 14.6 x 9.52 x 8.89"
             }],
         "credit_line": "Gift of Jewel Stern in honor of Shelley Selim",
-        "rights": [],
+        "rights": null,
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15193,
+            "location_code": "Hc9.lv4",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc9",
+            "level_4": "lv4",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 90817,
         "related_objects": [
             {
@@ -9874,7 +10554,7 @@
                 "relationship": "part",
                 "object_irn": 92160
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-28"
     },
@@ -9940,12 +10620,22 @@
                 "notes": "B) Metric: 11.43 x 9.52 x 8.25"
             }],
         "credit_line": "Gift of Jewel Stern in honor of Shelley Selim",
-        "rights": [],
+        "rights": null,
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15193,
+            "location_code": "Hc9.lv4",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc9",
+            "level_4": "lv4",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 90817,
         "related_objects": [
             {
@@ -9956,7 +10646,7 @@
                 "relationship": "part",
                 "object_irn": 92160
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-28"
     },
@@ -10022,12 +10712,22 @@
                 "notes": "C) Metric: 8.25 x 8.89 x 8.58"
             }],
         "credit_line": "Gift of Jewel Stern in honor of Shelley Selim",
-        "rights": [],
+        "rights": null,
         "rights_uris": [],
         "provenance": "Jewel Stern Coral Gables, Florida; given to the Indianapolis Museum of Art in 2017.",
         "department": "Design Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 15193,
+            "location_code": "Hc9.lv4",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Hc9",
+            "level_4": "lv4",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 90817,
         "related_objects": [
             {
@@ -10038,7 +10738,7 @@
                 "relationship": "part",
                 "object_irn": 92159
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2022-03-28"
     },
@@ -10112,12 +10812,22 @@
                 "notes": "B) Metric: 10.48 x 11.43 x 13.97"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 663,
+            "location_code": "Xc4.lv5",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Xc4",
+            "level_4": "lv5",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 24693,
         "related_objects": [
             {
@@ -10128,7 +10838,7 @@
                 "relationship": "part",
                 "object_irn": 92386
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2021-05-03"
     },
@@ -10191,12 +10901,22 @@
                 "notes": "B) Metric: 10.48 x 11.43 x 13.97"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 663,
+            "location_code": "Xc4.lv5",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Xc4",
+            "level_4": "lv5",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 24693,
         "related_objects": [
             {
@@ -10207,7 +10927,7 @@
                 "relationship": "part",
                 "object_irn": 92386
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2021-05-03"
     },
@@ -10270,12 +10990,22 @@
                 "notes": "B) Metric: 10.48 x 11.43 x 13.97"
             }],
         "credit_line": "John Herron Fund",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [],
         "provenance": null,
         "department": "Asian Art (Japanese and Korean)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 663,
+            "location_code": "Xc4.lv5",
+            "level_1": "IMA",
+            "level_2": "storage",
+            "level_3": "Xc4",
+            "level_4": "lv5",
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 24693,
         "related_objects": [
             {
@@ -10286,7 +11016,7 @@
                 "relationship": "part",
                 "object_irn": 92385
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2021-05-03"
     },
@@ -10340,7 +11070,7 @@
                 "notes": "Metric: 81.28 x 106.68"
             }],
         "credit_line": "Gift of Mr. and Mrs. Gus Mascari",
-        "rights": ["Public Domain"],
+        "rights": "Public Domain",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -10349,10 +11079,20 @@
         "provenance": null,
         "department": "Decorative Arts",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 326,
+            "location_code": "G",
+            "level_1": "IMA",
+            "level_2": "Grounds",
+            "level_3": "G",
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": 53558,
         "related_objects": [],
-            "guids": [],
+        "guids": [],
         "deaccession": {
             "deaccession_method": "Deaccession",
             "deaccession_date_year": 2018,
@@ -10430,7 +11170,7 @@
                 "notes": "Metric: 58.4 x 67.9 x 7.6 cm. (framed)"
             }],
         "credit_line": "Collection of the Lilly Endowment",
-        "rights": ["© The Estates of William J. and Constance Forsyth", "Public Domain \nCourtesy the Estates of William J. and Constance Forsyth"],
+        "rights": "© The Estates of William J. and Constance Forsyth",
         "rights_uris": [
             {
                 "type": "RightsStatements.org URI",
@@ -10439,7 +11179,17 @@
         "provenance": "Lilly Endowment, Indianapolis, Indiana",
         "department": "Registration (Returned Loans)",
         "on_view": false,
-        "current_location": {},
+        "current_location": {
+            "location_irn": 10,
+            "location_code": "Returned",
+            "level_1": "Returned",
+            "level_2": null,
+            "level_3": null,
+            "level_4": null,
+            "level_5": null,
+            "level_6": null,
+            "level_7": null,
+            "level_8": null},
         "parent_irn": null,
         "related_objects": [
             {
@@ -10450,7 +11200,7 @@
                 "relationship": "related record",
                 "object_irn": 59216
             }],
-            "guids": [],
+        "guids": [],
         "deaccession": {},
         "date_modified": "2019-08-08"
     }]

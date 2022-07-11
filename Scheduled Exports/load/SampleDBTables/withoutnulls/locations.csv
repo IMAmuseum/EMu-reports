@@ -1,0 +1,13 @@
+﻿location_id,emu_irn,publish,code,level_1,level_2,level_3,level_4,level_5,level_6,level_7,level_8,date_modified
+1,738,FALSE,Ac1.lv1,IMA,storage,Ac1,lv1,,null,,null,2022-07-01
+2,2351,FALSE,P.63w,IMA,storage,P,63w,,null,,null,2021-08-15
+3,10315,FALSE,F25.cg5.r6.lv4,IMA,Print Storage,F25,cg5,r6,lv4,,null,2022-05-02
+4,10326,FALSE,F25.cg5.r7.lv13,IMA,Print Storage,F25,cg5,r7,lv13,,null,2022-03-02
+5,326,TRUE,G,IMA,Grounds,G,,null,,null,,2021-03-03
+6,87,FALSE,On Loan,On Loan,,null,,null,,null,,2018-07-10
+7,14123,FALSE,W303.c1.wall,IMA,Eiteljorg Suite of African and Oceanic Art,W303,c1,wall,,null,,2019-08-01
+8,9972,FALSE,F25.cg6.r4.lv12,IMA,Print Storage,F25,cg6,r4,lv12,,null,2015-08-02
+9,3674,FALSE,P.10w,IMA,storage,P,10w,,null,,null,2016-02-02
+10,35,FALSE,Ec43.lv4,IMA,storage,Ec43,lv4,,null,,null,2020-09-10
+11,14825,TRUE,W202,IMA,Pulliam Family Great Hall,W202,,null,,null,,2021-03-09
+12,3965,FALSE,P.92w,IMA,storage,P,92w,,null,,null,2021-10-10

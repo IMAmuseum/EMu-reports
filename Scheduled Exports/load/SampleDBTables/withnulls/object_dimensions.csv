@@ -1,0 +1,27 @@
+﻿object_id,type,height,width,depth,diameter,length_unit,weight,weight_unit,notes,sort_order
+1,Dimensions,17.25,null,null,null,in.,null,null,Metric: 43.8 cm.,1
+2,Unframed Dimensions,27.25,16.25,null,null,in.,null,null,Metric: 69.2 x 41.2 cm. (canvas),1
+2,Framed Dimensions,34.75,24.75,4,null,in.,null,null,Metric: 88.2 x 62.8 x 10.1 cm. (framed),2
+3,Image Dimensions,9,13.9375,null,null,in.,null,null,Metric: 22.7 x 35.4 cm. (image),1
+4,Sheet Dimensions,22.3,null,null,null,cm.,null,null,sheet,1
+5,Dimensions A,372,36,11,null,in.,null,null,A) Metric: 944.8 x 91.4 x 27.9,1
+5,Dimensions B,98,357,10.25,null,in.,null,null,B) Metric: 248.9 x 906.7 x 26.03,2
+5,Dimensions C,104,271,12,null,in.,null,null,C) Metric: 264.1 x 688.3 x 30.4,3
+5,Dimensions D,228,100,11,null,in.,null,null,D) Metric: 579.1 x 254 x 27.9,4
+5,Dimensions E,480,77,15,null,in.,null,null,E) Metric: 1219.2 x 195.5 x 38.1 (assembled),5
+6,Dimensions,87,null,null,null,in.,null,null,null,1
+7,Dimensions,0.5,null,null,2,in.,null,null,Metric: 1.3 x 5.1 (diam.) cm.,1
+8,Dimensions,0.5,null,null,2,in.,null,null,Metric: 1.3 x 5.1,1
+9,Dimensions,0.5,null,null,2,in.,null,null,Metric: 1.3 x 5.1 cm.,1
+10,Image Dimensions,7.125,9.125,null,null,in.,null,null,Metric: 18.1 x 23.2 (image),1
+10,Sheet Dimensions,12,18,null,null,in.,null,null,Metric: 30.5 x 45.7 (sheet),2
+11,Dimensions,23.75,19.25,null,null,in.,null,null,Metric: 60.3 x 48.9 cm.,1
+11,Framed Dimensions,30.125,26,null,null,in.,null,null,Metric: 76.5 x 66 cm. (framed),2
+12,Dimensions,12.5,2.5,0.38,null,in.,null,null,Metric: 31.8 x 6.4 x 0.9 cm.,1
+13,Dimensions,144,144,72,null,in.,null,null,Metric: 365.8 x 365.8 x 182.9 cm.,1
+13,Weight,null,null,null,null,null,9200,lbs.,total weight,2
+13,Weight,null,null,null,null,null,4100,lbs.,weight of LV,3
+13,Weight,null,null,null,null,null,2300,lbs.,weight of O,4
+13,Weight,null,null,null,null,null,2800,lbs.,weight of E,5
+14,Dimensions,39.188,33.25,null,null,in.,null,null,Metric: 99.5 x 84.5 cm.,1
+14,Framed Dimensions,45.125,39,2.375,null,in.,null,null,Metric: 114.6 x 99.1 x 6 cm. (framed),2

@@ -1,0 +1,5 @@
+﻿object_id_1,object_id_2,relationship,sort_order
+8,7,blanket record,1
+8,9,pair (one of),2
+9,7,blanket record,1
+9,8,pair (one of),2

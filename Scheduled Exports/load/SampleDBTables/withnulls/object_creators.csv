@@ -1,0 +1,12 @@
+﻿object_id,party_id,attribution,role,sort_order
+2,1,null,Artist,1
+3,3,null,Artist,1
+4,6,null,Artist,1
+5,7,null,Artist,1
+6,8,null,Artist,1
+10,9,null,Artist,1
+11,12,After,"Artist, after",1
+13,13,null,Artist,1
+13,14,null,Foundry,2
+14,15,null,Artist,1
+14,16,After,"Artist, after",2

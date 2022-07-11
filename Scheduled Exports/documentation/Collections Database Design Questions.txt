@@ -2,7 +2,7 @@
 
 ## Overall design approach
 
-- data type preferences? currently using int, boolean (bit?), varchar (no n specified), varchar(max), date, decimal(18,4)
+- data type preferences? currently using int, boolean, varchar (no n specified), varchar(max), date, decimal(18,4)
 - deleted records - setup a scheduled export from the Audit module to identify EMu records that have been deleted to then remove from the database?
 - updating existing records across the database - drop and insert across the board, or just many-to-one/many-to-many (join) data points?
 
@@ -19,7 +19,7 @@
 
 - any way to get insight on the current collection database set-up for managing locations?
 --- Daniel said he would look into pulling
-- using movement type = 'Exhibition Location' to determine if onView true/false
+- using movement type = 'Exhibition Location' to determine if on_view true/false
 
 
 

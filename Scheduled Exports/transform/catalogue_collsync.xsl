@@ -80,7 +80,7 @@
                 "notes": <xsl:choose><xsl:when test="atom[@name='PhyDimensionNotes'] != ''">"<xsl:value-of select="replace(replace(atom[@name='PhyDimensionNotes'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>
             }<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>],
         "credit_line": <xsl:choose><xsl:when test="atom[@name='SumCreditLine'] != ''">"<xsl:value-of select="replace(replace(replace(atom[@name='SumCreditLine'], '\n', '\\n'), '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-        "rights": [<xsl:for-each select="table[@name='Rights']/tuple[atom[@name='RigAcknowledgement'] != '']">"<xsl:value-of select="replace(replace(replace(atom[@name='RigAcknowledgement'], '\n', '\\n'), '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"<xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
+        "rights": <xsl:choose><xsl:when test="table[@name='Rights']/tuple[1]/atom[@name='RigAcknowledgement'] != ''">"<xsl:value-of select="replace(replace(replace(table[@name='Rights']/tuple[1]/atom[@name='RigAcknowledgement'], '\n', '\\n'), '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "rights_uris": [<xsl:for-each select="table[@name='RightsURIs']/tuple[atom[@name='AdmGUIDType_tab'] != '' and atom[@name='AdmGUIDValue_tab'] != '']">
             {
                 "type": "<xsl:value-of select="atom[@name='AdmGUIDType_tab']"/>",
@@ -89,7 +89,7 @@
         "provenance": <xsl:choose><xsl:when test="atom[@name='CreProvenance'] != ''">"<xsl:value-of select="replace(replace(replace(atom[@name='CreProvenance'], '\n', '\\n'), '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "department": <xsl:choose><xsl:when test="atom[@name='PhyCollectionArea'] != ''">"<xsl:value-of select="substring-after(replace(replace(atom[@name='PhyCollectionArea'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;'), '-')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "on_view": <xsl:choose><xsl:when test="atom[@name='LocMovementType'] = 'Exhibition Location'">true</xsl:when><xsl:otherwise>false</xsl:otherwise></xsl:choose>,
-        "current_location": {<xsl:if test="atom[@name='LocMovementType'] = 'Exhibition Location'">
+        "current_location": {<xsl:if test="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='irn'] != ''">
             "location_irn": <xsl:value-of select="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='irn']"/>,
             "location_code": <xsl:choose><xsl:when test="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='LocLocationCode'] != ''">"<xsl:value-of select="replace(replace(table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='LocLocationCode'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
             "level_1": <xsl:choose><xsl:when test="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel1'] != ''">"<xsl:value-of select="replace(replace(table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='LocLevel1'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
@@ -106,7 +106,7 @@
                 "relationship": "<xsl:value-of select="replace(replace(atom[@name='AssRelationship'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>",
                 "object_irn": <xsl:value-of select="atom[@name='irn']"/>
             }<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>],
-            "guids": [<xsl:for-each select="table[@name='GUIDs']/tuple[atom[@name='AdmGUIDType'] != 'Dagwood ID' and atom[@name='AdmGUIDType'] != '' and atom[@name='AdmGUIDValue'] != '']">
+        "guids": [<xsl:for-each select="table[@name='GUIDs']/tuple[atom[@name='AdmGUIDType'] != 'Dagwood ID' and atom[@name='AdmGUIDType'] != '' and atom[@name='AdmGUIDValue'] != '']">
             {
                 "preferred": <xsl:choose><xsl:when test="atom[@name='AdmGUIDIsPreferred'] = 'Yes'">true</xsl:when><xsl:otherwise>false</xsl:otherwise></xsl:choose>,
                 "type": "<xsl:value-of select="atom[@name='AdmGUIDType']"/>",
