@@ -9,9 +9,9 @@ CREATE TABLE "objects" (
   "date_accessioned_year" int,
   "date_accessioned_month" int,
   "date_accessioned_day" int,
-  "title" varchar(max),
-  "series_title" varchar(max),
-  "portfolio_title" varchar(max),
+  "title" varchar,
+  "series_title" varchar,
+  "portfolio_title" varchar,
   "date_created" varchar,
   "date_created_earliest" int,
   "date_created_latest" int,
@@ -21,14 +21,14 @@ CREATE TABLE "objects" (
   "period" varchar,
   "dynasty" varchar,
   "record_type" varchar NOT NULL,
-  "medium_support" varchar(max),
+  "medium_support" varchar,
   "technique" varchar,
   "style" varchar,
-  "mark_description" varchar(max),
-  "dimensions" varchar(max),
-  "credit_line" varchar(max),
-  "rights_acknowledgement" varchar(max),
-  "provenance" varchar(max),
+  "mark_description" varchar,
+  "dimensions" varchar,
+  "credit_line" varchar,
+  "rights_acknowledgement" varchar,
+  "provenance" varchar,
   "department" int,
   "on_view" boolean NOT NULL,
   "location_id" int,
@@ -37,9 +37,9 @@ CREATE TABLE "objects" (
   "deaccession_date_year" int,
   "deaccession_date_month" int,
   "deaccession_date_day" int,
-  "deaccession_notes" varchar(max),
+  "deaccession_notes" varchar,
   "recipient" int,
-  "transfer_notes" varchar(max),
+  "transfer_notes" varchar,
   "date_modified" date NOT NULL
 );
 
@@ -57,7 +57,7 @@ CREATE TABLE "object_flags" (
 
 CREATE TABLE "alt_titles" (
   "object_id" int NOT NULL,
-  "alt_title" varchar(max),
+  "alt_title" varchar,
   "sort_order" int NOT NULL,
   PRIMARY KEY ("object_id", "sort_order")
 );
@@ -162,7 +162,7 @@ CREATE TABLE "object_dimensions" (
   "length_unit" varchar,
   "weight" decimal(18,4),
   "weight_unit" varchar,
-  "notes" varchar(max),
+  "notes" varchar,
   "sort_order" int NOT NULL,
   PRIMARY KEY ("object_id", "sort_order")
 );
@@ -227,7 +227,7 @@ CREATE TABLE "narratives" (
   "date_year" int,
   "date_month" int,
   "date_day" int,
-  "narrative" varchar(max) NOT NULL,
+  "narrative" varchar NOT NULL,
   "date_modified" date NOT NULL
 );
 
@@ -264,7 +264,7 @@ CREATE TABLE "parties" (
   "emu_irn" int NOT NULL,
   "publish" boolean NOT NULL,
   "party_type" varchar,
-  "full_name" varchar(max),
+  "full_name" varchar,
   "title" varchar,
   "first_name" varchar,
   "middle_name" varchar,
@@ -276,17 +276,17 @@ CREATE TABLE "parties" (
   "birth_place" varchar,
   "death_date" varchar,
   "death_place" varchar,
-  "organization_name" varchar(max),
+  "organization_name" varchar,
   "commencement_date" varchar,
   "completion_date" varchar,
-  "collaboration_name" varchar(max),
+  "collaboration_name" varchar,
   "acronym" varchar,
   "date_modified" date NOT NULL
 );
 
 CREATE TABLE "party_other_names" (
   "party_id" int NOT NULL,
-  "other_name" varchar(max) NOT NULL,
+  "other_name" varchar NOT NULL,
   "sort_order" int NOT NULL,
   PRIMARY KEY ("party_id", "sort_order")
 );
