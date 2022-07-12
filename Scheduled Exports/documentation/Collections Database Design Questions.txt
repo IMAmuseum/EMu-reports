@@ -27,3 +27,11 @@
 
 - how to handle "unknown" creators? Should not be identified by the unique ID, because it arbitrarily links objects to a common creator when they're all just Unknown.
 - possibly suggest that Registration use the After/Follower field with "Unknown" value, instead of a linked Party record?
+
+
+
+## Sample Database Tables Script Notes
+- BOOLEAN and BIT versions (SQL doesn't support BOOLEAN)
+- Skipping the ID insertion for tables set to auto-increment
+- Escaping ' with '' (SQL syntax, I believe this is the same for PostgreSQL)
+- Do I need to transform any single quotes, or will that be handled in the script?

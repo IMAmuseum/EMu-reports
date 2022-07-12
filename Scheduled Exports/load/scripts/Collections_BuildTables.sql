@@ -1,4 +1,4 @@
-USE CollectionsTest
+USER CollectionsTest
 GO
 
 CREATE TABLE [objects] (
@@ -12,9 +12,9 @@ CREATE TABLE [objects] (
   [date_accessioned_year] int,
   [date_accessioned_month] int,
   [date_accessioned_day] int,
-  [title] nvarchar(255),
-  [series_title] nvarchar(255),
-  [portfolio_title] nvarchar(255),
+  [title] nvarchar(max),
+  [series_title] nvarchar(max),
+  [portfolio_title] nvarchar(max),
   [date_created] nvarchar(255),
   [date_created_earliest] int,
   [date_created_latest] int,
@@ -27,9 +27,10 @@ CREATE TABLE [objects] (
   [medium_support] nvarchar(255),
   [technique] nvarchar(255),
   [style] nvarchar(255),
-  [mark_description] nvarchar(255),
-  [dimensions] nvarchar(255),
-  [credit_line] nvarchar(255),
+  [mark_description] nvarchar(max),
+  [dimensions] nvarchar(max),
+  [credit_line] nvarchar(max),
+  [rights_acknowledgement] nvarchar(max),
   [provenance] varchar(max),
   [department] int,
   [on_view] bit NOT NULL,
@@ -62,7 +63,7 @@ GO
 
 CREATE TABLE [alt_titles] (
   [object_id] int NOT NULL,
-  [alt_title] nvarchar(255),
+  [alt_title] nvarchar(max),
   [sort_order] int NOT NULL,
   PRIMARY KEY ([object_id], [sort_order])
 )
@@ -142,7 +143,7 @@ CREATE TABLE [object_types] (
 GO
 
 CREATE TABLE [mark_types] (
-  [mark_type_id] int PRIMARY KEY NOT NULL,
+  [mark_type_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [mark_type] nvarchar(255) UNIQUE NOT NULL
 )
 GO
@@ -181,7 +182,7 @@ CREATE TABLE [object_dimensions] (
   [length_unit] nvarchar(255),
   [weight] decimal(18,4),
   [weight_unit] nvarchar(255),
-  [notes] nvarchar(255),
+  [notes] nvarchar(max),
   [sort_order] int NOT NULL,
   PRIMARY KEY ([object_id], [sort_order])
 )
@@ -266,7 +267,7 @@ CREATE TABLE [narrative_authors] (
 )
 GO
 
-CREATE TABLE [narratives_objects] (
+CREATE TABLE [narrative_objects] (
   [narrative_id] int NOT NULL,
   [object_id] int NOT NULL,
   [sort_order] int NOT NULL,
@@ -293,8 +294,9 @@ GO
 CREATE TABLE [parties] (
   [party_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int NOT NULL,
+  [publish] bit NOT NULL,
   [party_type] nvarchar(255),
-  [full_name] nvarchar(255),
+  [full_name] nvarchar(max),
   [title] nvarchar(255),
   [first_name] nvarchar(255),
   [middle_name] nvarchar(255),
@@ -306,10 +308,10 @@ CREATE TABLE [parties] (
   [birth_place] nvarchar(255),
   [death_date] nvarchar(255),
   [death_place] nvarchar(255),
-  [organization_name] nvarchar(255),
+  [organization_name] nvarchar(max),
   [commencement_date] nvarchar(255),
   [completion_date] nvarchar(255),
-  [collaboration_name] nvarchar(255),
+  [collaboration_name] nvarchar(max),
   [acronym] nvarchar(255),
   [date_modified] date NOT NULL
 )
@@ -317,7 +319,7 @@ GO
 
 CREATE TABLE [party_other_names] (
   [party_id] int NOT NULL,
-  [other_name] nvarchar(255) NOT NULL,
+  [other_name] nvarchar(max) NOT NULL,
   [sort_order] int NOT NULL,
   PRIMARY KEY ([party_id], [sort_order])
 )
@@ -459,10 +461,10 @@ GO
 ALTER TABLE [narrative_authors] ADD FOREIGN KEY ([party_id]) REFERENCES [parties] ([party_id])
 GO
 
-ALTER TABLE [narratives_objects] ADD FOREIGN KEY ([narrative_id]) REFERENCES [narratives] ([narrative_id])
+ALTER TABLE [narrative_objects] ADD FOREIGN KEY ([narrative_id]) REFERENCES [narratives] ([narrative_id])
 GO
 
-ALTER TABLE [narratives_objects] ADD FOREIGN KEY ([object_id]) REFERENCES [objects] ([object_id])
+ALTER TABLE [narrative_objects] ADD FOREIGN KEY ([object_id]) REFERENCES [objects] ([object_id])
 GO
 
 ALTER TABLE [narrative_events] ADD FOREIGN KEY ([narrative_id]) REFERENCES [narratives] ([narrative_id])
