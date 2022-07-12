@@ -29,7 +29,6 @@ DROP TABLE [events];
 DROP TABLE [narratives];
 DROP TABLE [parties];
 DROP TABLE [objects];
-
 DROP TABLE [roles];
 DROP TABLE [rights_uris];
 DROP TABLE [mark_types];

@@ -1,22 +1,22 @@
-﻿party_id,emu_irn,party_type,full_name,title,first_name,middle_name,last_name,suffix,gender,nationality,birth_date,birth_place,death_date,death_place,organization_name,commencement_date,completion_date,collaboration_name,acronym,date_modified
-1,733,Registration Verified,Charles J. Fiscus,,Charles,J.,Fiscus,,Male,American,1861,,1884,,,,,,,2022-02-18
-2,9711,IMA Staff,Leslie Anderson-Perkins,,Leslie,,Anderson-Perkins,,Female,,,,,,,,,,,2022-03-02
-3,592,Person,Utagawa Hiroshige,,,,Utagawa Hiroshige 歌川広重,,Male,Japanese,1797,,1858,,,,,,,2022-06-08
-4,2515,Registration Verified,,,,,H^oeid^o,,Unknown,,,,,,,,,,,2019-01-09
-5,2514,Registration Verified,Takenouchi Magohachi,,,,Takenouchi Magohachi,,,,,,,,,,,,,2019-01-09
-6,11362,Person,Katsushika Hokusai 葛飾北斎,,,,Katsushika Hokusai 葛飾北斎,,Male,Japanese,1760,,1849,,,,,,,2019-01-09
-7,613279,Place Holder,Roy Lichtenstein,,Roy,,Lichtenstein,,Male,American,1923,,1997,,,,,,,2022-06-08
-8,2741,Registration Verified,Unknown,,,,Unknown,,,,,,,,,,,,,2019-05-09
-9,601,Place Holder,Alexandre Calame,,Alexandre,,Calame,,Male,Swiss,1810,,1864,,,,,,,2019-01-09
-10,14044,Organisation,Jacomme & Cie,,,,,,,,,,,,Jacomme & Cie,,,,,2020-12-14
-11,12095,Person,François Delarue,,François,,Delarue,,Male,French,,,,,,circa 1850's,circa 1860's,,,2019-01-09
-12,600739,Place Holder,Hieronymus Bosch,,Hieronymus,,Bosch,,Male,Netherlandish,1450,,1516,,,,,,,2022-06-08
-13,615130,Person,Robert Indiana,,Robert,,Indiana,,Male,American,1928,"New Castle, Indiana",2018,"Vinalhaven, Maine",,,,,,2022-06-08
-14,10433,Organisation,"Lippincott, LLC",,,,,,Unknown,American,,,,,"Lippincott, LLC",1966,,,,2019-02-18
-15,610521,Place Holder,James Thornhill,,James,,Thornhill,,Male,British,1675,,1734,,,,,,,2016-08-17
-16,619988,Place Holder,Jonathan Richardson the elder,,Jonathan,,Richardson,the elder,Male,British,1665,,1745,,,,,,,2019-01-09
-17,14152,Organisation,Lilly House and Gardens,,,,,,,,,,,,Lilly House and Gardens,,,,,2021-07-19
-18,7052,Collaboration,Los Carpinteros,,,,,,,Cuban,,,,,,1992,,Los Carpinteros,,2021-06-23
-19,7051,Registration Verified,Dagoberto Rodríguez Sánchez,,Dagoberto,,Rodríguez Sánchez,,Male,Cuban,1969,Cuba,,,,,,,,2019-01-09
-20,7050,Registration Verified,Marco A. Castillo Valdés,,Marco,Antonio,Castillo Valdés,,Male,Cuban,1971,Cuba,,,,,,,,2019-01-10
-21,620,Place Holder,Wayman Adams,,Wayman,,Adams,,Male,American,1883,"Muncie, Indiana",1959,"Austin, Texas",,,,,,2022-02-18
+﻿party_id,emu_irn,publish,party_type,full_name,title,first_name,middle_name,last_name,suffix,gender,nationality,birth_date,birth_place,death_date,death_place,organization_name,commencement_date,completion_date,collaboration_name,acronym,date_modified
+1,733,TRUE,Registration Verified,Charles J. Fiscus,,Charles,J.,Fiscus,,Male,American,1861,,1884,,,,,,,2022-02-18
+2,9711,FALSE,IMA Staff,Leslie Anderson-Perkins,,Leslie,,Anderson-Perkins,,Female,,,,,,,,,,,2022-03-02
+3,592,TRUE,Person,Utagawa Hiroshige,,,,Utagawa Hiroshige 歌川広重,,Male,Japanese,1797,,1858,,,,,,,2022-06-08
+4,2515,TRUE,Registration Verified,,,,,H^oeid^o,,Unknown,,,,,,,,,,,2019-01-09
+5,2514,TRUE,Registration Verified,Takenouchi Magohachi,,,,Takenouchi Magohachi,,,,,,,,,,,,,2019-01-09
+6,11362,FALSE,Person,Katsushika Hokusai 葛飾北斎,,,,Katsushika Hokusai 葛飾北斎,,Male,Japanese,1760,,1849,,,,,,,2019-01-09
+7,613279,TRUE,Place Holder,Roy Lichtenstein,,Roy,,Lichtenstein,,Male,American,1923,,1997,,,,,,,2022-06-08
+8,2741,TRUE,Registration Verified,Unknown,,,,Unknown,,,,,,,,,,,,,2019-05-09
+9,601,TRUE,Place Holder,Alexandre Calame,,Alexandre,,Calame,,Male,Swiss,1810,,1864,,,,,,,2019-01-09
+10,14044,FALSE,Organisation,Jacomme & Cie,,,,,,,,,,,,Jacomme & Cie,,,,,2020-12-14
+11,12095,TRUE,Person,François Delarue,,François,,Delarue,,Male,French,,,,,,circa 1850's,circa 1860's,,,2019-01-09
+12,600739,TRUE,Place Holder,Hieronymus Bosch,,Hieronymus,,Bosch,,Male,Netherlandish,1450,,1516,,,,,,,2022-06-08
+13,615130,TRUE,Person,Robert Indiana,,Robert,,Indiana,,Male,American,1928,"New Castle, Indiana",2018,"Vinalhaven, Maine",,,,,,2022-06-08
+14,10433,TRUE,Organisation,"Lippincott, LLC",,,,,,Unknown,American,,,,,"Lippincott, LLC",1966,,,,2019-02-18
+15,610521,TRUE,Place Holder,James Thornhill,,James,,Thornhill,,Male,British,1675,,1734,,,,,,,2016-08-17
+16,619988,TRUE,Place Holder,Jonathan Richardson the elder,,Jonathan,,Richardson,the elder,Male,British,1665,,1745,,,,,,,2019-01-09
+17,14152,FALSE,Organisation,Lilly House and Gardens,,,,,,,,,,,,Lilly House and Gardens,,,,,2021-07-19
+18,7052,FALSE,Collaboration,Los Carpinteros,,,,,,,Cuban,,,,,,1992,,Los Carpinteros,,2021-06-23
+19,7051,TRUE,Registration Verified,Dagoberto Rodríguez Sánchez,,Dagoberto,,Rodríguez Sánchez,,Male,Cuban,1969,Cuba,,,,,,,,2019-01-09
+20,7050,TRUE,Registration Verified,Marco A. Castillo Valdés,,Marco,Antonio,Castillo Valdés,,Male,Cuban,1971,Cuba,,,,,,,,2019-01-10
+21,620,TRUE,Place Holder,Wayman Adams,,Wayman,,Adams,,Male,American,1883,"Muncie, Indiana",1959,"Austin, Texas",,,,,,2022-02-18
