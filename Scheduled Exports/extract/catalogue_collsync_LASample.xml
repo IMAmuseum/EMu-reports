@@ -144,11 +144,14 @@
     table           DeaccessionDetails
       text short      DeaDeaccessionMethod
       date            DeaDeaccessionDate
-      text long       DeaDeaccessionNotes
       tuple           DeaReceivingPartyRef
         integer         irn
       end
       text long       DeaTransferNotes
+    end
+    table           Valuation
+      text long       ValReasonForValuation
+      float           ValValuationAmount
     end
     date            AdmDateModified
   end
@@ -368,17 +371,6 @@ Inscribed: title and series title</atom>
         <atom name="AdmGUIDValue">80085</atom>
       </tuple>
     </table>
-    <table name="DeaccessionDetails">
-      <tuple>
-        <atom name="DeaDeaccessionMethod"></atom>
-        <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">John Teramoto, IMA Curator of Asian Art, this is a late printing.</atom>
-        <tuple name="DeaReceivingPartyRef">
-            <atom name="irn"></atom>
-        </tuple>
-        <atom name="DeaTransferNotes"></atom>
-      </tuple>
-    </table>
     <atom name="AdmDateModified">2022-06-07</atom>
   </tuple>
 
@@ -584,6 +576,12 @@ Inscribed: title and series title</atom>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">87</atom>
         </tuple>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">3000.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2022-07-11</atom>
@@ -947,6 +945,12 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">1000000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-05-19</atom>
   </tuple>
 
@@ -1158,15 +1162,10 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
-    <table name="DeaccessionDetails">
+    <table name="Valuation">
       <tuple>
-        <atom name="DeaDeaccessionMethod"></atom>
-        <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">Robin Cooper, Manager of Curatorial Affairs, recommends this piece for deaccession because it falls outside of the collecting plan and institutional priorities of the Indianapolis Museum of Art.</atom>
-        <tuple name="DeaReceivingPartyRef">
-            <atom name="irn"></atom>
-        </tuple>
-        <atom name="DeaTransferNotes"></atom>
+        <atom name="ValReasonForValuation">Estimated Value</atom>
+        <atom name="ValValuationAmount">50.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2022-07-06</atom>
@@ -1305,11 +1304,16 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
         <tuple name="DeaReceivingPartyRef">
             <atom name="irn"></atom>
         </tuple>
         <atom name="DeaTransferNotes"></atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">250.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2021-05-03</atom>
@@ -1431,11 +1435,16 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
         <tuple name="DeaReceivingPartyRef">
             <atom name="irn"></atom>
         </tuple>
         <atom name="DeaTransferNotes"></atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">250.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2019-09-30</atom>
@@ -1565,11 +1574,16 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
         <tuple name="DeaReceivingPartyRef">
             <atom name="irn"></atom>
         </tuple>
         <atom name="DeaTransferNotes"></atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">250.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2021-05-03</atom>
@@ -1699,11 +1713,16 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">slated for deaccession</atom>
         <tuple name="DeaReceivingPartyRef">
             <atom name="irn"></atom>
         </tuple>
         <atom name="DeaTransferNotes"></atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">250.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2021-05-03</atom>
@@ -1844,6 +1863,12 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">10000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-05-16</atom>
   </tuple>
 
@@ -1967,11 +1992,16 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession Candidate</atom>
         <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">This work was identifed during the 2015-2017 Collection Ranking Project as a candidate for deaccession, due to its ethnographic nature it is not suitable for an art museum.</atom>
         <tuple name="DeaReceivingPartyRef">
             <atom name="irn"></atom>
         </tuple>
         <atom name="DeaTransferNotes"></atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">100.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2020-06-19</atom>
@@ -2615,6 +2645,12 @@ Censor's seal: single kiwame</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Auction Sale Price</atom>
+        <atom name="ValValuationAmount">5625.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2020-12-11</atom>
   </tuple>
 
@@ -2756,6 +2792,12 @@ Censor's seal: single kiwame</atom>
         <atom name="AdmGUIDIsPreferred">No</atom>
         <atom name="AdmGUIDType">Dagwood ID</atom>
         <atom name="AdmGUIDValue">41696</atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">10000.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2022-06-08</atom>
@@ -3013,6 +3055,12 @@ Signed in plate: 1094 B. A. Calame - 7ime Livraison - 1853 - No. 7</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Insurance valuation</atom>
+        <atom name="ValValuationAmount">125000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-02-18</atom>
   </tuple>
 
@@ -3235,17 +3283,6 @@ Engraver's seal: Horisen</atom>
         </tuple>
       </tuple>
     </table>
-    <table name="DeaccessionDetails">
-      <tuple>
-        <atom name="DeaDeaccessionMethod"></atom>
-        <atom name="DeaDeaccessionDate"></atom>
-        <atom name="DeaDeaccessionNotes">Per Niloo - keep</atom>
-        <tuple name="DeaReceivingPartyRef">
-            <atom name="irn"></atom>
-        </tuple>
-        <atom name="DeaTransferNotes"></atom>
-      </tuple>
-    </table>
     <atom name="AdmDateModified">2022-02-22</atom>
   </tuple>
 
@@ -3380,6 +3417,12 @@ Engraver's seal: Horisen</atom>
           <atom name="LocLevel7"></atom>
           <atom name="LocLevel8"></atom>
         </tuple>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation"></atom>
+        <atom name="ValValuationAmount">100.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2022-05-09</atom>
@@ -3601,6 +3644,12 @@ Engraver's seal: Horisen</atom>
     <table name="Related">
       <tuple>
         <atom name="irn">44498</atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Outgoing Loan Estimated Value</atom>
+        <atom name="ValValuationAmount">20000.00</atom>
       </tuple>
     </table>
     <atom name="AdmDateModified">2022-03-28</atom>
@@ -3826,17 +3875,143 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2021-05-03</atom>
-        <atom name="DeaDeaccessionNotes">Lilly House deaccession</atom>
         <tuple name="DeaReceivingPartyRef">
           <atom name="irn">14152</atom>
         </tuple>
         <atom name="DeaTransferNotes">Lilly House reclassification</atom>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">1500.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-02-24</atom>
   </tuple>
 
   <!-- Row 31 -->
+  <tuple>
+    <atom name="irn">18078</atom>
+    <table name="Flags">
+      <tuple>
+        <atom name="TitObjectRating">Deaccessioned</atom>
+      </tuple>
+      <tuple>
+        <atom name="TitObjectRating">Disposed</atom>
+      </tuple>
+    </table>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
+    <atom name="TitObjectStatus">Deaccessioned</atom>
+    <atom name="TitAccessionNo">73.74.1</atom>
+    <atom name="TitPreviousAccessionNo">TR0077/1</atom>
+    <atom name="TitAccessionDate">1973</atom>
+    <atom name="TitMainTitle">plate</atom>
+    <atom name="TitSeriesTitle"></atom>
+    <atom name="TitCollectionTitle"></atom>
+    <table name="Culture">
+      <tuple>
+        <atom name="CreCreationNationality2">Italian</atom>
+      </tuple>
+    </table>
+    <atom name="CreDateCreated"></atom>
+    <atom name="CreEarliestDate"></atom>
+    <atom name="CreLatestDate"></atom>
+    <atom name="CreDateDesigned"></atom>
+    <atom name="CreEarliestDesignDate"></atom>
+    <atom name="CreLatestDesignDate"></atom>
+    <atom name="CreCreationPeriod"></atom>
+    <atom name="CreCreationDynasty"></atom>
+    <table name="CreLoc">
+      <tuple>
+        <atom name="CreCountry">Italy</atom>
+      </tuple>
+    </table>
+    <atom name="TitObjectType">Containers</atom>
+    <table name="ObjType">
+      <tuple>
+        <atom name="PhyMediaCategory">dinnerware</atom>
+      </tuple>
+    </table>
+    <table name="Medium">
+      <tuple>
+        <atom name="PhyMedium">earthenware</atom>
+      </tuple>
+    </table>
+    <table name="Support">
+      <tuple>
+        <atom name="PhySupport">earthenware</atom>
+      </tuple>
+    </table>
+    <atom name="PhyMediumAndSupport">earthenware</atom>
+    <atom name="PhyTechnique"></atom>
+    <atom name="PhyStyle"></atom>
+    <atom name="CrePrimaryInscriptions"></atom>
+    <atom name="PhyConvertedDims">D: 9-1/4 in.</atom>
+    <table name="Dims">
+      <tuple>
+        <atom name="PhyType">Dimensions</atom>
+        <atom name="PhyDepth">9.2500</atom>
+        <atom name="PhyUnitLength">in.</atom>
+      </tuple>
+    </table>
+    <atom name="SumCreditLine">Gift of Mrs. C. W. Weathers from the Hazel H. Force Estate</atom>
+    <table name="Rights">
+      <tuple>
+        <atom name="irn">1700</atom>
+        <atom name="RigAcknowledgement">No Known Rights Holder</atom>
+      </tuple>
+    </table>
+    <table name="RightsURIs">
+      <tuple>
+      </tuple>
+    </table>
+    <atom name="CreProvenance"></atom>
+    <atom name="PhyCollectionArea">903.1-Decorative Arts</atom>
+    <atom name="LocMovementType">Storage Location</atom>
+    <table name="CurLoc">
+      <tuple>
+        <tuple name="LocCurrentLocationRef">
+          <atom name="irn">19</atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="PermLoc">
+      <tuple>
+        <tuple name="LocPermanentLocationRef">
+          <atom name="irn">810</atom>
+          <atom name="LocLocationCode">STU.F2.BOX14</atom>
+          <atom name="LocLevel1">Stuart's Offsite Storage</atom>
+          <atom name="LocLevel2">STU</atom>
+          <atom name="LocLevel3">F2</atom>
+          <atom name="LocLevel4">BOX14</atom>
+          <atom name="LocLevel5"></atom>
+          <atom name="LocLevel6"></atom>
+          <atom name="LocLevel7"></atom>
+          <atom name="LocLevel8"></atom>
+        </tuple>
+      </tuple>
+    </table>
+    <table name="DeaccessionDetails">
+      <tuple>
+        <atom name="DeaDeaccessionMethod">Deaccession</atom>
+        <atom name="DeaDeaccessionDate">2011-09-15</atom>
+        <tuple name="DeaReceivingPartyRef">
+          <atom name="irn">4656</atom>
+        </tuple>
+        <atom name="DeaTransferNotes">Transferred to Susanin's Premiere Auctions; Sold on 5/12/2012 in Premiere Sale 111 (lot 2082)</atom>
+      </tuple>
+    </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Auction Sale Price</atom>
+        <atom name="ValValuationAmount">2.22</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-02-23</atom>
+  </tuple>
+
+  <!-- Row 32 -->
   <tuple>
     <atom name="irn">17425</atom>
     <table name="Flags">
@@ -3963,10 +4138,16 @@ Engraver's seal: Horisen</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">20000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 32 -->
+  <!-- Row 33 -->
   <tuple>
     <atom name="irn">8543</atom>
     <table name="Flags">
@@ -4101,10 +4282,16 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">25000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 33 -->
+  <!-- Row 34 -->
   <tuple>
     <atom name="irn">20419</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -4228,10 +4415,16 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">4000000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-04-26</atom>
   </tuple>
 
-  <!-- Row 34 -->
+  <!-- Row 35 -->
   <tuple>
     <atom name="irn">1448</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -4365,7 +4558,7 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
-  <!-- Row 35 -->
+  <!-- Row 36 -->
   <tuple>
     <atom name="irn">17577</atom>
     <table name="Flags">
@@ -4491,10 +4684,16 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">6000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2021-12-06</atom>
   </tuple>
 
-  <!-- Row 36 -->
+  <!-- Row 37 -->
   <tuple>
     <atom name="irn">55312</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -4566,7 +4765,7 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 37 -->
+  <!-- Row 38 -->
   <tuple>
     <atom name="irn">41018</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -4661,7 +4860,7 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 38 -->
+  <!-- Row 39 -->
   <tuple>
     <atom name="irn">41019</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -4755,7 +4954,7 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 39 -->
+  <!-- Row 40 -->
   <tuple>
     <atom name="irn">89163</atom>
     <table name="Flags">
@@ -4864,7 +5063,7 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
     <atom name="AdmDateModified">2019-09-09</atom>
   </tuple>
 
-  <!-- Row 40 -->
+  <!-- Row 41 -->
   <tuple>
     <atom name="irn">24892</atom>
     <table name="Flags">
@@ -4978,10 +5177,16 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">20000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 41 -->
+  <!-- Row 42 -->
   <tuple>
     <atom name="irn">89164</atom>
     <table name="Flags">
@@ -5092,10 +5297,16 @@ C) sash: length 81 in.</atom>
         <atom name="irn">89165</atom>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">20000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2019-09-09</atom>
   </tuple>
 
-  <!-- Row 42 -->
+  <!-- Row 43 -->
   <tuple>
     <atom name="irn">89165</atom>
     <table name="Flags">
@@ -5204,7 +5415,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-09-09</atom>
   </tuple>
 
-  <!-- Row 43 -->
+  <!-- Row 44 -->
   <tuple>
     <atom name="irn">37383</atom>
     <table name="Flags">
@@ -5355,10 +5566,16 @@ C) sash: length 81 in.</atom>
         <atom name="AdmGUIDValue">Q27898818</atom>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">75000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-06-08</atom>
   </tuple>
 
-  <!-- Row 44 -->
+  <!-- Row 45 -->
   <tuple>
     <atom name="irn">37087</atom>
     <table name="Flags">
@@ -5474,10 +5691,16 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">60000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-07-01</atom>
   </tuple>
 
-  <!-- Row 45 -->
+  <!-- Row 46 -->
   <tuple>
     <atom name="irn">6136</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -5576,7 +5799,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2021-04-12</atom>
   </tuple>
 
-  <!-- Row 46 -->
+  <!-- Row 47 -->
   <tuple>
     <atom name="irn">8407</atom>
     <table name="Flags">
@@ -5700,10 +5923,16 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">20000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 47 -->
+  <!-- Row 48 -->
   <tuple>
     <atom name="irn">1105</atom>
     <table name="Flags">
@@ -5806,10 +6035,16 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">7000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-02-23</atom>
   </tuple>
 
-  <!-- Row 48 -->
+  <!-- Row 49 -->
   <tuple>
     <atom name="irn">6855</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -5912,7 +6147,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2020-08-05</atom>
   </tuple>
 
-  <!-- Row 49 -->
+  <!-- Row 50 -->
   <tuple>
     <atom name="irn">63355</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -6008,10 +6243,16 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">105000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 50 -->
+  <!-- Row 51 -->
   <tuple>
     <atom name="irn">64018</atom>
     <table name="Flags">
@@ -6140,7 +6381,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2020-04-02</atom>
   </tuple>
 
-  <!-- Row 51 -->
+  <!-- Row 52 -->
   <tuple>
     <atom name="irn">64017</atom>
     <table name="Flags">
@@ -6230,10 +6471,16 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Purchase Price</atom>
+        <atom name="ValValuationAmount">1500.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2020-04-10</atom>
   </tuple>
 
-  <!-- Row 52 -->
+  <!-- Row 53 -->
   <tuple>
     <atom name="irn">64019</atom>
     <table name="Flags">
@@ -6359,7 +6606,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2020-04-02</atom>
   </tuple>
 
-  <!-- Row 53 -->
+  <!-- Row 54 -->
   <tuple>
     <atom name="irn">64628</atom>
     <table name="Flags">
@@ -6484,10 +6731,16 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Purchase Price</atom>
+        <atom name="ValValuationAmount">6193.44</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 54 -->
+  <!-- Row 55 -->
   <tuple>
     <atom name="irn">68186</atom>
     <table name="Flags">
@@ -6664,7 +6917,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 55 -->
+  <!-- Row 56 -->
   <tuple>
     <atom name="irn">68187</atom>
     <table name="Flags">
@@ -6839,7 +7092,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 56 -->
+  <!-- Row 57 -->
   <tuple>
     <atom name="irn">68188</atom>
     <table name="Flags">
@@ -7030,7 +7283,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 57 -->
+  <!-- Row 58 -->
   <tuple>
     <atom name="irn">68189</atom>
     <table name="Flags">
@@ -7205,7 +7458,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 58 -->
+  <!-- Row 59 -->
   <tuple>
     <atom name="irn">68190</atom>
     <table name="Flags">
@@ -7380,7 +7633,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 59 -->
+  <!-- Row 60 -->
   <tuple>
     <atom name="irn">68191</atom>
     <table name="Flags">
@@ -7571,7 +7824,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 60 -->
+  <!-- Row 61 -->
   <tuple>
     <atom name="irn">68192</atom>
     <table name="Flags">
@@ -7762,7 +8015,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 61 -->
+  <!-- Row 62 -->
   <tuple>
     <atom name="irn">68193</atom>
     <table name="Flags">
@@ -7937,7 +8190,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 62 -->
+  <!-- Row 63 -->
   <tuple>
     <atom name="irn">68194</atom>
     <table name="Flags">
@@ -8112,7 +8365,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 63 -->
+  <!-- Row 64 -->
   <tuple>
     <atom name="irn">68195</atom>
     <table name="Flags">
@@ -8289,7 +8542,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 64 -->
+  <!-- Row 65 -->
   <tuple>
     <atom name="irn">68196</atom>
     <table name="Flags">
@@ -8480,7 +8733,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 65 -->
+  <!-- Row 66 -->
   <tuple>
     <atom name="irn">68197</atom>
     <table name="Flags">
@@ -8671,7 +8924,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 66 -->
+  <!-- Row 67 -->
   <tuple>
     <atom name="irn">68198</atom>
     <table name="Flags">
@@ -8862,7 +9115,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 67 -->
+  <!-- Row 68 -->
   <tuple>
     <atom name="irn">68199</atom>
     <table name="Flags">
@@ -9053,7 +9306,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 68 -->
+  <!-- Row 69 -->
   <tuple>
     <atom name="irn">68181</atom>
     <table name="Flags">
@@ -9173,7 +9426,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 69 -->
+  <!-- Row 70 -->
   <tuple>
     <atom name="irn">68180</atom>
     <table name="Flags">
@@ -9345,7 +9598,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 70 -->
+  <!-- Row 71 -->
   <tuple>
     <atom name="irn">68182</atom>
     <table name="Flags">
@@ -9452,7 +9705,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 71 -->
+  <!-- Row 72 -->
   <tuple>
     <atom name="irn">68184</atom>
     <table name="Flags">
@@ -9555,7 +9808,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 72 -->
+  <!-- Row 73 -->
   <tuple>
     <atom name="irn">68183</atom>
     <table name="Flags">
@@ -9726,7 +9979,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 73 -->
+  <!-- Row 74 -->
   <tuple>
     <atom name="irn">68185</atom>
     <table name="Flags">
@@ -9833,7 +10086,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2019-06-13</atom>
   </tuple>
 
-  <!-- Row 74 -->
+  <!-- Row 75 -->
   <tuple>
     <atom name="irn">69062</atom>
     <table name="Flags">
@@ -9941,7 +10194,7 @@ C) sash: length 81 in.</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 75 -->
+  <!-- Row 76 -->
   <tuple>
     <atom name="irn">67743</atom>
     <table name="Flags">
@@ -10057,10 +10310,16 @@ B) ottoman: diam.: 22 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value  IMA Staff</atom>
+        <atom name="ValValuationAmount">5000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 76 -->
+  <!-- Row 77 -->
   <tuple>
     <atom name="irn">69063</atom>
     <table name="Flags">
@@ -10166,7 +10425,7 @@ B) ottoman: diam.: 22 in.</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 77 -->
+  <!-- Row 78 -->
   <tuple>
     <atom name="irn">68903</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -10242,10 +10501,16 @@ B) ottoman: diam.: 22 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Purchase Price</atom>
+        <atom name="ValValuationAmount">100000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2020-11-13</atom>
   </tuple>
 
-  <!-- Row 78 -->
+  <!-- Row 79 -->
   <tuple>
     <atom name="irn">81052</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -10356,10 +10621,16 @@ B) ottoman: diam.: 22 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Insurance Valuation</atom>
+        <atom name="ValValuationAmount">5000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 79 -->
+  <!-- Row 80 -->
   <tuple>
     <atom name="irn">85257</atom>
     <table name="Flags">
@@ -10494,7 +10765,7 @@ B) ottoman: diam.: 22 in.</atom>
     <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 80 -->
+  <!-- Row 81 -->
   <tuple>
     <atom name="irn">82696</atom>
     <table name="Flags">
@@ -10617,10 +10888,16 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">6000000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2021-02-11</atom>
   </tuple>
 
-  <!-- Row 81 -->
+  <!-- Row 82 -->
   <tuple>
     <atom name="irn">85258</atom>
     <table name="Flags">
@@ -10755,7 +11032,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 82 -->
+  <!-- Row 83 -->
   <tuple>
     <atom name="irn">85259</atom>
     <table name="Flags">
@@ -10890,7 +11167,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2020-06-05</atom>
   </tuple>
 
-  <!-- Row 83 -->
+  <!-- Row 84 -->
   <tuple>
     <atom name="irn">85260</atom>
     <table name="Flags">
@@ -11025,7 +11302,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 84 -->
+  <!-- Row 85 -->
   <tuple>
     <atom name="irn">85261</atom>
     <table name="Flags">
@@ -11160,7 +11437,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 85 -->
+  <!-- Row 86 -->
   <tuple>
     <atom name="irn">85262</atom>
     <table name="Flags">
@@ -11295,7 +11572,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 86 -->
+  <!-- Row 87 -->
   <tuple>
     <atom name="irn">85263</atom>
     <table name="Flags">
@@ -11430,7 +11707,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 87 -->
+  <!-- Row 88 -->
   <tuple>
     <atom name="irn">85264</atom>
     <table name="Flags">
@@ -11565,7 +11842,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2019-07-24</atom>
   </tuple>
 
-  <!-- Row 88 -->
+  <!-- Row 89 -->
   <tuple>
     <atom name="irn">88757</atom>
     <table name="Flags">
@@ -11696,7 +11973,7 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 89 -->
+  <!-- Row 90 -->
   <tuple>
     <atom name="irn">83398</atom>
     <table name="Flags">
@@ -11844,10 +12121,16 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">2000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 90 -->
+  <!-- Row 91 -->
   <tuple>
     <atom name="irn">88761</atom>
     <table name="Flags">
@@ -11977,7 +12260,7 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 91 -->
+  <!-- Row 92 -->
   <tuple>
     <atom name="irn">88762</atom>
     <table name="Flags">
@@ -12124,7 +12407,7 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 92 -->
+  <!-- Row 93 -->
   <tuple>
     <atom name="irn">88763</atom>
     <table name="Flags">
@@ -12254,7 +12537,7 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 93 -->
+  <!-- Row 94 -->
   <tuple>
     <atom name="irn">88772</atom>
     <table name="Flags">
@@ -12384,7 +12667,7 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 94 -->
+  <!-- Row 95 -->
   <tuple>
     <atom name="irn">88773</atom>
     <table name="Flags">
@@ -12526,7 +12809,7 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 95 -->
+  <!-- Row 96 -->
   <tuple>
     <atom name="irn">88774</atom>
     <table name="Flags">
@@ -12665,10 +12948,16 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
         <atom name="irn">88773</atom>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">2000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 96 -->
+  <!-- Row 97 -->
   <tuple>
     <atom name="irn">91744</atom>
     <atom name="AdmPublishWebNoPassword">Yes</atom>
@@ -12769,10 +13058,16 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">60000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 97 -->
+  <!-- Row 98 -->
   <tuple>
     <atom name="irn">92158</atom>
     <table name="Flags">
@@ -12884,7 +13179,7 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
     <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 98 -->
+  <!-- Row 99 -->
   <tuple>
     <atom name="irn">90817</atom>
     <table name="Flags">
@@ -12994,10 +13289,16 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Owner's Valuation</atom>
+        <atom name="ValValuationAmount">750.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 99 -->
+  <!-- Row 100 -->
   <tuple>
     <atom name="irn">92159</atom>
     <table name="Flags">
@@ -13109,7 +13410,7 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 100 -->
+  <!-- Row 101 -->
   <tuple>
     <atom name="irn">92160</atom>
     <table name="Flags">
@@ -13221,7 +13522,7 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
     <atom name="AdmDateModified">2022-03-28</atom>
   </tuple>
 
-  <!-- Row 101 -->
+  <!-- Row 102 -->
   <tuple>
     <atom name="irn">33886</atom>
     <table name="Flags">
@@ -13343,10 +13644,16 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">250000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-03-30</atom>
   </tuple>
 
-  <!-- Row 102 -->
+  <!-- Row 103 -->
   <tuple>
     <atom name="irn">33140</atom>
     <table name="Flags">
@@ -13477,10 +13784,16 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">32000000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-04-05</atom>
   </tuple>
 
-  <!-- Row 103 -->
+  <!-- Row 104 -->
   <tuple>
     <atom name="irn">62243</atom>
     <table name="Flags">
@@ -13568,17 +13881,22 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2021-05-03</atom>
-        <atom name="DeaDeaccessionNotes">Lilly House deaccession</atom>
         <tuple name="DeaReceivingPartyRef">
           <atom name="irn">14152</atom>
         </tuple>
         <atom name="DeaTransferNotes">Lilly House reclassification</atom>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value</atom>
+        <atom name="ValValuationAmount">1000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2021-10-13</atom>
   </tuple>
 
-  <!-- Row 104 -->
+  <!-- Row 105 -->
   <tuple>
     <atom name="irn">93739</atom>
     <table name="Flags">
@@ -13665,7 +13983,6 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2018-10-10</atom>
-        <atom name="DeaDeaccessionNotes">Per Charles L. Venable, The Melvin &amp; Bren Simon Director and Chief Executive Officer, this piece is not of museum quality. To be deaccessioned for future use on the IMA grounds.</atom>
         <tuple name="DeaReceivingPartyRef">
           <atom name="irn">14200</atom>
         </tuple>
@@ -13675,7 +13992,7 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
     <atom name="AdmDateModified">2021-10-19</atom>
   </tuple>
 
-  <!-- Row 105 -->
+  <!-- Row 106 -->
   <tuple>
     <atom name="irn">19677</atom>
     <table name="Flags">
@@ -13790,17 +14107,22 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
       <tuple>
         <atom name="DeaDeaccessionMethod">Deaccession</atom>
         <atom name="DeaDeaccessionDate">2021-11-16</atom>
-        <atom name="DeaDeaccessionNotes">Niloo Paydar, Curator of Textile and Fashion Arts, recommends this piece for deaccession because it is not museum quality.</atom>
         <tuple name="DeaReceivingPartyRef">
             <atom name="irn"></atom>
         </tuple>
         <atom name="DeaTransferNotes"></atom>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Estimated Value - IMA Staff</atom>
+        <atom name="ValValuationAmount">100.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-02-03</atom>
   </tuple>
 
-  <!-- Row 106 -->
+  <!-- Row 107 -->
   <tuple>
     <atom name="irn">87369</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
@@ -13885,7 +14207,7 @@ Inscribed in unknown hand, l.r. : 1890</atom>
     <atom name="AdmDateModified">2019-06-14</atom>
   </tuple>
 
-  <!-- Row 107 -->
+  <!-- Row 108 -->
   <tuple>
     <atom name="irn">95907</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
@@ -13991,10 +14313,16 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
         <atom name="irn">59216</atom>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">55000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2019-08-08</atom>
   </tuple>
 
-  <!-- Row 108 -->
+  <!-- Row 109 -->
   <tuple>
     <atom name="irn">5076</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
@@ -14092,10 +14420,16 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">95000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-02-25</atom>
   </tuple>
 
-  <!-- Row 109 -->
+  <!-- Row 110 -->
   <tuple>
     <atom name="irn">4634</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
@@ -14202,10 +14536,16 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">55000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-06-17</atom>
   </tuple>
 
-  <!-- Row 110 -->
+  <!-- Row 111 -->
   <tuple>
     <atom name="irn">16848</atom>
     <atom name="AdmPublishWebNoPassword">No</atom>
@@ -14313,10 +14653,16 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
         </tuple>
       </tuple>
     </table>
+    <table name="Valuation">
+      <tuple>
+        <atom name="ValReasonForValuation">Appraised Value</atom>
+        <atom name="ValValuationAmount">45000.00</atom>
+      </tuple>
+    </table>
     <atom name="AdmDateModified">2022-02-25</atom>
   </tuple>
 
-  <!-- Row 111 -->
+  <!-- Row 112 -->
   <tuple>
     <atom name="irn">3457</atom>
     <table name="Flags">
@@ -14417,7 +14763,6 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
       <tuple>
         <atom name="DeaDeaccessionMethod">Abandoned Property Fulfilled</atom>
         <atom name="DeaDeaccessionDate">2018-12-05</atom>
-        <atom name="DeaDeaccessionNotes">Abandoned Property Advertisement Notice published by Indianapolis Star in accordance with IC-32-34-5 on September 29, 2018 and October 06, 2018. The Indianapolis Museum of Art will claim clear title on December 05, 2018.</atom>
         <tuple name="DeaReceivingPartyRef">
             <atom name="irn"></atom>
         </tuple>

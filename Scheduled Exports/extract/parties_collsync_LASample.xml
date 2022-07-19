@@ -195,13 +195,10 @@
         <atom name="NamRoles">Maker</atom>
       </tuple>
       <tuple>
-        <atom name="NamRoles">Maker</atom>
-      </tuple>
-      <tuple>
         <atom name="NamRoles">Creator</atom>
       </tuple>
     </table>
-    <atom name="AdmDateModified">2019-05-09</atom>
+    <atom name="AdmDateModified">2022-07-11</atom>
   </tuple>
 
   <!-- Row 4 -->
@@ -2603,5 +2600,35 @@
       </tuple>
     </table>
     <atom name="AdmDateModified">2021-01-28</atom>
+  </tuple>
+
+  <!-- Row 67 -->
+  <tuple>
+    <atom name="irn">4656</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="NamPartyType">Organisation</atom>
+    <atom name="NamFullName">Susanin's Premiere Auctions</atom>
+    <atom name="NamTitle"></atom>
+    <atom name="NamFirst"></atom>
+    <atom name="NamMiddle"></atom>
+    <atom name="NamLast"></atom>
+    <atom name="NamSuffix"></atom>
+    <atom name="NamSex"></atom>
+    <atom name="BioNationality"></atom>
+    <atom name="BioBirthDate"></atom>
+    <atom name="BioBirthPlace"></atom>
+    <atom name="BioDeathDate"></atom>
+    <atom name="BioDeathPlace"></atom>
+    <atom name="NamOrganisation">Susanin's Premiere Auctions</atom>
+    <atom name="NamOrganisationAcronym"></atom>
+    <atom name="IMAHisCommenced"></atom>
+    <atom name="IMAHisCompleted"></atom>
+    <atom name="ColCollaborationName"></atom>
+    <table name="Roles">
+      <tuple>
+        <atom name="NamRoles">Dealer</atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2019-01-10</atom>
   </tuple>
 </table>

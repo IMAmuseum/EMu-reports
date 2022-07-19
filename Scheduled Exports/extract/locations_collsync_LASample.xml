@@ -22,6 +22,7 @@
 <?schema
   table           elocations
     integer         irn
+    text short      AdmPublishWebNoPassword
     text short      LocLocationCode
     text short      LocLevel1
     text short      LocLevel2
@@ -40,6 +41,7 @@
   <!-- Row 1 -->
   <tuple>
     <atom name="irn">738</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Ac1.lv1</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -55,6 +57,7 @@
   <!-- Row 2 -->
   <tuple>
     <atom name="irn">2351</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.63w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -70,6 +73,7 @@
   <!-- Row 3 -->
   <tuple>
     <atom name="irn">14099</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">W302.c7.riser</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Eiteljorg Suite of African and Oceanic Art</atom>
@@ -85,6 +89,7 @@
   <!-- Row 4 -->
   <tuple>
     <atom name="irn">9733</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg14.r7.lv9</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -100,6 +105,7 @@
   <!-- Row 5 -->
   <tuple>
     <atom name="irn">773</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Ec43.lv6</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -115,6 +121,7 @@
   <!-- Row 6 -->
   <tuple>
     <atom name="irn">3674</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.10w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -130,6 +137,7 @@
   <!-- Row 7 -->
   <tuple>
     <atom name="irn">14787</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">K212</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Andrew and Jane Paine Galleries</atom>
@@ -145,6 +153,7 @@
   <!-- Row 8 -->
   <tuple>
     <atom name="irn">3484</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.170e</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -160,6 +169,7 @@
   <!-- Row 9 -->
   <tuple>
     <atom name="irn">15826</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.sc1.lv10</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -175,6 +185,7 @@
   <!-- Row 10 -->
   <tuple>
     <atom name="irn">1095</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Ec45.lv3</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -190,6 +201,7 @@
   <!-- Row 11 -->
   <tuple>
     <atom name="irn">7919</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Tc58.lv8</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -205,6 +217,7 @@
   <!-- Row 12 -->
   <tuple>
     <atom name="irn">7246</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Tc58.lv2</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -220,6 +233,7 @@
   <!-- Row 13 -->
   <tuple>
     <atom name="irn">4348</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Tc23.lv1</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -235,6 +249,7 @@
   <!-- Row 14 -->
   <tuple>
     <atom name="irn">3965</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.92w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -250,6 +265,7 @@
   <!-- Row 15 -->
   <tuple>
     <atom name="irn">9966</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg4.r15.lv4</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -265,6 +281,7 @@
   <!-- Row 16 -->
   <tuple>
     <atom name="irn">8644</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg2.r5.lv14</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -280,6 +297,7 @@
   <!-- Row 17 -->
   <tuple>
     <atom name="irn">35</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Ec43.lv4</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -295,6 +313,7 @@
   <!-- Row 18 -->
   <tuple>
     <atom name="irn">9474</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.bin8.lv1.sl6</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -310,6 +329,7 @@
   <!-- Row 19 -->
   <tuple>
     <atom name="irn">7349</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.172w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -325,6 +345,7 @@
   <!-- Row 20 -->
   <tuple>
     <atom name="irn">14784</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="LocLocationCode">K210</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Joan D. Weisenberger Gallery</atom>
@@ -340,6 +361,7 @@
   <!-- Row 21 -->
   <tuple>
     <atom name="irn">7243</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Tc58.lv7</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -355,6 +377,7 @@
   <!-- Row 22 -->
   <tuple>
     <atom name="irn">3351</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.17w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -370,6 +393,7 @@
   <!-- Row 23 -->
   <tuple>
     <atom name="irn">7328</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.81w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -385,6 +409,7 @@
   <!-- Row 24 -->
   <tuple>
     <atom name="irn">14825</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">W202</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Pulliam Family Great Hall</atom>
@@ -400,6 +425,7 @@
   <!-- Row 25 -->
   <tuple>
     <atom name="irn">10315</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg5.r6.lv4</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -415,6 +441,7 @@
   <!-- Row 26 -->
   <tuple>
     <atom name="irn">9972</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg6.r4.lv12</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -430,6 +457,7 @@
   <!-- Row 27 -->
   <tuple>
     <atom name="irn">68</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">see related parts</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">see related parts</atom>
@@ -445,6 +473,7 @@
   <!-- Row 28 -->
   <tuple>
     <atom name="irn">2634</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cs7.lv8</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -460,6 +489,7 @@
   <!-- Row 29 -->
   <tuple>
     <atom name="irn">9682</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg6.r8.lv4</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -475,6 +505,7 @@
   <!-- Row 30 -->
   <tuple>
     <atom name="irn">1050</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.18w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -490,6 +521,7 @@
   <!-- Row 31 -->
   <tuple>
     <atom name="irn">14746</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">C207</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Portraiture, Medieval  Art Gallery</atom>
@@ -505,6 +537,7 @@
   <!-- Row 32 -->
   <tuple>
     <atom name="irn">9950</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">T13</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Exhibition Holding</atom>
@@ -520,6 +553,7 @@
   <!-- Row 33 -->
   <tuple>
     <atom name="irn">6378</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.91w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -535,6 +569,7 @@
   <!-- Row 34 -->
   <tuple>
     <atom name="irn">14916</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Location Not Verified</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Location Not Verified</atom>
@@ -550,6 +585,7 @@
   <!-- Row 35 -->
   <tuple>
     <atom name="irn">87</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">On Loan</atom>
     <atom name="LocLevel1">On Loan</atom>
     <atom name="LocLevel2"></atom>
@@ -565,6 +601,7 @@
   <!-- Row 36 -->
   <tuple>
     <atom name="irn">136</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Cc3.lv3</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -580,6 +617,7 @@
   <!-- Row 37 -->
   <tuple>
     <atom name="irn">10285</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg5.r3.lv11</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -595,6 +633,7 @@
   <!-- Row 38 -->
   <tuple>
     <atom name="irn">10326</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg5.r7.lv13</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -610,6 +649,7 @@
   <!-- Row 39 -->
   <tuple>
     <atom name="irn">9921</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">F25.cg10.r2.lv1</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Print Storage</atom>
@@ -625,6 +665,7 @@
   <!-- Row 40 -->
   <tuple>
     <atom name="irn">8358</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">LH103.c5.lv2</atom>
     <atom name="LocLevel1">Lilly House</atom>
     <atom name="LocLevel2">Game room</atom>
@@ -640,6 +681,7 @@
   <!-- Row 41 -->
   <tuple>
     <atom name="irn">3715</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.174w</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -655,6 +697,7 @@
   <!-- Row 42 -->
   <tuple>
     <atom name="irn">14123</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">W303.c1.wall</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Eiteljorg Suite of African and Oceanic Art</atom>
@@ -670,6 +713,7 @@
   <!-- Row 43 -->
   <tuple>
     <atom name="irn">14069</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">H302</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Contemporary Design Gallery</atom>
@@ -685,6 +729,7 @@
   <!-- Row 44 -->
   <tuple>
     <atom name="irn">15153</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Hc2.lv7</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -700,6 +745,7 @@
   <!-- Row 45 -->
   <tuple>
     <atom name="irn">452</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">ANP</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">The Virginia B. Fairbanks Art &amp; Nature Park</atom>
@@ -715,6 +761,7 @@
   <!-- Row 46 -->
   <tuple>
     <atom name="irn">14999</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="LocLocationCode">H301</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Contemporary Design Gallery</atom>
@@ -730,6 +777,7 @@
   <!-- Row 47 -->
   <tuple>
     <atom name="irn">1083</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Tc25.lv9</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -745,6 +793,7 @@
   <!-- Row 48 -->
   <tuple>
     <atom name="irn">326</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">G</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Grounds</atom>
@@ -760,6 +809,7 @@
   <!-- Row 49 -->
   <tuple>
     <atom name="irn">10</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Returned</atom>
     <atom name="LocLevel1">Returned</atom>
     <atom name="LocLevel2"></atom>
@@ -775,6 +825,7 @@
   <!-- Row 50 -->
   <tuple>
     <atom name="irn">14628</atom>
+    <atom name="AdmPublishWebNoPassword">Yes</atom>
     <atom name="LocLocationCode">H203.p2</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
@@ -790,6 +841,7 @@
   <!-- Row 51 -->
   <tuple>
     <atom name="irn">8013</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Lc8.lv4</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -805,6 +857,7 @@
   <!-- Row 52 -->
   <tuple>
     <atom name="irn">319</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Tc46</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -820,6 +873,7 @@
   <!-- Row 53 -->
   <tuple>
     <atom name="irn">4562</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">P.72e</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -835,6 +889,7 @@
   <!-- Row 54 -->
   <tuple>
     <atom name="irn">15193</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Hc9.lv4</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -850,6 +905,7 @@
   <!-- Row 55 -->
   <tuple>
     <atom name="irn">663</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
     <atom name="LocLocationCode">Xc4.lv5</atom>
     <atom name="LocLevel1">IMA</atom>
     <atom name="LocLevel2">storage</atom>
@@ -860,5 +916,21 @@
     <atom name="LocLevel7"></atom>
     <atom name="LocLevel8"></atom>
     <atom name="AdmDateModified">2008-07-08</atom>
+  </tuple>
+
+  <!-- Row 56 -->
+  <tuple>
+    <atom name="irn">19</atom>
+    <atom name="AdmPublishWebNoPassword">No</atom>
+    <atom name="LocLocationCode">Disposed</atom>
+    <atom name="LocLevel1">IMA</atom>
+    <atom name="LocLevel2">Disposed</atom>
+    <atom name="LocLevel3"></atom>
+    <atom name="LocLevel4"></atom>
+    <atom name="LocLevel5"></atom>
+    <atom name="LocLevel6"></atom>
+    <atom name="LocLevel7"></atom>
+    <atom name="LocLevel8"></atom>
+    <atom name="AdmDateModified">2016-01-15</atom>
   </tuple>
 </table>

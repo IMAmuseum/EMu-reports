@@ -1100,9 +1100,9 @@
             "deaccession_date_year": 2021,
             "deaccession_date_month": 5,
             "deaccession_date_day": 3,
-            "deaccession_notes": "Lilly House deaccession",
             "recipient": 14152,
-            "transfer_notes": "Lilly House reclassification"
+            "transfer_notes": "Lilly House reclassification",
+            "sale_price": null
         },
         "date_modified": "2022-02-24"
     },
@@ -1771,6 +1771,85 @@
         "date_modified": "2021-12-06"
     },
     {
+        "emu_irn": 18078,
+        "dagwood_id": null,
+        "flags": ["Deaccessioned", "Disposed"],
+        "publish": true,
+        "status": "Deaccessioned",
+        "accession_number": "73.74.1",
+        "previous_id": "TR0077/1",
+        "date_accessioned_year": 1973,
+        "date_accessioned_month": null,
+        "date_accessioned_day": null,
+        "title": "plate",
+        "series_title": null,
+        "portfolio_title": null,
+        "alt_titles": [],
+        "creators": [],
+        "cultures": [
+            {
+                "attribution": null,
+                "culture": null,
+                "nationality": "Italian"
+            }],
+        "date_created": null,
+        "date_created_earliest": null,
+        "date_created_latest": null,
+        "date_designed": null,
+        "date_designed_earliest": null,
+        "date_designed_latest": null,
+        "period": null,
+        "dynasty": null,
+        "creation_locations": [{
+            "country": "Italy",
+            "state": null,
+            "district": null,
+            "city": null}],
+        "record_type": "Containers",
+        "object_types": ["dinnerware"],
+        "mediums": ["earthenware"],
+        "supports": ["earthenware"],
+        "medium_support": "earthenware",
+        "technique": null,
+        "style": null,
+        "mark": {},
+        "printer_irns": [],
+        "publisher_irns": [],
+        "converted_dimensions": "D: 9-1/4 in.",
+        "dimensions": [
+            {
+                "type": "Dimensions",
+                "height": null,
+                "width": null,
+                "depth": 9.2500,
+                "diameter": null,
+                "length_unit": "in.",
+                "weight": null,
+                "weight_unit": null,
+                "notes": null
+            }],
+        "credit_line": "Gift of Mrs. C. W. Weathers from the Hazel H. Force Estate",
+        "rights": "No Known Rights Holder",
+        "rights_uris": [],
+        "provenance": null,
+        "department": "Decorative Arts",
+        "on_view": false,
+        "location_irn": 19,
+        "parent_irn": null,
+        "related_objects": [],
+        "guids": [],
+        "deaccession": {
+            "deaccession_method": "Deaccession",
+            "deaccession_date_year": 2011,
+            "deaccession_date_month": 9,
+            "deaccession_date_day": 15,
+            "recipient": 4656,
+            "transfer_notes": "Transferred to Susanin's Premiere Auctions; Sold on 5/12/2012 in Premiere Sale 111 (lot 2082)",
+            "sale_price": 2.22
+        },
+        "date_modified": "2022-02-23"
+    },
+    {
         "emu_irn": 18672,
         "dagwood_id": null,
         "flags": ["Luce Digitization Project"],
@@ -1929,9 +2008,9 @@
             "deaccession_date_year": 2021,
             "deaccession_date_month": 11,
             "deaccession_date_day": 16,
-            "deaccession_notes": "Niloo Paydar, Curator of Textile and Fashion Arts, recommends this piece for deaccession because it is not museum quality.",
             "recipient": null,
-            "transfer_notes": ""
+            "transfer_notes": null,
+            "sale_price": null
         },
         "date_modified": "2022-02-03"
     },
@@ -3761,9 +3840,9 @@
             "deaccession_date_year": 2021,
             "deaccession_date_month": 5,
             "deaccession_date_day": 3,
-            "deaccession_notes": "Lilly House deaccession",
             "recipient": 14152,
-            "transfer_notes": "Lilly House reclassification"
+            "transfer_notes": "Lilly House reclassification",
+            "sale_price": null
         },
         "date_modified": "2021-10-13"
     },
@@ -9998,9 +10077,9 @@
             "deaccession_date_year": 2018,
             "deaccession_date_month": 10,
             "deaccession_date_day": 10,
-            "deaccession_notes": "Per Charles L. Venable, The Melvin & Bren Simon Director and Chief Executive Officer, this piece is not of museum quality. To be deaccessioned for future use on the IMA grounds.",
             "recipient": 14200,
-            "transfer_notes": "Transferred to the Newfields Horticulture Department"
+            "transfer_notes": "Transferred to the Newfields Horticulture Department",
+            "sale_price": null
         },
         "date_modified": "2021-10-19"
     },

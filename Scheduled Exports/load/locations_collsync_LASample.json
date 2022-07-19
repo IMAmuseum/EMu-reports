@@ -1,6 +1,7 @@
 {"locations": [
     {
         "irn": 10,
+        "publish": false,
         "location_code": "Returned",
         "level_1": "Returned",
         "level_2": null,
@@ -13,7 +14,22 @@
         "date_modified": "2006-04-13"
     },
     {
+        "irn": 19,
+        "publish": false,
+        "location_code": "Disposed",
+        "level_1": "IMA",
+        "level_2": "Disposed",
+        "level_3": null,
+        "level_4": null,
+        "level_5": null,
+        "level_6": null,
+        "level_7": null,
+        "level_8": null,
+        "date_modified": "2016-01-15"
+    },
+    {
         "irn": 35,
+        "publish": false,
         "location_code": "Ec43.lv4",
         "level_1": "IMA",
         "level_2": "storage",
@@ -27,6 +43,7 @@
     },
     {
         "irn": 68,
+        "publish": false,
         "location_code": "see related parts",
         "level_1": "IMA",
         "level_2": "see related parts",
@@ -40,6 +57,7 @@
     },
     {
         "irn": 87,
+        "publish": false,
         "location_code": "On Loan",
         "level_1": "On Loan",
         "level_2": null,
@@ -53,6 +71,7 @@
     },
     {
         "irn": 136,
+        "publish": false,
         "location_code": "Cc3.lv3",
         "level_1": "IMA",
         "level_2": "storage",
@@ -66,6 +85,7 @@
     },
     {
         "irn": 319,
+        "publish": false,
         "location_code": "Tc46",
         "level_1": "IMA",
         "level_2": "storage",
@@ -79,6 +99,7 @@
     },
     {
         "irn": 326,
+        "publish": false,
         "location_code": "G",
         "level_1": "IMA",
         "level_2": "Grounds",
@@ -92,6 +113,7 @@
     },
     {
         "irn": 452,
+        "publish": false,
         "location_code": "ANP",
         "level_1": "IMA",
         "level_2": "The Virginia B. Fairbanks Art & Nature Park",
@@ -105,6 +127,7 @@
     },
     {
         "irn": 663,
+        "publish": false,
         "location_code": "Xc4.lv5",
         "level_1": "IMA",
         "level_2": "storage",
@@ -118,6 +141,7 @@
     },
     {
         "irn": 738,
+        "publish": false,
         "location_code": "Ac1.lv1",
         "level_1": "IMA",
         "level_2": "storage",
@@ -131,6 +155,7 @@
     },
     {
         "irn": 773,
+        "publish": false,
         "location_code": "Ec43.lv6",
         "level_1": "IMA",
         "level_2": "storage",
@@ -144,6 +169,7 @@
     },
     {
         "irn": 1050,
+        "publish": false,
         "location_code": "P.18w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -157,6 +183,7 @@
     },
     {
         "irn": 1083,
+        "publish": false,
         "location_code": "Tc25.lv9",
         "level_1": "IMA",
         "level_2": "storage",
@@ -170,6 +197,7 @@
     },
     {
         "irn": 1095,
+        "publish": false,
         "location_code": "Ec45.lv3",
         "level_1": "IMA",
         "level_2": "storage",
@@ -183,6 +211,7 @@
     },
     {
         "irn": 2351,
+        "publish": false,
         "location_code": "P.63w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -196,6 +225,7 @@
     },
     {
         "irn": 2634,
+        "publish": false,
         "location_code": "F25.cs7.lv8",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -209,6 +239,7 @@
     },
     {
         "irn": 3351,
+        "publish": false,
         "location_code": "P.17w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -222,6 +253,7 @@
     },
     {
         "irn": 3484,
+        "publish": false,
         "location_code": "P.170e",
         "level_1": "IMA",
         "level_2": "storage",
@@ -235,6 +267,7 @@
     },
     {
         "irn": 3674,
+        "publish": false,
         "location_code": "P.10w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -248,6 +281,7 @@
     },
     {
         "irn": 3715,
+        "publish": false,
         "location_code": "P.174w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -261,6 +295,7 @@
     },
     {
         "irn": 3965,
+        "publish": false,
         "location_code": "P.92w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -274,6 +309,7 @@
     },
     {
         "irn": 4348,
+        "publish": false,
         "location_code": "Tc23.lv1",
         "level_1": "IMA",
         "level_2": "storage",
@@ -287,6 +323,7 @@
     },
     {
         "irn": 4562,
+        "publish": false,
         "location_code": "P.72e",
         "level_1": "IMA",
         "level_2": "storage",
@@ -300,6 +337,7 @@
     },
     {
         "irn": 6378,
+        "publish": false,
         "location_code": "P.91w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -313,6 +351,7 @@
     },
     {
         "irn": 7243,
+        "publish": false,
         "location_code": "Tc58.lv7",
         "level_1": "IMA",
         "level_2": "storage",
@@ -326,6 +365,7 @@
     },
     {
         "irn": 7246,
+        "publish": false,
         "location_code": "Tc58.lv2",
         "level_1": "IMA",
         "level_2": "storage",
@@ -339,6 +379,7 @@
     },
     {
         "irn": 7328,
+        "publish": false,
         "location_code": "P.81w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -352,6 +393,7 @@
     },
     {
         "irn": 7349,
+        "publish": false,
         "location_code": "P.172w",
         "level_1": "IMA",
         "level_2": "storage",
@@ -365,6 +407,7 @@
     },
     {
         "irn": 7919,
+        "publish": false,
         "location_code": "Tc58.lv8",
         "level_1": "IMA",
         "level_2": "storage",
@@ -378,6 +421,7 @@
     },
     {
         "irn": 8013,
+        "publish": false,
         "location_code": "Lc8.lv4",
         "level_1": "IMA",
         "level_2": "storage",
@@ -391,6 +435,7 @@
     },
     {
         "irn": 8358,
+        "publish": false,
         "location_code": "LH103.c5.lv2",
         "level_1": "Lilly House",
         "level_2": "Game room",
@@ -404,6 +449,7 @@
     },
     {
         "irn": 8644,
+        "publish": false,
         "location_code": "F25.cg2.r5.lv14",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -417,6 +463,7 @@
     },
     {
         "irn": 9474,
+        "publish": false,
         "location_code": "F25.bin8.lv1.sl6",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -430,6 +477,7 @@
     },
     {
         "irn": 9682,
+        "publish": false,
         "location_code": "F25.cg6.r8.lv4",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -443,6 +491,7 @@
     },
     {
         "irn": 9733,
+        "publish": false,
         "location_code": "F25.cg14.r7.lv9",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -456,6 +505,7 @@
     },
     {
         "irn": 9921,
+        "publish": false,
         "location_code": "F25.cg10.r2.lv1",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -469,6 +519,7 @@
     },
     {
         "irn": 9950,
+        "publish": false,
         "location_code": "T13",
         "level_1": "IMA",
         "level_2": "Exhibition Holding",
@@ -482,6 +533,7 @@
     },
     {
         "irn": 9966,
+        "publish": false,
         "location_code": "F25.cg4.r15.lv4",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -495,6 +547,7 @@
     },
     {
         "irn": 9972,
+        "publish": false,
         "location_code": "F25.cg6.r4.lv12",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -508,6 +561,7 @@
     },
     {
         "irn": 10285,
+        "publish": false,
         "location_code": "F25.cg5.r3.lv11",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -521,6 +575,7 @@
     },
     {
         "irn": 10315,
+        "publish": false,
         "location_code": "F25.cg5.r6.lv4",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -534,6 +589,7 @@
     },
     {
         "irn": 10326,
+        "publish": false,
         "location_code": "F25.cg5.r7.lv13",
         "level_1": "IMA",
         "level_2": "Print Storage",
@@ -547,6 +603,7 @@
     },
     {
         "irn": 14069,
+        "publish": false,
         "location_code": "H302",
         "level_1": "IMA",
         "level_2": "Contemporary Design Gallery",
@@ -560,6 +617,7 @@
     },
     {
         "irn": 14099,
+        "publish": false,
         "location_code": "W302.c7.riser",
         "level_1": "IMA",
         "level_2": "Eiteljorg Suite of African and Oceanic Art",
@@ -573,6 +631,7 @@
     },
     {
         "irn": 14123,
+        "publish": false,
         "location_code": "W303.c1.wall",
         "level_1": "IMA",
         "level_2": "Eiteljorg Suite of African and Oceanic Art",
@@ -586,6 +645,7 @@
     },
     {
         "irn": 14628,
+        "publish": true,
         "location_code": "H203.p2",
         "level_1": "IMA",
         "level_2": "Mary Ann and Gene Zink Gallery",
@@ -599,6 +659,7 @@
     },
     {
         "irn": 14746,
+        "publish": false,
         "location_code": "C207",
         "level_1": "IMA",
         "level_2": "Portraiture, Medieval  Art Gallery",
@@ -612,6 +673,7 @@
     },
     {
         "irn": 14784,
+        "publish": true,
         "location_code": "K210",
         "level_1": "IMA",
         "level_2": "Joan D. Weisenberger Gallery",
@@ -625,6 +687,7 @@
     },
     {
         "irn": 14787,
+        "publish": false,
         "location_code": "K212",
         "level_1": "IMA",
         "level_2": "Andrew and Jane Paine Galleries",
@@ -638,6 +701,7 @@
     },
     {
         "irn": 14825,
+        "publish": false,
         "location_code": "W202",
         "level_1": "IMA",
         "level_2": "Pulliam Family Great Hall",
@@ -651,6 +715,7 @@
     },
     {
         "irn": 14916,
+        "publish": false,
         "location_code": "Location Not Verified",
         "level_1": "IMA",
         "level_2": "Location Not Verified",
@@ -664,6 +729,7 @@
     },
     {
         "irn": 14999,
+        "publish": true,
         "location_code": "H301",
         "level_1": "IMA",
         "level_2": "Contemporary Design Gallery",
@@ -677,6 +743,7 @@
     },
     {
         "irn": 15153,
+        "publish": false,
         "location_code": "Hc2.lv7",
         "level_1": "IMA",
         "level_2": "storage",
@@ -690,6 +757,7 @@
     },
     {
         "irn": 15193,
+        "publish": false,
         "location_code": "Hc9.lv4",
         "level_1": "IMA",
         "level_2": "storage",
@@ -703,6 +771,7 @@
     },
     {
         "irn": 15826,
+        "publish": false,
         "location_code": "F25.sc1.lv10",
         "level_1": "IMA",
         "level_2": "Print Storage",

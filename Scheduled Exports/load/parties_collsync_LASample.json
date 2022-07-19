@@ -397,9 +397,9 @@
         "collaborators": [],
         "acronym": null,
         "other_names": [],
-        "roles": ["artist", "designer", "Origin", "manufacturer", "publisher", "author", "Culture or People", "printer", "photographer", "Maker", "Maker", "Creator"],
+        "roles": ["artist", "designer", "Origin", "manufacturer", "publisher", "author", "Culture or People", "printer", "photographer", "Maker", "Creator"],
         "guids": [],
-        "date_modified": "2019-05-09"
+        "date_modified": "2022-07-11"
     },
     {
         "emu_irn": 2793,
@@ -456,6 +456,34 @@
         "roles": ["author"],
         "guids": [],
         "date_modified": "2019-01-09"
+    },
+    {
+        "emu_irn": 4656,
+        "publish": false,
+        "party_type": "Organisation",
+        "full_name": "Susanin's Premiere Auctions",
+        "title": null,
+        "first_name": null,
+        "middle_name": null,
+        "last_name": null,
+        "suffix": null,
+        "gender": null,
+        "nationality": null,
+        "identities": [],
+        "birth_date": null,
+        "birth_place": null,
+        "death_date": null,
+        "death_place": null,
+        "organization_name": "Susanin's Premiere Auctions",
+        "commencement_date": null,
+        "completion_date": null,
+        "collaboration_name": null,
+        "collaborators": [],
+        "acronym": null,
+        "other_names": [],
+        "roles": ["Dealer"],
+        "guids": [],
+        "date_modified": "2019-01-10"
     },
     {
         "emu_irn": 5060,

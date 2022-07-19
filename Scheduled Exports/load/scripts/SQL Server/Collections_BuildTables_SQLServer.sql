@@ -1,4 +1,4 @@
-USER CollectionsTest
+USE CollectionsTest
 GO
 
 CREATE TABLE [objects] (
@@ -40,9 +40,9 @@ CREATE TABLE [objects] (
   [deaccession_date_year] int,
   [deaccession_date_month] int,
   [deaccession_date_day] int,
-  [deaccession_notes] varchar(max),
   [recipient] int,
   [transfer_notes] varchar(max),
+  [sale_price] decimal(18,4),
   [date_modified] date NOT NULL
 )
 GO

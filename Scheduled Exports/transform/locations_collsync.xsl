@@ -9,6 +9,7 @@
 <xsl:template match="/">{"locations": [
     <xsl:for-each select="table[@name='elocations']/tuple"><xsl:sort select="atom[@name='irn']" data-type="number"/>{
         "irn": <xsl:value-of select="atom[@name='irn']"/>,
+        "publish": <xsl:choose><xsl:when test="atom[@name='AdmPublishWebNoPassword'] = 'Yes'">true</xsl:when><xsl:otherwise>false</xsl:otherwise></xsl:choose>,
         "location_code": <xsl:choose><xsl:when test="atom[@name='LocLocationCode'] != ''">"<xsl:value-of select="replace(replace(atom[@name='LocLocationCode'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "level_1": <xsl:choose><xsl:when test="atom[@name='LocLevel1'] != ''">"<xsl:value-of select="replace(replace(atom[@name='LocLevel1'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "level_2": <xsl:choose><xsl:when test="atom[@name='LocLevel2'] != ''">"<xsl:value-of select="replace(replace(atom[@name='LocLevel2'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,

@@ -47,6 +47,9 @@ VALUES (1050,0,'P.18w','IMA','storage','P','18w',null,null,null,null,'2021-09-10
 INSERT INTO [locations] (emu_irn,publish,code,level_1,level_2,level_3,level_4,level_5,level_6,level_7,level_8,date_modified)
 VALUES (7246,0,'Tc58.lv2','IMA','storage','Tc58','lv2',null,null,null,null,'2021-10-11');
 
+INSERT INTO [locations] (emu_irn,publish,code,level_1,level_2,level_3,level_4,level_5,level_6,level_7,level_8,date_modified)
+VALUES (19,0,'Disposed','IMA','Disposed',null,null,null,null,null,null,'2016-01-15');
+
 
 --INSERT SAMPLE VALUES INTO DEPARTMENTS TABLE
 INSERT INTO [departments] (department)
@@ -79,6 +82,9 @@ VALUES ('Lilly House');
 INSERT INTO [departments] (department)
 VALUES ('Textile and Fashion Arts');
 
+INSERT INTO [departments] (department)
+VALUES ('Decorative Arts');
+
 
 --INSERT VALUES INTO FLAGS TABLE
 INSERT INTO [flags] (flag)
@@ -110,6 +116,9 @@ VALUES ('WWII-Era Provenance Research');
 
 INSERT INTO [flags] (flag)
 VALUES ('Deaccessioned');
+
+INSERT INTO [flags] (flag)
+VALUES ('Disposed');
 
 
 --INSERT SAMPLE VALUES INTO TYPES TABLE
@@ -167,6 +176,9 @@ VALUES ('quilts');
 INSERT INTO [types] (type)
 VALUES ('appliqué quilts');
 
+INSERT INTO [types] (type)
+VALUES ('dinnerware');
+
 
 --INSERT SAMPLE VALUES INTO MEDIUMS TABLE
 INSERT INTO [mediums] (medium)
@@ -195,6 +207,9 @@ VALUES ('pigment');
 
 INSERT INTO [mediums] (medium)
 VALUES ('plastic');
+
+INSERT INTO [mediums] (medium)
+VALUES ('eathenware');
 
 
 --INSERT SAMPLE VALUES INTO SUPPORTS TABLE
@@ -236,6 +251,9 @@ VALUES ('plastic');
 
 INSERT INTO [supports] (support)
 VALUES ('cotton {fabric}');
+
+INSERT INTO [supports] (support)
+VALUES ('eathenware');
 
 
 --INSERT SAMPLE VALUES INTO MARK_TYPES TABLE
@@ -360,58 +378,64 @@ VALUES ('Owner');
 INSERT INTO [roles] (role)
 VALUES ('collaborator');
 
+INSERT INTO [roles] (role)
+VALUES ('Dealer');
+
 
 --INSERT SAMPLE VALUES INTO OBJECTS TABLE
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (1032,null,1,'Accessioned','60.63','TR5488/1',1960,10,10,'long-neck vase with cup mouth',null,null,'100-220',100,220,null,null,null,null,'Eastern Han dynasty','Containers','green glazed stoneware',null,null,null,'17-1/4 in.','Gift of Mr. and Mrs. Eli Lilly','Public Domain','(Jan W.A. Kleijkamp); purchased by Eli Lilly, Indianapolis, Indiana, May 1950 ( list noting 15 November 1950 $950.); given to the John Herron Art Institute, now the Indianapolis Museum of Art, in 1960.',1,0,1,null,null,null,null,null,null,null,null,'2021-10-25');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (1065,null,1,'Accessioned','14.55',null,1914,2,19,'The Bachelor Boudoir (Corner of the Studio)',null,null,'about 1883',1882,1883,null,null,null,null,null,'Visual Works: Paintings','oil on canvas','painting',null,'Signed, l.r.: C FISCUS','27-1/4 x 16-1/4 in. (canvas)\n34-3/4 x 24-3/4 x 4 in. (framed)','Gift of the Artist''s mother, Mrs. E.J. Fiscus','Public Domain',null,2,0,2,null,null,null,null,null,null,null,null,'2022-05-16');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (21137,80085,1,'Accessioned','06.137',null,1906,5,1,'Hakone','The Fifty-three Stations of the T^okaid^o',null,'1833-1834',1833,1834,null,null,null,'Edo',null,'Visual Works: Prints','ink on paper, color woodblock print','woodcutting',null,'Signed by artist: Hiroshige ga\nPublisher''s mark: Hōeidō (Takenouchi Magohachi)\nSeal with subtitle: Kosuizu\nInscribed: title and series title','9 x 13-15/16 in. (image, sheet trimmed to image on all sides)','John Herron Fund','Public Domain','Purchased by the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1906.',3,0,3,null,null,null,null,null,null,null,null,'2022-06-07');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (52481,null,1,'Accessioned','44.91','TR4585/9ab',1944,6,20,'Spring snow on Sumida River 隅田川　春雪',null,'Amusement of the Eastern Capital  狂歌東遊  (Ehon Azuma asobi)','about 1802',1797,1807,null,null,null,'Edo',null,'Visual Works: Prints','color woodblock print',null,null,'Kyoka poem','8-3/4 x 12 in.','Gift of Charles C. Kryter','No Known Rights Holder',null,3,0,4,null,null,null,null,null,null,null,null,'2022-02-22');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (82696,null,1,'Accessioned','2013.443A-E.4','TR11707A-E.4',2013,12,12,'Five Brushstrokes',null,null,'fabricated 2012',2012,2012,'1983-1984',1983,1984,null,null,'Visual Works: Sculpture','painted aluminum',null,null,'rf Lichtenstein 83-84 AP <copyright> The Roy Lichtenstein Foundation, 2012','Element A) 372 x 36 x 11 in.\nElement B) 98 x 357 x 10-1/4 in.\nElement C) 104 x 271 x 12 in.\nElement D) 228 x 100 x 11 in.\nElement E.1-.4) 480 x 77 x 15 in. (assembled)','Robert L. and Marjorie J. Mann Fund, Partial Gift of the Roy Lichtenstein Foundation','© Roy Lichtenstein Foundation','(Roy Lichtenstein Foundation, New York, New York); purchased by the Indianapolis Museum of Art in 2013.',4,1,5,null,null,null,null,null,null,null,null,'2021-02-11');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (47035,null,1,'Accessioned','08.19',null,1908,null,null,'Statue of Augustus Caesar',null,null,'before 1908',null,1908,null,null,null,null,null,'Visual Works: Sculpture','plaster cast','casting','Roman',null,'87 in.','Gift of Mary E. Nicholson','Public Domain',null,2,0,6,null,null,null,null,null,null,null,null,'2022-04-26');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (64017,null,1,'Accessioned','2007.4A-B','TR10523/3A-B',2007,4,10,'pair of earplugs (for man or woman)',null,null,'mid-20th century',1920,1960,null,null,null,null,null,'Costume Accessories','wood, synthetic resin, metal tacks',null,null,null,'1/2 x 2 (diam.) in.','General Memorial Art Fund','No Known Rights Holder','Probably with (Rhoda Levinsohn, Cleveland, Ohio) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; purchased by the Indianapolis Museum of Art, Indianapolis, Indiana in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.',5,1,7,null,null,null,null,null,null,null,null,'2020-04-10');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (64018,null,0,'Accessioned','2007.4A','TR10523/3A',2007,4,10,'earplug',null,null,'1950-1970',1950,1970,null,null,null,null,null,'Costume Accessories','wood, synthetic resin, metal',null,null,null,'1/2 x 2 (diam.) in.','General Memorial Art Fund','No Known Rights Holder','Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.',5,1,7,7,null,null,null,null,null,null,null,'2020-04-02');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (64019,null,0,'Accessioned','2007.4B','TR10523/3B',2007,4,10,'earplug (for man or woman)',null,null,'1920-1960',1920,1960,null,null,null,null,null,'Costume Accessories','wood, synthetic resin, metal tacks',null,null,null,'1/2 x 2 (diam.) in.','General Memorial Art Fund','No Known Rights Holder','Probably with (Rhoda Levinsohn, Cleveland) by 1983;[1] (Axis Gallery, West Orange, New Jersey) in 2000; acquired by IMA in 2007.\n\n[1] Information provided by Gary van Wyk, Axis Gallery, New York.',5,1,7,7,null,null,null,null,null,null,null,'2020-04-02');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (21444,null,1,'Accessioned','27.25','TR941/2',1927,10,18,'Souvenir de la Scheideges',null,null,'19th century',1801,1900,null,null,null,null,null,'Visual Works: Prints','lithograph on chine collé','lithography',null,'Inscribed in plate above image: Oeuvres de A. Calame\nInscribed in plate below image: Imp. Jacomme & Cie R. de Lancry, 18 Paris, du Cabinet de M. Mussard Cons. d'' Etat''. F. Delarue Editeur, rue J. J. Rousseau, 18, Paris\nSigned in plate: 1094 B. A. Calame - 7ime Livraison - 1853 - No. 7','7-1/8 x 9-1/8 in. (image)\n12 x 18 in. (sheet)','Anonymous Gift','Public Domain',null,6,0,8,null,null,null,null,null,null,null,null,'2020-12-14');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (33886,null,1,'Accessioned','2020.1','C10007',2020,8,27,'Temptation of St. Anthony',null,null,'1575-1600',1575,1600,null,null,null,null,null,'Visual Works: Paintings','oil on panel',null,null,'Not Inscribed','23-3/4 x 19-1/4 in.\n30-1/8 x 26 in. (framed)','The Clowes Collection','Public Domain','Gustav von Gerhardt, Budapest, Hungary, until 1911.{1} Mrs. Moric Palugyay and Mrs. Moric Tomcsanyi. Budapest, by 1927.{2} (Ivan N. Podgoursky, New York, New York); George Henry Alexander Clowes, Indianapolis, Indiana, in 1944; The Clowes Fund, Indianapolis, from 1958–2020, and on long-term loan to the Indianapolis Museum of Art, since 1971; given to the Indianapolis Museum of Art at Newfields, in 2020.\n\n{1} Sammlung des. Königl[ichen]. Ungar[ischen]. Hofrats Gustav von Gerhardt, Budapest : Zweiter Teil : Gemälde Alter Meister, sale catalogue, Rudolph Lepke’s Kunst-Auctions-Haus, Berlin, 10 November 1911, no. 61, plate 30.\n{2} Catalogue de l''Exposition Belge d''art Ancien et Moderne, Budapest: Imp. de la Société Anonyme Athenaeum, 1927, 34, no. 191.',7,0,9,null,null,null,null,null,null,null,null,'2022-03-30');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (16410,null,1,'Accessioned','14.231','1965.14',1914,6,1,'necklace',null,null,'before 1910',null,1910,null,null,null,null,null,'Costume Accessories','shell beads',null,null,null,'12-1/2 x 2-1/2 x 3/8 in.','Gift of Hugh McKennan Landon','No Known Rights Holder','Collected by Arthur Henn, Hugh McKennan Landon Expedition to Ecuador and Peru under the direction of Dr. Carl H. Eigenmann of Indiana University; Hugh McKennan Landon [1868-1947] Indianapolis, Indiana; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, Indianapolis, Indiana in 1914.',8,0,10,null,null,null,null,null,null,null,null,'2020-06-19');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (20419,null,1,'Accessioned','75.174','TR8614',1975,10,2,'Love',null,null,'1970',1970,1970,null,null,null,null,null,'Visual Works: Sculpture','Cor-ten steel','welding',null,'Stamped, lower proper right edge of the \E\"" along the full length: 1 [gapped]  [copyright symbol] R INDIANA  [in stencilled font] 1970  [HF symbol for Herbert Feuerlicht, Technical Supervisor of Triad Designs] [three stacked lines of smaller text] WORK EXECUTED BY  |  Lippincott  |  NORTH HAVEN CONN""','144 x 144 x 72 in.','Gift of the Friends of the Indianapolis Museum of Art in memory of Henry F. DeBoest.  Restoration was made possible by Patricia J. and James E. LaCrosse.','© Morgan Art Foundation/Artists Rights Society (ARS), New York','(Robert Indiana, New York, New York); Purchased by the Indianapolis Museum of Art, Indinianapolis, Indiana, in 1975.',4,1,11,null,null,null,null,null,null,null,null,'2022-04-26');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
-VALUES (14617,null,0,'Deaccessioned','67.10.48',null,1967,null,null,'Matthew Prior',null,null,'late 17th - early 18th century',1675,1825,null,null,null,null,null,'Visual Works: Paintings','oil on canvas',null,null,null,'39-3/16 x 33-1/4 in. (canvas)\n45-1/8 x 39 x 2-3/8 in. (framed)','Gift of the Children of J.K. Lilly, Jr.','No Known Rights Holder','J.K. Lilly, Jr, Indianapolis, Indiana; by descent to his children; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1967.',9,0,12,null,'Deaccession',2021,5,3,'Lilly House deaccession',17,'Lilly House reclassification','2022-02-24');
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
+VALUES (14617,null,0,'Deaccessioned','67.10.48',null,1967,null,null,'Matthew Prior',null,null,'late 17th - early 18th century',1675,1825,null,null,null,null,null,'Visual Works: Paintings','oil on canvas',null,null,null,'39-3/16 x 33-1/4 in. (canvas)\n45-1/8 x 39 x 2-3/8 in. (framed)','Gift of the Children of J.K. Lilly, Jr.','No Known Rights Holder','J.K. Lilly, Jr, Indianapolis, Indiana; by descent to his children; given to the John Herron Art Institute, now the Indianapolis Museum of Art at Newfields, in 1967.',9,0,12,null,'Deaccession',2021,5,3,17,'Lilly House reclassification',null,'2022-02-24');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (68903,null,1,'Accessioned','2010.217','TR11136',2010,9,16,'Free Basket',null,null,'2010',2010,2010,null,null,null,null,null,'Visual Works: Sculpture',null,null,null,null,'various dimensions','Commissioned by the Indianapolis Museum of Art, purchased with funds provided by the Griffith Foundation Gift, in memory of Melvin Simon','© Los Carpinteros. Courtesy Sean Kelly Gallery, New York.','Commissioned by the Indianapolis Museum of Art.',4,1,13,null,null,null,null,null,null,null,null,'2020-11-13');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
 VALUES (29270,41696,1,'Accessioned','26.189','TR835/1',1926,12,21,'The Art Jury',null,null,'1921',1921,1921,null,null,null,null,null,'Visual Works: Paintings','oil on canvas','painting',null,'Signed, l.l.: Wayman Adams','82-1/4 x 54-1/4 in. (canvas)\n86-1/2 x 59 x 2-1/2 in. (framed)','Gift to the Art Association through popular subscription','© Wayman Adams','Purchased from the artist by a group of local patrons for the museum.',2,0,14,null,null,null,null,null,null,null,null,'2022-06-08');
 
-INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,deaccession_notes,recipient,transfer_notes,date_modified)
-VALUES (19677,null,1,'Deaccessioned','S4344.81.1','TR4344/1',1981,null,null,'quilt (Star of Bethlehem)',null,null,'about 1930',1927,1933,null,null,null,null,null,'Furnishings','cotton, appliquéd and quilted','quilting',null,null,'84 x 86 in.','Gift of Edgar B. Howard','No Known Rights Holder','Edgar B. Howard, New York; given to the Indianapolis Museum of Art, Indianapolis, Indiana, 17 December 1981.',10,0,15,null,'Deaccession',2021,11,16,'Niloo Paydar, Curator of Textile and Fashion Arts, recommends this piece for deaccession because it is not museum quality.',null,null,'2022-02-03');
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
+VALUES (19677,null,1,'Deaccessioned','S4344.81.1','TR4344/1',1981,null,null,'quilt (Star of Bethlehem)',null,null,'about 1930',1927,1933,null,null,null,null,null,'Furnishings','cotton, appliquéd and quilted','quilting',null,null,'84 x 86 in.','Gift of Edgar B. Howard','No Known Rights Holder','Edgar B. Howard, New York; given to the Indianapolis Museum of Art, Indianapolis, Indiana, 17 December 1981.',10,0,15,null,'Deaccession',2021,11,16,null,null,null,'2022-02-03');
+
+INSERT INTO [objects] (emu_irn,dagwood_id,publish,status,accession_number,previous_id,date_accessioned_year,date_accessioned_month,date_accessioned_day,title,series_title,portfolio_title,date_created,date_created_earliest,date_created_latest,date_designed,date_designed_earliest,date_designed_latest,period,dynasty,record_type,medium_support,technique,style,mark_description,dimensions,credit_line,rights_acknowledgement,provenance,department,on_view,location_id,parent_irn,deaccession_method,deaccession_date_year,deaccession_date_month,deaccession_date_day,recipient,transfer_notes,sale_price,date_modified)
+VALUES (18078,null,1,'Deaccessioned','73.74.1','TR0077/1',1973,null,null,'plate',null,null,null,null,null,null,null,null,null,null,'Containers','dinnerware','earthenware',null,null,'D: 9-1/4 in.','Gift of Mrs. C. W. Weathers from the Hazel H. Force Estate','No Known Rights Holder',null,11,0,16,null,'Deaccession',2011,9,15,22,'Transferred to Susanin''s Premiere Auctions; Sold on 5/12/2012 in Premiere Sale 111 (lot 2082)',2.22,'2022-02-03');
 
 
 --INSERT SAMPLE VALUES INTO PARTIES TABLE
@@ -478,6 +502,9 @@ VALUES (7050,1,'Registration Verified','Marco A. Castillo Valdés',null,'Marco',
 INSERT INTO [parties] (emu_irn,publish,party_type,full_name,title,first_name,middle_name,last_name,suffix,gender,nationality,birth_date,birth_place,death_date,death_place,organization_name,commencement_date,completion_date,collaboration_name,acronym,date_modified)
 VALUES (620,1,'Place Holder','Wayman Adams',null,'Wayman',null,'Adams',null,'Male','American','1883','Muncie, Indiana','1959','Austin, Texas',null,null,null,null,null,'2022-02-18');
 
+INSERT INTO [parties] (emu_irn,publish,party_type,full_name,title,first_name,middle_name,last_name,suffix,gender,nationality,birth_date,birth_place,death_date,death_place,organization_name,commencement_date,completion_date,collaboration_name,acronym,date_modified)
+VALUES (4656,1,'Organisation','Susanin''s Premier Auctions',null,null,null,null,null,null,null,null,null,null,null,'Susanin''s Premiere Auctions',null,null,null,null,'2019-01-10');
+
 
 --INSERT SAMPLE VALUES INTO NARRATIVES TABLE
 INSERT INTO [narratives] (emu_irn,publish,title,purpose,date_year,date_month,date_day,narrative,date_modified)
@@ -513,6 +540,9 @@ VALUES (12,'possibly','Pueblo People',null,1);
 
 INSERT INTO [object_cultures] (object_id,attribution,culture,nationality,sort_order)
 VALUES (17,null,null,'American',1);
+
+INSERT INTO [object_cultures] (object_id,attribution,culture,nationality,sort_order)
+VALUES (18,null,null,'Italian',1);
 
 
 --INSERT SAMPLE VALUES INTO OBJECT_PLACES TABLE
@@ -554,6 +584,9 @@ VALUES (16,'United States',null,null,null,1);
 
 INSERT INTO [object_places] (object_id,country,state,district,city,sort_order)
 VALUES (17,'United States',null,null,null,1);
+
+INSERT INTO [object_places] (object_id,country,state,district,city,sort_order)
+VALUES (18,'Italy',null,null,null,1);
 
 
 --INSERT SAMPLE VALUES INTO OBJECT_DIMENSIONS TABLE
@@ -643,6 +676,9 @@ VALUES (16,'Unframed Dimensions',82.2500,54.2500,null,null,'in.',null,null,'Metr
 
 INSERT INTO [object_dimensions] (object_id,type,height,width,depth,diameter,length_unit,weight,weight_unit,notes,sort_order)
 VALUES (17,'Dimensions',84.0000,86.0000,null,null,'in.',null,null,'Metric: 213.4 x 218.4 cm.',1);
+
+INSERT INTO [object_dimensions] (object_id,type,height,width,depth,diameter,length_unit,weight,weight_unit,notes,sort_order)
+VALUES (18,'Dimensions',null,null,9.2500,null,'in.',null,null,null,1);
 
 
 --INSERT SAMPLE VALUES INTO OBJECT_GUIDS TABLE
@@ -945,6 +981,9 @@ VALUES (21,1,1);
 INSERT INTO [party_roles] (party_id,role_id,sort_order)
 VALUES (21,5,2);
 
+INSERT INTO [party_roles] (party_id,role_id,sort_order)
+VALUES (22,30,1);
+
 
 --INSERT SAMPLE VALUES INTO PARTY_GUIDS TABLE
 INSERT INTO [party_guids] (party_id,preferred,type,guid,sort_order)
@@ -1019,6 +1058,12 @@ VALUES (12,1,1);
 
 INSERT INTO [object_flags] (object_id,flag_id,sort_order)
 VALUES (14,10,1);
+
+INSERT INTO [object_flags] (object_id,flag_id,sort_order)
+VALUES (18,10,1);
+
+INSERT INTO [object_flags] (object_id,flag_id,sort_order)
+VALUES (18,11,2);
 
 
 --INSERT SAMPLE VALUES INTO OBJECT_PRINTERS TABLE
@@ -1113,6 +1158,9 @@ VALUES (17,17,4);
 INSERT INTO [object_types] (object_id,type_id,sort_order)
 VALUES (17,18,5);
 
+INSERT INTO [object_types] (object_id,type_id,sort_order)
+VALUES (18,19,1);
+
 
 --INSERT SAMPLE VALUES INTO OBJECT_MEDIUMS TABLE
 INSERT INTO [object_mediums] (object_id,medium_id,sort_order)
@@ -1162,6 +1210,9 @@ VALUES (15,5,2);
 
 INSERT INTO [object_mediums] (object_id,medium_id,sort_order)
 VALUES (16,2,1);
+
+INSERT INTO [object_mediums] (object_id,medium_id,sort_order)
+VALUES (18,10,1);
 
 
 --INSERT SAMPLE VALUES INTO OBJECT_SUPPORTS TABLE
@@ -1224,6 +1275,9 @@ VALUES (16,2,1);
 
 INSERT INTO [object_supports] (object_id,support_id,sort_order)
 VALUES (17,13,1);
+
+INSERT INTO [object_supports] (object_id,support_id,sort_order)
+VALUES (18,14,1);
 
 
 --INSERT SAMPLE VALUES INTO OBJECT_MARKS TABLE
