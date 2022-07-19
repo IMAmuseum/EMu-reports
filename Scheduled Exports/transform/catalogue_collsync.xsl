@@ -89,7 +89,7 @@
         "provenance": <xsl:choose><xsl:when test="atom[@name='CreProvenance'] != ''">"<xsl:value-of select="replace(replace(replace(atom[@name='CreProvenance'], '\n', '\\n'), '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "department": <xsl:choose><xsl:when test="atom[@name='PhyCollectionArea'] != ''">"<xsl:value-of select="substring-after(replace(replace(atom[@name='PhyCollectionArea'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;'), '-')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "on_view": <xsl:choose><xsl:when test="atom[@name='LocMovementType'] = 'Exhibition Location'">true</xsl:when><xsl:otherwise>false</xsl:otherwise></xsl:choose>,
-        "current_location_irn": <xsl:choose><xsl:when  test="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='irn'] != ''"><xsl:value-of select="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='irn']"/></xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+        "location_irn": <xsl:choose><xsl:when  test="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='irn'] != ''"><xsl:value-of select="table[@name='CurLoc']/tuple/tuple[@name='LocCurrentLocationRef']/atom[@name='irn']"/></xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "parent_irn": <xsl:choose><xsl:when test="table[@name='Parent']/tuple/tuple[@name='AssParentObjectRef']/atom[@name='irn'] != ''"><xsl:value-of select="table[@name='Parent']/tuple/tuple[@name='AssParentObjectRef']/atom[@name='irn']"/></xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "related_objects": [<xsl:for-each select="table[@name='Related']/tuple">
             {

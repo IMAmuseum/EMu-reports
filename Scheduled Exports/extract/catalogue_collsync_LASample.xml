@@ -111,15 +111,6 @@
     table           CurLoc
       tuple           LocCurrentLocationRef
         integer         irn
-        text short      LocLocationCode
-        text short      LocLevel1
-        text short      LocLevel2
-        text short      LocLevel3
-        text short      LocLevel4
-        text short      LocLevel5
-        text short      LocLevel6
-        text short      LocLevel7
-        text short      LocLevel8
       end
     end
     table           PermLoc
@@ -226,15 +217,6 @@
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14916</atom>
-          <atom name="LocLocationCode">Location Not Verified</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Location Not Verified</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -360,15 +342,6 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">10315</atom>
-          <atom name="LocLocationCode">F25.cg5.r6.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg5</atom>
-          <atom name="LocLevel5">r6</atom>
-          <atom name="LocLevel6">lv4</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -509,15 +482,6 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">8644</atom>
-          <atom name="LocLocationCode">F25.cg2.r5.lv14</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg2</atom>
-          <atom name="LocLevel5">r5</atom>
-          <atom name="LocLevel6">lv14</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -598,6 +562,7 @@ Inscribed: title and series title</atom>
       <tuple>
         <atom name="PhyType">Dimensions</atom>
         <atom name="PhyHeight">87.0000</atom>
+        <atom name="PhyUnitLength">in.</atom>
       </tuple>
     </table>
     <atom name="SumCreditLine">Gift of Mary E. Nicholson</atom>
@@ -618,19 +583,10 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">87</atom>
-          <atom name="LocLocationCode">On Loan</atom>
-          <atom name="LocLevel1">On Loan</atom>
-          <atom name="LocLevel2"></atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
-    <atom name="AdmDateModified">2022-04-26</atom>
+    <atom name="AdmDateModified">2022-07-11</atom>
   </tuple>
 
   <!-- Row 5 -->
@@ -719,15 +675,6 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -836,15 +783,6 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">9966</atom>
-          <atom name="LocLocationCode">F25.cg4.r15.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg4</atom>
-          <atom name="LocLevel5">r15</atom>
-          <atom name="LocLevel6">lv4</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -990,15 +928,6 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14787</atom>
-          <atom name="LocLocationCode">K212</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Andrew and Jane Paine Galleries</atom>
-          <atom name="LocLevel3">K212</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -1121,15 +1050,6 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">9474</atom>
-          <atom name="LocLocationCode">F25.bin8.lv1.sl6</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">bin8</atom>
-          <atom name="LocLevel5">lv1</atom>
-          <atom name="LocLevel6">sl6</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -1191,13 +1111,14 @@ Inscribed: title and series title</atom>
     <atom name="PhyTechnique"></atom>
     <atom name="PhyStyle"></atom>
     <atom name="CrePrimaryInscriptions"></atom>
-    <atom name="PhyConvertedDims">25 in.</atom>
+    <atom name="PhyConvertedDims">25 x 1/16 (diam.) in.</atom>
     <table name="Dims">
       <tuple>
         <atom name="PhyType">Dimensions</atom>
         <atom name="PhyHeight">25.0000</atom>
+        <atom name="PhyDiameter">0.0625</atom>
         <atom name="PhyUnitLength">in.</atom>
-        <atom name="PhyDimensionNotes">Metric: 9.52</atom>
+        <atom name="PhyDimensionNotes">Metric: 63.5 x 0.2 (diam.) cm.</atom>
       </tuple>
     </table>
     <atom name="SumCreditLine">Gift of Egyptian Research Account, British School of Archaeology through William Flinders Petrie</atom>
@@ -1218,15 +1139,6 @@ Inscribed: title and series title</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">136</atom>
-          <atom name="LocLocationCode">Cc3.lv3</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Cc3</atom>
-          <atom name="LocLevel4">lv3</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -1246,7 +1158,18 @@ Inscribed: title and series title</atom>
         </tuple>
       </tuple>
     </table>
-    <atom name="AdmDateModified">2022-06-29</atom>
+    <table name="DeaccessionDetails">
+      <tuple>
+        <atom name="DeaDeaccessionMethod"></atom>
+        <atom name="DeaDeaccessionDate"></atom>
+        <atom name="DeaDeaccessionNotes">Robin Cooper, Manager of Curatorial Affairs, recommends this piece for deaccession because it falls outside of the collecting plan and institutional priorities of the Indianapolis Museum of Art.</atom>
+        <tuple name="DeaReceivingPartyRef">
+            <atom name="irn"></atom>
+        </tuple>
+        <atom name="DeaTransferNotes"></atom>
+      </tuple>
+    </table>
+    <atom name="AdmDateModified">2022-07-06</atom>
   </tuple>
 
   <!-- Row 10 -->
@@ -1342,15 +1265,6 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">663</atom>
-          <atom name="LocLocationCode">Xc4.lv5</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Xc4</atom>
-          <atom name="LocLevel4">lv5</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -1494,15 +1408,6 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -1620,15 +1525,6 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">663</atom>
-          <atom name="LocLocationCode">Xc4.lv5</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Xc4</atom>
-          <atom name="LocLevel4">lv5</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -1763,15 +1659,6 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">663</atom>
-          <atom name="LocLocationCode">Xc4.lv5</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Xc4</atom>
-          <atom name="LocLevel4">lv5</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -1938,15 +1825,6 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">2351</atom>
-          <atom name="LocLocationCode">P.63w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">63w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -2066,15 +1944,6 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">35</atom>
-          <atom name="LocLocationCode">Ec43.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Ec43</atom>
-          <atom name="LocLevel4">lv4</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -2203,15 +2072,6 @@ B) 4-1/8 x 4-1/2 x 5-1/2 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">2634</atom>
-          <atom name="LocLocationCode">F25.cs7.lv8</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cs7</atom>
-          <atom name="LocLevel5">lv8</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -2355,15 +2215,6 @@ Censor's seal: single kiwame</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">2634</atom>
-          <atom name="LocLocationCode">F25.cs7.lv8</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cs7</atom>
-          <atom name="LocLevel5">lv8</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -2481,15 +2332,6 @@ Censor's seal: single kiwame</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">2634</atom>
-          <atom name="LocLocationCode">F25.cs7.lv8</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cs7</atom>
-          <atom name="LocLevel5">lv8</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -2633,15 +2475,6 @@ Censor's seal: single kiwame</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">2634</atom>
-          <atom name="LocLocationCode">F25.cs7.lv8</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cs7</atom>
-          <atom name="LocLevel5">lv8</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -2763,15 +2596,6 @@ Censor's seal: single kiwame</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">9682</atom>
-          <atom name="LocLocationCode">F25.cg6.r8.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg6</atom>
-          <atom name="LocLevel5">r8</atom>
-          <atom name="LocLevel6">lv4</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -2903,15 +2727,6 @@ Censor's seal: single kiwame</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">1050</atom>
-          <atom name="LocLocationCode">P.18w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">18w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3050,15 +2865,6 @@ Signed in plate: 1094 B. A. Calame - 7ime Livraison - 1853 - No. 7</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">9972</atom>
-          <atom name="LocLocationCode">F25.cg6.r4.lv12</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg6</atom>
-          <atom name="LocLevel5">r4</atom>
-          <atom name="LocLevel6">lv12</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3188,15 +2994,6 @@ Signed in plate: 1094 B. A. Calame - 7ime Livraison - 1853 - No. 7</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">7328</atom>
-          <atom name="LocLocationCode">P.81w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">81w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3331,15 +3128,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">10285</atom>
-          <atom name="LocLocationCode">F25.cg5.r3.lv11</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg5</atom>
-          <atom name="LocLevel5">r3</atom>
-          <atom name="LocLevel6">lv11</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3428,15 +3216,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">4348</atom>
-          <atom name="LocLocationCode">Tc23.lv1</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc23</atom>
-          <atom name="LocLevel4">lv1</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3584,15 +3363,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">3674</atom>
-          <atom name="LocLocationCode">P.10w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">10w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3693,15 +3463,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">10326</atom>
-          <atom name="LocLocationCode">F25.cg5.r7.lv13</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg5</atom>
-          <atom name="LocLevel5">r7</atom>
-          <atom name="LocLevel6">lv13</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3818,15 +3579,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14784</atom>
-          <atom name="LocLocationCode">K210</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Joan D. Weisenberger Gallery</atom>
-          <atom name="LocLevel3">K210</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -3930,15 +3682,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">738</atom>
-          <atom name="LocLocationCode">Ac1.lv1</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Ac1</atom>
-          <atom name="LocLevel4">lv1</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4060,15 +3803,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">3965</atom>
-          <atom name="LocLocationCode">P.92w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">92w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4210,15 +3944,6 @@ Engraver's seal: Horisen</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">7243</atom>
-          <atom name="LocLocationCode">Tc58.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc58</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4357,15 +4082,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">7246</atom>
-          <atom name="LocLocationCode">Tc58.lv2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc58</atom>
-          <atom name="LocLevel4">lv2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4509,15 +4225,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14825</atom>
-          <atom name="LocLocationCode">W202</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Pulliam Family Great Hall</atom>
-          <atom name="LocLevel3">W202</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4636,15 +4343,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">9733</atom>
-          <atom name="LocLocationCode">F25.cg14.r7.lv9</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg14</atom>
-          <atom name="LocLevel5">r7</atom>
-          <atom name="LocLevel6">lv9</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4774,15 +4472,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">3351</atom>
-          <atom name="LocLocationCode">P.17w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">17w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4863,15 +4552,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">9921</atom>
-          <atom name="LocLocationCode">F25.cg10.r2.lv1</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">cg10</atom>
-          <atom name="LocLevel5">r2</atom>
-          <atom name="LocLevel6">lv1</atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -4965,15 +4645,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -5069,15 +4740,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -5163,15 +4825,6 @@ Embroidered, one state name on each star, clockwise from top center: Massachuset
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">319</atom>
-          <atom name="LocLocationCode">Tc46</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc46</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -5306,15 +4959,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -5412,15 +5056,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">319</atom>
-          <atom name="LocLocationCode">Tc46</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc46</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -5530,15 +5165,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">319</atom>
-          <atom name="LocLocationCode">Tc46</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc46</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -5690,15 +5316,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">6378</atom>
-          <atom name="LocLocationCode">P.91w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">91w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -5833,32 +5450,23 @@ C) sash: length 81 in.</atom>
     </table>
     <atom name="CreProvenance">Purchased from the artist by the Art Association of Indianapolis for the John Herron Art Institute, Indianapolis, Indiana, now the Indianapolis Museum of Art at Newfields, in 1894.</atom>
     <atom name="PhyCollectionArea">901.2-American Painting and Sculpture 1800-1945</atom>
-    <atom name="LocMovementType">Other Location</atom>
+    <atom name="LocMovementType">Inventory Beginning 2018 - ten year schedule for upcoming reaccreditation</atom>
     <table name="CurLoc">
       <tuple>
         <tuple name="LocCurrentLocationRef">
-          <atom name="irn">9950</atom>
-          <atom name="LocLocationCode">T13</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Exhibition Holding</atom>
-          <atom name="LocLevel3">T13</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
+          <atom name="irn">2516</atom>
         </tuple>
       </tuple>
     </table>
     <table name="PermLoc">
       <tuple>
         <tuple name="LocPermanentLocationRef">
-          <atom name="irn">4335</atom>
-          <atom name="LocLocationCode">P.47w</atom>
+          <atom name="irn">2516</atom>
+          <atom name="LocLocationCode">P.50w</atom>
           <atom name="LocLevel1">IMA</atom>
           <atom name="LocLevel2">storage</atom>
           <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">47w</atom>
+          <atom name="LocLevel4">50w</atom>
           <atom name="LocLevel5"></atom>
           <atom name="LocLevel6"></atom>
           <atom name="LocLevel7"></atom>
@@ -5866,7 +5474,7 @@ C) sash: length 81 in.</atom>
         </tuple>
       </tuple>
     </table>
-    <atom name="AdmDateModified">2022-06-29</atom>
+    <atom name="AdmDateModified">2022-07-01</atom>
   </tuple>
 
   <!-- Row 45 -->
@@ -5946,15 +5554,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15826</atom>
-          <atom name="LocLocationCode">F25.sc1.lv10</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Print Storage</atom>
-          <atom name="LocLevel3">F25</atom>
-          <atom name="LocLevel4">sc1</atom>
-          <atom name="LocLevel5">lv10</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6082,15 +5681,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">7919</atom>
-          <atom name="LocLocationCode">Tc58.lv8</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc58</atom>
-          <atom name="LocLevel4">lv8</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6197,15 +5787,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14099</atom>
-          <atom name="LocLocationCode">W302.c7.riser</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Eiteljorg Suite of African and Oceanic Art</atom>
-          <atom name="LocLevel3">W302</atom>
-          <atom name="LocLevel4">c7</atom>
-          <atom name="LocLevel5">riser</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6309,15 +5890,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">1095</atom>
-          <atom name="LocLocationCode">Ec45.lv3</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Ec45</atom>
-          <atom name="LocLevel4">lv3</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6417,15 +5989,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">3715</atom>
-          <atom name="LocLocationCode">P.174w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">174w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6538,15 +6101,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14123</atom>
-          <atom name="LocLocationCode">W303.c1.wall</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Eiteljorg Suite of African and Oceanic Art</atom>
-          <atom name="LocLevel3">W303</atom>
-          <atom name="LocLevel4">c1</atom>
-          <atom name="LocLevel5">wall</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6673,15 +6227,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14123</atom>
-          <atom name="LocLocationCode">W303.c1.wall</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Eiteljorg Suite of African and Oceanic Art</atom>
-          <atom name="LocLevel3">W303</atom>
-          <atom name="LocLevel4">c1</atom>
-          <atom name="LocLevel5">wall</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6775,15 +6320,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14123</atom>
-          <atom name="LocLocationCode">W303.c1.wall</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Eiteljorg Suite of African and Oceanic Art</atom>
-          <atom name="LocLevel3">W303</atom>
-          <atom name="LocLevel4">c1</atom>
-          <atom name="LocLevel5">wall</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -6945,15 +6481,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -7062,15 +6589,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -7246,15 +6764,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -7430,15 +6939,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15153</atom>
-          <atom name="LocLocationCode">Hc2.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc2</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -7630,15 +7130,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -7814,15 +7305,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -7998,15 +7480,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15153</atom>
-          <atom name="LocLocationCode">Hc2.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc2</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -8198,15 +7671,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15153</atom>
-          <atom name="LocLocationCode">Hc2.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc2</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -8398,15 +7862,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -8582,15 +8037,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -8768,15 +8214,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -8952,15 +8389,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15153</atom>
-          <atom name="LocLocationCode">Hc2.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc2</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -9152,15 +8580,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15153</atom>
-          <atom name="LocLocationCode">Hc2.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc2</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -9352,15 +8771,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15153</atom>
-          <atom name="LocLocationCode">Hc2.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc2</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -9552,15 +8962,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15153</atom>
-          <atom name="LocLocationCode">Hc2.lv7</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc2</atom>
-          <atom name="LocLevel4">lv7</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -9749,15 +9150,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -9878,15 +9270,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10046,15 +9429,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10162,15 +9536,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10286,15 +9651,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10454,15 +9810,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14069</atom>
-          <atom name="LocLocationCode">H302</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H302</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10575,15 +9922,6 @@ C) sash: length 81 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14999</atom>
-          <atom name="LocLocationCode">H301</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H301</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10700,15 +10038,6 @@ B) ottoman: diam.: 22 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10818,15 +10147,6 @@ B) ottoman: diam.: 22 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14999</atom>
-          <atom name="LocLocationCode">H301</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Contemporary Design Gallery</atom>
-          <atom name="LocLevel3">H301</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -10919,15 +10239,6 @@ B) ottoman: diam.: 22 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">452</atom>
-          <atom name="LocLocationCode">ANP</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">The Virginia B. Fairbanks Art &amp; Nature Park</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -11026,15 +10337,6 @@ B) ottoman: diam.: 22 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">1083</atom>
-          <atom name="LocLocationCode">Tc25.lv9</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc25</atom>
-          <atom name="LocLevel4">lv9</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -11149,15 +10451,6 @@ B) ottoman: diam.: 22 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -11321,15 +10614,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -11428,15 +10712,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -11572,15 +10847,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -11716,15 +10982,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -11860,15 +11117,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -12004,15 +11252,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -12148,15 +11387,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -12292,15 +11522,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -12436,15 +11657,6 @@ Element E.1-.4) 480 x 77 x 15 in. (assembled)</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14628</atom>
-          <atom name="LocLocationCode">H203.p2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
-          <atom name="LocLevel3">H203</atom>
-          <atom name="LocLevel4">p2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -12629,15 +11841,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -12735,15 +11938,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14628</atom>
-          <atom name="LocLocationCode">H203.p2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
-          <atom name="LocLevel3">H203</atom>
-          <atom name="LocLevel4">p2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -12875,15 +12069,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">8013</atom>
-          <atom name="LocLocationCode">Lc8.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Lc8</atom>
-          <atom name="LocLevel4">lv4</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13030,15 +12215,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14628</atom>
-          <atom name="LocLocationCode">H203.p2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
-          <atom name="LocLevel3">H203</atom>
-          <atom name="LocLevel4">p2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13169,15 +12345,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14628</atom>
-          <atom name="LocLocationCode">H203.p2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
-          <atom name="LocLevel3">H203</atom>
-          <atom name="LocLevel4">p2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13320,15 +12487,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14628</atom>
-          <atom name="LocLocationCode">H203.p2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
-          <atom name="LocLevel3">H203</atom>
-          <atom name="LocLevel4">p2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13471,15 +12629,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14628</atom>
-          <atom name="LocLocationCode">H203.p2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Mary Ann and Gene Zink Gallery</atom>
-          <atom name="LocLevel3">H203</atom>
-          <atom name="LocLevel4">p2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13601,15 +12750,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">4562</atom>
-          <atom name="LocLocationCode">P.72e</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">72e</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13705,15 +12845,6 @@ E.2) platter lid: 3 x 6 (diam.) in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15193</atom>
-          <atom name="LocLocationCode">Hc9.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc9</atom>
-          <atom name="LocLevel4">lv4</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13844,15 +12975,6 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">68</atom>
-          <atom name="LocLocationCode">see related parts</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">see related parts</atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -13948,15 +13070,6 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15193</atom>
-          <atom name="LocLocationCode">Hc9.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc9</atom>
-          <atom name="LocLevel4">lv4</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14069,15 +13182,6 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">15193</atom>
-          <atom name="LocLocationCode">Hc9.lv4</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Hc9</atom>
-          <atom name="LocLevel4">lv4</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14220,15 +13324,6 @@ C) 3-1/4 x 3-1/2 x 3-3/8 in.</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">3674</atom>
-          <atom name="LocLocationCode">P.10w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">10w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14363,15 +13458,6 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14746</atom>
-          <atom name="LocLocationCode">C207</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Portraiture, Medieval  Art Gallery</atom>
-          <atom name="LocLevel3">C207</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14475,15 +13561,6 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">8358</atom>
-          <atom name="LocLocationCode">LH103.c5.lv2</atom>
-          <atom name="LocLevel1">Lilly House</atom>
-          <atom name="LocLevel2">Game room</atom>
-          <atom name="LocLevel3">LH103</atom>
-          <atom name="LocLevel4">c5</atom>
-          <atom name="LocLevel5">lv2</atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14574,15 +13651,6 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">326</atom>
-          <atom name="LocLocationCode">G</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Grounds</atom>
-          <atom name="LocLevel3">G</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14699,15 +13767,6 @@ On long-term loan to the Indianapolis Museum of Art, now the Indianapolis Museum
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">7246</atom>
-          <atom name="LocLocationCode">Tc58.lv2</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Tc58</atom>
-          <atom name="LocLevel4">lv2</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14820,15 +13879,6 @@ Inscribed in unknown hand, l.r. : 1890</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">10</atom>
-          <atom name="LocLocationCode">Returned</atom>
-          <atom name="LocLevel1">Returned</atom>
-          <atom name="LocLevel2"></atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -14928,15 +13978,6 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">10</atom>
-          <atom name="LocLocationCode">Returned</atom>
-          <atom name="LocLevel1">Returned</atom>
-          <atom name="LocLevel2"></atom>
-          <atom name="LocLevel3"></atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -15032,15 +14073,6 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">3484</atom>
-          <atom name="LocLocationCode">P.170e</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">170e</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -15151,15 +14183,6 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">14787</atom>
-          <atom name="LocLocationCode">K212</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">Andrew and Jane Paine Galleries</atom>
-          <atom name="LocLevel3">K212</atom>
-          <atom name="LocLevel4"></atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -15271,15 +14294,6 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">7349</atom>
-          <atom name="LocLocationCode">P.172w</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">P</atom>
-          <atom name="LocLevel4">172w</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
@@ -15380,15 +14394,6 @@ Courtesy the Estates of William J. and Constance Forsyth</atom>
       <tuple>
         <tuple name="LocCurrentLocationRef">
           <atom name="irn">773</atom>
-          <atom name="LocLocationCode">Ec43.lv6</atom>
-          <atom name="LocLevel1">IMA</atom>
-          <atom name="LocLevel2">storage</atom>
-          <atom name="LocLevel3">Ec43</atom>
-          <atom name="LocLevel4">lv6</atom>
-          <atom name="LocLevel5"></atom>
-          <atom name="LocLevel6"></atom>
-          <atom name="LocLevel7"></atom>
-          <atom name="LocLevel8"></atom>
         </tuple>
       </tuple>
     </table>
