@@ -505,6 +505,7 @@ VALUES (620,TRUE,'Place Holder','Wayman Adams',null,'Wayman',null,'Adams',null,'
 INSERT INTO parties (emu_irn,publish,party_type,full_name,title,first_name,middle_name,last_name,suffix,gender,nationality,birth_date,birth_place,death_date,death_place,organization_name,commencement_date,completion_date,collaboration_name,acronym,date_modified)
 VALUES (4656,TRUE,'Organisation','Susanin''s Premier Auctions',null,null,null,null,null,null,null,null,null,null,null,'Susanin''s Premiere Auctions',null,null,null,null,'2019-01-10');
 
+
 --INSERT SAMPLE VALUES INTO NARRATIVES TABLE
 INSERT INTO narratives (emu_irn,publish,title,purpose,date_year,date_month,date_day,narrative,date_modified)
 VALUES (6633,TRUE,'14.55_v01','Exhibition Label',2015,12,18,'<UL>\n<LI>The contents of Fiscus’s well-appointed workspace—leather-bound books, ceramic <EM>objets d’art,</EM> and a fur throw—provide the motif for this composition and demonstrate his ability to depict various textures. His range of subject matter is suggested by the charcoal portrait sketch, the fruit still-life painting, and the complex figural scene.<BR></LI>\n<LI>The teenaged artist thrived under the tutelage of Love and Gookins. A writer of the period observed: “Charles Fiscus was among the most talented pupils of [the] early school….”<BR></LI>\n<LI>After the Indiana School of Art shuttered its doors, Fiscus continued his studies under Gookins in Terre Haute and Chicago. Later, he participated in Indianapolis’s sketching groups until his untimely death at age 22.</LI></UL>','2017-01-09');
