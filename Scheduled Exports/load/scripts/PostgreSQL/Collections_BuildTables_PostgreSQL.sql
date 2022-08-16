@@ -1,6 +1,6 @@
 CREATE TABLE "objects" (
   "object_id" SERIAL PRIMARY KEY NOT NULL,
-  "emu_irn" int NOT NULL,
+  "emu_irn" int UNIQUE NOT NULL,
   "dagwood_id" int,
   "publish" boolean NOT NULL,
   "status" varchar,
@@ -29,15 +29,15 @@ CREATE TABLE "objects" (
   "credit_line" varchar,
   "rights_acknowledgement" varchar,
   "provenance" varchar,
-  "department" int,
+  "department_id" int,
   "on_view" boolean NOT NULL,
   "location_id" int,
-  "parent_irn" int,
+  "parent_id" int,
   "deaccession_method" varchar,
   "deaccession_date_year" int,
   "deaccession_date_month" int,
   "deaccession_date_day" int,
-  "recipient" int,
+  "recipient_id" int,
   "transfer_notes" varchar,
   "sale_price" decimal(18,4),
   "date_modified" date NOT NULL
@@ -187,7 +187,7 @@ CREATE TABLE "departments" (
 
 CREATE TABLE "locations" (
   "location_id" SERIAL PRIMARY KEY NOT NULL,
-  "emu_irn" int NOT NULL,
+  "emu_irn" int UNIQUE NOT NULL,
   "publish" boolean NOT NULL,
   "code" varchar,
   "level_1" varchar,
@@ -220,7 +220,7 @@ CREATE TABLE "object_guids" (
 
 CREATE TABLE "narratives" (
   "narrative_id" SERIAL PRIMARY KEY NOT NULL,
-  "emu_irn" int NOT NULL,
+  "emu_irn" int UNIQUE NOT NULL,
   "publish" boolean NOT NULL,
   "title" varchar,
   "purpose" varchar,
@@ -261,7 +261,7 @@ CREATE TABLE "narrative_parties" (
 
 CREATE TABLE "parties" (
   "party_id" SERIAL PRIMARY KEY NOT NULL,
-  "emu_irn" int NOT NULL,
+  "emu_irn" int UNIQUE NOT NULL,
   "publish" boolean NOT NULL,
   "party_type" varchar,
   "full_name" varchar,
@@ -331,11 +331,13 @@ CREATE TABLE "events" (
   "emu_irn" int NOT NULL
 );
 
-ALTER TABLE "objects" ADD FOREIGN KEY ("department") REFERENCES "departments" ("department_id");
+ALTER TABLE "objects" ADD FOREIGN KEY ("department_id") REFERENCES "departments" ("department_id");
 
 ALTER TABLE "objects" ADD FOREIGN KEY ("location_id") REFERENCES "locations" ("location_id");
 
-ALTER TABLE "objects" ADD FOREIGN KEY ("parent_irn") REFERENCES "objects" ("object_id");
+ALTER TABLE "objects" ADD FOREIGN KEY ("parent_id") REFERENCES "objects" ("object_id");
+
+ALTER TABLE "objects" ADD FOREIGN KEY ("recipient_id") REFERENCES "parties" ("party_id");
 
 ALTER TABLE "object_flags" ADD FOREIGN KEY ("object_id") REFERENCES "objects" ("object_id");
 

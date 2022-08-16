@@ -1,20 +1,17 @@
-USE CollectionsTest
-GO
-
 CREATE TABLE [objects] (
   [object_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
-  [emu_irn] int NOT NULL,
+  [emu_irn] int UNIQUE NOT NULL,
   [dagwood_id] int,
-  [publish] bit NOT NULL,
+  [publish] boolean NOT NULL,
   [status] nvarchar(255),
   [accession_number] nvarchar(255),
   [previous_id] nvarchar(255),
   [date_accessioned_year] int,
   [date_accessioned_month] int,
   [date_accessioned_day] int,
-  [title] nvarchar(max),
-  [series_title] nvarchar(max),
-  [portfolio_title] nvarchar(max),
+  [title] nvarchar(255),
+  [series_title] nvarchar(255),
+  [portfolio_title] nvarchar(255),
   [date_created] nvarchar(255),
   [date_created_earliest] int,
   [date_created_latest] int,
@@ -27,21 +24,21 @@ CREATE TABLE [objects] (
   [medium_support] nvarchar(255),
   [technique] nvarchar(255),
   [style] nvarchar(255),
-  [mark_description] nvarchar(max),
-  [dimensions] nvarchar(max),
-  [credit_line] nvarchar(max),
-  [rights_acknowledgement] nvarchar(max),
-  [provenance] varchar(max),
-  [department] int,
-  [on_view] bit NOT NULL,
+  [mark_description] nvarchar(255),
+  [dimensions] nvarchar(255),
+  [credit_line] nvarchar(255),
+  [rights_acknowledgement] nvarchar(255),
+  [provenance] nvarchar(255),
+  [department_id] int,
+  [on_view] boolean NOT NULL,
   [location_id] int,
-  [parent_irn] int,
+  [parent_id] int,
   [deaccession_method] nvarchar(255),
   [deaccession_date_year] int,
   [deaccession_date_month] int,
   [deaccession_date_day] int,
-  [recipient] int,
-  [transfer_notes] varchar(max),
+  [recipient_id] int,
+  [transfer_notes] nvarchar(255),
   [sale_price] decimal(18,4),
   [date_modified] date NOT NULL
 )
@@ -63,7 +60,7 @@ GO
 
 CREATE TABLE [alt_titles] (
   [object_id] int NOT NULL,
-  [alt_title] nvarchar(max),
+  [alt_title] nvarchar(255),
   [sort_order] int NOT NULL,
   PRIMARY KEY ([object_id], [sort_order])
 )
@@ -182,7 +179,7 @@ CREATE TABLE [object_dimensions] (
   [length_unit] nvarchar(255),
   [weight] decimal(18,4),
   [weight_unit] nvarchar(255),
-  [notes] nvarchar(max),
+  [notes] nvarchar(255),
   [sort_order] int NOT NULL,
   PRIMARY KEY ([object_id], [sort_order])
 )
@@ -211,8 +208,8 @@ GO
 
 CREATE TABLE [locations] (
   [location_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
-  [emu_irn] int NOT NULL,
-  [publish] bit NOT NULL,
+  [emu_irn] int UNIQUE NOT NULL,
+  [publish] boolean NOT NULL,
   [code] nvarchar(255),
   [level_1] nvarchar(255),
   [level_2] nvarchar(255),
@@ -237,7 +234,7 @@ GO
 
 CREATE TABLE [object_guids] (
   [object_id] int NOT NULL,
-  [preferred] bit NOT NULL,
+  [preferred] boolean NOT NULL,
   [type] nvarchar(255) NOT NULL,
   [guid] nvarchar(255) NOT NULL,
   [sort_order] int NOT NULL,
@@ -247,14 +244,14 @@ GO
 
 CREATE TABLE [narratives] (
   [narrative_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
-  [emu_irn] int NOT NULL,
-  [publish] bit NOT NULL,
+  [emu_irn] int UNIQUE NOT NULL,
+  [publish] boolean NOT NULL,
   [title] nvarchar(255),
   [purpose] nvarchar(255),
   [date_year] int,
   [date_month] int,
   [date_day] int,
-  [narrative] varchar(max) NOT NULL,
+  [narrative] nvarchar(255) NOT NULL,
   [date_modified] date NOT NULL
 )
 GO
@@ -293,10 +290,10 @@ GO
 
 CREATE TABLE [parties] (
   [party_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
-  [emu_irn] int NOT NULL,
-  [publish] bit NOT NULL,
+  [emu_irn] int UNIQUE NOT NULL,
+  [publish] boolean NOT NULL,
   [party_type] nvarchar(255),
-  [full_name] nvarchar(max),
+  [full_name] nvarchar(255),
   [title] nvarchar(255),
   [first_name] nvarchar(255),
   [middle_name] nvarchar(255),
@@ -308,10 +305,10 @@ CREATE TABLE [parties] (
   [birth_place] nvarchar(255),
   [death_date] nvarchar(255),
   [death_place] nvarchar(255),
-  [organization_name] nvarchar(max),
+  [organization_name] nvarchar(255),
   [commencement_date] nvarchar(255),
   [completion_date] nvarchar(255),
-  [collaboration_name] nvarchar(max),
+  [collaboration_name] nvarchar(255),
   [acronym] nvarchar(255),
   [date_modified] date NOT NULL
 )
@@ -319,7 +316,7 @@ GO
 
 CREATE TABLE [party_other_names] (
   [party_id] int NOT NULL,
-  [other_name] nvarchar(max) NOT NULL,
+  [other_name] nvarchar(255) NOT NULL,
   [sort_order] int NOT NULL,
   PRIMARY KEY ([party_id], [sort_order])
 )
@@ -357,7 +354,7 @@ GO
 
 CREATE TABLE [party_guids] (
   [party_id] int NOT NULL,
-  [preferred] bit NOT NULL,
+  [preferred] boolean NOT NULL,
   [type] nvarchar(255) NOT NULL,
   [guid] nvarchar(255) NOT NULL,
   [sort_order] int NOT NULL,
@@ -371,13 +368,16 @@ CREATE TABLE [events] (
 )
 GO
 
-ALTER TABLE [objects] ADD FOREIGN KEY ([department]) REFERENCES [departments] ([department_id])
+ALTER TABLE [objects] ADD FOREIGN KEY ([department_id]) REFERENCES [departments] ([department_id])
 GO
 
 ALTER TABLE [objects] ADD FOREIGN KEY ([location_id]) REFERENCES [locations] ([location_id])
 GO
 
-ALTER TABLE [objects] ADD FOREIGN KEY ([parent_irn]) REFERENCES [objects] ([object_id])
+ALTER TABLE [objects] ADD FOREIGN KEY ([parent_id]) REFERENCES [objects] ([object_id])
+GO
+
+ALTER TABLE [objects] ADD FOREIGN KEY ([recipient_id]) REFERENCES [parties] ([party_id])
 GO
 
 ALTER TABLE [object_flags] ADD FOREIGN KEY ([object_id]) REFERENCES [objects] ([object_id])
