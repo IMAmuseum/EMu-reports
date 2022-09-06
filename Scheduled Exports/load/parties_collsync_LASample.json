@@ -676,12 +676,12 @@
         "collaboration_name": "Los Carpinteros",
         "collaborators": [
             {
-                "collaboration-role": "Collaborator",
-                "collaborator_irn": "7051"
+                "collaboration_role": "Collaborator",
+                "collaborator_irn": 7051
             },
             {
-                "collaboration-role": "Collaborator",
-                "collaborator_irn": "7050"
+                "collaboration_role": "Collaborator",
+                "collaborator_irn": 7050
             }],
         "acronym": null,
         "other_names": [],

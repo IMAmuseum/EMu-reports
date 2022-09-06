@@ -30,8 +30,8 @@
         "collaboration_name": <xsl:choose><xsl:when test="atom[@name='ColCollaborationName'] != ''">"<xsl:value-of select="replace(replace(atom[@name='ColCollaborationName'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "collaborators": [<xsl:for-each select="table[@name='Collaborators']/tuple">
             {
-                "collaboration-role": <xsl:choose><xsl:when test="atom[@name='ColRole'] != ''">"<xsl:value-of select="replace(replace(atom[@name='ColRole'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
-                "collaborator_irn": "<xsl:value-of select="atom[@name='irn']"/>"
+                "collaboration_role": <xsl:choose><xsl:when test="atom[@name='ColRole'] != ''">"<xsl:value-of select="replace(replace(atom[@name='ColRole'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
+                "collaborator_irn": <xsl:value-of select="atom[@name='irn']"/>
             }<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>],
         "acronym": <xsl:choose><xsl:when test="atom[@name='NamOrganisationAcronym'] != ''">"<xsl:value-of select="replace(replace(atom[@name='NamOrganisationAcronym'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "other_names": [<xsl:for-each select="table[@name='OtherPersonNames']/tuple">"<xsl:value-of select="replace(replace(atom[@name='NamOtherNames'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"<xsl:if test="position() != last()">, </xsl:if></xsl:for-each><xsl:if test="table[@name='OtherPersonNames'] and table[@name='OtherOrgNames']">, </xsl:if><xsl:for-each select="table[@name='OtherOrgNames']/tuple">"<xsl:value-of select="replace(replace(atom[@name='NamOrganisationOtherNames'], '&quot;', '\\&quot;'), '&#09;', '\\&#09;')"/>"<xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
