@@ -7,7 +7,7 @@
     <xsl:output method="text"/>
     
 <xsl:template match="/">{"narratives": [
-    <xsl:for-each select="table[@name='enarratives']/tuple"><xsl:sort select="atom[@name='irn']" data-type="number"/>{
+    <xsl:for-each select="table[@name='enarratives']/tuple[atom[@name='NarNarrative'] != '']"><xsl:sort select="atom[@name='irn']" data-type="number"/>{
         "emu_irn": <xsl:value-of select="atom[@name='irn']"/>,
         "publish": <xsl:choose><xsl:when test="atom[@name='AdmPublishWebNoPassword'] = 'Yes'">true</xsl:when><xsl:otherwise>false</xsl:otherwise></xsl:choose>,
         "title": "<xsl:choose><xsl:when test="atom[@name='NarTitle'] != ''"><xsl:value-of select="replace(replace(replace(atom[@name='NarTitle'], '\&#92;', '\&#92;\&#92;'), '&quot;', '\\&quot;'), '&#09;', '\\t')"/></xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>",
