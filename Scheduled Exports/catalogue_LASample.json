@@ -1167,11 +1167,11 @@
         "parent_irn": 89724,
         "related_objects": [
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 20184
             },
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 35937
             }],
         "guids": [],
@@ -1581,7 +1581,7 @@
         "parent_irn": null,
         "related_objects": [
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 44498
             }],
         "guids": [],
@@ -3087,11 +3087,11 @@
         "parent_irn": null,
         "related_objects": [
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 43218
             },
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 43219
             }],
         "guids": [
@@ -3286,7 +3286,7 @@
                 "object_irn": 55312
             },
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 41018
             }],
         "guids": [],
@@ -3715,11 +3715,11 @@
         "parent_irn": null,
         "related_objects": [
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 41018
             },
             {
-                "relationship": "",
+                "relationship": null,
                 "object_irn": 41019
             }],
         "guids": [],
