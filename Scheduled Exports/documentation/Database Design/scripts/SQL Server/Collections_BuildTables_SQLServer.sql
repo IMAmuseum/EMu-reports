@@ -2,7 +2,7 @@ CREATE TABLE [objects] (
   [object_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
   [dagwood_id] int,
-  [publish] boolean NOT NULL,
+  [publish] int NOT NULL,
   [status] nvarchar(255),
   [accession_number] nvarchar(255),
   [previous_id] nvarchar(255),
@@ -27,10 +27,9 @@ CREATE TABLE [objects] (
   [mark_description] nvarchar(255),
   [dimensions] nvarchar(255),
   [credit_line] nvarchar(255),
-  [rights_acknowledgement] nvarchar(255),
   [provenance] nvarchar(255),
   [department_id] int,
-  [on_view] boolean NOT NULL,
+  [on_view] int NOT NULL,
   [location_id] int,
   [parent_id] int,
   [deaccession_method] nvarchar(255),
@@ -185,6 +184,20 @@ CREATE TABLE [object_dimensions] (
 )
 GO
 
+CREATE TABLE [rights] (
+  [rights_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
+  [rights_acknowledgement] nvarchar(255) UNIQUE NOT NULL
+)
+GO
+
+CREATE TABLE [object_rights] (
+  [object_id] int NOT NULL,
+  [rights_id] int NOT NULL,
+  [sort_order] int NOT NULL,
+  PRIMARY KEY ([object_id], [sort_order])
+)
+GO
+
 CREATE TABLE [rights_uris] (
   [rights_uri_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [type] nvarchar(255) NOT NULL,
@@ -209,7 +222,7 @@ GO
 CREATE TABLE [locations] (
   [location_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
-  [publish] boolean NOT NULL,
+  [publish] int NOT NULL,
   [code] nvarchar(255),
   [level_1] nvarchar(255),
   [level_2] nvarchar(255),
@@ -234,7 +247,7 @@ GO
 
 CREATE TABLE [object_guids] (
   [object_id] int NOT NULL,
-  [preferred] boolean NOT NULL,
+  [preferred] int NOT NULL,
   [type] nvarchar(255) NOT NULL,
   [guid] nvarchar(255) NOT NULL,
   [sort_order] int NOT NULL,
@@ -245,7 +258,7 @@ GO
 CREATE TABLE [narratives] (
   [narrative_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
-  [publish] boolean NOT NULL,
+  [publish] int NOT NULL,
   [title] nvarchar(255),
   [purpose] nvarchar(255),
   [date_year] int,
@@ -291,7 +304,7 @@ GO
 CREATE TABLE [parties] (
   [party_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
-  [publish] boolean NOT NULL,
+  [publish] int NOT NULL,
   [party_type] nvarchar(255),
   [full_name] nvarchar(255),
   [title] nvarchar(255),
@@ -354,7 +367,7 @@ GO
 
 CREATE TABLE [party_guids] (
   [party_id] int NOT NULL,
-  [preferred] boolean NOT NULL,
+  [preferred] int NOT NULL,
   [type] nvarchar(255) NOT NULL,
   [guid] nvarchar(255) NOT NULL,
   [sort_order] int NOT NULL,
@@ -438,6 +451,12 @@ ALTER TABLE [object_publishers] ADD FOREIGN KEY ([party_id]) REFERENCES [parties
 GO
 
 ALTER TABLE [object_dimensions] ADD FOREIGN KEY ([object_id]) REFERENCES [objects] ([object_id])
+GO
+
+ALTER TABLE [object_rights] ADD FOREIGN KEY ([object_id]) REFERENCES [objects] ([object_id])
+GO
+
+ALTER TABLE [object_rights] ADD FOREIGN KEY ([rights_id]) REFERENCES [rights] ([rights_id])
 GO
 
 ALTER TABLE [object_rights_uris] ADD FOREIGN KEY ([object_id]) REFERENCES [objects] ([object_id])
