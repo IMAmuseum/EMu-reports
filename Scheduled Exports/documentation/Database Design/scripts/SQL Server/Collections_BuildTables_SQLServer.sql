@@ -2,7 +2,7 @@ CREATE TABLE [objects] (
   [object_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
   [dagwood_id] int,
-  [publish] int NOT NULL,
+  [publish] boolean NOT NULL,
   [status] nvarchar(255),
   [accession_number] nvarchar(255),
   [previous_id] nvarchar(255),
@@ -29,7 +29,7 @@ CREATE TABLE [objects] (
   [credit_line] nvarchar(255),
   [provenance] nvarchar(255),
   [department_id] int,
-  [on_view] int NOT NULL,
+  [on_view] boolean NOT NULL,
   [location_id] int,
   [parent_id] int,
   [deaccession_method] nvarchar(255),
@@ -222,7 +222,7 @@ GO
 CREATE TABLE [locations] (
   [location_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
-  [publish] int NOT NULL,
+  [publish] boolean NOT NULL,
   [code] nvarchar(255),
   [level_1] nvarchar(255),
   [level_2] nvarchar(255),
@@ -247,7 +247,7 @@ GO
 
 CREATE TABLE [object_guids] (
   [object_id] int NOT NULL,
-  [preferred] int NOT NULL,
+  [preferred] boolean NOT NULL,
   [type] nvarchar(255) NOT NULL,
   [guid] nvarchar(255) NOT NULL,
   [sort_order] int NOT NULL,
@@ -258,7 +258,7 @@ GO
 CREATE TABLE [narratives] (
   [narrative_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
-  [publish] int NOT NULL,
+  [publish] boolean NOT NULL,
   [title] nvarchar(255),
   [purpose] nvarchar(255),
   [date_year] int,
@@ -304,7 +304,7 @@ GO
 CREATE TABLE [parties] (
   [party_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
   [emu_irn] int UNIQUE NOT NULL,
-  [publish] int NOT NULL,
+  [publish] boolean NOT NULL,
   [party_type] nvarchar(255),
   [full_name] nvarchar(255),
   [title] nvarchar(255),
@@ -367,7 +367,7 @@ GO
 
 CREATE TABLE [party_guids] (
   [party_id] int NOT NULL,
-  [preferred] int NOT NULL,
+  [preferred] boolean NOT NULL,
   [type] nvarchar(255) NOT NULL,
   [guid] nvarchar(255) NOT NULL,
   [sort_order] int NOT NULL,
@@ -377,7 +377,7 @@ GO
 
 CREATE TABLE [events] (
   [event_id] int PRIMARY KEY NOT NULL IDENTITY(1, 1),
-  [emu_irn] int NOT NULL
+  [emu_irn] int UNIQUE NOT NULL
 )
 GO
 
