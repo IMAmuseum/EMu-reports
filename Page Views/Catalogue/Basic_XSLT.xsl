@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:emu="http://kesoftware.com/emu"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:emu="http://kesoftware.com/emu"
     xmlns:date="http://exslt.org/dates-and-times">
-    <xsl:output method="html" encoding="ISO-8859-1" />
+    <xsl:output method="html" encoding="ISO-8859-1"/>
 
-   <!--The root transformation -->
+    <!--The root transformation -->
     <xsl:template match="/">
         <html>
             <head>
-                <xsl:call-template name="styles" />
-                <xsl:call-template name="scripts" />
+                <xsl:call-template name="styles"/>
+                <xsl:call-template name="scripts"/>
             </head>
             <body class="sheet" onLoad="loaded()">
-                <xsl:call-template name="body" />
+                <xsl:call-template name="body"/>
             </body>
         </html>
     </xsl:template>
@@ -23,9 +21,9 @@
      -->
     <xsl:template name="body">
         <xsl:for-each select="/table/tuple">
-            <xsl:call-template name="record" />
+            <xsl:call-template name="record"/>
             <xsl:if test="position() != last()">
-                <p />
+                <p/>
             </xsl:if>
         </xsl:for-each>
     </xsl:template>
@@ -157,8 +155,8 @@ function loaded()
     <xsl:template name="record">
         <center>
             <table border="1" class="sheet">
-                <xsl:call-template name="heading" />
-                <xsl:call-template name="object" />
+                <xsl:call-template name="heading"/>
+                <xsl:call-template name="object"/>
                 <!--
                 <xsl:call-template name="section" />
                 <xsl:call-template name="data" />
@@ -172,34 +170,54 @@ function loaded()
     <xsl:template name="heading">
         <tr class="heading">
             <xsl:choose>
-                <xsl:when test="atom[@name='StaStocktakeStatus']='A'">
+                <xsl:when test="atom[@name = 'StaStocktakeStatus'] = 'A'">
                     <td class="heading">
-                        <span style="color: #6BE407"><xsl:value-of select="atom[@name='StaStocktakeStatus']"/><xsl:text> - </xsl:text></span><xsl:value-of select="atom[@name='SummaryData']" />
+                        <span style="color: #6BE407">
+                            <xsl:value-of select="atom[@name = 'StaStocktakeStatus']"/>
+                            <xsl:text> - </xsl:text>
+                        </span>
+                        <xsl:value-of select="atom[@name = 'SummaryData']"/>
                     </td>
                 </xsl:when>
-                <xsl:when test="atom[@name='StaStocktakeStatus']='B'">
+                <xsl:when test="atom[@name = 'StaStocktakeStatus'] = 'B'">
                     <td class="heading">
-                        <span style="color: #FFBD08"><xsl:value-of select="atom[@name='StaStocktakeStatus']"/><xsl:text> - </xsl:text></span><xsl:value-of select="atom[@name='SummaryData']" />
+                        <span style="color: #FFBD08">
+                            <xsl:value-of select="atom[@name = 'StaStocktakeStatus']"/>
+                            <xsl:text> - </xsl:text>
+                        </span>
+                        <xsl:value-of select="atom[@name = 'SummaryData']"/>
                     </td>
                 </xsl:when>
-                <xsl:when test="atom[@name='StaStocktakeStatus']='C'">
+                <xsl:when test="atom[@name = 'StaStocktakeStatus'] = 'C'">
                     <td class="heading">
-                        <span style="color: #FF9008"><xsl:value-of select="atom[@name='StaStocktakeStatus']"/><xsl:text> - </xsl:text></span><xsl:value-of select="atom[@name='SummaryData']" />
-                    </td>
-                </xsl:when>            
-                <xsl:when test="atom[@name='StaStocktakeStatus']='D'">
-                    <td class="heading">
-                        <span style="color: #a50e20"><xsl:value-of select="atom[@name='StaStocktakeStatus']"/><xsl:text> - </xsl:text></span><xsl:value-of select="atom[@name='SummaryData']" />
+                        <span style="color: #FF9008">
+                            <xsl:value-of select="atom[@name = 'StaStocktakeStatus']"/>
+                            <xsl:text> - </xsl:text>
+                        </span>
+                        <xsl:value-of select="atom[@name = 'SummaryData']"/>
                     </td>
                 </xsl:when>
-                <xsl:when test="atom[@name='StaStocktakeStatus']='I'">
+                <xsl:when test="atom[@name = 'StaStocktakeStatus'] = 'D'">
                     <td class="heading">
-                        <span style="color: #000000"><xsl:value-of select="atom[@name='StaStocktakeStatus']"/><xsl:text> - </xsl:text></span><xsl:value-of select="atom[@name='SummaryData']" />
+                        <span style="color: #a50e20">
+                            <xsl:value-of select="atom[@name = 'StaStocktakeStatus']"/>
+                            <xsl:text> - </xsl:text>
+                        </span>
+                        <xsl:value-of select="atom[@name = 'SummaryData']"/>
+                    </td>
+                </xsl:when>
+                <xsl:when test="atom[@name = 'StaStocktakeStatus'] = 'I'">
+                    <td class="heading">
+                        <span style="color: #000000">
+                            <xsl:value-of select="atom[@name = 'StaStocktakeStatus']"/>
+                            <xsl:text> - </xsl:text>
+                        </span>
+                        <xsl:value-of select="atom[@name = 'SummaryData']"/>
                     </td>
                 </xsl:when>
                 <xsl:otherwise>
                     <td class="heading">
-                        <xsl:value-of select="atom[@name='SummaryData']" />
+                        <xsl:value-of select="atom[@name = 'SummaryData']"/>
                     </td>
                 </xsl:otherwise>
             </xsl:choose>
@@ -213,17 +231,18 @@ function loaded()
             <td class="image">
                 <table class="picture">
                     <tr class="picture">
-                        <xsl:if test="table/tuple/atom[@name='Multimedia']">
+                        <xsl:if test="table/tuple/atom[@name = 'Multimedia']">
                             <td class="picture" width="25%">
                                 <table class="icon">
                                     <tr class="icon">
                                         <td class="icon">
                                             <img class="icon">
                                                 <xsl:attribute name="src">
-                                                    <!--xsl:for-each select="table/tuple/atom"-->
-                                                    <!--xsl:value-of select="." /-->
-                                                    <xsl:value-of select="concat('file:///', translate(table/tuple/atom[@name='Multimedia'], '\', '/'))" />
-                                                    <!--/xsl:for-each-->
+                                                  <!--xsl:for-each select="table/tuple/atom"-->
+                                                  <!--xsl:value-of select="." /-->
+                                                  <xsl:value-of
+                                                  select="concat('file:///', translate(table/tuple/atom[@name = 'Multimedia'], '\', '/'))"/>
+                                                  <!--/xsl:for-each-->
                                                 </xsl:attribute>
                                             </img>
                                         </td>
@@ -234,28 +253,23 @@ function loaded()
                         <td width="75%">
                             <table border="0" class="data" id="datatable">
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Accession Number
-                                    </td>
+                                    <td class="atomprompt"> Accession Number </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='TitAccessionNo']" />
+                                        <xsl:value-of select="atom[@name = 'TitAccessionNo']"/>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Title
-                                    </td>
+                                    <td class="atomprompt"> Title </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='TitMainTitle']" />
+                                        <xsl:value-of select="atom[@name = 'TitMainTitle']"/>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Creator(s)
-                                    </td>
+                                    <td class="atomprompt"> Creator(s) </td>
                                     <td class="atomvalue">
-                                        <xsl:for-each select="table[@name='Group1']/tuple">
-                                            <xsl:value-of select="atom[@name='CreRole']"/>: <xsl:value-of select="atom[@name='SummaryData']"/>
+                                        <xsl:for-each select="table[@name = 'Group1']/tuple">
+                                            <xsl:value-of select="atom[@name = 'CreRole']"/>:
+                                                <xsl:value-of select="atom[@name = 'SummaryData']"/>
                                             <xsl:if test="position() != last()">
                                                 <br/>
                                             </xsl:if>
@@ -263,89 +277,73 @@ function loaded()
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Date Created
-                                    </td>
+                                    <td class="atomprompt"> Date Created </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='CreDateCreated']" />
+                                        <xsl:value-of select="atom[@name = 'CreDateCreated']"/>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Medium and Support
-                                    </td>
+                                    <td class="atomprompt"> Medium and Support </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='PhyMediumAndSupport']" />
+                                        <xsl:value-of select="atom[@name = 'PhyMediumAndSupport']"/>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Converted Dimensions
-                                    </td>
+                                    <td class="atomprompt"> Converted Dimensions </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='PhyConvertedDims']" />
+                                        <xsl:value-of select="atom[@name = 'PhyConvertedDims']"/>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Credit Line
-                                    </td>
+                                    <td class="atomprompt"> Credit Line </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='SumCreditLine']" />
+                                        <xsl:value-of select="atom[@name = 'SumCreditLine']"/>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Rights
-                                    </td>
+                                    <td class="atomprompt"> Rights </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="table[@name='RigRightsRef_tab']/tuple/atom[@name='RigStatus']" />
+                                        <xsl:value-of
+                                            select="table[@name = 'RigRightsRef_tab']/tuple/atom[@name = 'RigStatus']"
+                                        />
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Current Location
-                                    </td>
+                                    <td class="atomprompt"> Current Location </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="tuple[@name='LocCurrentLocationRef']/atom[@name='SummaryData']" />
+                                        <xsl:value-of
+                                            select="tuple[@name = 'LocCurrentLocationRef']/atom[@name = 'SummaryData']"
+                                        />
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        On Display?
-                                    </td>
+                                    <td class="atomprompt"> On Display? </td>
                                     <xsl:choose>
-                                        <xsl:when test="contains(atom[@name='LocMovementType'], 'Exhibition Location')">
-                                            <td class="atomvalue">
-                                                Yes
-                                            </td>
+                                        <xsl:when
+                                            test="contains(atom[@name = 'LocMovementType'], 'Exhibition Location')">
+                                            <td class="atomvalue"> Yes </td>
                                         </xsl:when>
-                                        <xsl:when test="contains(tuple[@name='LocCurrentLocationRef']/atom[@name='SummaryData'], 'see related parts')">
-                                            <td class="atomvalue">
-                                                Blanket record - see parts for on display status
-                                            </td>
+                                        <xsl:when
+                                            test="contains(tuple[@name = 'LocCurrentLocationRef']/atom[@name = 'SummaryData'], 'see related parts')">
+                                            <td class="atomvalue"> Blanket record - see parts for on
+                                                display status </td>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <td class="atomvalue">
-                                                No
-                                            </td>
+                                            <td class="atomvalue"> No </td>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        IRN
-                                    </td>
+                                    <td class="atomprompt"> IRN </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='irn']"/>
+                                        <xsl:value-of select="atom[@name = 'irn']"/>
                                     </td>
                                 </tr>
                                 <tr class="atomvalue">
-                                    <td class="atomprompt">
-                                        Publish Online?
-                                    </td>
+                                    <td class="atomprompt"> Publish Online? </td>
                                     <td class="atomvalue">
-                                        <xsl:value-of select="atom[@name='AdmPublishWebNoPassword']"/>
+                                        <xsl:value-of
+                                            select="atom[@name = 'AdmPublishWebNoPassword']"/>
                                     </td>
                                 </tr>
                             </table>
@@ -353,7 +351,7 @@ function loaded()
                     </tr>
                 </table>
             </td>
-        </tr>        
+        </tr>
     </xsl:template>
     <!--
             Section template
