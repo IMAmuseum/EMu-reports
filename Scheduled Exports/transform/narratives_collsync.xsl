@@ -18,7 +18,7 @@
         "narrative": <xsl:choose><xsl:when test="normalize-space(atom[@name='NarNarrative']) != ''">"<xsl:call-template name="escape_characters"><xsl:with-param name="input_string"><xsl:value-of select="atom[@name='NarNarrative']"/></xsl:with-param></xsl:call-template>"</xsl:when><xsl:otherwise>null</xsl:otherwise></xsl:choose>,
         "author_irns": [<xsl:for-each select="table[@name='authors']/tuple[atom[@name='irn'] != '']"><xsl:value-of select="atom[@name='irn']"/><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
         "objects": [<xsl:for-each select="table[@name='objects']/tuple[atom[@name='irn'] != '']"><xsl:value-of select="atom[@name='irn']"/><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
-        "event_irns": [<xsl:for-each select="table[@name='events']/tuple[atom[@name='irn'] != '']"><xsl:value-of select="atom[@name='irn']"/><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
+        "event_irns": [<xsl:for-each select="table[@name='events']/tuple[atom[@name='irn'] != '' and (contains(atom[@name='EveTypeOfEvent'], 'Exhibition') or contains(atom[@name='EveTypeOfEvent'], 'Outgoing Loan'))]"><xsl:value-of select="atom[@name='irn']"/><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
         "party_irns": [<xsl:for-each select="table[@name='parties']/tuple[atom[@name='irn'] != '']"><xsl:value-of select="atom[@name='irn']"/><xsl:if test="position() != last()">, </xsl:if></xsl:for-each>],
         "date_modified": "<xsl:value-of select="atom[@name='AdmDateModified']"/>"
     }<xsl:if test="position() != last()">,
